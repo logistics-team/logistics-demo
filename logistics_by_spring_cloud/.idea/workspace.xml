@@ -100,13 +100,6 @@
   <component name="NamedScopeManager">
     <scope name="Armed z2-Modules" pattern="" />
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="266" />
     <option name="y" value="93" />
@@ -230,7 +223,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567325231882</updated>
-      <workItem from="1567325236070" duration="6912000" />
+      <workItem from="1567325236070" duration="7561000" />
     </task>
     <task id="LOCAL-00001" summary="首发天天项目logistics提交">
       <created>1567331920712</created>
@@ -243,11 +236,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6912000" />
+    <option name="totallyTimeSpent" value="7561000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Learn" />
       <window_info id="Image Layers" />
