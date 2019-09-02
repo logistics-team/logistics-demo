@@ -1,7 +1,7 @@
 package com.cssl;
 
 
-import com.cssl.mailing.entity.Express_user;
+import com.cssl.entity.Express_user;
 import com.cssl.mailing.mapper.Express_userDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;

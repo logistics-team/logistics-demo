@@ -1,6 +1,6 @@
 package com.cssl.mailing.service.impl;
 
-import com.cssl.mailing.entity.Express_user;
+import com.cssl.entity.Express_user;
 import com.cssl.mailing.mapper.Express_userDao;
 import com.cssl.mailing.service.IExpress_userService;
 import org.springframework.beans.factory.annotation.Autowired;

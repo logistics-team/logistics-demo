@@ -1,4 +1,7 @@
-package com.cssl.mailing.entity;
+package com.cssl.entity;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -15,6 +18,7 @@ public class Express_user implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @TableId(value = "eu_id", type = IdType.AUTO)
     private Integer eu_id;
 
     private LocalDateTime eu_gmt_create;

@@ -20,5 +20,5 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:18000/eureka/
 mybatis:
-  type-aliases-package: com.cssl.mailing.entity
+  type-aliases-package: com.cssl.entity
   mapper-locations: classpath:com/cssl/mailing/mapper/*.xml

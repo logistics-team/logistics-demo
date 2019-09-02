@@ -1,4 +1,7 @@
-package com.cssl.mailing.entity;
+package com.cssl.entity;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -16,6 +19,7 @@ public class Express_goods implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @TableId(value = "eg_id", type = IdType.AUTO)
     private Integer eg_id;
 
     private LocalDateTime eg_gmt_create;
@@ -73,6 +77,18 @@ public class Express_goods implements Serializable {
     }
 
     public void setEg_special_context(String eg_special_context) {
+        this.eg_special_context = eg_special_context;
+    }
+
+    public Express_goods() {
+    }
+
+    public Express_goods(Integer eg_id, LocalDateTime eg_gmt_create, Integer it_id, BigDecimal weight, BigDecimal eg_appraised_price, String eg_special_context) {
+        this.eg_id = eg_id;
+        this.eg_gmt_create = eg_gmt_create;
+        this.it_id = it_id;
+        this.weight = weight;
+        this.eg_appraised_price = eg_appraised_price;
         this.eg_special_context = eg_special_context;
     }
 

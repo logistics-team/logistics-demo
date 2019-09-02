@@ -1,6 +1,6 @@
 package com.cssl.mailing.mapper;
 
-import com.cssl.mailing.entity.Express_goods;
+import com.cssl.entity.Express_goods;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 
