@@ -22,14 +22,9 @@ public class LogisticsServerApplicationTests {
     @Test
     public void contextLoads() {
         System.out.println("LocalDateTime.now() = " + LocalDateTime.now());
-        int i = mapper.saveExpress_user(new Express_user(1, LocalDateTime.now(), LocalDateTime.now(), "李嘉欣", 430000, 430990, 430903, "17700244411", "杨舟", 430000, 431100, 431125, "15116114097", 1));
+        int i = mapper.saveExpress_user(new Express_user(1, LocalDateTime.now(), LocalDateTime.now(), "李嘉欣", 430000, 430900, 430903, "17700244411", "杨舟", 430000, 431100, 431125, "15116114097", 2));
         System.out.println("i = " + i);
-        //        Express_provinces_city_areas province =  mapper.findAddressByName("湖南省");
-//        System.out.println("province = " + province);
-//        List<Express_provinces_city_areas> express_provinces_city_areas = mapper.selectList(null);
-//        Integer integer = mapper.selectCount(null);
-//        System.out.println("integer = " + integer);
-//        System.out.println("express_provinces_city_areas = " + express_provinces_city_areas);
+
     }
 
 }

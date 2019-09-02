@@ -12,6 +12,9 @@ public class Express_userServiceImpl implements IExpress_userService {
     private Express_userDao expressUserDao;
     @Override
     public int saveExpress_user(Express_user expressUser) {
+        if (expressUser==null){
+            return 0;
+        }
         return expressUserDao.saveExpress_user(expressUser);
     }
 }
