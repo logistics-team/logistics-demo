@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @EnableEurekaClient
 @SpringBootApplication
-@MapperScan("com.cssl.addr.mapper")
+
 public class LogisticsServerApplication {
 
     public static void main(String[] args) {
