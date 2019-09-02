@@ -7,11 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="code-genterator" />
-        <module name="eureka-server" />
-        <module name="user-server" />
         <module name="consumer-server" />
-        <module name="logistics_by_spring_cloud" />
+        <module name="eureka-server" />
         <module name="logistics-server" />
+        <module name="logistics_by_spring_cloud" />
+        <module name="user-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,12 +21,12 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="code-genterator" options="-parameters" />
-      <module name="consumer-server" options="-parameters" />
-      <module name="eureka-server" options="-parameters" />
+      <module name="code-genterator" options="" />
+      <module name="consumer-server" options="" />
+      <module name="eureka-server" options="" />
       <module name="genterator" options="-parameters" />
-      <module name="logistics-server" options="-parameters" />
-      <module name="user-server" options="-parameters" />
+      <module name="logistics-server" options="" />
+      <module name="user-server" options="" />
     </option>
   </component>
 </project>
