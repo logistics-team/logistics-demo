@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c35c3643-0a45-4007-a7bb-ae9decbe70b4" name="默认更改列表" comment="首发天天项目logistics提交">
+    <list default="true" id="c35c3643-0a45-4007-a7bb-ae9decbe70b4" name="默认更改列表" comment="">
       <change afterPath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/LogisticsService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logistics-server/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logistics-server/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
@@ -70,92 +70,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/logistics-server/src/test/java/com/cssl/LogisticsServerApplicationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/service/impl/Express_userServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/mapper/Express_userMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/mapper/xml/Express_userMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/mapper/Express_provinces_city_areasMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/service/IExpress_userService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/service/IExpress_provinces_city_areasService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/service/impl/Express_provinces_city_areasServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/controller/Express_provinces_city_areasController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="27" column="73" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/mapper/xml/Express_provinces_city_areasMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            <state relative-caret-position="96">
+              <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -201,9 +120,9 @@
         <option value="$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/mapper/Express_provinces_city_areasMapper.java" />
         <option value="$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/service/IExpress_provinces_city_areasService.java" />
         <option value="$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/service/impl/Express_provinces_city_areasServiceImpl.java" />
-        <option value="$PROJECT_DIR$/logistics-server/src/test/java/com/cssl/LogisticsServerApplicationTests.java" />
         <option value="$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/service/impl/Express_userServiceImpl.java" />
         <option value="$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/service/IExpress_userService.java" />
+        <option value="$PROJECT_DIR$/logistics-server/src/test/java/com/cssl/LogisticsServerApplicationTests.java" />
       </list>
     </option>
   </component>
@@ -410,7 +329,7 @@
       <option name="presentableId" value="Default" />
       <updated>1567325231882</updated>
       <workItem from="1567325236070" duration="7561000" />
-      <workItem from="1567392344697" duration="6533000" />
+      <workItem from="1567392344697" duration="6802000" />
     </task>
     <task id="LOCAL-00001" summary="首发天天项目logistics提交">
       <created>1567331920712</created>
@@ -419,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567331920712</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="项目架构">
+      <created>1567402336076</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567402336076</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -455,7 +381,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14094000" />
+    <option name="totallyTimeSpent" value="14363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -515,7 +441,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="首发天天项目logistics提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="首发天天项目logistics提交" />
+    <MESSAGE value="项目架构" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目架构" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -752,7 +679,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/mapper/Express_provinces_city_areasMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
+        <state relative-caret-position="479">
           <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
         </state>
       </provider>
@@ -778,13 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logistics-server/src/test/java/com/cssl/LogisticsServerApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/addr/service/impl/Express_userServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -796,6 +716,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="479">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistics-server/src/test/java/com/cssl/LogisticsServerApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
