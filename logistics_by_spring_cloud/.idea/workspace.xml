@@ -1,275 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c35c3643-0a45-4007-a7bb-ae9decbe70b4" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/ForwardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/2019071101.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/city-picker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/common.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/dropdown.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/expressServiceTab.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/ft-carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/jedate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/jobs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/joiningTT.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/mystyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/public.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/renCaiZhaoPin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/siller-min-201908230320.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/siller.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/style-person-reg-new-min-2019082.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/sweetalert.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/css/ttAgreement.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/505.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/Artboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/EMBA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/aboutTT.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/account.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/addressBook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/am-2015102601.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/aoyun-code-2016080401.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/arrow.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/banner002.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/banner1-1905253358.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/banner2-1349930884.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/banner3-260039662.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/banner4-13974203.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/biao.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/bigdatabac.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/bjfw.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/blankbg-2015102601.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/bmnx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/btn_metro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/checkboxChecked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/checkboxNoSelect.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/chengxin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/cjwt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/close1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/code_dyh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/code_fwh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/codeing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/conten_question_titlebg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/cpfw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/cqpx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/customer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/customerGuide_tabbg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/customerService.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/cxbg-2016031001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/czsprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/dial.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/dial1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/dianxin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/dianzi-02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/dqjl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/dyd_map.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/dzmd.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/expressService.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/failed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/fhgz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/finprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/gou.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/graybg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/gwab-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/gxwl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/gytt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/hdfk.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/headbanner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/huax.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/icon-search-pic-20170522.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/icon-search-pic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/icon_fanihuidingbu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/icon_zaixiankefu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/icon_zizhutousu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/index.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/jbfl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/jcfw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/jlhf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/jmrx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/jmtt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/joiningTT.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/kdwl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/kfrx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/kfzx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/kjwl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/leftArrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/login_bgimg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/mfdh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/newbg-20190505.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/news.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/news_search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/nhzd_map.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/npbg-20140825.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/npbg-2015102601.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/orange_on.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/play_over.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/public.sprite-20140825.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/qianyue.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/qq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/radio.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/radio2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/rczp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/recruitment.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/register_zaixiankefu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/rencai.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/rightArrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/rys.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/s.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/search-express-none-20150522.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/shenhe.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/show.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/sidebar-20152525.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/sidebar-20170721.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/sidebar-bg-20151010.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/sidebar-loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/sidebar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/sidebaricon-2019010301.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/slide-new-201608012359.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/slide-new.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/slider-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/smqj.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/sn-sidebar-member-20151012.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/sndx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/sprite-1541754766549.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/stdj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/success.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/szyt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/tczy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/time.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/tips.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/tips_errorMenu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/tips_rightMenu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/titleBg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/tj1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/tj2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/tj3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/tjd1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/tjd2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/ui_bg-2015102601.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/ui_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/unicom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/verificationCodeAction!getRandom.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/warning.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/wdcx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/wmdysbg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/wmdysbgo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/ww.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/wxrz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/wycx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/wyjj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/xs1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/xxtjsq.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/ydcx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/yfcx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/yfdf.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/yunxin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/yyzz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/yzm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/zntx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/zxjj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/zxxx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/zycz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/zzyw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/2019071101.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/201908230320.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/Base64.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/DD_belatedPNG.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/Js.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/SnCaptcha.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/addToolbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/additional-methods.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/city-picker.data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/city-picker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/d3.v3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/env.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/expressServiceTab.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/fp-201908230320_sSBPSduMXbsBS0Ra.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/ft-carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/goUrl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/gt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/index1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/jobs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/joiningTT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/jquery-1.4.2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/jquery-form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/jquery.SuperSlide.2.1.1_2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/jquery.jedate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/jquery.slideBox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/jquery.validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/jsencrypt.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/maps-1.4.13_a820db6476bc0642dfbf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/messages_zh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/mmds-201908230320_sSBPSduMXbsBS0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/pclogErrorInfo-min-201908230320.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/placeOrder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/porto-201908230320.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/r2d3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/siller-201908230320.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/suAES.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/sweetalert-dev.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/2019071101.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/font/iconfont-06.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/font/iconfont-061.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/font/iconfont-062.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/font/iconfont1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/am-2015102601.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/blankbg-2015102601.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/cxbg-2016031001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/gwab-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/icon-search-pic-20170522.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/icon-search-pic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/index.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/newbg-20190505.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/npbg-20140825.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/npbg-2015102601.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/public.sprite-20140825.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/search-express-none-20150522.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/search_input/icon-search-pic-20170522.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/search_input/icon-search-pic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/ui_bg-2015102601.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/public/v3/css/images/ui_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/business.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/customer_service.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/join_in.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/queryExpress.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/queryNetwork.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/queryPrice.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="c35c3643-0a45-4007-a7bb-ae9decbe70b4" name="默认更改列表" comment="整合前后台页面17：15">
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Complainant_info.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Express_goods.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Express_provinces_city_areas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Express_user.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Item_type.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Logistics_orders.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Logistics_power.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Logistics_rose.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Logistics_status.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Logistics_user.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/My_address_book.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/My_complaint.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Processing_status.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Pwoer_role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Role_user.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Transport_means.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Transportation_status.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comm/target/classes/com/cssl/entity/Types_of_complaints.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comm/src/main/java/com/cssl/entity/Express_user.java" beforeDir="false" afterPath="$PROJECT_DIR$/comm/src/main/java/com/cssl/entity/Express_user.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/ConsumerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/ConsumerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/echarts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/echarts.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/jquery-3.2.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/jquery-3.2.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/resources/tamplates/html/backstage.html" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/backstage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -290,17 +41,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/js/goUrl.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/js/gt.js">
+        <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="32448">
+              <caret line="676" column="36" selection-start-line="676" selection-start-column="36" selection-end-line="676" selection-end-column="36" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -416,111 +163,6 @@
               <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cssl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cssl" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cssl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -626,16 +268,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567497668056</updated>
-      <workItem from="1567497702133" duration="3384000" />
+      <workItem from="1567497702133" duration="4415000" />
     </task>
+    <task id="LOCAL-00001" summary="整合前后台页面">
+      <created>1567501146772</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567501146772</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12762000" />
+    <option name="totallyTimeSpent" value="13793000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837664" visible="true" weight="0.2945571" />
       <window_info id="Structure" order="1" sideWeight="0.5016234" side_tool="true" weight="0.2913554" />
@@ -649,7 +298,7 @@
       <window_info id="Web" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49893278" visible="true" weight="0.22004357" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49893278" visible="true" weight="0.39760348" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -657,7 +306,7 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010672" side_tool="true" weight="0.32461873" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010672" side_tool="true" weight="0.22004357" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="11" />
       <window_info anchor="bottom" id="Findings" order="12" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
@@ -1295,12 +944,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/about.html">
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/js/gt.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="676" column="36" lean-forward="true" selection-start-line="676" selection-start-column="36" selection-end-line="676" selection-end-column="36" />
+        <state relative-caret-position="-2880">
           <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1308,11 +956,12 @@
     <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/js/goUrl.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/js/gt.js">
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="32448">
+          <caret line="676" column="36" selection-start-line="676" selection-start-column="36" selection-end-line="676" selection-end-column="36" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
