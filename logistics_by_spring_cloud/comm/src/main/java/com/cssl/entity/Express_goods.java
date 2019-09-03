@@ -32,6 +32,16 @@ public class Express_goods implements Serializable {
 
     private String eg_special_context;
 
+    private Express_user express_user;
+
+    public Express_user getExpress_user() {
+        return express_user;
+    }
+
+    public void setExpress_user(Express_user express_user) {
+        this.express_user = express_user;
+    }
+
     public Integer getEg_id() {
         return eg_id;
     }
@@ -92,6 +102,18 @@ public class Express_goods implements Serializable {
         this.eg_special_context = eg_special_context;
     }
 
+//    @Override
+//    public String toString() {
+//        return "Express_goods{" +
+//                "eg_id=" + eg_id +
+//                ", eg_gmt_create=" + eg_gmt_create +
+//                ", it_id=" + it_id +
+//                ", weight=" + weight +
+//                ", eg_appraised_price=" + eg_appraised_price +
+//                ", eg_special_context=" + eg_special_context +
+//                "}";
+//    }
+
     @Override
     public String toString() {
         return "Express_goods{" +
@@ -100,7 +122,8 @@ public class Express_goods implements Serializable {
                 ", it_id=" + it_id +
                 ", weight=" + weight +
                 ", eg_appraised_price=" + eg_appraised_price +
-                ", eg_special_context=" + eg_special_context +
-                "}";
+                ", eg_special_context='" + eg_special_context + '\'' +
+                ", express_user=" + express_user +
+                '}';
     }
 }
