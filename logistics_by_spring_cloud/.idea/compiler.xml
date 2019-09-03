@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="code-genterator" />
-<<<<<<< HEAD
+<HEAD></HEAD>
         <module name="eureka-server" />
         <module name="comm" />
         <module name="consumer-server" />
@@ -17,7 +17,7 @@
         <module name="eureka-server" />
         <module name="logistics-server" />
         <module name="logistics_by_spring_cloud" />
->>>>>>> 4f1dc5fae4b50b3cf9cba7bec002b8bd6f53ce2a
+> 4f1dc5fae4b50b3cf9cba7bec002b8bd6f53ce2a
         <module name="user-server" />
       </profile>
     </annotationProcessing>
