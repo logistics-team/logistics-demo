@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
 import com.baomidou.mybatisplus.generator.config.GlobalConfig;
 import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
+import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
 import java.util.Scanner;
@@ -81,6 +82,12 @@ public class CodeGenterator {
         }
         strategyConfig.setInclude(split); // 表名生成策略 指定表
         mpg.setTemplateEngine(new FreemarkerTemplateEngine());
+        //3. 策略配置globalConfiguration中
+//        StrategyConfig stConfig = new StrategyConfig();
+        strategyConfig.setCapitalMode(true) //全局大写命名
+//                .setDbColumnUnderline(true)  // 指定表名 字段名是否使用下划线
+                .setNaming(NamingStrategy.underline_to_camel) // 数据库表映射到实体的命名策略
+                .setCapitalMode(true); //全局大写命名
         mpg.setStrategy(strategyConfig);
         mpg.execute();
     }

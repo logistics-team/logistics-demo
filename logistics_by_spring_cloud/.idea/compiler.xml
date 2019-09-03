@@ -8,11 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="code-genterator" />
         <module name="eureka-server" />
-        <module name="user-server" />
         <module name="comm" />
         <module name="consumer-server" />
         <module name="logistics_by_spring_cloud" />
         <module name="logistics-server" />
+        <module name="user-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

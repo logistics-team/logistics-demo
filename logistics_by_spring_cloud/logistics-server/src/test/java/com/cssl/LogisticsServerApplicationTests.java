@@ -1,7 +1,8 @@
 package com.cssl;
 
 
-import com.cssl.entity.Express_user;
+import com.cssl.entity.ExpressUser;
+import com.cssl.entity.ItemType;
 import com.cssl.mailing.mapper.Express_userDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,6 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 
 @RunWith(SpringRunner.class)
@@ -21,10 +23,10 @@ public class LogisticsServerApplicationTests {
     Express_userDao mapper;
     @Test
     public void contextLoads() {
-        System.out.println("LocalDateTime.now() = " + LocalDateTime.now());
-        int i = mapper.saveExpress_user(new Express_user(1, LocalDateTime.now(), LocalDateTime.now(), "李嘉欣", 430000, 430900, 430903, "17700244411", "杨舟", 430000, 431100, 431125, "15116114097", 2));
-        System.out.println("i = " + i);
-
+        List<ExpressUser> list = mapper.find();
+        list.forEach(express_user -> System.out.println("express_user = " + express_user));
+        List<ItemType> it = mapper.findIt();
+        it.forEach(itemType -> System.out.println("itemType = " + itemType));
     }
 
 }

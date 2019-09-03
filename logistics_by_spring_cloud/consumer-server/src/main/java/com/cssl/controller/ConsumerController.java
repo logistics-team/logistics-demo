@@ -1,8 +1,8 @@
 package com.cssl.controller;
 
-import com.cssl.entity.Express_goods;
-import com.cssl.entity.Express_user;
-import com.cssl.entity.Logistics_status;
+import com.cssl.entity.ExpressGoods;
+import com.cssl.entity.ExpressUser;
+import com.cssl.entity.LogisticsStatus;
 import com.cssl.service.LogisticsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,9 +30,9 @@ public class ConsumerController {
     @ResponseBody
     @RequestMapping("find")
     public Object find(){
-        Logistics_status status = new Logistics_status();
-        status.setLs_id(1);
-        status.setLs_context("sss");
+        LogisticsStatus status = new LogisticsStatus();
+        status.setLsId(1);
+        status.setLsContext("sss");
         Map<String, Object> map = new HashMap<>();
         map.put("stu",status);
         System.out.println("map = " + map);
@@ -50,21 +50,21 @@ public class ConsumerController {
         LocalDateTime now = LocalDateTime.now();
         System.out.println("now = " + now);
 //        System.out.println("name = " + name);
-        Express_goods goods = new Express_goods();
+        ExpressGoods goods = new ExpressGoods();
         BigDecimal bigDecimal = BigDecimal.valueOf(15.5);
         goods.setWeight(bigDecimal);
-        goods.setEg_appraised_price(bigDecimal);
-        goods.setIt_id(1);
-        goods.setEg_gmt_create(LocalDateTime.now());
-        goods.setEg_special_context("这是一个马踏飞燕");
-        Express_user user = new Express_user(1, LocalDateTime.now(), LocalDateTime.now(), "李嘉欣",
+        goods.setEgAppraisedPrice(bigDecimal);
+        goods.setItId(1);
+        goods.setEgGmtCreate(LocalDateTime.now());
+        goods.setEgSpecialContext("这是一个马踏飞燕");
+        ExpressUser user = new ExpressUser(1, LocalDateTime.now(), LocalDateTime.now(), "李嘉欣",
                 430000, 430900, 430903, "17700244411",
                 "刘成", 430000, 431100, 431101,
                 "15116114097", 2);
         System.out.println("user = " + user);
         System.out.println("goods = " + goods);
         //数据嵌入
-        goods.setExpress_user(user);
+        goods.setExpressUser(user);
         System.out.println("goods = " + goods);
         return logisticsService.save(goods); //logisticsService.save(goods,user);
     }

@@ -1,14 +1,9 @@
 package com.cssl.service.impl;
 
-import com.cssl.entity.Express_goods;
-import com.cssl.entity.Express_user;
-import com.cssl.entity.Logistics_status;
+import com.cssl.entity.ExpressGoods;
+import com.cssl.entity.LogisticsStatus;
 import com.cssl.service.LogisticsService;
 import org.springframework.stereotype.Component;
-
-
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 
 @Component
@@ -23,12 +18,12 @@ public class LogisticsServiceHystrix implements LogisticsService {
 
     //测试
     @Override
-    public String find(Logistics_status status) {
+    public String find(LogisticsStatus status) {
         return "找不到资源";
     }
 
     @Override
-    public String save(Express_goods goods) {
+    public String save(ExpressGoods goods) {
         return "客户端连接失败！请检查网络信息";
     }
 

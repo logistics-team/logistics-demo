@@ -15,11 +15,11 @@ public interface LogisticsService {
 
     @RequestMapping(value = "mailing/test", method = RequestMethod.POST, consumes = "application/json")
 //    public Object find(@RequestBody Map<String,Object> map);
-    String find(@RequestBody Logistics_status status);
+    String find(@RequestBody LogisticsStatus status);
 
 
     @RequestMapping(value = "mailing/save", method = RequestMethod.POST, consumes = "application/json")
-    String save(@RequestBody Express_goods goods);
+    String save(@RequestBody ExpressGoods goods);
 }
 
 
