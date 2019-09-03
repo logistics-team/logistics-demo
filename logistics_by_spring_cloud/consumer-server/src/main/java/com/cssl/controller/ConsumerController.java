@@ -20,7 +20,7 @@ public class ConsumerController {
 
     @RequestMapping("go_login")         //重定向到登录页面
     public String goLogin(){
-        return "redirect:/html/login.html"; //redirect:/html/backstage.html
+        return "/html/login"; //redirect:/html/backstage.html
     }
 
     @RequestMapping("go_backstage")     //重定向到后台

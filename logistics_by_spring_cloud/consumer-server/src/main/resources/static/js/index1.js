@@ -64,7 +64,7 @@ function passportIsLoginSuccess(data){
         console.log(hasLogin);
         if (!hasLogin){
             //如果这里的登录状态为false 说明 passport 登录已经过去,但是spring 安全框架没有过期
-            window.location.href = "/passPortIndex.action?login_type=0"
+            // window.location.href = "" //passPortIndex.action?login_type=0
             return;
         }
     }catch (e) {
