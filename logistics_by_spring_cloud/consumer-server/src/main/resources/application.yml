@@ -11,12 +11,20 @@ spring:
       max-wait-millis: 200
   application:
     name: consumer-server
+  resources:
+    static-locations: classpath:/templates/,classpath:/static/
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: UTC
   thymeleaf:
     cache: false
     mode: LEGACYHTML5
     encoding: UTF-8
     servlet:
       content-type: text/html
+    prefix: classpath:/templates/
+    suffix: .html
+
 
 server:
   port: 9292

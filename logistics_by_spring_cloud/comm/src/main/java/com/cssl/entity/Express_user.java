@@ -2,6 +2,7 @@ package com.cssl.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -21,8 +22,9 @@ public class Express_user implements Serializable {
     @TableId(value = "eu_id", type = IdType.AUTO)
     private Integer eu_id;
 
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime eu_gmt_create;
-
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime eu_gmt_modified;
 
     private String eu_receipt_name;

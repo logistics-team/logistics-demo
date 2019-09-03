@@ -5,18 +5,29 @@ import com.cssl.entity.Express_user;
 import com.cssl.entity.Logistics_status;
 import com.cssl.service.LogisticsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
-@RestController
+@Controller
 public class ConsumerController {
     @Autowired
     private LogisticsService logisticsService;
+
+    @RequestMapping("go_login")         //重定向到登录页面
+    public String goLogin(){
+        return "redirect:/html/login.html"; //redirect:/html/backstage.html
+    }
+
+    @RequestMapping("go_backstage")     //重定向到后台
+    public String goBackstage(){
+        return "redirect:/html/backstage.html"; //redirect:/html/backstage.html
+    }
+    @ResponseBody
     @RequestMapping("find")
     public Object find(){
         Logistics_status status = new Logistics_status();
@@ -33,6 +44,7 @@ public class ConsumerController {
 //    String eu_receipt_name, Integer ep_receipt_id, Integer ec_receipt_id,Integer ea_receipt_id,
 //    String eu_receipt_phone, String eu_sender_name, Integer ep_sender_id,Integer ec_sender_id,
 //    Integer ea_sender_id, String eu_sender_phone, Integer eg_id
+    @ResponseBody
     @RequestMapping("save")
     public Object save(){
         LocalDateTime now = LocalDateTime.now();

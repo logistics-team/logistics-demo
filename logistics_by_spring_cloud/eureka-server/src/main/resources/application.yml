@@ -4,7 +4,7 @@ eureka:
   instance:
     hostname: localhost
   client:
-    fetch-registry: false         #false±íÊ¾×Ô¼º¶Ë¾ÍÊÇ×¢²áÖĞĞÄ£¬ÎÒµÄÖ°Ôğ¾ÍÊÇÎ¬»¤·şÎñÊµÀı£¬²¢²»ĞèÒªÈ¥¼ìË÷·şÎñ
-    register-with-eureka: false   #false±íÊ¾²»Ïò×¢²áÖĞĞÄ×¢²á×Ô¼º¡£
+    fetch-registry: false         #falseè¡¨ç¤ºè‡ªå·±ç«¯å°±æ˜¯æ³¨å†Œä¸­å¿ƒï¼Œæˆ‘çš„èŒè´£å°±æ˜¯ç»´æŠ¤æœåŠ¡å®ä¾‹ï¼Œå¹¶ä¸éœ€è¦å»æ£€ç´¢æœåŠ¡
+    register-with-eureka: false   #falseè¡¨ç¤ºä¸å‘æ³¨å†Œä¸­å¿ƒæ³¨å†Œè‡ªå·±ã€‚
     serviceUrl:
       defaultZone: http://localhost:18000/eureka/
