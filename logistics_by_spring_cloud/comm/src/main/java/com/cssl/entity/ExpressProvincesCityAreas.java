@@ -1,16 +1,16 @@
 package com.cssl.entity;
 
-    import java.io.Serializable;
+import java.io.Serializable;
 
 /**
-* <p>
-    * 记录中国所有省市县信息，省市县表
-    * </p>
-*
-* @author Devil
-* @since 2019-09-03
-*/
-    public class ExpressProvincesCityAreas implements Serializable {
+ * <p>
+ * 记录中国所有省市县信息，省市县表
+ * </p>
+ *
+ * @author Devil
+ * @since 2019-09-03
+ */
+public class ExpressProvincesCityAreas implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -34,90 +34,99 @@ package com.cssl.entity;
 
     private String epcaPinyin;
 
-        public Integer getEpcaId() {
+    public Integer getEpcaId() {
         return epcaId;
-        }
+    }
 
-            public void setEpcaId(Integer epcaId) {
+    public void setEpcaId(Integer epcaId) {
         this.epcaId = epcaId;
-        }
-        public String getEpcaName() {
+    }
+
+    public String getEpcaName() {
         return epcaName;
-        }
+    }
 
-            public void setEpcaName(String epcaName) {
+    public void setEpcaName(String epcaName) {
         this.epcaName = epcaName;
-        }
-        public Integer getParentId() {
+    }
+
+    public Integer getParentId() {
         return parentId;
-        }
+    }
 
-            public void setParentId(Integer parentId) {
+    public void setParentId(Integer parentId) {
         this.parentId = parentId;
-        }
-        public String getEpcaAbbreviation() {
+    }
+
+    public String getEpcaAbbreviation() {
         return epcaAbbreviation;
-        }
+    }
 
-            public void setEpcaAbbreviation(String epcaAbbreviation) {
+    public void setEpcaAbbreviation(String epcaAbbreviation) {
         this.epcaAbbreviation = epcaAbbreviation;
-        }
-        public String getEpcaLevel() {
+    }
+
+    public String getEpcaLevel() {
         return epcaLevel;
-        }
+    }
 
-            public void setEpcaLevel(String epcaLevel) {
+    public void setEpcaLevel(String epcaLevel) {
         this.epcaLevel = epcaLevel;
-        }
-        public String getEpcaCitycode() {
+    }
+
+    public String getEpcaCitycode() {
         return epcaCitycode;
-        }
+    }
 
-            public void setEpcaCitycode(String epcaCitycode) {
+    public void setEpcaCitycode(String epcaCitycode) {
         this.epcaCitycode = epcaCitycode;
-        }
-        public Integer getEpcaNumber() {
+    }
+
+    public Integer getEpcaNumber() {
         return epcaNumber;
-        }
+    }
 
-            public void setEpcaNumber(Integer epcaNumber) {
+    public void setEpcaNumber(Integer epcaNumber) {
         this.epcaNumber = epcaNumber;
-        }
-        public String getEpcaLng() {
+    }
+
+    public String getEpcaLng() {
         return epcaLng;
-        }
+    }
 
-            public void setEpcaLng(String epcaLng) {
+    public void setEpcaLng(String epcaLng) {
         this.epcaLng = epcaLng;
-        }
-        public String getEpcaLat() {
+    }
+
+    public String getEpcaLat() {
         return epcaLat;
-        }
+    }
 
-            public void setEpcaLat(String epcaLat) {
+    public void setEpcaLat(String epcaLat) {
         this.epcaLat = epcaLat;
-        }
-        public String getEpcaPinyin() {
-        return epcaPinyin;
-        }
+    }
 
-            public void setEpcaPinyin(String epcaPinyin) {
+    public String getEpcaPinyin() {
+        return epcaPinyin;
+    }
+
+    public void setEpcaPinyin(String epcaPinyin) {
         this.epcaPinyin = epcaPinyin;
-        }
+    }
 
     @Override
     public String toString() {
-    return "ExpressProvincesCityAreas{" +
-            "epcaId=" + epcaId +
-            ", epcaName=" + epcaName +
-            ", parentId=" + parentId +
-            ", epcaAbbreviation=" + epcaAbbreviation +
-            ", epcaLevel=" + epcaLevel +
-            ", epcaCitycode=" + epcaCitycode +
-            ", epcaNumber=" + epcaNumber +
-            ", epcaLng=" + epcaLng +
-            ", epcaLat=" + epcaLat +
-            ", epcaPinyin=" + epcaPinyin +
-    "}";
+        return "ExpressProvincesCityAreas{" +
+                "epcaId=" + epcaId +
+                ", epcaName=" + epcaName +
+                ", parentId=" + parentId +
+                ", epcaAbbreviation=" + epcaAbbreviation +
+                ", epcaLevel=" + epcaLevel +
+                ", epcaCitycode=" + epcaCitycode +
+                ", epcaNumber=" + epcaNumber +
+                ", epcaLng=" + epcaLng +
+                ", epcaLat=" + epcaLat +
+                ", epcaPinyin=" + epcaPinyin +
+                "}";
     }
 }
