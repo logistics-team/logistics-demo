@@ -1,0 +1,1032 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>天天快递官网</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control " content="no-cache,must-revalidate">
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1">
+
+	<meta name="keyword" content="">
+	<meta name="description" content=""><meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="format-detection" content="email=no"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
+	<meta http-equiv="Pragma"   content="no-cache">
+	<link href="css/public.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/mystyle.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/city-picker.css" />
+	<link type="text/css" rel="stylesheet" href="css/common.css">
+	<link type="text/css" rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+	<link type="text/css" rel="stylesheet" href="css/expressServiceTab.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/sweetalert-dev.js"></script>
+	<script type="text/javascript" src="js/goUrl.js"></script>
+	<script type="text/javascript" src="js/env.js"></script>
+
+
+</head>
+<body>
+<div class="wrapper admin-content twolevelWrap">
+	<!--Created by 17120847 on 2018/5/23.-->
+	<div class="logAndRegister">
+		<div class="fixedWid clearfix">
+			<a href="javascript:void(0)" class="fl" onclick="addFavorite();">加入收藏</a>
+			<div  class="fr normal"><a href="/passPortIndex.action?login_type=0">登录</a><span></span><a href="/register.action">注册</a></div>
+			<div style="display:none" class="fr sucess"> <a href="/myOrderNew.action"><span class="username" id="username"></span></a><a class="exit"  href="/j_logout">退出</a></div>
+		</div>
+	</div>
+	<div id="navWrap" class="headerWrap whiteBack commonWrap">
+		<div class="fixedWid">
+			<div class="navWrap clearfix">
+				<div class="logo fl">
+					<a href="/"><img src="images/logo.png" class="logoimg"></a>
+				</div>
+				<div class="fr">
+					<a href="/" class="link">首页</a><span
+						onclick="location.href='/staticFiles/pages/expressServiceTab.html'"
+						class="link kdyw">快递业务
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">增值服务</span> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=hdfk"
+										class="linka">货到付款</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=dzmd"
+										class="linka">电子面单</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=dffw"
+										class="linka">到付服务</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=bjfw"
+										class="linka">保价服务</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=smqj"
+										class="linka">上门取件</a>
+								</div>
+							</div>
+						</span><span
+						onclick="location.href='/staticFiles/pages/placeOrder.html'"
+						class="link khfw">客户服务
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">我要寄件</span>
+									<span class="linka wyjjlink" data-url="/staticFiles/pages/placeOrder.html">我要寄件</span>
+								</div>
+								<div class="content secondcontent">
+									<span class="linka second">我要查询</span>
+									<span class="linka cxydlink" data-url="/staticFiles/pages/queryExpress.html">运单查询</span>
+									<span class="linka cxwdlink" data-url="/staticFiles/pages/queryNetwork.html">网点查询</span>
+									<span class="linka yfcxlink" data-url="/staticFiles/pages/queryPrice.html">运费查询</span>
+								</div>
+							</div>
+						</span><span onclick="location.href='/staticFiles/pages/joiningTT.html'"
+									 class="link jmtt">加盟天天
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">加盟天天</span> <a
+										href="/staticFiles/pages/joiningTT.html?divId=jmxz"
+										class="linka">加盟须知</a> <a
+										href="/staticFiles/pages/joiningTT.html?divId=jmlc"
+										class="linka">加盟流程</a> <a
+										href="/staticFiles/pages/joiningTT.html?divId=jmrx"
+										class="linka">加盟热线</a> <a
+										href="/staticFiles/pages/joiningTT.html?divId=zsqy"
+										class="linka">招商区域</a>
+								</div>
+							</div>
+						</span><span onclick="location.href='/staticFiles/pages/recruitment.html'" class="link rczp">人才招聘
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">人才招聘</span><a
+										href="/staticFiles/pages/recruitment.html?tab=1" class="linka">职位信息</a><a
+										href="/staticFiles/pages/recruitment.html?tab=2" class="linka">招聘介绍</a>
+								</div>
+							</div>
+						</span>
+					<span onclick="window.open('http://wuliu.suning.com')" class="link">苏宁物流</span>
+						<span onclick="location.href='/article/baseArticleAction!aboutTT.action'" class="link gytt">关于天天
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">关于天天</span><span
+										class="linka qyjslink" data-url="/article/baseArticleAction!aboutTT.action#qyjs">企业介绍</span><span class="linka xwzxlink" data-url="/article/baseArticleAction!aboutTT.action#xwzx">新闻中心</span><span
+										class="linka lxwmlink" data-url="/article/baseArticleAction!aboutTT.action#lxwm">联系我们</span>
+								</div>
+							</div>
+						</span><span class="kfdh"><img
+						src="images/kfrx.png" class="kfrx kfrx_1"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- ftl start -->
+
+<script src="js/jquery.validate.js"></script>
+<script src="js/additional-methods.js"></script>
+<script src="js/messages_zh.js"></script>
+<script src="js/city-picker.data.js"></script>
+<script src="js/city-picker.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/jquery.pagination.js"></script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.13&key=a820db6476bc0642dfbf492706a7c989&plugin=AMap.Autocomplete"></script>
+
+<link type="text/css" rel="stylesheet" href="css/renCaiZhaoPin.css">
+<link type="text/css" rel="stylesheet" href="css/pagination.css">
+<script src="js/SnCaptcha.js"></script>
+
+<div style="background:url(images/customerCenter.jpg) no-repeat" class="t_content t_banner">
+    <div class="fixedWid">
+        <h3 class="title">个人中心</h3>
+        <line class="wid20line"></line>
+        <p class="info">天天快递提供快捷、安全、贴心、可靠的快递服务，是您的优质选择</p>
+    </div>
+</div>
+<div class="personalCenterContent">
+    <div class="leftTabContent">
+        <div class="leftMainTitle">个人中心</div>
+        <div class="personInfo">
+            <a href="/myPerson.action">
+                
+                
+                    <img  src="images/0000000000_01.jpg" />
+                
+                <div>155****1419</div>
+
+            </a>
+        </div>
+        <div class="leftMainContent">
+            <a href="/myOrderNew.action"><div class="leftNodeTab"> 我的订单</div></a>
+            <a href="/myOnlineOrder.action"> <div class="leftNodeTab leftNodeTabActive">我要寄件</div></a>
+            <a href="/myAddress.action"><div class="leftNodeTab">我的地址簿</div></a>
+            <a href="/myPerson.action"><div class="leftNodeTab">会员信息</div></a>
+            <a href="/myWorkOrder.action"><div class="leftNodeTab">我的投诉</div></a>
+        </div>
+    </div>
+
+
+    <div class="rightTabContent personRigthCont" style="display: inline-block;">
+        <div class="intelligenceTip"><img src="images/tips.png">请检查拆分地址是否准确，如有遗漏请及时补充</div>
+        <div style="padding: 23px 37px 0 29px;">
+            <form id="orderForm">
+                <input type="hidden" id="custCode" name="orderInfo.custCode" value="7814967" />
+
+                <div class="rightSmallTitle">寄件人信息
+                    <div class="addressBook" style="margin-left: 10px;"><img src="images/zntx.png"><span class="addressBookDesc" onclick="openZnjxAddressBook('01')">智能填写地址</span></div>
+                    <div class="addressBook"><img src="images/addressBook.png"><span class="addressBookDesc" onclick="openAddressBook('01')">地址簿</span></div>
+                </div>
+                <div class="rightinputRow">
+                    <div class="leftinputclumn"><span class="forRedTip">*</span>
+                        <label>寄件地区</label>
+                        <div class="area_div">
+                            <input placeHolder="请选择省/市/区" id="sendArea" name="orderInfo.sendArea" readonly type="text" />
+                            <input type="hidden" id="sendProvinceCode" name="orderInfo.sendProvinceCode" />
+                            <input type="hidden" id="sendCityCode" name="orderInfo.sendCityCode" />
+                            <input type="hidden" id="sendRegionCode" name="orderInfo.sendRegionCode" />
+                            <input type="hidden" id="sendProvinceName" name="orderInfo.sendProvinceName" />
+                            <input type="hidden" id="sendCityName" name="orderInfo.sendCityName" />
+                            <input type="hidden" id="sendRegionName" name="orderInfo.sendRegionName" />
+                        </div>
+                    </div>
+                    <div class="rightinputclumn"><span class="forRedTip">*</span>
+                        <label>详细地址</label>
+                        <input placeHolder="请输入详细地址" class="detailedAddress" id="sendAddress" name="orderInfo.sendAddress">
+                    </div>
+                </div>
+                <div class="rightinputRow">
+                    <div class="leftinputclumn"><span class="forRedTip">*</span>
+                        <label>姓名</label>
+                        <input placeHolder="请输入寄件人姓名" id="sendName" name="orderInfo.sendName" />
+                    </div>
+                    <div class="rightinputclumn"><span style="margin-left: 11px;" class="forRedTip"></span>
+                        <label>座机电话</label>
+                        <input placeHolder="请输入寄件人座机电话" id="sendTel" name="orderInfo.sendTel" />
+                    </div>
+                </div>
+                <div class="rightinputRow">
+                    <div class="leftinputclumn"><span class="forRedTip">*</span>
+                        <label>手机</label>
+                        <input placeHolder="请输入手机号" id="sendPhone" name="orderInfo.sendPhone" />
+                    </div>
+                    <div class="rightinputclumn saveToAddr">
+                        <span class="checkboxDom noChecked ckClass">
+                            <input type="checkbox" id="saveAddress01" value="01" />
+                        </span>保存到地址簿
+                    </div>
+                    
+                </div>
+
+                <div class="rightSmallTitle">收件人信息
+                    <div class="addressBook" style="margin-left: 10px;"><img src="images/zntx.png"><span class="addressBookDesc" onclick="openZnjxAddressBook('02')">智能填写地址</span></div>
+                    <div class="addressBook"><img src="images/addressBook.png"><span class="addressBookDesc" onclick="openAddressBook('02')">地址簿</span></div>
+                </div>
+                <div class="rightinputRow">
+                    <div class="leftinputclumn"><span class="forRedTip">*</span>
+                        <label>收件地区</label>
+                        <div class="area_div">
+                            <input placeHolder="请选择省/市/区" id="receiveArea" name="orderInfo.receiveArea" readonly type="text" />
+                            <input type="hidden" id="receiveProvinceCode" name="orderInfo.receiveProvinceCode" />
+                            <input type="hidden" id="receiveCityCode" name="orderInfo.receiveCityCode" />
+                            <input type="hidden" id="receiveRegionCode" name="orderInfo.receiveRegionCode" />
+                            <input type="hidden" id="receiveProvinceName" name="orderInfo.receiveProvinceName" />
+                            <input type="hidden" id="receiveCityName" name="orderInfo.receiveCityName" />
+                            <input type="hidden" id="receiveRegionName" name="orderInfo.receiveRegionName" />
+                        </div>
+                    </div>
+                    <div class="rightinputclumn"><span class="forRedTip">*</span>
+                        <label>详细地址</label>
+                        <input placeHolder="请输入详细地址" id="receiveAddress" name="orderInfo.receiveAddress" class="detailedAddress">
+                    </div>
+                </div>
+                <div class="rightinputRow">
+                    <div class="leftinputclumn"><span class="forRedTip">*</span>
+                        <label>姓名</label>
+                        <input placeHolder="请输入收件人姓名." id="receiveName" name="orderInfo.receiveName" />
+                    </div>
+                    <div class="rightinputclumn"><span class="forRedTip">*</span>
+                        <label>座机电话</label>
+                        <input placeHolder="收件人手机号和座机电话必填一项" id="receiveTel" name="orderInfo.receiveTel" />
+                    </div>
+                </div>
+                <div class="rightinputRow">
+                    <div class="leftinputclumn"><span class="forRedTip">*</span>
+                        <label>手机</label>
+                        <input placeHolder="收件人手机号和座机电话必填一项" id="receivePhone" name="orderInfo.receivePhone" />
+                    </div>
+                    <div class="rightinputclumn saveToAddr">
+                        <span class="checkboxDom noChecked ckClass">
+                            <input type="checkbox" id="saveAddress02" value="02">
+                        </span>保存到地址簿
+                    </div>
+                </div>
+
+                <div class="rightSmallTitle">物品信息</div>
+                <div class="leftinputclumn"><span class="forRedTip">*</span>
+                    <label>物品类型</label>
+                    <div class="wpType" style="padding-left: 16px;width:740px;">
+                        <a class="noActiveRemarks remarksBtn activeRemarks">文件</a>
+                        <a class="noActiveRemarks remarksBtn">书籍</a>
+                        <a class="noActiveRemarks remarksBtn">食品</a>
+                        <a class="noActiveRemarks remarksBtn">化妆品</a>
+                        <a class="noActiveRemarks remarksBtn">服饰</a>
+                        <a class="noActiveRemarks remarksBtn">日用品</a>
+                        <a class="noActiveRemarks remarksBtn">医药类产品</a>
+                        <a class="noActiveRemarks remarksBtn nextRow">易碎品</a>
+                        <a class="noActiveRemarks remarksBtn nextRow">其他</a>
+                    </div>
+                    <input type="hidden" id="goodsType" name="orderInfo.goodsType" value="文件" />
+                </div>
+                <div class="rightinputRow">
+                    <div class="leftinputclumn insuredContentRow"><span class="forRedTip">*</span>
+                        <label>物品重量</label>
+                        <input placeHolder="0.1-50KG之间" id="goodsWeight" name="orderInfo.goodsWeight" /><span class="unit">KG</span>
+                        <span class="checkboxDom noChecked"><input type="checkbox" id="insuranceCheck"></span><span>保价预估</span>
+                        <span class="insuredContent">保值<input placeHolder="声明价值，1-5000间整数" id="insuranceMoney" name="orderInfo.insuranceMoney"><span>元</span></span>
+                        <input type="button" class="insuredBtn forBtn"  name="orderInfo.transportMoney" onclick="" value="运费预估" disabled="disabled" title="请输入收/寄件人地区、物品重量！" />
+                    </div>
+                </div>
+                <div class="rightinputRow specilaRemark">
+                    <div id="special-remarks" class="leftinputclumn"><span class="forRedTip">&nbsp;&nbsp;</span>
+                        <label>特殊备注</label><a class="noActiveRemarks remarksBtn" style="margin-left: 1px;">请带纸箱</a><a class="noActiveRemarks remarksBtn">需爬楼</a><a class="noActiveRemarks remarksBtn">缺文件袋</a><a class="noActiveRemarks remarksBtn">来前电话</a><a class="noActiveRemarks remarksBtn">我没胶带</a>
+                    </div>
+                    <input type="hidden" id="specialRemarks" name="orderInfo.specialRemarks" />
+                </div>
+                <textarea placeHolder="易碎品、液体、贵重物品等特别说明" class="prohibitedInput" id="goodsRemarks" name="orderInfo.goodsRemarks" maxlength="100"></textarea><a href="javascript:void(0)" class="prohibitedGood whiteBtn">违禁品须知</a>
+                <div class="readAgree">
+                    <span class="checkboxDom noChecked">
+                          <input type="checkbox" id="agreeProtocols"></span><span>我已阅读并同意</span><span class="blueFont kdfuxybtn">《快递服务协议》
+                    </span>
+                </div>
+
+                <div class="forSubmitDiv">
+                    <button id="submitOrder" class="submitOrder" onclick="submitFunc('/myOnlineOrder.action')" disabled="disabled" style="color: #B3B3B3;">提交订单</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--选择地址弹出框-->
+<div class="selectAddressModel" id="addressBookDiv">
+    <div class="selectAddressGroup">
+        <input type="hidden" id="pageNum" name="pageNum" value="" />
+        <input type="hidden" id="pageSize" name="pageSize" value="" />
+        <input type="hidden" id="totalCount" name="totalCount" value="" />
+        <input type="hidden" id="pageCount" name="pageCount" value="" />
+        <div class="selectModelTitle">选择<span class="addressSpan"></span>地址<img src="images/close.png" class="closeModel"></div>
+        <div class="selectModelContent" id="selModelContent">
+            <div class="queryResultOrderTable">
+                <table border="1" id="addressBookTable">
+                    <thead>
+                    <tr>
+                        <th width="49px;"></th>
+                        <th width="129px;">姓名</th>
+                        <th width="170px;">联系方式</th>
+                        <th width="237px;">地址</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="M-box1 pageCont"></div>
+            <div class="selectModelConfirm"><a href="javascript:void(0)" class="forBtn ConfirmBtn" onclick="selFunc()">确认</a></div>
+        </div>
+    </div>
+</div>
+<div class="selectNoAddressModel">
+    <div class="selectNoAddressGroup">
+        <div class="selectModelTitle">选择<span class="addressSpan"></span>地址<img src="images/close.png" class="closeModel"></div>
+        <div class="selectModelContent">
+            <div>地址薄空空的，点我<a href="javascript: void(0);" class="addAddrBtn" onclick="toAddAddressFunc()">新增<span class="addressSpan"></span>地址</a></div>
+            
+        </div>
+    </div>
+</div>
+<!-- 弹出框背景色 -->
+<div class="mask"></div>
+
+<!-- 运费预估 -->
+<div id="transportPriceDiv">
+    <div class="rightSmallTitle queryfreightTitle">运费预估
+        <img src="images/close.png" id="closeBtn" class="closeModel2">
+    </div>
+    <div class="queryResultTable">
+        <table border="1" id="transportPriceTable">
+            <thead>
+            <tr>
+                <th>服务产品</th>
+                <th>重量（kg）</th>
+                <th>首重（元/kg）</th>
+                <th>续重（元/kg）</th>
+                <th>保费（元）</th>
+                <th>预计运费（元）</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- 违禁品须知 -->
+<div id="wjpxzModel" class="wjpxzModel kfzx_kfzl">
+    <div class="wjpxzModel_group">
+        <div class="netModelTitle">违禁品须知<img src="images/close.png" class="closeModel"></div>
+        <div class="wjpxzcontent">
+            <p class="info"><i class="circle"></i>各类武器、弹药，如枪支、弹药、炮弹、手榴弹、地雷、炸弹等；</p>
+            <p class="info"><i class="circle"></i>各类以爆炸性物品，如雷管、炸药、鞭炮等；</p>
+            <dl class="dl clearfix">
+                <dt class="dt fl"></dt>
+                <dd class="dd">各类易燃烧性物品、包括液体、气体和固体，如汽油 、煤油、桐油、酒精、生漆、柴油、气雾剂、气体打火机、瓦斯气瓶、硫、硫磺、火柴等；</dd>
+            </dl>
+            <p class="info"><i class="circle"></i>各类易腐蚀性物品，如火硫酸、盐酸、有机溶剂、农药、双氧水、危险化学品等；</p>
+            <p class="info"><i class="circle"></i>各类放射性元素及容器，如铀、钴、锡、钚等；各类烈性元素及容器，如铊、氯化物、砒霜等；</p>
+            <p class="info"><i class="circle"></i>各类麻醉药物，如鸦片(包括罂粟壳、花、苞、叶)、吗啡、可卡因、海洛因、大麻、麻黄素及其它制品等；</p>
+            <p class="info"><i class="circle"></i>各类化制品和传染性物品，如炭疽、危险性病菌、医药用废物等；</p>
+            <p class="info"><i class="circle"></i>各类危害国家安全和社会政治稳定以及淫秽的出版物、宣传品、印刷品等；</p>
+            <p class="info"><i class="circle"></i>各种妨害公共卫生的物品，如尸骨、动物器官、肢体、未经硝制的兽皮、未经药制的兽骨等；</p>
+            <dl class="dl clearfix">
+                <dt class="dt fl"></dt>
+                <dd class="dd">国家法律、法规、行政规章明令禁止流通、寄递或进出境的物品，如国家秘密文件和资料、国家货币及伪造 的货币和有价证券、仿真武器、管制刀具、珍贵文物、病危野生动物及其制品等； 包装不妥，可能危害人身安全、污染或者损毁其他寄递件、设备的物品等； 各寄达过(地区)禁止寄递进口的物品等，其他禁止寄递的物品；</dd>
+            </dl>
+            <p class="info"><i class="circle"></i>其他物品：参考国家发布的各类禁寄品名录。</p>
+            <div class="btngroup"><a class="submitOrder blueBtn">确定</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- 天天快递服务协议 -->
+<div id="ttkdfwxy" class="wjpxzModel">
+    <div class="wjpxzModel_group">
+        <div class="netModelTitle">天天快递服务协议<img src="images/close.png" class="closeModel"></div>
+        <div class="wjpxzcontent ttkdfwxycontent">
+
+            <p style="line-height:32px;background:white"><span style="font-family:微软雅黑;
+color:#333;background:white">尊敬的用户（以下简称“您”）：</span></p>
+
+            <p style="text-indent:24.0pt;line-height:32px;background:white"><span style="font-family:微软雅黑;color:#333;background:white">您好！感谢选择天天快递，天天快递有限公司将依据以下服务协议给您提供更加满意的快递服务。<b>请您先仔细阅读本协议内容，尤其是字体加粗部分，如您对本协议内容或页面提示信息有疑问，请勿进行下一步操作。您通过页面点击、勾选或其它方式确认即表示您已同意本协议。</b></span></p>
+
+            <p class="MsoNormal" style="margin-left:0cm;text-align:left;
+text-indent:0cm;line-height:32px" align="left"><strong><span style="font-size:
+12.0pt;line-height:32px;font-family:微软雅黑;color:#282828" lang="EN-US">一、</span></strong><strong><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white">服务时间</span></strong></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><strong><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white;font-weight:normal" lang="EN-US">1</span></strong><strong><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white;font-weight:normal">、预约时间</span></strong></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px;" align="left"><span style="font-size:14px;font-family:微软雅黑;background:white" lang="EN-US">00:00-09:00</span><span style="font-size:14px;font-family:微软雅黑;background:white">下单我司将在<span lang="EN-US">09</span>：<span lang="EN-US">30</span>前与您电话预约上门取件时间；</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px;" align="left"><span style="font-size:14px;font-family:微软雅黑;background:white" lang="EN-US">09:00-17:00</span><span style="font-size:14px;font-family:微软雅黑;background:white">下单我司将在<span lang="EN-US">10</span>分钟内与您电话预约上门取件时间；</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px;" align="left"><span style="font-size:14px;font-family:微软雅黑;background:white" lang="EN-US">17:00-</span><span style="font-size:14px;font-family:微软雅黑;background:white">次日<span lang="EN-US">09:00</span>下订单我司将在次日<span lang="EN-US">09:30</span>前与您电话预约上门取件时间（主要城市已支持预约<span lang="EN-US">2</span>小时内快速上门揽收）如未在上述时间内接到预约电话，可致电<span lang="EN-US">4001888888</span>咨询，客服服务时间：<span lang="EN-US">08:30-17:30</span>。</span></p>
+
+            <p class="MsoNormal" style="margin-left:0cm;text-align:left;
+text-indent:0cm;line-height:32px;" align="left"><span style="font-size:14px;font-family:微软雅黑" lang="EN-US">2、</span><span style="font-size:14px;font-family:微软雅黑;background:white">揽收时间</span></p>
+
+            <p style="background:white;line-height:32px;"><span style="font-family:微软雅黑;background:white">当日<span lang="EN-US">17</span>：<span lang="EN-US">00</span>前下的订单，当天预约揽收；</span></p>
+
+            <p style="background:white"><span style="font-family:微软雅黑;background:white">当日<span lang="EN-US">17</span>：<span lang="EN-US">00</span>后下的订单，视情况安排揽收时间或预约次日揽收。</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><strong><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white">二、服务费用</span></strong></p>
+
+            <p style="line-height:32px;background:white"><span style="font-family:
+微软雅黑;color:#333;background:white" lang="EN-US">1</span><span style="font-family:微软雅黑;
+color:#333;background:white">、寄件费用：按照天天快递官方网站上公布或双方书面协议约定计算标准收取；</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px;
+text-autospace:none" align="left"><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑;color:#333;background:white" lang="EN-US">2</span><span style="line-height:32px;font-family:微软雅黑;color:#333;background:white">、保价服务：</span><span style="font-size:14px;line-height:32px;font-family:微软雅黑">是指若您针对配送的物品向天天快递申请保价，并支付相应的费用，当物品在配送过程中</span><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:black">因天天快递原因发生丢失、损毁</span><span style="font-size:14px;line-height:32px;font-family:微软雅黑">时，我司按照物品的申明价格赔偿相应损失；</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white" lang="EN-US">3</span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑;color:#333;background:white">、保价费用：</span><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white">保价快件除支付快递费外还须支付保价费，保价费为申报内件价值的<span lang="EN-US">1</span></span><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:black;
+background:white" lang="EN-US">%(</span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑;color:#333;background:white">双方另有约定按约定收取保价费<span lang="EN-US">)</span>保价费须当面支付，单票内件价值不得超过<span lang="EN-US">5000</span>人民币，计费公式：申明价值</span><span style="line-height:32px;font-family:微软雅黑" lang="EN-US">*</span><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑">标准服务费率，计费按四舍五入取整</span><span class="MsoCommentReference"><span style="font-size:14px;line-height:
+125%;font-family:微软雅黑" lang="EN-US">,</span></span><span style="font-size:14px;line-height:
+125%;font-family:微软雅黑">最低<span lang="EN-US">1</span>元，不足<span lang="EN-US">1</span>元的按<span lang="EN-US">1</span>元收取；</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white" lang="EN-US">4</span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑;color:#333;background:white">、适用范围：</span><span style="font-size:14px;line-height:32px;font-family:微软雅黑">中国大陆地区。</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><strong><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white">三、赔偿原则、标准及理赔流程</span></strong></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white" lang="EN-US"><strong>1、</strong></span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑;color:#333;background:white"><strong>保价货物赔偿标准：保价货物，货物全部灭失，按货物保价声明价格赔偿；货物部分毁损或灭失，按实际损失赔偿；货物实际损失高于声明价格的，按声明价格赔偿；货物能修复的，按修理费加维修取送费赔偿；保价只是针对物品的直接损失承担赔偿责任，物品价值之外的损失天天快递不负责赔偿。</strong></span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white" lang="EN-US"><strong>2</strong></span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑;color:#333;background:white"><strong>、非保价货物赔偿标准：非保价货物，在寄递过程中发生快件延误、丢失、损毁时，您有权追究天天快递责任并提出赔偿，但不承担您可能获得的收益、实际用途、商业价值等任何间接损失，具体标准如下：</strong></span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white" lang="EN-US"><strong>2.1</strong></span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑;color:#333;background:white"><strong> 快件延误的，为您退回本次运费；</strong></span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white" lang="EN-US"><strong>2.2</strong></span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑;color:#333;background:white"><strong> 快件丢失、毁损的，在运费5倍以内，赔偿您的直接损失。</strong></span></p>
+
+            <p class="MsoNormal" style="margin-left:0cm;text-align:left;
+text-indent:0cm;line-height:32px" align="left"><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑" lang="EN-US">3</span><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑">、理赔流程</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑">您可向寄件网点，或天天快递全国服务热线、天天快递官方微信公众号客服等渠道发起理赔申请，并提供以下理赔材料：</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white">・</span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑">寄件人身份证复印件或照片</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white">・</span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑">货物价值证明</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white">・</span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑">运单发件联图片或电子存根图片</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white">・</span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑">银行卡号及开户行名称或其他金融账户号</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white">・</span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑">转让或指定其他人获赔时需提供转让声明</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑" lang="EN-US"><strong>4</strong></span><span style="font-size:14px;line-height:32px;font-family:微软雅黑"><strong>、您自寄递货物之日起1年内，未提出赔偿要求的，视为放弃索赔。</strong></span><br>
+</span><strong><span style="font-size:14px;line-height:32px;font-family:微软雅黑;
+color:#333;background:white">四、寄件人须知</span></strong></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;333" lang="EN-US">1</span><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;333">、安全检查：依照国家法律法规，快递公司有权对您寄递的快件进行开箱验视，请您配合，对于明文禁止寄递的物品我司依法将不予揽收；</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;333" lang="EN-US">2</span><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;333">、如实申报义务：您办理保价时应如实申报配送货物内容、数量、价值，天天快递无审核配送货物价值的能力和义务；</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;333" lang="EN-US">3</span><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;333">、实名制寄件：按照国家规定，寄件人应当出示有效证件进行实名制寄件；</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;333" lang="EN-US">4</span><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;333">、运单填写：寄件人需准确、完整填写快递运单或打印运单，如实地填写寄件人和收件人的姓名、地址、联系电话以及内件品名、数量、付费方式。因寄件人填写有误，造成快件延误、无法送达或无法退还，由寄件人承担责任；</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;333" lang="EN-US"><strong>5</strong></span><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;333"><strong>、快件包装：寄件人有义务应当根据所寄快件的性质、状态和重量，对快件进行妥善的包装，保证其坚固、完好，在运输过程中能防止包装破裂、內物漏出、散失；防止因码放、摩擦、震荡或因气压、气温变化而引起货物损坏或变质，因寄件人包装不当造成快件损毁、灭失的由寄件人承担责任；</strong></span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;333" lang="EN-US">6</span><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;333">、寄递时限：按国家相关标准执行；</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;333" lang="EN-US">7</span><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;333">、快件签收：按寄件人填写的收件人姓名、进行投递，经收件人本人或收件人认可的代签收人签字或盖章后视为送达；</span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><b><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white">五、天天免责条款</span></b></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="line-height:32px;font-family:微软雅黑;color:#333;333"><b>无论如何，针对以下情形，天天快递不予理赔：</b></span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white" lang="EN-US"><strong>1</strong></span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑;color:#333;background:white"><b>、不可抗力因素造成的快件损失及寄件人或收件人过错造成的快件损失的；</b></span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white" lang="EN-US"><strong>2</strong></span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑;color:#333;background:white"><b>、包裹外包装未破损，内件丢失或破损的；</b></span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white" lang="EN-US"><strong>3</strong></span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑;color:#333;background:white"><b>、因您、收件人的自身过错造成的，如您没有如实申报交运物资料，您交付的交运物属于法律法规明文规定禁止运输或限制运输的，收件人迟延受领交运物等情形，造成的查扣、货件丢失损毁等情形；</b></span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white" lang="EN-US"><strong>4</strong></span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑;color:#333;background:white"><b>、行政行为或司法行为而使货物遭受查封扣押、罚没的；</b></span></p>
+
+            <p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;
+background:white" lang="EN-US"><strong>5</strong></span><span style="font-size:14px;line-height:32px;
+font-family:微软雅黑;color:#333;background:white"><b>、货物自身潜在缺陷、自然磨损、自然损耗造成损失的。</b></span></p>
+
+            <!--<p class="MsoNormal" style="text-align:left;line-height:32px" align="left"><span style="font-size:14px;line-height:32px;font-family:微软雅黑;color:#333;;-->
+            <!--background:white" lang="EN-US"><br>-->
+            </span><strong><span style="font-size:14px;line-height:32px;font-family:微软雅黑;
+color:#333;background:white">六、禁寄规定</span></strong></p>
+
+            <p style="line-height:32px;background:white"><span style="font-family:微软雅黑;
+color:#333;background:white">禁寄物品是指国家法律、法规禁止寄递的物品，主要包括以下：</span></p>
+
+            <p class="MsoNormal" style="line-height:32px"><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑;color:#333;background:white">・各类武器、弹药，如枪支、弹药、炮弹、手榴弹、地雷、炸弹等；</span></p>
+
+            <p class="MsoNormal" style="line-height:32px"><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑;color:#333;background:white">・各类以爆炸性物品，如雷管、炸药、鞭炮等；</span></p>
+
+            <p class="MsoNormal" style="line-height:32px"><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑;color:#333;background:white">・各类易燃烧性物品、包括液体、气体和固体，如汽油
+、煤油、桐油、酒精、生漆、柴油、气雾剂、气体打火机、瓦斯气瓶、硫、硫磺、火柴等；</span></p>
+
+            <p class="MsoNormal" style="line-height:32px"><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑;color:#333;background:white">・各类易腐蚀性物品，如火硫酸、盐酸、有机溶剂、农药、双氧水、危险化学品等；</span></p>
+
+            <p class="MsoNormal" style="line-height:32px"><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑;color:#333;background:white">・各类放射性元素及容器，如铀、钴、锡、钚等；各类烈性元素及容器，如铊、氯化物、砒霜等；</span></p>
+
+            <p class="MsoNormal" style="line-height:32px"><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑;color:#333;background:white">・各类麻醉药物，如鸦片<span lang="EN-US">(</span>包括罂粟壳、花、苞、叶<span lang="EN-US">)</span>、吗啡、可卡因、海洛因、大麻、麻黄素及其它制品等；</span></p>
+
+            <p class="MsoNormal" style="line-height:32px"><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑;color:#333;background:white">・各类化制品和传染性物品，如炭疽、危险性病菌、医药用废物等；</span></p>
+
+            <p class="MsoNormal" style="line-height:32px"><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑;color:#333;background:white">・各类危害国家安全和社会政治稳定以及淫秽的出版物、宣传品、印刷品等；</span></p>
+
+            <p class="MsoNormal" style="line-height:32px"><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑;color:#333;background:white">・各种妨害公共卫生的物品，如尸骨、动物器官、肢体、未经硝制的兽皮、未经药制的兽骨等；</span></p>
+
+            <p class="MsoNormal" style="line-height:32px"><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑;color:#333;background:white">・国家法律、法规、行政规章明令禁止流通、寄递或进出境的物品，如国家秘密文件和资料、国家货币及伪造
+的货币和有价证券、仿真武器、管制刀具、珍贵文物、病危野生动物及其制品等；</span></p>
+
+            <p class="MsoNormal" style="line-height:32px"><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑;color:#333;background:white">・包装不妥，可能危害人身安全、污染或者损毁其他寄递件、设备的物品等；</span></p>
+
+            <p class="MsoNormal" style="line-height:32px"><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑;color:#333;background:white">・各寄达过<span lang="EN-US">(</span>地区<span lang="EN-US">)</span>禁止寄递进口的物品等，其他禁止寄递的物品；</span></p>
+
+            <p style="line-height:32px;background:white"><span style="font-family:微软雅黑;
+color:#333;background:white">・</span><span style="font-family:微软雅黑;color:#333;;
+background:white">其他物品：参考国家发布</span><span style="font-family:微软雅黑;color:black;
+background:white">的各类禁寄品名录。</span></p>
+
+            <p class="MsoNormal" style="line-height:32px"><b><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑;color:#333;background:white">七、注意事项</span></b></p>
+
+            <p class="MsoNormal" style="line-height:32px"><span style="font-size:14px;
+line-height:32px;font-family:微软雅黑">本协议履行过程中如发生争议，双方应友好协商解决。<b>如协商不成，应向南京市玄武区人民法院提起诉讼。</b></span></p>
+
+            <p style="line-height:32px;background:white"><span style="font-family:
+微软雅黑;color:#333;background:white" lang="EN-US">&nbsp;</span></p>
+            <div class="btngroup"><a class="submitOrder blueBtn">确定</a></div>
+        </div>
+    </div>
+</div>
+
+<div class="reg-protocol" id="writeAddrModel">
+    <div class="protocolmask"></div>
+    <div class="content">
+        <div class="head">智能填写地址<a href="javascript:;"></a></div>
+        <div class="body">
+            <div class="intelligenceWriteRow">
+                <textarea id="intelligenceWrite" placeholder="粘贴整段地址，自动识别姓名、电话和地址，例：小天天， 13298934285，江苏省南京市玄武区苏宁总部"></textarea>
+                <span class="showLength"><span class="surplusLen">0</span>/150</span>
+            </div>
+            <div class="disableTip">请输入要解析的内容！</div>
+            <div class="operateBtnRow">
+                <button class="confirmSubmit" style="margin-left:148px;">确定</button>
+                <button class="cancleSubmit">取消</button>
+            </div>
+            <input type="hidden" id="znType" value="01"/>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    // 智能填写地址验证
+    $(document).on('click','#writeAddrModel .confirmSubmit',function() {
+        if ($('#writeAddrModel #intelligenceWrite').val() === '') {
+            $('#writeAddrModel .disableTip').show().prev().find('textarea').css('borderColor','#FF5858')
+        } else {
+            $.ajax({
+                type : "post",
+                url : "/subscriptionBusiness!addressResolution.action",
+                dataType: "JSON",
+                data:{"addressInfo":$('#writeAddrModel #intelligenceWrite').val()},
+                success : function(res) {
+                    if(res.code=="1000"){
+                        setAddFuncZntx(res.data,$('#znType').val());
+                        $('.reg-protocol').hide()
+                        $(".city-picker-dropdown").hide();  // 防止地址控件弹出
+                        $('.intelligenceTip').slideDown(500);
+                        setTimeout(function () {
+                            $('.intelligenceTip').slideUp(500)
+                        }, 5000);
+                    }else{
+                        $('#writeAddrModel .disableTip').show().prev().find('textarea').css('borderColor','#FF5858');
+                        $('#writeAddrModel .disableTip').html(res.msg);
+                    }
+                },
+                error:function(data){
+                    swal("", "登录校验异常！", "error");
+                }
+            });
+        }
+        $('#writeAddrModel .content').css('marginTop', -$('#writeAddrModel .content').height()/2)
+    })
+
+    // 设置地址
+    function setAddFuncZntx(aBook, aType) {
+        var auto1;
+        var auto2;
+        var sendAreaOld = "";
+        var receiveAreaOld = "";
+        var addType;
+        if (aType == "01") {    // 寄件
+            addType = "send";
+        } else if (aType == "02") { // 收件
+            addType = "receive";
+        }
+        $("#" + addType + "Name").val(aBook.rname);
+        $("#" + addType + "ProvinceCode").val(aBook.province);
+        $("#" + addType + "ProvinceName").val(aBook.provinceCode);
+        $("#" + addType + "CityCode").val(aBook.cityCode);
+        $("#" + addType + "CityName").val(aBook.city);
+        $("#" + addType + "RegionCode").val(aBook.countyCode);
+        $("#" + addType + "RegionName").val(aBook.county);
+        $("#" + addType + "Address").val(aBook.address);
+        var checkTel = /^\d{11}$/g;
+        if(checkTel.test(aBook.telenum)){
+            $("#" + addType + "Phone").val(aBook.telenum);
+        }else{
+            $("#" + addType + "Tel").val(aBook.telenum);
+        }
+        $("#" + addType + "Area").citypicker("reset");
+        $("#" + addType + "Area").citypicker("destroy");
+        $("#" + addType + "Area").citypicker({
+            province: aBook.province,
+            city: aBook.city,
+            district: aBook.county,
+            onChange:function(){
+                transportPriceCheckFunc();
+                searchAmap(aType);
+            }
+        });
+    }
+
+
+    // 关闭地址弹框
+    $(document).on('click','.reg-protocol .head a, .protocolmask, #writeAddrModel .cancleSubmit',function() {
+        $('.reg-protocol').hide()
+    })
+    // 打开弹框
+    function openZnjxAddressBook(n) {
+        $('#intelligenceWrite').val('').css('borderColor', '#E0E0E0').parent().next().hide()
+        $('#writeAddrModel').show()
+        $('#writeAddrModel .surplusLen').text('0')
+        $('#writeAddrModel .content').css('marginTop', -$('writeAddrModel .content').height()/2)
+        $('#znType').val(n)
+    }
+    $(function() {
+        /*字数限制*/
+        $("#intelligenceWrite ").on("input propertychange", function() {
+            var _val = $(this).val()
+            if (_val.length > 150) {
+                $(this).val(_val.substring(0, 150));
+                $(this).next().find('.surplusLen').text(150);
+            }else{
+                $(this).next().find('.surplusLen').text(_val.length);
+            }
+        })
+        $(".ckClass").click(function() {
+            var $this = $(this);
+            if ($this.hasClass("hasChecked")) {
+                return;
+            }
+            var aType = $this.find("input").val();
+            $.ajax({
+                type : "post",
+                url : "/myAddress!addresMaxCountCheck.action",
+                data : {"addressType": aType},
+                dataType: "JSON",
+                success : function(data) {
+                    if (data != null) {
+                        if (data.returnStatus == "02") {
+                            var errorMsg = "";
+                            if (aType == "01") {
+                                errorMsg = "您的寄件地址薄条数已达上限！";
+                            } else {
+                                errorMsg = "您的收件地址薄条数已达上限！";
+                            }
+                            $this.find("input").prop("checked", false);
+                            $this.removeClass("hasChecked").addClass("noChecked");
+                            swal("", errorMsg, "error");
+                        }
+                    } else {
+                        swal("", "地址数量最大值校验异常，请稍后再试！", "error");
+                    }
+                },
+                error:function(data){
+                    swal("", "提交失败！", "error");
+                }
+            });
+        });
+    });
+
+    // 初始化分页控件
+    function initPaginationFunc(totalData, showData, current, pageCount) {
+        if (totalData != 0) {
+            $('.M-box1').pagination({
+                totalData: totalData,
+                showData: showData,
+                current: current,
+                coping: false,
+                homePage: '首页',
+                endPage: '末页',
+                keepShowPN: false,
+                prevContent: '上一页',
+                nextContent: '下一页',
+                mode: "unfixed",
+                count: 3
+            });
+            $(".pageCont").prepend('<a href="javascript:;" data-page="1" class="jumpClass">首页</a>');
+            $(".pageCont").append('<a href="javascript:;" data-page="' + pageCount + '" class="jumpClass">尾页</a>');
+        }
+    }
+
+    // 打开选择地址簿
+    function openAddressBook(addressType) {
+        var pageNum = $("#pageNum").val();
+        var pageSize = $("#pageSize").val();
+        $.ajax({
+            type: "post",
+            url: "/myAddress!queryAddressBookList.action",
+            data: {"addressType": addressType, "pageNum": pageNum, "pageSize": pageSize},
+            dataType: "JSON",
+            success: function (data) {
+                if (data != null) {
+                    if (data.returnStatus == "01") {
+                        $("#pageNum").val(data.pageNum);
+                        $("#pageSize").val(data.pageSize);
+                        $("#totalCount").val(data.totalCount);
+                        $("#pageCount").val(data.pageCount);
+                        initPaginationFunc(data.totalCount, data.pageSize, data.pageNum, data.pageCount);
+                        // 点击分页
+                        $(".M-box1").find("a").click(function() {
+                            var dataPage = $(this).attr("data-page");
+                            if (typeof(dataPage) != "undefined") {  // 点击具体的页码
+                                $("#pageNum").val(dataPage);
+                            } else {    // 点击“上一页”或“下一页”
+                                if ($(this).attr("class") == "prev") {
+                                    $("#pageNum").val(parseInt($("#pageNum").val()) - 1);
+                                } else if ($(this).attr("class") == "next"){
+                                    $("#pageNum").val(parseInt($("#pageNum").val()) + 1);
+                                }
+                            }
+                            openAddressBook(toAddressType);
+                        });
+                        showAddressBook(data.addressBookList, addressType);
+                    } else if (data.returnStatus == "02") {
+                        swal("", data.returnMsg, "warning");
+                    }
+                } else {
+                    swal("", "操作异常，请稍后再试！", "warning");
+                }
+            },
+            error: function (data) {
+                swal("", "提交失败！", "error");
+            }
+        });
+    }
+
+    // 展示地址簿
+    var toAddressType;
+    function showAddressBook(addressBookList, addressType) {
+        toAddressType = addressType;
+        if ("01" == addressType) {
+            $(".addressSpan").html("寄件");
+        } else {
+            $(".addressSpan").html("收件");
+        }
+        if (addressBookList != null && addressBookList.length > 0) {
+            clearFunc();
+            $.each(addressBookList, function(i, ab) {
+                var x = document.getElementById("addressBookTable").insertRow();
+                var td0 = x.insertCell(0);
+                var td1 = x.insertCell(1);
+                var td2 = x.insertCell(2);
+                var td3 = x.insertCell(3);
+                $(td0).addClass('tdChecked');
+                if (ab.default_type == "01") {  // 默认地址
+                    td0.innerHTML = '<div class="inputRadio radiohasChecked"><input type="radio" class="addClass" name="addressBookRadio" aid="' + ab.id + '" addresstype="' + ab.address_type + '" checked="checked"></div>';
+                } else {
+                    td0.innerHTML = '<div class="inputRadio radioNoChecked"><input type="radio" class="addClass" name="addressBookRadio" aid="' + ab.id + '" addresstype="' + ab.address_type + '"></div>';
+                }
+
+                td1.innerHTML = ab.name;
+                td2.innerHTML = ab.phone;
+                td3.innerHTML = ab.province_name + ab.city_name + ab.region_name + ab.address;
+            });
+            $('.selectAddressModel').show();
+        } else {
+            $(".selectNoAddressModel").show();
+        }
+        $('.mask').show();
+    }
+
+    // 清空表格
+    function clearFunc() {
+        var tableObj = document.getElementById("addressBookTable");
+        if (tableObj != null) {
+            var rowLen = tableObj.rows.length;
+            for (var i = rowLen - 1; i != 0; i--) {
+                tableObj.deleteRow(i);
+            }
+        }
+    }
+
+    // 选择地址簿
+    function selFunc() {
+        var aId = $(".addClass:checked").attr("aid");
+        var aType = $(".addClass:checked").attr("addresstype");
+
+        if (aId == "" || aId == null) {
+            swal("", "请选择地址！", "error");
+            return;
+        }
+        $.ajax({
+            type : "post",
+            url : "/myAddress!queryAddressBookInfo.action",
+            data: {"aId": aId},
+            dataType: "JSON",
+            success : function(data) {
+                if (data != null) {
+                    if (data.returnStatus == "01") {
+                        setAddFunc(data.addressBook, aType);
+                        closeFunc();
+                        areaExceedCheckFunc("", "", aType);
+                    } else if (data.returnStatus == "02") {
+                        swal("", data.returnMsg, "warning");
+                    }
+                } else {
+                    swal("", "操作异常，请稍后再试！", "warning");
+                }
+            },
+            error:function(data){
+                swal("", "提交失败！", "error");
+            }
+        });
+    }
+
+    // 设置地址
+    function setAddFunc(aBook, aType) {
+        var addType;
+        if (aType == "01") {    // 寄件
+            addType = "send";
+        } else if (aType == "02") { // 收件
+            addType = "receive";
+        }
+        $("#" + addType + "Name").val(aBook.name);
+        $("#" + addType + "ProvinceCode").val(aBook.provinceCode);
+        $("#" + addType + "ProvinceName").val(aBook.provinceName);
+        $("#" + addType + "CityCode").val(aBook.cityCode);
+        $("#" + addType + "CityName").val(aBook.cityName);
+        $("#" + addType + "RegionCode").val(aBook.regionCode);
+        $("#" + addType + "RegionName").val(aBook.regionName);
+        $("#" + addType + "Address").val(aBook.address);
+        $("#" + addType + "Phone").val(aBook.phone);
+        $("#" + addType + "Tel").val(aBook.tel);
+        $("#" + addType + "Area").citypicker("reset");
+        $("#" + addType + "Area").citypicker("destroy");
+        $("#" + addType + "Area").citypicker({
+            province: aBook.provinceName,
+            city: aBook.cityName,
+            district: aBook.regionName,
+            onChange:function(){
+                transportPriceCheckFunc();
+                searchAmap(aType);
+            }
+        });
+    }
+
+    // 关闭
+    function closeFunc() {
+        $("#addressBookDiv").hide();
+        $('.mask').hide();
+        clearFunc();
+        $(".city-picker-dropdown").hide();  // 防止地址控件弹出
+    }
+
+    // 跳转到新增地址页面
+    function toAddAddressFunc() {
+        window.location.href = "/myAddress.action?addressType=" + toAddressType;
+    }
+
+
+</script>
+<script src="js/placeOrder.js"></script>
+<script src="js/env.js"></script>
+<!-- ftl end -->
+
+<div class="footer commonWrap">
+  <div class="footerCont fixedWid clearfix">
+    <div class="customer fl">
+      <span class="info">客服电话</span>
+      <span class="info tel">4001-888-888</span>
+      <span class="info timer">服务时间： 8:30 - 17:30</span>
+    </div>
+    <div class="hyperlink clearfix">
+      <div class="linkgroup fl">
+        <a href="" class="link">客户服务</a>
+        <a href="/staticFiles/pages/placeOrder.html" class="link">在线寄件</a>
+        <a href="/staticFiles/pages/queryExpress.html" class="link">运单查询</a>
+        <a href="/staticFiles/pages/queryNetwork.html" class="link">网点查询</a>
+        <a href="/staticFiles/pages/queryPrice.html" class="link">运费查询</a>
+      </div>
+      <div class="linkgroup fl">
+        <a href="" class="link">客服服务</a>
+        <a href="/article/baseArticleAction!aboutTT.action#lxwm" class="link">客服热线  </a>
+        <a href="/staticFiles/pages/customerServiceCenter.html#last" class="link">在线留言</a>
+      </div>
+      <div class="linkgroup fl">
+        <a href="" class="link">加盟天天</a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=jmxz" class="link">加盟须知   </a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=jmlc" class="link">加盟流程</a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=jmrx" class="link">加盟热线</a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=zsqy" class="link">招商区域</a>
+      </div>
+      <div class="linkgroup fl">
+        <a href="" class="link">人才招聘</a>
+        <a href="/staticFiles/pages/recruitment.html?tab=1" class="link">职位信息</a>
+        <a href="/staticFiles/pages/recruitment.html?tab=2" class="link">招聘介绍</a>
+      </div>
+      <div class="linkgroup fr smcodediv" style="text-align:center">
+        <img class="smcode" src="images/code_dyh.png" alt="">
+        <span class="info">天天相知微信</span>
+        <span class="info">订阅号扫码关注</span>
+      </div>
+      <div class="linkgroup fr smcodediv">
+        <img class="smcode" src="images/code_fwh.png" alt="">
+        <span class="info">天天快递微信</span>
+        <span class="info">服务号扫码关注</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footerbottom commonWrap">
+  <div class="fixedWid">
+    <p class='info'>©版权所有 2016 天天快递有限公司<a style="color: #A6A7AB;" href="http://www.beian.miit.gov.cn/" target="_blank"> 浙ICP备13006085</a>号
+
+    <a href="images/businessLicense.png" target="_blank" style="color: #A6A7AB;" > | 快递业务经营许可证</a><a href="/staticFiles/pages/businessLincence.html" target="_blank" style="color: #A6A7AB;" > | <img src="images/yyzz.png" style="width: 19px;height:19px;vertical-align: middle;"> 营业执照</a></p>
+  </div>
+</div>
+<div class="selfServiceBtnList">
+  <div class="customerBtn" data="/onlineCall.action">
+    <div class="onLineIcon"></div>
+    <span class="btnTip">在线客服</span>
+  </div>
+  <div class="customerBtns selfOrderServiceBtn" id="selfOrderServiceBtn">
+    <div class="selfServiceIcon"></div>
+    <span class="btnTip">自助投诉</span>
+  </div>
+  <div class="customerBtns selfOrderServiceBtn" id="toTopBtn">
+    <div class="returnTopIcon"></div>
+    <span class="btnTip">返回顶部</span>
+  </div>
+</div>
+</div>
+
+<script type="text/javascript" src="js/index1.js"></script>
+<script type="text/javascript" src="js/expressServiceTab.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+</body>
+</html>

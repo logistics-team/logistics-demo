@@ -1,0 +1,324 @@
+<!-- Created by 17120847 on 2018/5/23.--><!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html">
+    
+    <title>天天快递官网</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control " content="no-cache,must-revalidate">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1">
+
+    <meta name="keyword" content="">
+    <meta name="description" content=""><meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <link href="/css/public.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/css/mystyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/city-picker.css">
+    <link type="text/css" rel="stylesheet" href="/css/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
+    <link type="text/css" rel="stylesheet" href="/css/expressServiceTab.css">
+
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/sweetalert-dev.js"></script>
+    <script type="text/javascript" src="/js/goUrl.js"></script>
+    </head>
+<body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-135" data-genuitec-path="/ttkdex-web/target/m2e-jee/web-resources/staticFiles/pages/joiningTT.html">
+<div class="wrapper admin-content twolevelWrap" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-135" data-genuitec-path="/ttkdex-web/target/m2e-jee/web-resources/staticFiles/pages/joiningTT.html">
+    <!--Created by 17120847 on 2018/5/23.-->
+    <div class="logAndRegister">
+        <div class="fixedWid clearfix">
+            <a href="javascript:void(0)" class="fl" onclick="addFavorite();">加入收藏</a>
+            <div class="fr normal"><a href="javascript:;">登录</a><span></span><a href="javascript:;">注册</a></div>
+            <div style="display:none" class="fr sucess"> <a href="javascript:;"><span class="username" id="username"></span></a><a class="exit" href="javascript:;">退出</a></div>
+        </div>
+    </div>
+    <div id="navWrap" class="headerWrap whiteBack commonWrap">
+        <div class="fixedWid">
+            <div class="navWrap clearfix">
+                <div class="logo fl">
+                    <a href="javascript:;"><img src="/images/logo.png" class="logoimg"></a>
+                </div>
+                <div class="fr">
+                    <a href="javascript:;" class="link">首页</a><span onclick="location.href='/staticFiles/pages/expressServiceTab.html'" class="link kdyw">快递业务
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">增值服务</span> <a href="javascript:;" class="linka">货到付款</a> <a href="javascript:;" class="linka">电子面单</a> <a href="javascript:;" class="linka">到付服务</a> <a href="javascript:;" class="linka">保价服务</a> <a href="javascript:;" class="linka">上门取件</a>
+								</div>
+							</div>
+						</span><span onclick="location.href='/staticFiles/pages/placeOrder.html'" class="link khfw">客户服务
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">我要寄件</span>
+									<span class="linka wyjjlink" data-url="/staticFiles/pages/placeOrder.html">我要寄件</span>
+								</div>
+								<div class="content secondcontent">
+									<span class="linka second">我要查询</span>
+									<span class="linka cxydlink" data-url="/staticFiles/pages/queryExpress.html">运单查询</span>
+									<span class="linka cxwdlink" data-url="/staticFiles/pages/queryNetwork.html">网点查询</span>
+									<span class="linka yfcxlink" data-url="/staticFiles/pages/queryPrice.html">运费查询</span>
+								</div>
+							</div>
+						</span><span onclick="location.href='/staticFiles/pages/joiningTT.html'" class="link jmtt">加盟天天
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">加盟天天</span>
+                                    <a href="javascript:;" class="linka">加盟须知</a> <a href="javascript:;" class="linka">加盟流程</a> <a href="javascript:;" class="linka">加盟热线</a> <a href="javascript:;" class="linka">招商区域</a>
+								</div>
+							</div>
+						</span><!-- <span onclick="location.href='/staticFiles/pages/recruitment.html'" class="link rczp">人才招聘
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">人才招聘</span><a href="javascript:;" class="linka">职位信息</a><a href="javascript:;" class="linka">招聘介绍</a>
+								</div>
+							</div>
+						</span> -->
+                    <span onclick="window.open('http://wuliu.suning.com')" class="link">苏宁物流</span>
+                    <span onclick="location.href='/staticFiles/pages/about.html'" class="link gytt">关于天天
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">关于天天</span><span class="linka qyjslink" data-url="/article/baseArticleAction!aboutTT.action#qyjs">企业介绍</span><span class="linka xwzxlink" data-url="/article/baseArticleAction!aboutTT.action#xwzx">新闻中心</span><span class="linka lxwmlink" data-url="/article/baseArticleAction!aboutTT.action#lxwm">联系我们</span>
+								</div>
+							</div>
+						</span><span class="kfdh"><img src="/images/kfrx.png" class="kfrx"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="/css/joiningTT.css">
+    <script src="/js/joiningTT.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!--Created by 17120847 on 2018/5/29.-->
+    <div style="background:url(/images/joiningTT.jpg) no-repeat" class="t_content t_banner">
+        <div class="fixedWid">
+            <h3 class="title" style="color:#fff">加盟天天</h3>
+            <line class="wid20line"></line>
+            <p class="info" style="color:#fff">天天快递提供快捷、安全、贴心、可靠的快递服务，是您的优质选择</p>
+        </div>
+    </div>
+    <!-- - var tabName1 = ['加盟须知','加盟流程','加盟热线','招商区域'];-->
+    <div class="serviceTabContent">
+        <div class="cont">
+            <div class="tabSwitchContent jmttCont expressTabContent">
+                <h3 id="jmxz" class="jmTitle">加盟须知</h3>
+                <dl class="dl">
+                    <dd class="dd">在认同天天快递品牌及经营管理模式前提下，符合加盟资质的网点经总部同意，独立与天天快递有限公司签订《特许经营加盟合同》，专一经营天天快递品牌，独立投资，自负盈亏，独立对外承担责任；接受总部统一管理，共同致力于提升客户满意度，提高服务品质，创造和谐可持续发展的网络环境。</dd>
+                </dl>
+                <dl class="dl">
+                    <dt class="dt">遵守法律法规，依法经营。</dt>
+                </dl>
+                <dl class="dl">
+                    <dt class="dt">企业法定代表人（职业经理人）具有高中以上学历，有一定的经济实力和经营管理能力。</dt>
+                </dl>
+                <dl class="dl">
+                    <dt class="dt">经营资质健全，依法注册有限责任公司，具备快递、寄递、或速递服务项目的资质，符合邮政行业标准要求，且取得快递业务经营许可证书。</dt>
+                </dl>
+                <dl class="dl">
+                    <dt class="dt">具有固定的经营场所，包括办公场所、快件存放场所、中转仓库等，员工生活区与工作场地必须分开。</dt>
+                </dl>
+                <dl class="dl">
+                    <dt class="dt">有适合业务公司发展需要的从业人员，包括但不限于管理人员、业务员、客服及仓库管理人员。</dt>
+                </dl>
+                <dl class="dl">
+                    <dt class="dt">有必要的办公设备和硬件设备，包括电脑、传真、电话、复印机、巴枪、监控、消防设施等，保障公司日常工作开展。</dt>
+                </dl>
+                <dl class="dl">
+                    <dt class="dt">有足够的车辆承担快件的收取、派送和中转运能。</dt>
+                </dl>
+                <dl class="dl">
+                    <dt class="dt">加盟网点按照省级城市、地级城市和县区级城市的等级进行分类，加盟费用则按照等级分类标准收取，加盟网点应缴纳押金、网络建设费、商标使用费。</dt>
+                </dl>
+                <dl class="dl">
+                    <dt class="dt">能够妥善协调国家相关职能部门的关系，保证快件在所加盟区域内安全中转与送达。</dt>
+                </dl>
+                <h3 id="jmlc" class="jmTitle">加盟流程</h3>
+                <div class="jmlcCont clearfix">
+                    <div class="jmlcImg xxtjBg"><img src="/images/xxtjsq.jpg">
+                        <div class="jmlcImgTitle">线下提交申请</div>
+                        <div class="jmlcImgCont">凡符合加盟条件的快递公司、企业或者个人，有资金投入且具有快递经营资格，均可向总部提出申请加盟。</div>
+                    </div><img src="/images/arrow.jpg" class="jmlcImg arrowImg">
+                    <div class="jmlcImg ssBg"><img src="images/shenhe.jpg">
+                        <div class="jmlcImgTitle">审核</div>
+                        <div class="jmlcImgCont">总部会派人实地考察申请人在该经营地区的资质与条件，如符合条件，由所在地区上属管理片区的经理/专员初步审核经营方案细则和派送区域，达成共识后，上报总部进行报批。</div>
+                    </div><img src="/images/arrow.jpg" class="jmlcImg arrowImg">
+                    <div class="jmlcImg qyBg"><img src="/images/qianyue.jpg">
+                        <div class="jmlcImgTitle">签约</div>
+                        <div class="jmlcImgCont">流程报批完成，天天快递有限公司同加盟网点签订《天天快递网络特许经营加盟合同书》（下面简称“合同”），合同一经签订，双方享受合同条款的权力与义务，共同致力于健康的网络建设。</div>
+                    </div>
+                </div>
+                <h3 id="jmrx" class="jmTitle">加盟热线</h3>
+                <div class="jmrx_div1"><img src="/images/jmrx.png" class="imgdiv1">
+                    <div class="div1">
+                        <ul class="ul1">
+                            <li><span class="span_title">加盟咨询热线 ：</span><span class="span_info">025-66996699转分机号867583</span></li>
+                            <li><span class="span_title">工作日：</span><span class="span_info">上午（9:00-12:00） 下午（14:00-18:00）</span></li>
+                        </ul>
+                        <p class="p1">地址及联系方式</p>
+                        <ul class="ul2">
+                            <li><span class="span_title">全国服务热线：</span><span class="span_info">4001-888-888</span><span style="margin-left: 56px;" class="span_title">邮编：</span><span class="span_info">210042</span></li>
+                            <li><span class="span_title">地址：</span><span class="span_info">江苏省南京市玄武区 苏宁大道1号 苏宁总部 2期4号楼4楼</span></li>
+                            <li><span class="span_title">公司网址：</span><span class="span_info">http://www.ttkdex.com</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3 id="zsqy" style="margin-top: 0;" class="jmTitle">招商区域</h3>
+                <div style="margin-bottom: 88px;" class="zsqy_div1">
+                    <div style="margin-bottom: 88px;" class="zsqy_div1" id="zsqy_div1">
+
+                    </div>
+                    <div class="comment_bubble"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Created by 17120847 on 2018/5/23.--><div class="footer commonWrap">
+    <div class="footerCont fixedWid clearfix">
+        <div class="customer fl">
+            <span class="info">客服电话</span>
+            <span class="info tel">4001-888-888</span>
+            <span class="info timer">服务时间： 8:30 - 17:30</span>
+        </div>
+        <div class="hyperlink clearfix">
+            <div class="linkgroup fl">
+                <a href="" class="link">客户服务</a>
+                <a href="javascript:;" class="link">在线寄件</a>
+                <a href="javascript:;" class="link">运单查询</a>
+                <a href="javascript:;" class="link">网点查询</a>
+                <a href="javascript:;" class="link">运费查询</a>
+            </div>
+            <div class="linkgroup fl">
+                <a href="" class="link">客服服务</a>
+                <a href="javascript:;" class="link">客服热线  </a>
+                <a href="javascript:;" class="link">在线留言</a>
+            </div>
+            <div class="linkgroup fl">
+                <a href="" class="link">加盟天天</a>
+                <a href="javascript:;" class="link">加盟须知   </a>
+                <a href="javascript:;" class="link">加盟流程</a>
+                <a href="javascript:;" class="link">加盟热线</a>
+                <a href="javascript:;" class="link">招商区域</a>
+            </div>
+            <div class="linkgroup fl">
+                <a href="" class="link">人才招聘</a>
+                <a href="javascript:;" class="link">职位信息</a>
+                <a href="javascript:;" class="link">招聘介绍</a>
+            </div>
+            <div class="linkgroup fr smcodediv" style="text-align:center">
+                <img class="smcode" src="/images/code_dyh.png" alt="">
+                <span class="info">天天相知微信</span>
+                <span class="info">订阅号扫码关注</span>
+            </div>
+            <div class="linkgroup fr smcodediv">
+                <img class="smcode" src="/images/code_fwh.png" alt="">
+                <span class="info">天天快递微信</span>
+                <span class="info">服务号扫码关注</span>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="footerbottom commonWrap">
+        <div class="fixedWid">
+            <p class='info'>©版权所有 2016 天天快递有限公司<a style="color: #A6A7AB;" href="javascript:;" target="_blank"> 浙ICP备13006085</a>号
+                <a href="javascript:;" target="_blank" style="color: #A6A7AB;"> | 快递业务经营许可证</a><a href="javascript:;" target="_blank" style="color: #A6A7AB;"> | <img src="/images/yyzz.png" style="width: 19px;height:19px;vertical-align: middle;"> 营业执照</a></p>
+        </div>
+    </div>
+</div>
+<div class="selfServiceBtnList">
+    <div class="customerBtn" data="/onlineCall.action">
+        <div class="onLineIcon"></div>
+        <span class="btnTip">在线客服</span>
+    </div>
+    <div class="customerBtns selfOrderServiceBtn" id="selfOrderServiceBtn">
+        <div class="selfServiceIcon"></div>
+        <span class="btnTip">自助投诉</span>
+    </div>
+    <div class="customerBtns selfOrderServiceBtn" id="toTopBtn">
+        <div class="returnTopIcon"></div>
+        <span class="btnTip">返回顶部</span>
+    </div>
+</div>
+<script type="text/javascript" src="/js/index1.js"></script>
+<script type="text/javascript" src="/js/expressServiceTab.js"></script>
+<script type="text/javascript" src="/js/Base64.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+</body>
+</html><script>
+
+    jQuery(document).ready(function($) {
+        $.ajax({
+            type:"post",
+            url:"/article/baseArticleAction!joiningMerchants.action",
+            error: function(){
+            },
+            success:function(data){
+                var myArr = eval('(' + data + ')');;
+                var tar = "<body><table class='table table-bordered table-striped'>";
+                tar+="<thead><tr>";
+                tar+="<th style='width:135px;'>省</th>";
+                tar+="<th style='width:135px;'>市</th>";
+                tar+="<th style='width:459px;'>县</th>";
+                tar+="<th style='width:310px;'>联系人/联系电话</th>";
+                tar+="</tr></thead><tbody>";
+                var mycars=new Array();
+                for(i=0,u=myArr.length;i<u;i++){
+                    mycars[i] = new Array();
+                    mycars[i][0]=myArr[i]["province"];
+                    mycars[i][1]=myArr[i]["city"];
+                    mycars[i][2]=myArr[i]["region"];
+                    if(myArr[i]["contactinformation"] == null){
+                        mycars[i][3] = '';
+                    }else{
+                        mycars[i][3]=myArr[i]["contactinformation"].replace(/\n/gm, '<br />');
+                    }
+                }//将数据转换为二维数组
+                var aaa=new Array();
+                for (i=0,k=myArr.length;i<k-1;i++) {
+                    var sun=0;
+                    if (myArr[i]["province"]==myArr[i+1]["province"]){
+                        sun++
+                        for(j=0,p=myArr.length-1;j<p-i;j++){
+                            if(myArr[i]["province"]==myArr[i+1+j]["province"]){
+                                sun++;
+                            }else{
+                                break
+                            }
+                        }
+                    }
+                    aaa[i]=sun
+                }//获取每个数组与后面连续数值的相同个数
+                for (i=0,k=myArr.length;i<k-1;i++) {
+                    if (myArr[i]["province"]==myArr[i+1]["province"]){
+                        for(t=1,h=aaa[i];t<h;t++){
+                            mycars[i+t].splice(0,1);
+                        }
+                    }
+                }//删除二位数组当中除第一个数据意外的相同数值
+                for (i=0,k=mycars.length;i<k;i++) {
+                    if(aaa[i]!==0){
+                        tar+="<tr>"+"<td rowspan='"+aaa[i]+"'>"+mycars[i][0]+"</td>";
+                        for(j=1,l=mycars[i].length;j<l;j++){
+                            tar+="<td>"+mycars[i][j]+"</td>"
+                        }
+                        tar+="</tr>";
+                    }else{
+                        tar+="<tr>";
+                        for(j=0,l=mycars[i].length;j<l;j++){
+                            tar+="<td>"+mycars[i][j]+"</td>"
+                        }
+                        tar+="</tr>";
+                    }
+                }//通过判断，分别写入table的样式
+                tar+="</tbody></table></body>";
+                document.getElementById("zsqy_div1").innerHTML = tar;
+            }
+        });
+    });
+    function jointable(data){
+    }
+</script>

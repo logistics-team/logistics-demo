@@ -1,0 +1,126 @@
+package com.cssl.entity;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+/**
+* <p>
+    * 记录物件的运输位置状态，物流状态信息表
+    * </p>
+*
+* @author Devil
+* @since 2019-09-03
+*/
+    public class TransportationStatus implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    private String tsId;
+
+    private LocalDateTime tsGmtCreate;
+
+    private LocalDateTime tsGmtModified;
+
+    private Integer lsId;
+
+    private Integer epId;
+
+    private Integer ecId;
+
+    private Integer eaId;
+
+    private Integer tmId;
+    //物流状态表
+    private LogisticsStatus ls;
+    //运输方式
+    private TransportMeans tm;
+
+    public LogisticsStatus getLs() {
+        return ls;
+    }
+
+    public void setLs(LogisticsStatus ls) {
+        this.ls = ls;
+    }
+
+    public TransportMeans getTm() {
+        return tm;
+    }
+
+    public void setTm(TransportMeans tm) {
+        this.tm = tm;
+    }
+
+    public String getTsId() {
+        return tsId;
+        }
+
+            public void setTsId(String tsId) {
+        this.tsId = tsId;
+        }
+        public LocalDateTime getTsGmtCreate() {
+        return tsGmtCreate;
+        }
+
+            public void setTsGmtCreate(LocalDateTime tsGmtCreate) {
+        this.tsGmtCreate = tsGmtCreate;
+        }
+        public LocalDateTime getTsGmtModified() {
+        return tsGmtModified;
+        }
+
+            public void setTsGmtModified(LocalDateTime tsGmtModified) {
+        this.tsGmtModified = tsGmtModified;
+        }
+        public Integer getLsId() {
+        return lsId;
+        }
+
+            public void setLsId(Integer lsId) {
+        this.lsId = lsId;
+        }
+        public Integer getEpId() {
+        return epId;
+        }
+
+            public void setEpId(Integer epId) {
+        this.epId = epId;
+        }
+        public Integer getEcId() {
+        return ecId;
+        }
+
+            public void setEcId(Integer ecId) {
+        this.ecId = ecId;
+        }
+        public Integer getEaId() {
+        return eaId;
+        }
+
+            public void setEaId(Integer eaId) {
+        this.eaId = eaId;
+        }
+        public Integer getTmId() {
+        return tmId;
+        }
+
+            public void setTmId(Integer tmId) {
+        this.tmId = tmId;
+        }
+
+    @Override
+    public String toString() {
+        return "TransportationStatus{" +
+                "tsId='" + tsId + '\'' +
+                ", tsGmtCreate=" + tsGmtCreate +
+                ", tsGmtModified=" + tsGmtModified +
+                ", lsId=" + lsId +
+                ", epId=" + epId +
+                ", ecId=" + ecId +
+                ", eaId=" + eaId +
+                ", tmId=" + tmId +
+                ", ls=" + ls +
+                ", tm=" + tm +
+                '}';
+    }
+}

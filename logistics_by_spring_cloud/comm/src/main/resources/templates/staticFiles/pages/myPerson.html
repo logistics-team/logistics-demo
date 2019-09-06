@@ -1,0 +1,860 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>天天快递官网</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control " content="no-cache,must-revalidate">
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1">
+
+	<meta name="keyword" content="">
+	<meta name="description" content=""><meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="format-detection" content="email=no"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
+	<meta http-equiv="Pragma"   content="no-cache">
+	<link href="css/public.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/mystyle.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/city-picker.css" />
+	<link type="text/css" rel="stylesheet" href="css/common.css">
+	<link type="text/css" rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+	<link type="text/css" rel="stylesheet" href="css/expressServiceTab.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/sweetalert-dev.js"></script>
+	<script type="text/javascript" src="js/goUrl.js"></script>
+	<script type="text/javascript" src="js/env.js"></script>
+
+
+</head>
+<body>
+<div class="wrapper admin-content twolevelWrap">
+	<!--Created by 17120847 on 2018/5/23.-->
+	<div class="logAndRegister">
+		<div class="fixedWid clearfix">
+			<a href="javascript:void(0)" class="fl" onclick="addFavorite();">加入收藏</a>
+			<div  class="fr normal"><a href="/passPortIndex.action?login_type=0">登录</a><span></span><a href="/register.action">注册</a></div>
+			<div style="display:none" class="fr sucess"> <a href="/myOrderNew.action"><span class="username" id="username"></span></a><a class="exit"  href="/j_logout">退出</a></div>
+		</div>
+	</div>
+	<div id="navWrap" class="headerWrap whiteBack commonWrap">
+		<div class="fixedWid">
+			<div class="navWrap clearfix">
+				<div class="logo fl">
+					<a href="/"><img src="images/logo.png" class="logoimg"></a>
+				</div>
+				<div class="fr">
+					<a href="/" class="link">首页</a><span
+						onclick="location.href='/staticFiles/pages/expressServiceTab.html'"
+						class="link kdyw">快递业务
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">增值服务</span> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=hdfk"
+										class="linka">货到付款</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=dzmd"
+										class="linka">电子面单</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=dffw"
+										class="linka">到付服务</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=bjfw"
+										class="linka">保价服务</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=smqj"
+										class="linka">上门取件</a>
+								</div>
+							</div>
+						</span><span
+						onclick="location.href='/staticFiles/pages/placeOrder.html'"
+						class="link khfw">客户服务
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">我要寄件</span>
+									<span class="linka wyjjlink" data-url="/staticFiles/pages/placeOrder.html">我要寄件</span>
+								</div>
+								<div class="content secondcontent">
+									<span class="linka second">我要查询</span>
+									<span class="linka cxydlink" data-url="/staticFiles/pages/queryExpress.html">运单查询</span>
+									<span class="linka cxwdlink" data-url="/staticFiles/pages/queryNetwork.html">网点查询</span>
+									<span class="linka yfcxlink" data-url="/staticFiles/pages/queryPrice.html">运费查询</span>
+								</div>
+							</div>
+						</span><span onclick="location.href='/staticFiles/pages/joiningTT.html'"
+									 class="link jmtt">加盟天天
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">加盟天天</span> <a
+										href="/staticFiles/pages/joiningTT.html?divId=jmxz"
+										class="linka">加盟须知</a> <a
+										href="/staticFiles/pages/joiningTT.html?divId=jmlc"
+										class="linka">加盟流程</a> <a
+										href="/staticFiles/pages/joiningTT.html?divId=jmrx"
+										class="linka">加盟热线</a> <a
+										href="/staticFiles/pages/joiningTT.html?divId=zsqy"
+										class="linka">招商区域</a>
+								</div>
+							</div>
+						</span><span onclick="location.href='/staticFiles/pages/recruitment.html'" class="link rczp">人才招聘
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">人才招聘</span><a
+										href="/staticFiles/pages/recruitment.html?tab=1" class="linka">职位信息</a><a
+										href="/staticFiles/pages/recruitment.html?tab=2" class="linka">招聘介绍</a>
+								</div>
+							</div>
+						</span>
+					<span onclick="window.open('http://wuliu.suning.com')" class="link">苏宁物流</span>
+						<span onclick="location.href='/article/baseArticleAction!aboutTT.action'" class="link gytt">关于天天
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">关于天天</span><span
+										class="linka qyjslink" data-url="/article/baseArticleAction!aboutTT.action#qyjs">企业介绍</span><span class="linka xwzxlink" data-url="/article/baseArticleAction!aboutTT.action#xwzx">新闻中心</span><span
+										class="linka lxwmlink" data-url="/article/baseArticleAction!aboutTT.action#lxwm">联系我们</span>
+								</div>
+							</div>
+						</span><span class="kfdh"><img
+						src="images/kfrx.png" class="kfrx kfrx_1"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- ftl start -->
+
+<script src="js/jquery.validate.js"></script>
+<script src="js/additional-methods.js"></script>
+<script src="js/messages_zh.js"></script>
+<script src="js/city-picker.data.js"></script>
+<script src="js/city-picker.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/jedate.css">
+<script type="text/javascript" src="js/jedate.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/cancelAccountAlert.css">
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="js/jquery1.42.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1_2.js"></script>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/laydate.js"></script>
+<script type="text/javascript" src="js/jquery-form.js"></script>
+<script type="text/javascript" src="js/uploadPreview.js"></script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.13&key=a820db6476bc0642dfbf492706a7c989&plugin=AMap.Autocomplete"></script>
+<style>
+    .qiangdu li{
+        margin-top: -2px !important;
+    }
+    .oldPwd{
+        margin-top: 37px;
+        margin-left: -262px;
+    }
+    .rightTips{
+        margin-top: 0px !important;
+    }
+</style>
+<div style="background:url(images/customerCenter.jpg) no-repeat" class="t_content t_banner">
+    <div class="fixedWid">
+        <h3 class="title">个人中心</h3>
+        <line class="wid20line"></line>
+        <p class="info">天天快递提供快捷、安全、贴心、可靠的快递服务，是您的优质选择</p>
+    </div>
+</div>
+
+<div class="personalCenterContent">
+    <div class="leftTabContent">
+        <div class="leftMainTitle">个人中心</div>
+        <div class="personInfo">
+            <a href="/myPerson.action">
+                <div style="width:  72px;
+                            height: 72px;
+                            margin-left: 36px;
+                            border-radius: 50%;">
+                    
+                    
+                        <img  src="http://image.suning.cn/uimg/cmf/cust_headpic/0000000000_01_120x120.jpg?v=20190906210846" />
+                    
+                </div>
+                <div>155****1419</div>
+
+            </a>
+            
+        </div>
+        <div class="leftMainContent">
+            <a href="/myOrderNew.action"><div class="leftNodeTab">我的订单</div></a>
+            <a href="/myOnlineOrder.action"><div class="leftNodeTab">我要寄件</div></a>
+            <a href="/myAddress.action"><div class="leftNodeTab">我的地址簿</div></a>
+            <a href="/myPerson.action"><div class="leftNodeTab leftNodeTabActive">会员信息</div></a>
+            <a href="/myWorkOrder.action"><div class="leftNodeTab">我的投诉</div></a>
+        </div>
+    </div>
+    <div class="rightTabContent freightQueryContent" style="display: inline-block;">
+        <div class="rightSmallTitle vipTitle clearfix">
+            <div class="vipInfo vipACtive" aclass = "cust_info">会员信息</div>
+        </div>
+        <div class="vipTab">
+            <form id="uploadForm"  enctype="multipart/form-data" action="/customerAction!uploadPicToAimp.action" method="post">
+
+                <div class="vipPic">
+                    <div style="width:  150px;
+                            height: 150px;
+                            margin-left: 19px;
+                            border-radius: 50%;">
+                        
+                        
+                            <img id="headPortraitUrl" id="imgShow" src="http://image.suning.cn/uimg/cmf/cust_headpic/0000000000_01_120x120.jpg?v=20190906210846" />
+                        
+                    </div>
+                    <div id="imgdiv" class="sctx">
+                        <div class="editHeadPic" id="editHeadPic">
+                            编辑头像
+                            <input type="file" name="file" value="1" id="up_img" accept="image/jpeg,image/png" />
+                        </div>
+                    </div>
+                    <div class="headPreviewPic">头像预览图</div>
+                    
+                </div>
+                <div class = "account_info_passport" style="margin-left: 50px;">
+                    <span style="position: relative;left: 146px;top: -135px;font-size: 12px;">155****1419</span>
+                    <a>
+                        <span aclass = "update_password" style="position: relative;left: 146px;top: -135px;font-size: 12px;color: #0293ED;">修改密码</span>
+                    </a>
+                    <a>
+                        <span aclass = "safety" style="position: relative;left: 146px;top: -135px;font-size: 12px;color: #0293ED;">账号安全</span>
+                    </a>
+                </div>
+            </form>
+            <form id="modifyCustomerForm"  action="/customerAction!modifyPersonalData.action" method="post">
+
+                <input type="hidden" name="customer.headPortraitUrl" id="headPortraitUrlNew" value="http://image.suning.cn/uimg/cmf/cust_headpic/0000000000_01_120x120.jpg?v=20190906210846" />
+                <input type="hidden" name="customer.userSex" id="userSex" value="124000000010" />
+                <div class="vipInfoContent">
+
+                    <div style="margin-bottom:20px;" class="vipInfoRow">
+                        <label>昵称</label>
+                        <input placeholder="请输入您的天天用户名" name = "customer.userName" id="userName" class="nickname" value="">
+                        <span id="userNameCheck"></span>
+                    </div>
+                    <div style="margin-bottom:22px;" class="vipInfoRow">
+                        <label>性别</label>
+                        
+                            
+                                <div class="inputRadio userSexRadio radiohasChecked">
+                                    <input  type="radio"
+                                            value="124000000010"  checked="checked"><span>男</span>
+                                </div>
+                                <div class="inputRadio userSexRadio radioNoChecked">
+                                    <input type="radio"
+                                           value="124000000020" ><span>女</span>
+                                </div>
+                            
+                            
+                            
+                        
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <span id="userSexCheck"></span>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    <div style="margin-bottom:26px;" class="vipInfoRow">
+                        <label>手机</label>
+                        155****1419
+                    </div>
+                    
+                    
+                    
+                    
+                    
+
+                    <div style="margin-bottom:20px;" class="vipInfoRow">
+                        <label>生日</label>
+                        <div class="demo4" style="display: inline-block;">
+                            <input class="datainp" id="userBrithday" type="text"
+                                   name="customer.userBrithday" value=""
+                                   style="width:187px;height:38px;padding-left: 5px;"
+                                   readonly>
+                            <script type="text/javascript">
+                                jeDate({
+                                    dateCell: '#userBrithday',
+                                    isinitVal:false,
+                                    format: 'YYYY-MM-DD'
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div>
+                        <a href="javascript:void(0)" id="modifyCustomer"  class="forBtn SaveBtn blueBtn">保存</a>
+                        <a href="javascript:void(0)" id="delShowBtn"  class="forBtn SaveBtn" style="margin-left: 15px;">删除</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+
+</div>
+
+<div class="alertContainer">
+    <div class="alertMask"></div>
+    <div class="alert" style="height: 250px;
+    width: 350px;">
+        <header>
+            <span class="title">请选择要删除的信息</span>
+            <img src="images/close.png"/>
+        </header>
+        <div class="content" style="width: 240px;">
+            <div class="checkboxDom noChecked" style="margin-left: 33px;width: 60px;display: block;line-height: 1;height: 30px;"><input name="delHead" type="checkbox" value="delHead">
+                <span style="margin-left: 20px;">头像</span>
+            </div>
+
+            <div class="checkboxDom noChecked" style="margin-left: 33px;width: 60px;display: block; line-height: 1;height: 30px;"><input name="delAlias" type="checkbox" value="delAlias">
+                <span style="margin-left: 20px;">昵称</span>
+            </div>
+            <div class="checkboxDom noChecked" style="margin-left: 33px;width: 60px;display: block; line-height: 1;height: 30px;"><input name="delBrithday"type="checkbox" value="delBrithday">
+                <span style="margin-left: 20px;">生日</span>
+            </div>
+        </div>
+        <footer>
+            <div class="btn" style="left: 106px;">确认并继续</div>
+        </footer>
+    </div>
+</div>
+<script type="text/javascript">
+    $("#delShowBtn").click(function () {
+        $('.alertContainer').show();
+    })
+    $(document).on('click','.account_info_passport span',function(){
+        var aclass = $(this).attr("aclass");
+        if(aclass == 'update_password'){
+            //修改密码
+            var form = $("<form >").attr('action','https://aq.suning.com/asc/password/check.do').attr('method','post');
+            var input = '<input type = "hidden" name="verifyTypeCode" value="verifyMobile"/>';
+            form.attr("target","_blank");
+            form.append(input).appendTo('body').css('display','none').submit();
+            return;
+        } else if (aclass == 'safety') {
+            var form = $("<form >").attr('action','https://aq.suning.com/asc/index.do').attr('method','post');
+            form.attr("target","_blank");
+            form.appendTo('body').css('display','none').submit();
+            return;
+        }
+    });
+
+    window.onload = function () {
+        new uploadPreview({ UpBtn: "up_img", DivShow: "imgdiv", ImgShow: "headPortraitUrl" });
+    }
+
+
+    $(document).on('click','.userSexRadio',function(){
+        $("#userSex").val($(this).find("input").val());
+    })
+
+    //修改内容
+    //    function selectSex(){
+    //        for(var i=0;i<	$(":radio").length;i++){
+    //            if($(":radio")[i].checked){
+    //                $("#userSex").val($(":radio")[i].value);
+    //            }
+    //        }
+    //    }
+    $(function(){
+        $("#userName").blur(function(){
+            validateUserName();
+        });
+        $("#userEmail").blur(function(){
+            validateUserEmail();
+        });
+        $("#userAddress").blur(function(){
+            validateUserAddress();
+        });
+        function validateUserName(){
+//            if($("#userName").val().length >= 2 && $("#userName").val().length <= 32){
+            if($("#userName").val().length <= 32){
+                $("#userNameCheck").text('').removeClass("errorTips").addClass("rightTips");
+                $("#userName").css("border","1px #cacaca solid");
+                return 0;
+            }else{
+                $("#userNameCheck").text('亲~昵称长度不能超过32位').removeClass("rightTips").addClass("errorTips");
+                $("#userName").css("border","1px #EA3A3A solid");
+                return 1;
+            }
+        }
+        function  validateUserNickName() {
+            if($("#userName").val().length <=0){
+                return true;
+            }
+            return false;
+        }
+        function  validateUserBrithday() {
+            if($("#userBrithday").val().length <=0){
+                return true;
+            }
+            return false;
+        }
+        function validateUserEmail(){
+            if($("#userEmail").length > 0 && "" != $("#userEmail").val()){
+                if($('#userEmail').val().search(/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/)==-1){
+                    $('#userEmailCheck').text('亲~请输入正确的邮箱').removeClass().addClass("errorTips");
+                    $('#userEmail').css("border","1px #EA3A3A solid");
+                    return 1;
+                }else{
+                    $('#userEmailCheck').text('').removeClass('errorTips').addClass('rightTips');
+                    $('#userEmail').css("border","1px #cacaca solid");
+                    return 0;
+                }
+            }else{
+                $('#userEmailCheck').text('').removeClass('errorTips').addClass('rightTips');
+                $('#userEmail').css("border","1px #cacaca solid");
+                return 0;
+            }
+        }
+        function validateUserAddress(){
+            if($("#userAddress").val().length <= 100){
+                $("#userAddressCheck").text('').removeClass("errorTips").addClass("rightTips");
+                $("#userAddress").css("border","1px #cacaca solid");
+                return 0;
+            }else{
+                $("#userAddressCheck").text('亲~详细地址的长度限制在100位以内').removeClass("rightTips").addClass("errorTips");
+                $("#userAddress").css("border","1px #EA3A3A solid");
+                return 1;
+            }
+        }
+        $('#modifyCustomer').click(function(){
+            // if(validateUserBrithday()){
+            //     swal("", "生日不能为空,如果想删除,使用删除功能！！", "warning");
+            //     return;
+            // }
+            // if(validateUserNickName()){
+            //     swal("", "昵称不能为空,如果想删除,使用删除功能！！", "warning");
+            //     return;
+            // }
+
+            var options ={
+                type:'post',
+                success:function(data){
+                    try{
+                        var obj = eval( "(" + data + ")" );
+                        if(obj.success == "true"){
+//                            window.location.href = "/uploadPic.action";
+                            if(obj.msg != ''){
+                                $("#headPortraitUrlNew").val(obj.msg);
+                            }
+                            submitCustomerForm()
+                        }else{
+//                                alert(obj.msg);
+                            swal("", obj.msg, "warning");
+                        }
+                    }catch(e) {
+//                            alert("系统异常，请刷新页面！！");
+                        swal("", "系统异常，请刷新页面！！", "warning");
+                    }
+                }
+            };
+            $("#uploadForm").ajaxSubmit(options);
+        });
+    });
+
+    function submitCustomerForm() {
+        var options ={
+            type:'post',
+            success:function(data){
+                try{
+                    var obj = eval( "(" + data + ")" );
+                    if(obj.success == "true"){
+                        window.location.href = "/myPerson.action";
+                    }else{
+//                                alert(obj.msg);
+                        swal("", obj.msg, "warning");
+                    }
+                }catch(e) {
+//                            alert("系统异常，请刷新页面！！");
+                    swal("", "系统异常，请刷新页面！！", "warning");
+
+                }
+
+            }
+        };
+        $("#modifyCustomerForm").ajaxSubmit(options);
+    }
+
+
+
+
+    //修改密码
+    function checkStrong(sValue) {
+//        var modes = 0;
+//        //正则表达式验证符合要求的
+//        if (sValue.length < 6) return modes;
+//        if (/\d/.test(sValue)) modes++; //数字
+//        if (/[a-z]/.test(sValue)) modes++; //小写
+//        if (/[A-Z]/.test(sValue)) modes++; //大写
+//        if (/[`~!@#$%\^\&\*\(\)_\+<>\?:"\{\},\.\\\/;'\[\]]/im.test(sValue)) modes++; //特殊字符
+//        return modes;
+        var modes;
+        //正则表达式验证符合要求的
+        if (sValue.length < 8)
+            modes = 0;
+        if (/[\dA-Za-z]/.test(sValue) || /[A-Za-z]/.test(sValue)){
+            modes = 1; //数字加字母  //大小写
+        }
+        if (/(?![\d])([\d`~!@#$%\^\&\*\(\)_\+<>\?:"\{\},\.\\\/;'\[\]])/.test(sValue)){
+            modes = 2; //数字加特殊符号
+        }
+
+        if (/^(?!^[0-9a-z]+$)(?!^[0-9A-Z]+$)(?!^[0-9\x21-\x2f\x3a-\x40\x5b-\x60\x7B-\x7F]+$)(?!^[a-zA-Z]+$)(?!^[a-z\x21-\x2f\x3a-\x40\x5b-\x60\x7B-\x7F]+$)(?!^[A-Z\x21-\x2f\x3a-\x40\x5b-\x60\x7B-\x7F]+$)(?!^[A-Z\x21-\x2f\x3a-\x40\x5b-\x60\x7B-\x7F]+$)[a-z0-9A-Z\x21-\x2f\x3a-\x40\x5b-\x60\x7B-\x7F]+$/.test(sValue)){
+            modes = 3; //特殊字符
+        }
+        return modes;
+    }
+    $(function(){
+//        $("up_img").click(function() {
+//
+//
+//        });
+
+        // 关闭弹框
+        $(document).on('click','.alertMask, .alert img',function(evt) {
+            $('.alertContainer').hide();
+        })
+        // 关闭弹框
+        $('.alertContainer .btn').click(function(evt) {
+            //删除信息
+            var delHead = $('input[name="delHead"]:checked').val();
+            console.info(delHead);
+            var delAlias = $('input[name="delAlias"]:checked').val();
+            console.info(delAlias);
+            var delBrithday = $('input[name="delBrithday"]:checked').val();
+            console.info(delBrithday);
+            if(delHead === undefined && delAlias ===undefined && delBrithday===undefined){
+                swal("", "请至少选择一个", "warning");
+                return;
+            }
+            $.ajax({
+                type:"post",
+                url:"/customerAction!delPersonalData.action",
+                data:{
+                    "delHead":delHead,
+                    "delAlias":delAlias,
+                    "delBrithday":delBrithday
+                },
+                error: function(){
+                    sweetAlert("", 'Error loading web_jsp document！', "warning");
+//                        alert("系统异常");
+                },
+                success:function(data){
+                    var obj = eval( "(" + data + ")" );
+                    if(obj.success == "true"){
+                        window.location.href = "/myPerson.action";
+                    }else{
+                        swal("", obj.msg, "warning");
+//                            alert(obj.msg);
+                    }
+                }
+            });
+        });
+        $('#cancellationSpan').click(function(){
+            // $.ajax({
+            //     url: '/customerAction!validateCancellationOk.action',
+            //     type: 'POST',
+            //     success: function (data) {
+            //         if (data != null) {
+            //             var dataObj = eval("(" + data + ")");
+            //             if (dataObj.success == "true") {
+            //                 $('.alertContainer').show();
+            //             }else{
+            //                 swal("", dataObj.msg, "warning");
+            //             }
+            //         }
+            //     },
+            //     error: function () {
+            //         swal("", 'Error loading web_jsp document！', "warning");
+            //     }
+            // });
+        });
+        $("#password").on({
+            input:function(){
+                switch (checkStrong($("#password").val())) {
+                    case 1:
+                        $("#demo1").addClass("dqqd");
+                        $("#demo2").removeClass("dqqd");
+                        $("#demo3").removeClass("dqqd");
+                        break;
+                    case 2:
+                        $("#demo1").addClass("dqqd");
+                        $("#demo2").addClass("dqqd");
+                        $("#demo3").removeClass("dqqd");
+                        break;
+                    case 3:
+                        $("#demo1").addClass("dqqd");
+                        $("#demo2").addClass("dqqd");
+                        $("#demo3").addClass("dqqd");
+                        break;
+                    default:
+                        $("#demo1").removeClass("dqqd");
+                        $("#demo2").removeClass("dqqd");
+                        $("#demo3").removeClass("dqqd");
+                        break;
+                }
+            }
+        });
+
+        $("#oldPassword").blur(function(){
+            validateOldPassword();
+        });
+        $("#password").blur(function(){
+            validatePassword();
+        });
+        $("#passwords").blur(function(){
+            validatePasswords();
+        });
+        function validateOldPassword(){
+            if($("#oldPassword").val().length == 0){
+                $("#oldPasswordCheck").text('请输入原密码').removeClass("rightTips").addClass("oldPwd").addClass("errorTips");
+                $("#oldPassword").css("border","1px #EA3A3A solid");
+                return 1;
+            }
+            else{
+                $("#oldPasswordCheck").text('').removeClass("errorTips").removeClass("oldPwd").addClass(
+                    "rightTips");
+                $("#oldPassword").css("border", "1px #cacaca solid");;
+                $(".rightTips").css("margin-top","0px !important");
+                return 0;
+            }
+        }
+        function validatePassword(){
+//            var checkPassStrong = /^(?!^\d+$)(?!^[a-z]+$)(?!^[A-Z]+$)(?!^[`~!@#$%^&*\(\)-_=+\|\[{}];:'",<.>\/? ]+$).{8,20}$/;
+            var checkPassStrong = /^(?!^\d+$)(?!^[a-z]+$)(?!^[A-Z]+$)(?!^[\`\~\!\@#$%\^\&\*\(\)\-\_\=\+\\\|\[\{\}\]\;\:\'\"\,\<\.\>\\\/\? ]+$).{8,20}$/;
+            var isStrangeChara = /^[A-Za-z0-9`~!@#$%^&*()-_=+\|\[{\}\];:'",<.>\/? ]+$/;
+            if ($("#password").val().length < 8
+                || $("#password").val().length > 20) {
+                $("#passwordCheck").text('密码限制8-20位，由数字/大小写字母/特殊符号至少两种字符组成').removeClass(
+                    "rightTips").addClass("errorTips");
+                $("#password").css("border", "1px #EA3A3A solid");
+                return 1;
+            }
+            if(!isStrangeChara.test($("#password").val()) || !checkPassStrong.test($("#password").val())){
+                $("#passwordCheck").text('密码限制8-20位，由数字/大小写字母/特殊符号至少两种字符组成').removeClass("rightTips").addClass("errorTips");
+                $("#password").css("border", "1px #EA3A3A solid");
+                return 1;
+            }
+            if($("#password").val() == $("#oldPassword").val()){
+                $("#passwordCheck").text('亲~新密码不能与原密码相同').removeClass("rightTips").addClass("errorTips");
+                $("#password").css("border","1px #EA3A3A solid");
+                return 1;
+            }
+            $("#passwordCheck").text('').removeClass("errorTips").addClass(
+                "rightTips");
+            $("#password").css("border", "1px #cacaca solid");
+            return 0;
+        }
+        function validatePasswords(){
+            if(($("#passwords").val()) == ($("#password").val()) && $("#password").val() != ''){
+                $("#passwordsCheck").text('').removeClass("errorTips").addClass("rightTips");
+                $("#passwords").css("border","1px #cacaca solid");
+                return 0;
+            }else{
+                $("#passwordsCheck").text('亲~请输入一致的密码呦').removeClass("rightTips").addClass("errorTips");
+                $("#passwords").css("border","1px #EA3A3A solid");
+                return 1;
+            }
+        }
+        $('#modifyPasswordBtn').click(function(){
+            var validateResult = validatePasswords() + validateOldPassword() + validatePassword();
+            if(validateResult==0){
+                $.ajax({
+                    type:"post",
+                    url:"/customerAction!modifyPaassword.action",
+                    data:{"oldPassword":$('#oldPassword').val(),
+                        "password":$('#password').val()},
+                    error: function(){
+                        sweetAlert("", 'Error loading web_jsp document！', "warning");
+//                        alert("系统异常");
+                    },
+                    success:function(data){
+                        var obj = eval( "(" + data + ")" );
+                        if(obj.success == "true"){
+                            window.location.href="/modifyPasswordSuccess.action";
+                        }else{
+                            swal("", obj.msg, "warning");
+//                            alert(obj.msg);
+                        }
+                    }
+                });
+            }
+        });
+    });
+
+    // $("#userAddress").bind("input propertychange",function(event){
+    //     var city = "";
+    //     if("" != $("#ctityTextHtml").html()){
+    //         city = $(".select-item")[1].innerHTML;
+    //         var auto = new AMap.Autocomplete({
+    //             city: city,
+    //             input: "userAddress"
+    //         });
+    //     }
+    //
+    //
+    // });
+
+
+</script>
+<!-- ftl end -->
+
+<div class="footer commonWrap">
+  <div class="footerCont fixedWid clearfix">
+    <div class="customer fl">
+      <span class="info">客服电话</span>
+      <span class="info tel">4001-888-888</span>
+      <span class="info timer">服务时间： 8:30 - 17:30</span>
+    </div>
+    <div class="hyperlink clearfix">
+      <div class="linkgroup fl">
+        <a href="" class="link">客户服务</a>
+        <a href="/staticFiles/pages/placeOrder.html" class="link">在线寄件</a>
+        <a href="/staticFiles/pages/queryExpress.html" class="link">运单查询</a>
+        <a href="/staticFiles/pages/queryNetwork.html" class="link">网点查询</a>
+        <a href="/staticFiles/pages/queryPrice.html" class="link">运费查询</a>
+      </div>
+      <div class="linkgroup fl">
+        <a href="" class="link">客服服务</a>
+        <a href="/article/baseArticleAction!aboutTT.action#lxwm" class="link">客服热线  </a>
+        <a href="/staticFiles/pages/customerServiceCenter.html#last" class="link">在线留言</a>
+      </div>
+      <div class="linkgroup fl">
+        <a href="" class="link">加盟天天</a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=jmxz" class="link">加盟须知   </a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=jmlc" class="link">加盟流程</a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=jmrx" class="link">加盟热线</a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=zsqy" class="link">招商区域</a>
+      </div>
+      <div class="linkgroup fl">
+        <a href="" class="link">人才招聘</a>
+        <a href="/staticFiles/pages/recruitment.html?tab=1" class="link">职位信息</a>
+        <a href="/staticFiles/pages/recruitment.html?tab=2" class="link">招聘介绍</a>
+      </div>
+      <div class="linkgroup fr smcodediv" style="text-align:center">
+        <img class="smcode" src="images/code_dyh.png" alt="">
+        <span class="info">天天相知微信</span>
+        <span class="info">订阅号扫码关注</span>
+      </div>
+      <div class="linkgroup fr smcodediv">
+        <img class="smcode" src="images/code_fwh.png" alt="">
+        <span class="info">天天快递微信</span>
+        <span class="info">服务号扫码关注</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footerbottom commonWrap">
+  <div class="fixedWid">
+    <p class='info'>©版权所有 2016 天天快递有限公司<a style="color: #A6A7AB;" href="http://www.beian.miit.gov.cn/" target="_blank"> 浙ICP备13006085</a>号
+
+    <a href="images/businessLicense.png" target="_blank" style="color: #A6A7AB;" > | 快递业务经营许可证</a><a href="/staticFiles/pages/businessLincence.html" target="_blank" style="color: #A6A7AB;" > | <img src="images/yyzz.png" style="width: 19px;height:19px;vertical-align: middle;"> 营业执照</a></p>
+  </div>
+</div>
+<div class="selfServiceBtnList">
+  <div class="customerBtn" data="/onlineCall.action">
+    <div class="onLineIcon"></div>
+    <span class="btnTip">在线客服</span>
+  </div>
+  <div class="customerBtns selfOrderServiceBtn" id="selfOrderServiceBtn">
+    <div class="selfServiceIcon"></div>
+    <span class="btnTip">自助投诉</span>
+  </div>
+  <div class="customerBtns selfOrderServiceBtn" id="toTopBtn">
+    <div class="returnTopIcon"></div>
+    <span class="btnTip">返回顶部</span>
+  </div>
+</div>
+</div>
+
+<script type="text/javascript" src="js/index1.js"></script>
+<script type="text/javascript" src="js/expressServiceTab.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+</body>
+</html>
