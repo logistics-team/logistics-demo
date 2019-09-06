@@ -417,12 +417,20 @@ function submitFunc(toUrl) {
         // 提交订单
         $.ajax({
             type : "post",
+<<<<<<< HEAD
+            url : "/customerService_submit",
+=======
             url : "/customerService!submitOrder.action",
+>>>>>>> remotes/origin/ljx
             data : args,
             dataType: "JSON",
             success : function(data) {
                 if (data != null) {
+<<<<<<< HEAD
+                    if (true) {//data.returnStatus == "01"
+=======
                     if (data.returnStatus == "01") {
+>>>>>>> remotes/origin/ljx
                         swal({
                                 title: "下单成功",
                                 type: "info"

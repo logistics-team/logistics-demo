@@ -1,9 +1,14 @@
 package com.cssl.service.impl;
 
 import com.cssl.entity.ExpressGoods;
+import com.cssl.entity.LogisticsOrders;
 import com.cssl.entity.LogisticsStatus;
 import com.cssl.service.LogisticsService;
 import org.springframework.stereotype.Component;
+
+import java.util.Map;
+
+
 
 
 @Component
@@ -28,8 +33,24 @@ public class LogisticsServiceHystrix implements LogisticsService {
     }
 
     @Override
+
+    public String getJson() {
+        return "客服端网络问题！";
+    }
+
+    @Override
+    public String isOk(ExpressGoods goods) {
+        return "网络连接中断！！!...";
+    }
+
+    @Override
+    public String confirmOrder(Map<String, Object> map) {
+        //提交失败！返回原页面
+        return "redirect:/staticFiles/pages/placeOrder.html";
+
     public String show(int id) {
         return "找不到资源";
+
     }
 
 //    @Override

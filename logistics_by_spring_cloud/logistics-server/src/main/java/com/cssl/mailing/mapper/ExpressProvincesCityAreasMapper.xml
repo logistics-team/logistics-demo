@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cssl.mailing.mapper.ExpressProvincesCityAreasMapper">
+
+    <select id="getJson" resultType="com.cssl.entity.ExpressProvincesCityAreas">
+        SELECT parent_id,epca_id,epca_name FROM express_provinces_city_areas
+        WHERE parent_id IN
+        (SELECT epca_id FROM express_provinces_city_areas
+        WHERE epca_level IN (1,2))
+    </select>
+
+    <select id="getProvinceIdByName" resultType="int" parameterType="string">
+        SELECT 	`epca_id` FROM `logistics`.`express_provinces_city_areas`
+        WHERE epca_level = 1 AND epca_name LIKE  CONCAT( #{province} ,'%')
+    </select>
+
+
+    <select id="getCityIdByName" resultType="int" parameterType="string">
+        SELECT 	`epca_id` FROM `logistics`.`express_provinces_city_areas`
+        WHERE epca_level = 2 AND epca_name LIKE  CONCAT( #{city} ,'%')
+    </select>
+
+    <select id="getAreasIdByName" resultType="int" parameterType="string">
+        SELECT 	`epca_id` FROM `logistics`.`express_provinces_city_areas`
+        WHERE epca_level = 3 AND epca_name LIKE  CONCAT( #{areas} ,'%')
+    </select>
+
+</mapper>
