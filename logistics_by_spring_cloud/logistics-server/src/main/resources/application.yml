@@ -13,15 +13,25 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
+<<<<<<< HEAD
 
 #  resources:
 #    static-locations: classpath:/static/,classpath:/templates/,classpath:/public/
 
+=======
+  resources:
+    static-locations: classpath:/resources/
+>>>>>>> remotes/origin/ljx
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:18000/eureka/
 mybatis:
+<<<<<<< HEAD
   type-aliases-package: classpath*:com.cssl.entity
   mapper-locations: classpath*:com/cssl/mailing/mapper/*.xml
+=======
+  type-aliases-package: com.cssl.entity
+  mapper-locations: classpath:dao/*.xml
+>>>>>>> remotes/origin/ljx

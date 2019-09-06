@@ -1,13 +1,19 @@
 package com.cssl.service.impl;
 
 import com.cssl.entity.ExpressGoods;
+<<<<<<< HEAD
 import com.cssl.entity.LogisticsOrders;
+=======
+>>>>>>> remotes/origin/ljx
 import com.cssl.entity.LogisticsStatus;
 import com.cssl.service.LogisticsService;
 import org.springframework.stereotype.Component;
 
+<<<<<<< HEAD
 import java.util.Map;
 
+=======
+>>>>>>> remotes/origin/ljx
 
 @Component
 public class LogisticsServiceHystrix implements LogisticsService {
@@ -31,6 +37,7 @@ public class LogisticsServiceHystrix implements LogisticsService {
     }
 
     @Override
+<<<<<<< HEAD
     public String getJson() {
         return "客服端网络问题！";
     }
@@ -44,6 +51,10 @@ public class LogisticsServiceHystrix implements LogisticsService {
     public String confirmOrder(Map<String, Object> map) {
         //提交失败！返回原页面
         return "redirect:/staticFiles/pages/placeOrder.html";
+=======
+    public String show(int id) {
+        return "找不到资源";
+>>>>>>> remotes/origin/ljx
     }
 
 //    @Override

@@ -32,8 +32,20 @@ public class ExpressGoods implements Serializable {
 
     private String egSpecialContext;
 
+<<<<<<< HEAD
 //    private ExpressUser expressUser;
 
+=======
+    private ExpressUser expressUser;
+
+    public ExpressUser getExpressUser() {
+        return expressUser;
+    }
+
+    public void setExpressUser(ExpressUser expressUser) {
+        this.expressUser = expressUser;
+    }
+>>>>>>> remotes/origin/ljx
 
     public Integer getEgId() {
         return egId;
@@ -83,18 +95,29 @@ public class ExpressGoods implements Serializable {
         this.egSpecialContext = egSpecialContext;
     }
 
+<<<<<<< HEAD
 
 
     public ExpressGoods() {
     }
 
     public ExpressGoods(Integer egId, LocalDateTime egGmtCreate, Integer itId, BigDecimal weight, BigDecimal egAppraisedPrice, String egSpecialContext) {
+=======
+    public ExpressGoods(Integer egId, LocalDateTime egGmtCreate, Integer itId, BigDecimal weight, BigDecimal egAppraisedPrice, String egSpecialContext, ExpressUser expressUser) {
+>>>>>>> remotes/origin/ljx
         this.egId = egId;
         this.egGmtCreate = egGmtCreate;
         this.itId = itId;
         this.weight = weight;
         this.egAppraisedPrice = egAppraisedPrice;
         this.egSpecialContext = egSpecialContext;
+<<<<<<< HEAD
+=======
+        this.expressUser = expressUser;
+    }
+
+    public ExpressGoods() {
+>>>>>>> remotes/origin/ljx
     }
 
     @Override
@@ -106,6 +129,10 @@ public class ExpressGoods implements Serializable {
                 ", weight=" + weight +
                 ", egAppraisedPrice=" + egAppraisedPrice +
                 ", egSpecialContext='" + egSpecialContext + '\'' +
+<<<<<<< HEAD
+=======
+                ", expressUser=" + expressUser +
+>>>>>>> remotes/origin/ljx
                 '}';
     }
 }

@@ -1,7 +1,10 @@
 package com.cssl.entity;
 
 import java.io.Serializable;
+<<<<<<< HEAD
 import java.util.List;
+=======
+>>>>>>> remotes/origin/ljx
 
 /**
  * <p>
@@ -35,10 +38,13 @@ public class ExpressProvincesCityAreas implements Serializable {
 
     private String epcaPinyin;
 
+<<<<<<< HEAD
     private List<ExpressProvincesCityAreas> cityList;
 
     private List<ExpressProvincesCityAreas> areaList;
 
+=======
+>>>>>>> remotes/origin/ljx
     public Integer getEpcaId() {
         return epcaId;
     }
@@ -119,6 +125,7 @@ public class ExpressProvincesCityAreas implements Serializable {
         this.epcaPinyin = epcaPinyin;
     }
 
+<<<<<<< HEAD
     public List<ExpressProvincesCityAreas> getCityList() {
         return cityList;
     }
@@ -139,10 +146,13 @@ public class ExpressProvincesCityAreas implements Serializable {
     }
 
 
+=======
+>>>>>>> remotes/origin/ljx
     @Override
     public String toString() {
         return "ExpressProvincesCityAreas{" +
                 "epcaId=" + epcaId +
+<<<<<<< HEAD
                 ", epcaName='" + epcaName + '\'' +
                 ", parentId=" + parentId +
                 ", epcaAbbreviation='" + epcaAbbreviation + '\'' +
@@ -155,5 +165,17 @@ public class ExpressProvincesCityAreas implements Serializable {
                 ", cityList=" + cityList +
                 ", areaList=" + areaList +
                 '}';
+=======
+                ", epcaName=" + epcaName +
+                ", parentId=" + parentId +
+                ", epcaAbbreviation=" + epcaAbbreviation +
+                ", epcaLevel=" + epcaLevel +
+                ", epcaCitycode=" + epcaCitycode +
+                ", epcaNumber=" + epcaNumber +
+                ", epcaLng=" + epcaLng +
+                ", epcaLat=" + epcaLat +
+                ", epcaPinyin=" + epcaPinyin +
+                "}";
+>>>>>>> remotes/origin/ljx
     }
 }

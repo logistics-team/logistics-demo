@@ -21,11 +21,14 @@
 
     <dependencies>
         <dependency>
+<<<<<<< HEAD
             <groupId>com.cssl</groupId>
             <artifactId>comm</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
+=======
+>>>>>>> remotes/origin/ljx
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>

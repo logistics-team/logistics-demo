@@ -1,9 +1,15 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
+<<<<<<< HEAD
     url: jdbc:mysql://47.102.85.126:3306/logistics?serverTimezone=UTC
     username: logistics
     password: root123
+=======
+    url: jdbc:mysql:///logistics?serverTimezone=UTC
+    username: root
+    password: root
+>>>>>>> remotes/origin/ljx
     dbcp2:
       min-idle: 5
       initial-size: 5
@@ -28,7 +34,10 @@ spring:
 
 server:
   port: 9292
+<<<<<<< HEAD
   max-http-header-size: 4048576
+=======
+>>>>>>> remotes/origin/ljx
 
 eureka:
   client:

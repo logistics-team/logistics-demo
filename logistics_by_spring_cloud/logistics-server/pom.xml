@@ -31,6 +31,7 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.1.2</version>
         </dependency>
+<<<<<<< HEAD
         <!--        <dependency>-->
         <!--            <groupId>com.baomidou</groupId>-->
         <!--            <artifactId>mybatis-plus</artifactId>-->
@@ -41,6 +42,18 @@
         <!--            <artifactId>mybatis-plus-generator</artifactId>-->
         <!--            <version>3.1.2</version>-->
         <!--        </dependency>-->
+=======
+<!--        <dependency>-->
+<!--            <groupId>com.baomidou</groupId>-->
+<!--            <artifactId>mybatis-plus</artifactId>-->
+<!--            <version>3.1.2</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.baomidou</groupId>-->
+<!--            <artifactId>mybatis-plus-generator</artifactId>-->
+<!--            <version>3.1.2</version>-->
+<!--        </dependency>-->
+>>>>>>> remotes/origin/ljx
 
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -49,6 +62,10 @@
         </dependency>
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> remotes/origin/ljx
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -83,11 +100,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+<<<<<<< HEAD
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.58</version>
         </dependency>
+=======
+>>>>>>> remotes/origin/ljx
     </dependencies>
 
     <dependencyManagement>
@@ -103,6 +123,7 @@
     </dependencyManagement>
 
     <build>
+<<<<<<< HEAD
         <!--配置Maven 对resource文件 过滤 -->
         <resources>
             <resource>
@@ -120,6 +141,25 @@
                     <include>**/*.xml</include>
                 </includes>
                 <filtering>true</filtering>
+=======
+        <resources>
+            <resource>
+                <directory>src/main/java</directory><!--java文件的路径-->
+                <includes>
+                    <include>**/*.*</include>
+                    <include>**/*/*.xml</include>
+                </includes>
+                <!-- <filtering>false</filtering>-->
+            </resource>
+
+            <resource>
+                <directory>src/main/resources</directory><!--资源文件的路径-->
+                <includes>
+                    <include>**/*.*</include>
+                    <include>**/*/*.xml</include>
+                </includes>
+                <!-- <filtering>false</filtering>-->
+>>>>>>> remotes/origin/ljx
             </resource>
         </resources>
         <plugins>
