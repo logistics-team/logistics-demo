@@ -1,0 +1,145 @@
+.informationTable{
+    margin-left: 69px;
+    width: 965px;
+}
+.informationTable table {
+    border-collapse: collapse;
+    border:1px solid #E0E0E0;
+}
+
+.informationTable table tr {
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size:14px;
+    font-family:MicrosoftYaHei;
+}
+
+.informationTable table>thead>tr>th {
+    background: #F7F7F7;
+    color: #666666;
+    width: 193px;
+}
+
+.informationTable table>tbody>tr {
+    color:#333333;
+}
+.zycz_div {
+    height: auto;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.zycz_div .zycz_div1{
+    background: url(../images/zycz.png) no-repeat;
+    width: 234px;
+    height: 163px;
+    display: inline-block;
+}
+.zycz_div .zycz_div2{
+    width: 680px;
+    height: 168px;
+    display: inline-block;
+    position: absolute;
+    margin-left: 37px;
+}
+.zycz_div .zycz_div2 .span1{
+    width: 680px;
+    height: 168px;
+    font-size: 14px;
+    font-family: MicrosoftYaHei;
+    color: rgba(51,51,51,1);
+    line-height: 24px;
+
+
+}
+.cjwtContents{
+    height: 585px;
+}
+.cjwtContents .dl {
+    margin-bottom: 20px;
+    width: 812px;
+    display: inline-block;
+}
+.cjwtContents .dt {
+    line-height: 19px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-indent: 2em;
+    font-family: MicrosoftYaHei-Bold;
+    color: rgba(51,51,51,1);
+}
+.cjwtContents .dd {
+    line-height: 24px;
+    margin-left: 28px;
+    font-family: MicrosoftYaHei;
+    color: rgba(102,102,102,1);
+}
+.cjwtContents .img1{
+    display: inline-block;
+}
+.cjwtContents .div1{
+    height: 130px;
+}
+.informationTable table tr td a {
+    color: #0293ED;
+}
+.performanceAppraisalModel {
+    width:690px;
+    background:#FFFFFF;
+    position: fixed;
+    top: calc(50% - 280px);
+    top:100px\0;
+    left:calc(50% - 345px);
+    left: 40%\0;
+    z-index: 1112;
+    display: none;
+}
+.performanceAppraisalModelTitle {
+	height:40px;
+	line-height: 40px;
+	background:#F7F7F7;
+	padding:0 23px 0 20px;
+	font-size:16px;
+	font-family:MicrosoftYaHei-Bold;
+	color:#262626;
+	font-weight: bold;
+	border-bottom:1px solid #E0E0E0;
+}
+.performanceAppraisalModel img {
+	float: right;
+	margin-top: 10px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.performanceAppraisalModelCont {
+    padding: 15px 0 34px 53px;
+}
+
+.performanceAppraisalRow label {
+    display: inline-block;
+    width:56px;
+    font-size:14px;
+    font-family:MicrosoftYaHei;
+    color:#666666;
+    line-height:32px;
+    margin-right: 17px;
+}
+
+.performanceAppraisalRow{
+    font-size:14px;
+    font-family:MicrosoftYaHei;
+    color:#333333;
+    line-height:32px;
+}
+
+.rightAppraisalRow {
+    margin-left: 73px;
+}
+#jobRequirementsSpan,#jobDescriptionSpan,#contactInformationSpan {
+    display: inline-block;
+    vertical-align: top;
+    width: 545px;
+}
