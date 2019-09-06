@@ -7,10 +7,14 @@ import com.cssl.service.LogisticsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
+import javax.print.DocFlavor;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -37,6 +41,35 @@ public class ConsumerController {
         map.put("stu",status);
         System.out.println("map = " + map);
         return logisticsService.find(status);
+    }
+
+    @Autowired
+    private RestTemplate rt;
+
+    @RequestMapping("show")
+    @ResponseBody
+    public String show(@RequestParam(required=false,name="id",defaultValue="0")int id){
+        System.out.println("id:"+id);
+        String s=rt.getForObject("http://logistics-server/orders/show?id="+id,String.class);;// 服务者 名 logistics-server 访问orders/show方法 获取String 数据
+        System.out.println("数据显示:"+s);
+        return s;
+    }
+    @RequestMapping("l_statue")
+    @ResponseBody
+    public List<LogisticsStatus> l_statue(@RequestParam(required=false,name="id",defaultValue="0")int id){
+        System.out.println("id:"+id);
+        LogisticsStatus[] s=rt.getForObject("http://logistics-server/orders/l_statue?id="+id, LogisticsStatus[].class);// 服务者 名 logistics-server 访问orders/show方法 获取list 数据
+        List<LogisticsStatus> list= Arrays.asList(s);
+        System.out.println("下拉框显示:"+list);
+        return list;
+    }
+    @RequestMapping("ls_update")
+    @ResponseBody
+    public int ls_update(@RequestParam(required=false,name="ls_id",defaultValue="0")int ls_id,@RequestParam(required=false,name="ts_id",defaultValue="")String ts_id){
+        System.out.println("ls_id:"+ls_id+",ts_id:"+ts_id);
+        String s=rt.getForObject("http://logistics-server/orders/ts_update?ts_id="+ts_id+"&ls_id="+ls_id, String.class);// 服务者 名 logistics-server 访问orders/show方法 获取int 数据
+        int i=Integer.parseInt(s);
+        return i;
     }
 
             //参数

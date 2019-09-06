@@ -131,7 +131,7 @@
                     贤心
                 </a>
                 <dl class="layui-nav-child">
-                    <dd><a href="">退出</a></dd>
+                    <dd><a href="http://localhost:9292/go/login">退出</a></dd>
                 </dl>
             </li>
         </ul>
@@ -188,6 +188,7 @@
                 <div class="layui-tab-content" style="height: 100px;">
 
                     <div class="layui-tab-item">
+                        <blockquote class="layui-elem-quote">这是一个解释</blockquote>
                         <div class="demoTable3">
                             <form class="layui-form" onclick="return false">
                             <div class="layui-form-item">
@@ -216,23 +217,31 @@
                             <a class="layui-btn layui-btn-mini layui-btn-normal layui-btn-xs" lay-event="edit">编辑</a>
                         </script>
 
-                        <script src="/layui/layui.js" charset="utf-8"></script>
                         <script>
+
                             layui.use('table', function(){
                                 var table = layui.table;
-
+                                var form = layui.form;
                                 //方法级渲染
                                 table.render({
                                     elem: '#LAY_table_user'
-                                    ,url: '/demo.json'
+                                    ,url: 'http://localhost:9292/show'
                                     ,cols: [[
-                                        {field:'id', width:100, title: '订单ID', sort: true, align: 'center'}
-                                        ,{field:'username', width:120, title: '寄件人', align: 'center'}
-                                        ,{field:'sex', width:120, title: '收件人', align: 'center'}
-                                        ,{field:'city', width:140, title: '投诉类型', align: 'center'}
-                                        ,{field:'experience', width:180, title: '时间', sort: true, align: 'center'}
-                                        ,{field:'email', width:470, title: '描述', align: 'center'}
-                                        ,{field:'xxx', width:170, templet: '#select',unresize: true, title: '操作', align: 'center'}
+                                        {field:'loId', width:160, title: '订单ID', sort: true, align: 'center'}
+                                        ,{field:'euReceiptName', width:120, title: '寄件人', align: 'center'}
+                                        ,{field:'euReceiptPhone', width:120, title: '寄件人手机', align: 'center'}
+                                        ,{field:'euSenderName', width:120, title: '收件人', align: 'center'}
+                                        ,{field:'euSenderPhone', width:120, title: '收件人手机', align: 'center'}
+                                        ,{field:'itName', width:140, title: '物品类型', align: 'center'}
+                                        ,{field:'egSpecialContext', width:140, title: '物品名称', align: 'center'}
+                                        ,{field:'tmType', width:120, title: '运输方式', align: 'center'}
+                                        ,{field:'lsContext', width:120, title: '运输状态', align: 'center'}
+                                        ,{field:'xxx', width:170, templet: '#select',unresize: true, title: '操作', align: 'center', fixed: 'right'}
+                                        ,{field:'euId', width:100, title: '用户表id', align: 'center',style:'display:none'}
+                                        ,{field:'egId', width:100, title: '物品表id', align: 'center',style:'display:none'}
+                                        ,{field:'itId', width:100, title: '物品类型表id', align: 'center',style:'display:none'}
+                                        ,{field:'lsId', width:100, title: '运输状态id', align: 'center',style:'display:none'}
+                                        ,{field:'tsid', width:100, title: '运输id', align: 'center',style:'display:none'}
                                     ]]
                                     ,id: 'LAY_table_userReload'
                                     ,page: true
@@ -241,7 +250,7 @@
                                 var $ = layui.$, active = {
                                     reload3: function(){
                                         var demoReload = $('#demoReload3');
-                                        alert(demoReload.val());//获取当前搜素值
+                                        //alert(demoReload.val());//获取当前搜素值
                                         //执行重载
                                         table.reload('LAY_table_userReload', {
                                             page: {
@@ -253,7 +262,6 @@
                                         }, 'data');
                                     }
                                 };
-
                                 table.on('tool(dd)', function (obj) {
                                     var data = obj.data;
                                     te(data);
@@ -268,28 +276,59 @@
                                                 layer.close(index);
                                             });
                                         } else if (obj.event === 'edit') {
-                                            layer.open({
+                                            c=layer.open({
                                                 //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
                                                 type: 1,
                                                 title: "修改订单信息",
                                                 area: ['420px', '250px'],
+                                                shadeClose:true,//点击阴影关闭
                                                 content: $("#dtUpdateTest")//引用的弹出层的页面层的方式加载修改界面表单
                                             });
                                             //动态向表传递赋值可以参看文章进行修改界面的更新前数据的显示，当然也是异步请求的要数据的修改数据的获取
-                                            setFormValue(obj,data);
+                                            //setFormValue(obj,data);
                                         }
                                     }
                                 });
-
+                                //显示被编辑信息
+                                var comtext=0;
                                 function te(data) {
-                                    var id=data.id;
-                                    var namej=data.username;
-                                    var names=data.sex;
+                                    var loid="<span class='lois2'>订单ID:&nbsp;&nbsp;&nbsp;&nbsp;"+data.loId+"</span>";
+                                    comtext=data.tsid;
+                                    var lsid="";
+                                    $.ajax({url:"http://localhost:9292/l_statue?id="+data.lsId,success:function (result) {
+                                        //alert(result);
+                                        $(result).each(function (index,element) {
+                                            lsid+="<option class='l_statue' value='"+element.lsId+"'>"+element.lsContext+"</option>";
+                                        })
+                                    },type:'post',async:false});
                                     //alert(id+namej+names);
-                                    document.getElementById("dtid").value = id;
-                                    document.getElementById("jjr").value = namej;
-                                    document.getElementById("sjr").value = names;
+                                    $(".lois2").remove();
+                                    $("#dtid").append(loid);
+                                    //alert(comtext);
+                                    //alert(lsid);
+                                    $(".l_statue").remove();
+                                    $("#lsid").append(lsid);
+                                    layui.form.render("select");//重新编译select
                                 }
+                                //编辑订单信息
+                                form.on('submit(lo_demo)',function (data) {
+                                    var ts_id=comtext;
+                                    var ls_id=data.field.interest;
+                                    //alert(ts_id+ls_id);
+                                    //layer.msg(ts_id+":"+ls_id);
+                                    layer.close(layer.index);//关闭最新弹出的框
+                                    //进行后台的数据修改
+                                    $.ajax({url:"http://localhost:9292/ls_update?ts_id="+ts_id+"&ls_id="+ls_id,success:function (result) {
+                                            if(result===0){
+                                                layer.msg("保存失败,请重试!");
+                                            }else{
+                                                layer.msg("保存成功!");
+                                                //location.reload(true);刷新页面
+
+                                            }
+                                        },type:'post',async:false});
+                                    return false;
+                                });
 
                                 $('.demoTable3 .layui-btn').on('click', function(){
                                     var type = $(this).data('type');
@@ -300,7 +339,7 @@
                         </script>
                     </div>
                     <div class="layui-tab-item">
-
+                        <blockquote class="layui-elem-quote">这是一个解释</blockquote>
                         <div class="demoTable">
                             搜索：
                             <div class="layui-inline">
@@ -357,6 +396,7 @@
                         </script>
                     </div>
                     <div class="layui-tab-item">
+                        <blockquote class="layui-elem-quote">这是一个解释</blockquote>
                         <script type="text/html" id="switchTp2">
                             <input type="checkbox" name="lock" value="{{d.id}}" lay-skin="switch" lay-text="处理中|未处理" lay-filter="lockDemo3">
                         </script>
@@ -389,6 +429,7 @@
                         </script>
                     </div>
                     <div class="layui-tab-item">
+                        <blockquote class="layui-elem-quote">这是一个解释</blockquote>
                         <script type="text/html" id="switchTp3">
                             <input type="checkbox" name="lock" value="{{d.id}}" lay-skin="switch" lay-text="已处理|处理中" lay-filter="lockDemo4">
                         </script>
@@ -421,6 +462,7 @@
                             </script>
                     </div>
                     <div class="layui-tab-item">
+                        <blockquote class="layui-elem-quote">这是一个解释</blockquote>
                         <table class="layui-hide" id="test7"></table>
                         <script>
                             layui.use('table', function(){
@@ -445,6 +487,7 @@
                     </div>
 
                     <div class="layui-tab-item">
+                        <blockquote class="layui-elem-quote">这是一个解释</blockquote>
                         <!--//搜索框-->
                         <div class="demoTable4">
                             搜索：
@@ -603,6 +646,7 @@
                 </div>
 
                     <div class="layui-tab-item">
+                        <blockquote class="layui-elem-quote">这是一个解释</blockquote>
                         <div class="demoTable">
                             搜索ID：
                             <div class="layui-inline">
@@ -701,6 +745,7 @@
                         </script>
                     </div>
                     <div class="layui-tab-item layui-show">
+                        <blockquote class="layui-elem-quote">这是一个解释</blockquote>
                         <div id="ca" style="width: 850px;height:800px;"></div>
                         <script>
                             // 基于准备好的dom，初始化echarts实例
@@ -1093,6 +1138,7 @@
 </div>
     <!--这里是弹出层的表单信息-->
     <div class="layui-row" id="popUpdateTest" style="display:none;">
+
         <div class="layui-col-md10">
             <form class="layui-form layui-from-pane" action="" style="margin-top:20px" >
                 <div class="layui-form-item">
@@ -1124,31 +1170,27 @@
     </div>
 </div>
 
-<div class="layui-row" id="dtUpdateTest" style="display:none;">
+<div class="layui-row" id="dtUpdateTest" style="display:none;width:390px">
     <div class="layui-col-md10">
-        <form class="layui-form layui-from-pane" action="" style="margin-top:20px" >
+        <form class="layui-form layui-from-pane" action=""  style="margin-top:20px" >
             <div class="layui-form-item">
-                <label class="layui-form-label">订单ID</label>
-                <div class="layui-input-block">
-                    <input type="text" name="neweqptIdCode" id="dtid"  required  lay-verify="required" autocomplete="off" placeholder="" class="layui-input layui-disabled">
-                </div>
+                <label class="layui-form-label" style="width: 200px;"><span  id="dtid"></span></label>
             </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">订单状态</label>
-                <div class="layui-input-block">
-                    <select name="interest" lay-filter="aihao">
-                        <option value=""></option>
-                        <option value="0">未发货</option>
-                        <option value="1" selected="">运送中</option>
-                        <option value="2">已送达</option>
+                <div class="layui-input-inline">
+                    <select name="interest" id="lsid" lay-filter="Type-filter" lay-verify="required">
+
+                        <option value="1" class="l_statue" selected="">运送中</option>
+
                     </select>
                 </div>
             </div>
 
             <div class="layui-form-item" style="margin-top:40px">
                 <div class="layui-input-block">
-                    <button class="layui-btn  layui-btn-submit " lay-submit="" lay-filter="demo11">确认修改</button>
+                    <button class="layui-btn  layui-btn-submit " lay-submit lay-filter="lo_demo">确认修改</button>
                 </div>
             </div>
         </form>

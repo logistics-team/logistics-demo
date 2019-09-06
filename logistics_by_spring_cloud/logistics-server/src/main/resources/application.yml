@@ -5,15 +5,16 @@ spring:
     name: logistics-server
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql:///logistics?serverTimezone=UTC
-    username: root
-    password: root
+    url: jdbc:mysql://47.102.85.126:3306/logistics?serverTimezone=UTC
+    username: logistics
+    password: root123
     dbcp2:
       min-idle: 5
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
-
+  resources:
+    static-locations: classpath:/resources/
 
 eureka:
   client:
@@ -21,4 +22,4 @@ eureka:
       defaultZone: http://localhost:18000/eureka/
 mybatis:
   type-aliases-package: com.cssl.entity
-  mapper-locations: classpath:com/cssl/mailing/mapper/*.xml
+  mapper-locations: classpath:dao/*.xml

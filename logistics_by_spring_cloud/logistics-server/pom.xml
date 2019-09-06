@@ -104,13 +104,16 @@
                 <directory>src/main/java</directory><!--java文件的路径-->
                 <includes>
                     <include>**/*.*</include>
+                    <include>**/*/*.xml</include>
                 </includes>
                 <!-- <filtering>false</filtering>-->
             </resource>
+
             <resource>
                 <directory>src/main/resources</directory><!--资源文件的路径-->
                 <includes>
                     <include>**/*.*</include>
+                    <include>**/*/*.xml</include>
                 </includes>
                 <!-- <filtering>false</filtering>-->
             </resource>

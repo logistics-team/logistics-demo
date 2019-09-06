@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cssl.orders.mapper.Orders_index">
+    <resultMap id="s" type="com.cssl.entity.LogisticsOrders">
+        <id column="lo_id" property="loId"></id>
+        <id column="ts_id" property="tsId"></id>
+        <association property="expressUser" javaType="com.cssl.entity.ExpressUser">
+            <id column="eu_id" property="euId"></id>
+            <id column="eu_receipt_name" property="euReceiptName"></id>
+            <id column="eu_receipt_phone" property="euReceiptPhone"></id>
+            <id column="eu_sender_name" property="euSenderName"></id>
+            <id column="eu_sender_phone" property="euSenderPhone"></id>
+        </association>
+        <association property="expressGoods" javaType="com.cssl.entity.ExpressGoods">
+            <id column="eg_id" property="egId"></id>
+            <id column="eg_special_context" property="egSpecialContext"></id>
+        </association>
+        <association property="itemType" javaType="com.cssl.entity.ItemType">
+            <id column="it_id" property="itId"></id>
+            <id column="it_name" property="itName"></id>
+        </association>
+        <association property="logisticsStatus" javaType="com.cssl.entity.LogisticsStatus">
+            <id column="ls_id" property="lsId"></id>
+            <id column="ls_context" property="lsContext"></id>
+        </association>
+        <association property="transportMeans" javaType="com.cssl.entity.TransportMeans">
+            <id column="tm_type" property="tmType"></id>
+        </association>
+    </resultMap>
+
+    <select id="show" resultMap="s" parameterType="int">
+        SELECT l.lo_id,l.eg_id,l.eu_id, l.ts_id ,t.it_id,ls.ls_id,m.tm_id,g.eg_special_context,u.eu_receipt_name,u.eu_receipt_phone,u.eu_sender_name,u.eu_sender_phone,t.it_name,ls.ls_context,m.tm_type
+        FROM logistics_orders l
+        INNER JOIN express_goods g ON l.eg_id=g.eg_id
+        INNER JOIN express_user u ON l.eu_id=u.eu_id
+        INNER JOIN item_type t ON g.it_id=t.it_id
+        INNER JOIN transportation_status s ON l.ts_id=s.ts_id
+        INNER JOIN logistics_status ls ON s.ls_id=ls.ls_id
+        INNER JOIN transport_means m ON l.tm_id=m.tm_id
+        <if test="id gt 0 and id lt 10">
+            WHERE t.it_id=#{id}
+        </if>
+    </select>
+
+
+
+    <resultMap id="sta" type="com.cssl.entity.LogisticsStatus">
+    <id column="ls_id" property="lsId"></id>
+    <id column="ls_context" property="lsContext"></id>
+    </resultMap>
+    <select id="l_statue" resultMap="sta" parameterType="int">
+        SELECT ls_id,ls_context FROM logistics_status WHERE ls_id>=#{id} and ls_id &lt; 9
+    </select>
+
+    <update id="ts_update" parameterType="com.cssl.entity.TransportationStatus">
+        UPDATE transportation_status SET ls_id=#{lsId} WHERE ts_id=#{tsId}
+    </update>
+</mapper>

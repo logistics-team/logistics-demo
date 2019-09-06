@@ -20,6 +20,9 @@ public interface LogisticsService {
 
     @RequestMapping(value = "mailing/save", method = RequestMethod.POST, consumes = "application/json")
     String save(@RequestBody ExpressGoods goods);
+
+    @RequestMapping(value = "orders/show", method = RequestMethod.POST, consumes = "application/json")
+    String show(@RequestBody int id);
 }
 
 

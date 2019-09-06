@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.cssl.mailing.mapper.ExpressUser">
-<!--    <insert id="saveExpress_user" parameterType="com.cssl.mailing.entity.ExpressUser">-->
-<!--        insert into ExpressUser  values (#{eu_id},#{eu_gmt_create},#{eu_gmt_modified},#{eu_receipt_name},-->
-<!--        #{ep_receipt_id},#{ec_receipt_id},#{ea_receipt_id},#{eu_receipt_phone},#{eu_sender_name},#{ep_sender_id},#{ec_sender_id},#{ea_sender_id},#{eu_sender_phone},#{eg_id});-->
-<!--    </insert>-->
-</mapper>
