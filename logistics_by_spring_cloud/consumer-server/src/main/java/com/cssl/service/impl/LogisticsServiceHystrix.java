@@ -9,8 +9,6 @@ import org.springframework.stereotype.Component;
 import java.util.Map;
 
 
-
-
 @Component
 public class LogisticsServiceHystrix implements LogisticsService {
 
@@ -33,7 +31,6 @@ public class LogisticsServiceHystrix implements LogisticsService {
     }
 
     @Override
-
     public String getJson() {
         return "客服端网络问题！";
     }
@@ -47,10 +44,6 @@ public class LogisticsServiceHystrix implements LogisticsService {
     public String confirmOrder(Map<String, Object> map) {
         //提交失败！返回原页面
         return "redirect:/staticFiles/pages/placeOrder.html";
-
-    public String show(int id) {
-        return "找不到资源";
-
     }
 
 //    @Override

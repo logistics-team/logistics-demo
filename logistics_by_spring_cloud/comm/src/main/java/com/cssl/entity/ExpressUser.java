@@ -45,7 +45,7 @@ public class ExpressUser implements Serializable {
 
     private String euSenderPhone;
 
-    private Integer egId;
+//    private Integer egId;
 
     public Integer getEuId() {
         return euId;
@@ -151,18 +151,18 @@ public class ExpressUser implements Serializable {
         this.euSenderPhone = euSenderPhone;
     }
 
-    public Integer getEgId() {
-        return egId;
-    }
-
-    public void setEgId(Integer egId) {
-        this.egId = egId;
-    }
+//    public Integer getEgId() {
+//        return egId;
+//    }
+//
+//    public void setEgId(Integer egId) {
+//        this.egId = egId;
+//    }
 
     public ExpressUser() {
     }
 
-    public ExpressUser(Integer euId, LocalDateTime euGmtCreate, LocalDateTime euGmtModified, String euReceiptName, Integer epReceiptId, Integer ecReceiptId, String euReceiptPhone, String euSenderName, Integer epSenderId, Integer ecSenderId, Integer eaSenderId, String euSenderPhone, Integer egId) {
+    public ExpressUser(Integer euId, LocalDateTime euGmtCreate, LocalDateTime euGmtModified, String euReceiptName, Integer epReceiptId, Integer ecReceiptId, String euReceiptPhone, String euSenderName, Integer epSenderId, Integer ecSenderId, Integer eaSenderId, String euSenderPhone) {
         this.euId = euId;
         this.euGmtCreate = euGmtCreate;
         this.euGmtModified = euGmtModified;
@@ -175,10 +175,10 @@ public class ExpressUser implements Serializable {
         this.ecSenderId = ecSenderId;
         this.eaSenderId = eaSenderId;
         this.euSenderPhone = euSenderPhone;
-        this.egId = egId;
+//        this.egId = egId;
     }
 
-    public ExpressUser(Integer euId, LocalDateTime euGmtCreate, LocalDateTime euGmtModified, String euReceiptName, Integer epReceiptId, Integer ecReceiptId, Integer eaReceiptId, String euReceiptPhone, String euSenderName, Integer epSenderId, Integer ecSenderId, Integer eaSenderId, String euSenderPhone, Integer egId) {
+    public ExpressUser(Integer euId, LocalDateTime euGmtCreate, LocalDateTime euGmtModified, String euReceiptName, Integer epReceiptId, Integer ecReceiptId, Integer eaReceiptId, String euReceiptPhone, String euSenderName, Integer epSenderId, Integer ecSenderId, Integer eaSenderId, String euSenderPhone) {
         this.euId = euId;
         this.euGmtCreate = euGmtCreate;
         this.euGmtModified = euGmtModified;
@@ -192,7 +192,7 @@ public class ExpressUser implements Serializable {
         this.ecSenderId = ecSenderId;
         this.eaSenderId = eaSenderId;
         this.euSenderPhone = euSenderPhone;
-        this.egId = egId;
+//        this.egId = egId;
     }
 
     @Override
@@ -211,7 +211,7 @@ public class ExpressUser implements Serializable {
                 ", ecSenderId=" + ecSenderId +
                 ", eaSenderId=" + eaSenderId +
                 ", euSenderPhone=" + euSenderPhone +
-                ", egId=" + egId +
+//                ", egId=" + egId +
                 "}";
     }
 }

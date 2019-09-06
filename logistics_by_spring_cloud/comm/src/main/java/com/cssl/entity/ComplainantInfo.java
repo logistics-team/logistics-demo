@@ -1,5 +1,7 @@
 package com.cssl.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+
 import java.io.Serializable;
 
 /**

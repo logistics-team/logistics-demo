@@ -6,16 +6,11 @@ import com.cssl.mailing.service.IExpressProvincesCityAreasService;
 import com.cssl.mailing.service.IExpress_goodsService;
 import com.cssl.mailing.service.IExpress_userService;
 import com.cssl.mailing.service.ILogisticsOrdersService;
-
-import com.cssl.mailing.service.IExpress_goodsService;
-import com.cssl.mailing.service.IExpress_userService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.cssl.entity.*;
 
 import java.util.List;
-
 import java.util.Map;
 
 
@@ -66,27 +61,6 @@ public class MailingController {
 //        return url;//传输地址判断是否添加成功！
 //
 //    }
-
-
-
-
-@RestController
-@RequestMapping("mailing")
-public class MailingController {
-    @Autowired
-    private IExpress_goodsService goodsService;
-    @Autowired
-    private IExpress_userService userService;
-    @RequestMapping("save")
-    public Object save(@RequestBody ExpressUser goods){
-        if (goods == null) {
-            System.out.println("null");
-//            return "信息传入为空，请核对！";
-            return null;
-        }
-        return goods;
-    }
-
 
 
     @PostMapping("test")

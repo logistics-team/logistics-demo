@@ -1,6 +1,7 @@
 package com.cssl.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * <p>
@@ -33,6 +34,10 @@ public class ExpressProvincesCityAreas implements Serializable {
     private String epcaLat;
 
     private String epcaPinyin;
+
+    private List<ExpressProvincesCityAreas> cityList;
+
+    private List<ExpressProvincesCityAreas> areaList;
 
     public Integer getEpcaId() {
         return epcaId;
@@ -114,19 +119,41 @@ public class ExpressProvincesCityAreas implements Serializable {
         this.epcaPinyin = epcaPinyin;
     }
 
+    public List<ExpressProvincesCityAreas> getCityList() {
+        return cityList;
+    }
+
+    public void setCityList(List<ExpressProvincesCityAreas> cityList) {
+        this.cityList = cityList;
+    }
+
+    public List<ExpressProvincesCityAreas> getAreaList() {
+        return areaList;
+    }
+
+    public void setAreaList(List<ExpressProvincesCityAreas> areaList) {
+        this.areaList = areaList;
+    }
+
+    public ExpressProvincesCityAreas() {
+    }
+
+
     @Override
     public String toString() {
         return "ExpressProvincesCityAreas{" +
                 "epcaId=" + epcaId +
-                ", epcaName=" + epcaName +
+                ", epcaName='" + epcaName + '\'' +
                 ", parentId=" + parentId +
-                ", epcaAbbreviation=" + epcaAbbreviation +
-                ", epcaLevel=" + epcaLevel +
-                ", epcaCitycode=" + epcaCitycode +
+                ", epcaAbbreviation='" + epcaAbbreviation + '\'' +
+                ", epcaLevel='" + epcaLevel + '\'' +
+                ", epcaCitycode='" + epcaCitycode + '\'' +
                 ", epcaNumber=" + epcaNumber +
-                ", epcaLng=" + epcaLng +
-                ", epcaLat=" + epcaLat +
-                ", epcaPinyin=" + epcaPinyin +
-                "}";
+                ", epcaLng='" + epcaLng + '\'' +
+                ", epcaLat='" + epcaLat + '\'' +
+                ", epcaPinyin='" + epcaPinyin + '\'' +
+                ", cityList=" + cityList +
+                ", areaList=" + areaList +
+                '}';
     }
 }

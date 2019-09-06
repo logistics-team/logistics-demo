@@ -32,15 +32,8 @@ public class ExpressGoods implements Serializable {
 
     private String egSpecialContext;
 
-    private ExpressUser expressUser;
+//    private ExpressUser expressUser;
 
-    public ExpressUser getExpressUser() {
-        return expressUser;
-    }
-
-    public void setExpressUser(ExpressUser expressUser) {
-        this.expressUser = expressUser;
-    }
 
     public Integer getEgId() {
         return egId;
@@ -90,17 +83,18 @@ public class ExpressGoods implements Serializable {
         this.egSpecialContext = egSpecialContext;
     }
 
-    public ExpressGoods(Integer egId, LocalDateTime egGmtCreate, Integer itId, BigDecimal weight, BigDecimal egAppraisedPrice, String egSpecialContext, ExpressUser expressUser) {
+
+
+    public ExpressGoods() {
+    }
+
+    public ExpressGoods(Integer egId, LocalDateTime egGmtCreate, Integer itId, BigDecimal weight, BigDecimal egAppraisedPrice, String egSpecialContext) {
         this.egId = egId;
         this.egGmtCreate = egGmtCreate;
         this.itId = itId;
         this.weight = weight;
         this.egAppraisedPrice = egAppraisedPrice;
         this.egSpecialContext = egSpecialContext;
-        this.expressUser = expressUser;
-    }
-
-    public ExpressGoods() {
     }
 
     @Override
@@ -112,7 +106,6 @@ public class ExpressGoods implements Serializable {
                 ", weight=" + weight +
                 ", egAppraisedPrice=" + egAppraisedPrice +
                 ", egSpecialContext='" + egSpecialContext + '\'' +
-                ", expressUser=" + expressUser +
                 '}';
     }
 }

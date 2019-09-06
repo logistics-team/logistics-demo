@@ -2,12 +2,11 @@ package com.cssl.service;
 
 import com.cssl.service.impl.LogisticsServiceHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import com.cssl.entity.*;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.util.Map;
+
 
 @FeignClient(value = "logistics-server",fallback = LogisticsServiceHystrix.class)
 public interface LogisticsService {
@@ -21,8 +20,14 @@ public interface LogisticsService {
     @RequestMapping(value = "mailing/save", method = RequestMethod.POST, consumes = "application/json")
     String save(@RequestBody ExpressGoods goods);
 
-    @RequestMapping(value = "orders/show", method = RequestMethod.POST, consumes = "application/json")
-    String show(@RequestBody int id);
+    @RequestMapping(value = "mailing/json", method = RequestMethod.POST, consumes = "application/json")
+    String getJson();
+    //表单提交
+    @RequestMapping(value = "mailing/submit", method = RequestMethod.POST, consumes = "application/json")
+    String isOk(@RequestBody ExpressGoods goods);
+
+    @RequestMapping(value = "mailing/submitOrders", method = RequestMethod.POST, consumes = "application/json")
+    String confirmOrder(@RequestBody Map<String, Object> map);
 }
 
 

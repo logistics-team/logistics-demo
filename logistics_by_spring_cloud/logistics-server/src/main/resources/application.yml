@@ -17,16 +17,11 @@ spring:
 #  resources:
 #    static-locations: classpath:/static/,classpath:/templates/,classpath:/public/
 
-  resources:
-    static-locations: classpath:/resources/
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:18000/eureka/
 mybatis:
-
   type-aliases-package: classpath*:com.cssl.entity
   mapper-locations: classpath*:com/cssl/mailing/mapper/*.xml
-
-
