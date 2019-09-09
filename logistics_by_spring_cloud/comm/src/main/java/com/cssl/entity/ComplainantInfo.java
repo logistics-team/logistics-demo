@@ -1,10 +1,7 @@
 package com.cssl.entity;
 
-<<<<<<< HEAD
 import com.baomidou.mybatisplus.annotation.TableField;
 
-=======
->>>>>>> remotes/origin/ljx
 import java.io.Serializable;
 
 /**

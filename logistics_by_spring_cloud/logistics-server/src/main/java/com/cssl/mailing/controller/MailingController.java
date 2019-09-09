@@ -2,21 +2,15 @@ package com.cssl.mailing.controller;
 
 
 
-<<<<<<< HEAD
 import com.cssl.mailing.service.IExpressProvincesCityAreasService;
 import com.cssl.mailing.service.IExpress_goodsService;
 import com.cssl.mailing.service.IExpress_userService;
 import com.cssl.mailing.service.ILogisticsOrdersService;
-=======
-import com.cssl.mailing.service.IExpress_goodsService;
-import com.cssl.mailing.service.IExpress_userService;
->>>>>>> remotes/origin/ljx
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.cssl.entity.*;
 
 import java.util.List;
-<<<<<<< HEAD
 import java.util.Map;
 
 
@@ -68,27 +62,6 @@ public class MailingController {
 //
 //    }
 
-=======
-
-
-@RestController
-@RequestMapping("mailing")
-public class MailingController {
-    @Autowired
-    private IExpress_goodsService goodsService;
-    @Autowired
-    private IExpress_userService userService;
-    @RequestMapping("save")
-    public Object save(@RequestBody ExpressUser goods){
-        if (goods == null) {
-            System.out.println("null");
-//            return "信息传入为空，请核对！";
-            return null;
-        }
-        return goods;
-    }
-
->>>>>>> remotes/origin/ljx
 
     @PostMapping("test")
     public Object testfind(@RequestBody LogisticsStatus status){

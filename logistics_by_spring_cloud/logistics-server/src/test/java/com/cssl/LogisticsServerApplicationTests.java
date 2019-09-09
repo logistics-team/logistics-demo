@@ -1,16 +1,10 @@
 package com.cssl;
 
 
-<<<<<<< HEAD
 import com.cssl.entity.*;
 import com.cssl.mailing.mapper.Express_userDao;
 import com.cssl.mailing.service.IExpressProvincesCityAreasService;
 import com.cssl.mailing.service.ILogisticsOrdersService;
-=======
-import com.cssl.entity.ExpressUser;
-import com.cssl.entity.ItemType;
-import com.cssl.mailing.mapper.Express_userDao;
->>>>>>> remotes/origin/ljx
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 
-<<<<<<< HEAD
 
-=======
-import java.time.LocalDateTime;
->>>>>>> remotes/origin/ljx
 import java.util.List;
 
 
@@ -32,7 +22,6 @@ public class LogisticsServerApplicationTests {
 
     @Autowired
     Express_userDao mapper;
-<<<<<<< HEAD
     @Autowired
     IExpressProvincesCityAreasService cityAreas;
     @Test
@@ -72,14 +61,6 @@ public class LogisticsServerApplicationTests {
 //
 //        LogisticsOrders logisticsOrders = ordersService.generateOrders(goods);
 //        System.out.println("logisticsOrders = " + logisticsOrders);
-=======
-    @Test
-    public void contextLoads() {
-        List<ExpressUser> list = mapper.find();
-        list.forEach(express_user -> System.out.println("express_user = " + express_user));
-        List<ItemType> it = mapper.findIt();
-        it.forEach(itemType -> System.out.println("itemType = " + itemType));
->>>>>>> remotes/origin/ljx
     }
 
 }

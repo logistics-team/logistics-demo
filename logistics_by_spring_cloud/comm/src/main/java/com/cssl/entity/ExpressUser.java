@@ -45,11 +45,7 @@ public class ExpressUser implements Serializable {
 
     private String euSenderPhone;
 
-<<<<<<< HEAD
 //    private Integer egId;
-=======
-    private Integer egId;
->>>>>>> remotes/origin/ljx
 
     public Integer getEuId() {
         return euId;
@@ -155,7 +151,6 @@ public class ExpressUser implements Serializable {
         this.euSenderPhone = euSenderPhone;
     }
 
-<<<<<<< HEAD
 //    public Integer getEgId() {
 //        return egId;
 //    }
@@ -163,24 +158,11 @@ public class ExpressUser implements Serializable {
 //    public void setEgId(Integer egId) {
 //        this.egId = egId;
 //    }
-=======
-    public Integer getEgId() {
-        return egId;
-    }
-
-    public void setEgId(Integer egId) {
-        this.egId = egId;
-    }
->>>>>>> remotes/origin/ljx
 
     public ExpressUser() {
     }
 
-<<<<<<< HEAD
     public ExpressUser(Integer euId, LocalDateTime euGmtCreate, LocalDateTime euGmtModified, String euReceiptName, Integer epReceiptId, Integer ecReceiptId, String euReceiptPhone, String euSenderName, Integer epSenderId, Integer ecSenderId, Integer eaSenderId, String euSenderPhone) {
-=======
-    public ExpressUser(Integer euId, LocalDateTime euGmtCreate, LocalDateTime euGmtModified, String euReceiptName, Integer epReceiptId, Integer ecReceiptId, String euReceiptPhone, String euSenderName, Integer epSenderId, Integer ecSenderId, Integer eaSenderId, String euSenderPhone, Integer egId) {
->>>>>>> remotes/origin/ljx
         this.euId = euId;
         this.euGmtCreate = euGmtCreate;
         this.euGmtModified = euGmtModified;
@@ -193,17 +175,10 @@ public class ExpressUser implements Serializable {
         this.ecSenderId = ecSenderId;
         this.eaSenderId = eaSenderId;
         this.euSenderPhone = euSenderPhone;
-<<<<<<< HEAD
 //        this.egId = egId;
     }
 
     public ExpressUser(Integer euId, LocalDateTime euGmtCreate, LocalDateTime euGmtModified, String euReceiptName, Integer epReceiptId, Integer ecReceiptId, Integer eaReceiptId, String euReceiptPhone, String euSenderName, Integer epSenderId, Integer ecSenderId, Integer eaSenderId, String euSenderPhone) {
-=======
-        this.egId = egId;
-    }
-
-    public ExpressUser(Integer euId, LocalDateTime euGmtCreate, LocalDateTime euGmtModified, String euReceiptName, Integer epReceiptId, Integer ecReceiptId, Integer eaReceiptId, String euReceiptPhone, String euSenderName, Integer epSenderId, Integer ecSenderId, Integer eaSenderId, String euSenderPhone, Integer egId) {
->>>>>>> remotes/origin/ljx
         this.euId = euId;
         this.euGmtCreate = euGmtCreate;
         this.euGmtModified = euGmtModified;
@@ -217,11 +192,7 @@ public class ExpressUser implements Serializable {
         this.ecSenderId = ecSenderId;
         this.eaSenderId = eaSenderId;
         this.euSenderPhone = euSenderPhone;
-<<<<<<< HEAD
 //        this.egId = egId;
-=======
-        this.egId = egId;
->>>>>>> remotes/origin/ljx
     }
 
     @Override
@@ -240,11 +211,7 @@ public class ExpressUser implements Serializable {
                 ", ecSenderId=" + ecSenderId +
                 ", eaSenderId=" + eaSenderId +
                 ", euSenderPhone=" + euSenderPhone +
-<<<<<<< HEAD
 //                ", egId=" + egId +
-=======
-                ", egId=" + egId +
->>>>>>> remotes/origin/ljx
                 "}";
     }
 }
