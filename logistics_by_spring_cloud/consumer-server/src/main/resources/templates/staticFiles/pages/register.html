@@ -1,0 +1,684 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+
+    <title>天天快递官网</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control " content="no-cache,must-revalidate">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1">
+
+    <meta name="keyword" content="">
+    <meta name="description" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link href="/css/public.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/css/mystyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/city-picker.css">
+    <link type="text/css" rel="stylesheet" href="/css/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
+    <link type="text/css" rel="stylesheet" href="/css/expressServiceTab.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/sweetalert-dev.js"></script>
+    <script type="text/javascript" src="/js/goUrl.js"></script>
+    <script type="text/javascript" src="/js/env.js"></script>
+
+
+</head>
+<body>
+<div class="wrapper admin-content twolevelWrap">
+    <!--Created by 17120847 on 2018/5/23.-->
+    <div class="logAndRegister">
+        <div class="fixedWid clearfix">
+            <a href="javascript:void(0)" class="fl" onclick="addFavorite();">加入收藏</a>
+            <div class="fr normal"><a href="javascript:window.location.href='http://localhost:9292/staticFiles/pages/login.html';">登录</a><span></span><a href="">注册</a></div>
+            <div style="display:none" class="fr sucess"><a href="javascript:;"><span class="username"
+                                                                                     id="username"></span></a><a
+                    class="exit" href="javascript:;">退出</a></div>
+        </div>
+    </div>
+    <div id="navWrap" class="headerWrap whiteBack commonWrap">
+        <div class="fixedWid">
+            <div class="navWrap clearfix">
+                <div class="logo fl">
+                    <a href="javascript:;"><img src="/images/logo.png" class="logoimg"></a>
+                </div>
+                <div class="fr">
+                    <a href="javascript:;" class="link">首页</a><span
+                        onclick="location.href='/staticFiles/pages/expressServiceTab.html'" class="link kdyw">快递业务
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">增值服务</span> <a href="javascript:;" class="linka">货到付款</a> <a
+                                        href="javascript:;" class="linka">电子面单</a> <a href="javascript:;" class="linka">到付服务</a> <a
+                                        href="javascript:;" class="linka">保价服务</a> <a href="javascript:;" class="linka">上门取件</a>
+								</div>
+							</div>
+						</span><span onclick="location.href='/staticFiles/pages/placeOrder.html'" class="link khfw">客户服务
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">我要寄件</span>
+									<span class="linka wyjjlink"
+                                          data-url="/staticFiles/pages/placeOrder.html">我要寄件</span>
+								</div>
+								<div class="content secondcontent">
+									<span class="linka second">我要查询</span>
+									<span class="linka cxydlink"
+                                          data-url="/staticFiles/pages/queryExpress.html">运单查询</span>
+									<span class="linka cxwdlink"
+                                          data-url="/staticFiles/pages/queryNetwork.html">网点查询</span>
+									<span class="linka yfcxlink"
+                                          data-url="/staticFiles/pages/queryPrice.html">运费查询</span>
+								</div>
+							</div>
+						</span><span onclick="location.href='/staticFiles/pages/joiningTT.html'" class="link jmtt">加盟天天
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">加盟天天</span> <a href="javascript:;" class="linka">加盟须知</a> <a
+                                        href="javascript:;" class="linka">加盟流程</a> <a href="javascript:;" class="linka">加盟热线</a> <a
+                                        href="javascript:;" class="linka">招商区域</a>
+								</div>
+							</div>
+						</span><!-- <span onclick="location.href='/staticFiles/pages/recruitment.html'" class="link rczp">人才招聘
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">人才招聘</span><a href="javascript:;" class="linka">职位信息</a><a href="javascript:;" class="linka">招聘介绍</a>
+								</div>
+							</div>
+						</span> -->
+                    <span onclick="window.open('http://wuliu.suning.com')" class="link">苏宁物流</span>
+                    <span onclick="location.href='/article/baseArticleAction!aboutTT.action'" class="link gytt">关于天天
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">关于天天</span><span class="linka qyjslink"
+                                                                               data-url="/article/baseArticleAction!aboutTT.action#qyjs">企业介绍</span><span
+                                        class="linka xwzxlink"
+                                        data-url="/article/baseArticleAction!aboutTT.action#xwzx">新闻中心</span><span
+                                        class="linka lxwmlink"
+                                        data-url="/article/baseArticleAction!aboutTT.action#lxwm">联系我们</span>
+								</div>
+							</div>
+						</span><span class="kfdh"><img src="/images/kfrx.png" class="kfrx kfrx_1"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1_2.js"></script>
+    <script type="text/javascript" src="/js/jquery.slideBox.min.js"></script>
+    <script type="text/javascript" src="/js/gt.js"></script>
+    <link href="/css/dropdown.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/js/jquery-form.js"></script>
+    <script type="text/javascript" src="/js/env.js"></script>
+    <link rel="stylesheet" href="/css/ttAgreement.css">
+    <link rel="stylesheet" type="text/css" href="/css/siller.css">
+
+    <script src="/js/SnCaptcha.js"></script>
+
+    <style>
+        .rightTips {
+            margin-top: 0px !important;
+        }
+
+        .selfServiceBtnList {
+            display: none;
+        }
+
+        .dt_parent .dt_notice {
+            border: 1px solid #e0e0e0;
+        }
+
+        .dt_parent .dt_child_content_knob_complete {
+            border-right: 1px solid #e0e0e0;
+            border-top: 1px solid #e0e0e0;
+            background-position: -31px -266px;
+        }
+    </style>
+
+
+    <div class="mask"></div>
+    <div class="warningModel commonModel">
+        <div class="modelContent">
+            <img src="/images/warning.png">
+            <div class="modelTip">该手机号已经注册！</div>
+            <div class="modelBtnRow">
+                <a href="javascript:;" class="cancleBtn">取消</a>
+                <a href="javascript:;" class="confirmBtn">直接登录</a>
+            </div>
+        </div>
+    </div>
+    <div class="about_cx"></div>
+    <div class="Dmain_about">
+        <div class="about_main1">
+            <div class="customerservice">
+                <div class="czdlmm">
+
+                    <span class="ltzi">会员注册</span>
+                </div>
+                <div class="czdlmm_bto">
+                    <div class="czdlmm_bto_l">
+                        <div class="iphone_numa">
+                            <span>手机号</span>
+                            <input type="text" id="telPhoneNumber" name="telPhoneNumber" autocomplete="off"
+                                   class="iphone_box" placeholder="请输入手机号">
+                            <div class="cxhqyam">
+                                <p id="telPhoneNumberCheck"></p>
+                            </div>
+                        </div>
+                        <div class="iphone_num_code" style="margin-bottom: 40px;">
+                            <span class="label">安全验证</span>
+                            <div id="captcha" style="margin-left: 12px; display:inline-block;"></div>
+                            <div class="cxhqyam">
+                                <p id="validateCodeCheck" style="margin-top: 12px;padding-top: 2px;"></p>
+                            </div>
+                        </div>
+                        <div class="iphone_numa">
+                            <div style="float: left;">
+                                <span>短信验证码</span>
+                                <input type="text" id="messageCode" class="iphone_box1" onchange="resetStyle()"
+                                       autocomplete="off" placeholder="请输入验证码">
+                                <input type="button" class="phoneInput" id="phoneInput" value="发送验证码">
+                            </div>
+                            <div class="cxhqyam">
+                                <p id="messageCodeCheck"></p>
+                            </div>
+                        </div>
+                        <div class="iphone_numa" style="margin-bottom: 10px;">
+                            <span>设置密码</span>
+                            <input id="password" type="password" autocomplete="off" class="iphone_box"
+                                   placeholder="8-20位数字/大小字母/特殊符号的组合">
+                            <div class="cxhqyam">
+                                <p id="passwordCheck" style="display:inline;white-space:nowrap;"></p>
+                            </div>
+                        </div>
+                        <div class="qiangdu">
+                            <ul>
+                                <li id="demo1">弱</li>
+                                <li id="demo2">中</li>
+                                <li id="demo3">强</li>
+                            </ul>
+                        </div>
+                        <div class="iphone_numa">
+                            <span>确认密码</span>
+                            <input id="passwords" type="password" autocomplete="off" class="iphone_box"
+                                   placeholder="8-20位数字/大小字母/特殊符号的组合">
+                            <div class="cxhqyam">
+                                <p id="passwordsCheck"></p>
+                            </div>
+                        </div>
+                        <div class="cxhqyam">
+	                <span class="tstp">
+	                <input type="hidden" id="validateResult" value="1">
+	                </span></div>
+                        <input id="registerBtn" type="button" class="nexta" value="提交注册">
+                        <input id="messageInitStatu" type="hidden" value="0">
+                    </div>
+
+                    <div class="czdlmm_bto_r">
+                        <p class="hyzcz1">欢迎注册天天快递会员</p>
+                        <p class="hyzcz2">1、如有疑问可以直接联系在线客服</p>
+
+                        <div class="zxkf customerYunxinBtn" data="/onlineCall.action"><img
+                                src="/images/register_zaixiankefu.png" style="margin-top: 4px;margin-right: 10px;"><a>在线客服</a>
+                        </div>
+                        <p class="hyzcz3">2、如已经注册帐号可直接点击登录</p>
+                        <div class="djdl"><a href="javascript:;">点击登录</a></div>
+                    </div>
+                </div>
+
+            </div>
+            <div style="clear:both"></div>
+
+
+            <div class="reg-protocol">
+                <div class="protocolmask"></div>
+                <div class="content">
+                    <div class="head">注册协议<a href="javascript:;"></a></div>
+                    <div class="body">
+                        <p>【审慎阅读】您在申请注册会员前，应当认真阅读以下协议，充分理解协议中相关条款，其中包括：<br>
+                        <p>1、与您约定免除或限制责任的条款；<br>
+                            2、与您约定法律适用和管辖的条款；<br>
+                            3、其他以粗体标识的重要条款。<br>
+                            如您对协议有任何疑问，可向天天快递客服咨询。</p>
+                        <p> 【特别提示】当您按照注册页面填写信息，阅读并同意协议且完成全部注册流程后，即表示您已充分阅读、理解并接受协议的全部内容。</p>
+                        <div class="linkAgreement"><a href="javascript:;" target="_blank">《天天快递会员章程》</a></div>
+                        <div class="linkAgreement"><a href="javascript:;" target="_blank">《天天快递隐私政策》</a></div>
+                        <div class="goOnBtn">
+                            <button>同意并继续</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--about_main1-->
+    </div>
+    <script type="text/javascript">
+        $(document).on('click', '.goOnBtn button', function () {
+            $('.reg-protocol').hide();
+        })
+        $(document).on('click', '.reg-protocol .head a', function () {
+            window.location.href = '/login.action';
+        })
+        var t = 60;
+        jQuery(document).ready(function () {
+            $(document).ready(function () {
+                $("#toTopBtn").css("display", "none");
+            })
+            var qcloud = {};
+            $('[_t_nav]').hover(function () {
+                var _nav = $(this).attr('_t_nav');
+                clearTimeout(qcloud[_nav + '_timer']);
+                qcloud[_nav + '_timer'] = setTimeout(function () {
+                    $('[_t_nav]').each(function () {
+                        $(this)[_nav == $(this).attr('_t_nav') ? 'addClass' : 'removeClass']('nav-up-selected');
+                    });
+                    $('#' + _nav).stop(true, true).slideDown(200);
+                }, 150);
+            }, function () {
+                var _nav = $(this).attr('_t_nav');
+                clearTimeout(qcloud[_nav + '_timer']);
+                qcloud[_nav + '_timer'] = setTimeout(function () {
+                    $('[_t_nav]').removeClass('nav-up-selected');
+                    $('#' + _nav).stop(true, true).slideUp(200);
+                }, 150);
+            });
+        });
+
+        function update_p(num, t) {
+            if (num == t) {
+                $("#phoneInput").val("重新发送");
+                $("#phoneInput").attr("disabled", false);
+                $("#phoneInput").css("background-color", "#27a8e8");
+            } else {
+                printnr = t - num;
+                $("#phoneInput").val("(" + printnr + ")秒后重新发送");
+            }
+        }
+
+        function checkStrong(sValue) {
+            var modes;
+            //正则表达式验证符合要求的
+            if (sValue.length < 8)
+                modes = 0;
+            if (/[\dA-Za-z]/.test(sValue) || /[A-Za-z]/.test(sValue)) {
+                modes = 1; //数字加字母  //大小写
+            }
+            if (/(?![\d])([\d`~!@#$%\^\&\*\(\)_\+<>\?:"\{\},\.\\\/;'\[\]])/.test(sValue)) {
+                modes = 2; //数字加特殊符号
+            }
+
+            if (/^(?!^[0-9a-z]+$)(?!^[0-9A-Z]+$)(?!^[0-9\x21-\x2f\x3a-\x40\x5b-\x60\x7B-\x7F]+$)(?!^[a-zA-Z]+$)(?!^[a-z\x21-\x2f\x3a-\x40\x5b-\x60\x7B-\x7F]+$)(?!^[A-Z\x21-\x2f\x3a-\x40\x5b-\x60\x7B-\x7F]+$)(?!^[A-Z\x21-\x2f\x3a-\x40\x5b-\x60\x7B-\x7F]+$)[a-z0-9A-Z\x21-\x2f\x3a-\x40\x5b-\x60\x7B-\x7F]+$/.test(sValue)) {
+                modes = 3; //特殊字符
+            }
+            return modes;
+        }
+
+        //关闭弹出框
+        $(document).on('click', '.warningModel .modelBtnRow a', function () {
+            $('.mask').hide();
+            $('.warningModel').hide();
+            if ($(this).hasClass('confirmBtn')) {
+                window.location.href = '/login.action';
+            }
+        })
+
+        function resetStyle() {
+            $("#messageCodeCheck").text('').removeClass("errorTips");
+            $("#messageCode").css("border", "1px #cacaca solid");
+        }
+
+        $("#password").bind("keyup", function () {
+            switch (checkStrong($("#password").val())) {
+                case 1:
+                    $("#demo1").addClass("dqqd");
+                    $("#demo2").removeClass("dqqd");
+                    $("#demo3").removeClass("dqqd");
+                    break;
+                case 2:
+                    $("#demo1").addClass("dqqd");
+                    $("#demo2").addClass("dqqd");
+                    $("#demo3").removeClass("dqqd");
+                    break;
+                case 3:
+                    $("#demo1").addClass("dqqd");
+                    $("#demo2").addClass("dqqd");
+                    $("#demo3").addClass("dqqd");
+                    break;
+                default:
+                    $("#demo1").removeClass("dqqd");
+                    $("#demo2").removeClass("dqqd");
+                    $("#demo3").removeClass("dqqd");
+                    break;
+            }
+        });
+        $("#password").blur(function () {
+            validatePassword();
+        });
+        $("#passwords").blur(function () {
+            validatePasswords();
+        });
+        $("#telPhoneNumber").blur(function () {
+            validateTelPhone();
+        });
+
+        function validatePassword() {
+//        var checkPassStrong = /^(?!^\d+$)(?!^[a-z]+$)(?!^[A-Z]+$)(?!^[`~!@#$%^&*\(\)-_=+\|\[{}];:'",<.>\/? ]+$).{8,20}$/;
+            var checkPassStrong = /^(?!^\d+$)(?!^[a-z]+$)(?!^[A-Z]+$)(?!^[\`\~\!\@#$%\^\&\*\(\)\-\_\=\+\\\|\[\{\}\]\;\:\'\"\,\<\.\>\\\/\? ]+$).{8,20}$/;
+            var isStrangeChara = /^[A-Za-z0-9`~!@#$%^&*()-_=+\|\[{\}\];:'",<.>\/? ]+$/;
+            if ($("#password").val().length < 8
+                || $("#password").val().length > 20) {
+                $("#passwordCheck").text('密码限制8-20位，由数字/大小写字母/特殊符号至少两种字符组成').removeClass(
+                    "rightTips").addClass("errorTips");
+                $("#password").css("border", "1px #EA3A3A solid");
+                return 1;
+            }
+            if (!isStrangeChara.test($("#password").val()) || !checkPassStrong.test($("#password").val())) {
+                $("#passwordCheck").text('密码限制8-20位，由数字/大小写字母/特殊符号至少两种字符组成').removeClass("rightTips").addClass("errorTips");
+                $("#password").css("border", "1px #EA3A3A solid");
+                return 1;
+            }
+            $("#passwordCheck").text('').removeClass("errorTips").addClass(
+                "rightTips");
+            $("#password").css("border", "1px #cacaca solid");
+            return 0;
+        }
+
+        function validatePasswords() {
+            if ($("#passwords").val().length > 0) {
+                if (($("#passwords").val()) == ($("#password").val())) {
+                    $("#passwordsCheck").text('').removeClass("errorTips")
+                        .addClass("rightTips");
+                    $("#passwords").css("border", "1px #cacaca solid");
+                    return 0;
+                } else {
+                    $("#passwordsCheck").text('亲~请输入一致的密码呦').removeClass(
+                        "rightTips").addClass("errorTips");
+                    $("#passwords").css("border", "1px #EA3A3A solid");
+                    return 1;
+                }
+            }
+        }
+
+        function validateTelPhone() {
+            var tel = $('#telPhoneNumber').val().search(/^1\d{10}$/);
+            if (tel == -1) {
+                $('#telPhoneNumberCheck').text('亲~请输入正确的手机号码').removeClass()
+                    .addClass("errorTips");
+                $('#telPhoneNumber').css("border", "1px #EA3A3A solid");
+                return 1;
+            } else {
+                $("#telPhoneNumberCheck").text('').removeClass("errorTips")
+                    .addClass("rightTips");
+                $("#telPhoneNumber").css("border", "1px #cacaca solid");
+                return 0;
+            }
+        }
+
+        function validateMessageCode() {
+            if ($('#messageCode').val() == null || $('#messageCode').val().trim().length == 0) {
+                $('#messageCodeCheck').text('亲~请输入正确的短信验证码').removeClass()
+                    .addClass("errorTips");
+                $('#messageCode').css("border", "1px #EA3A3A solid");
+                return 1;
+            } else {
+                $("#messageCodeCheck").text('').removeClass("errorTips")
+                    .addClass("rightTips");
+                $("#messageCode").css("border", "1px #cacaca solid");
+                return 0;
+            }
+        }
+
+        function ValidateCode() {
+            if ($('#validateResult').val() != 0) {
+                $('#validateCodeCheck').text('亲~亲进行安全验证。').removeClass()
+                    .addClass("errorTips");
+                return 1;
+            } else {
+                $("#validateCodeCheck").text('').removeClass("errorTips")
+                    .addClass("rightTips");
+                return 0;
+            }
+        }
+
+
+        $("#phoneInput").click(function () {
+            if (validateTelPhone() != 0) {//手机校验
+                return;
+            }
+
+            //手机存在验证
+            $.ajax({
+                type: "post",
+                url: "../../isExistence",
+                data: {
+                    "phone": document.getElementById('telPhoneNumber').value
+                },
+                error: function () {
+                    swal("", '服务器连接失败！', "warning");
+                },
+                success: function (data) {
+                    var obj = eval("(" + data + ")");
+                    // alert(obj);
+                    // siller.reset("captcha2");
+                    if (obj.message == '该手机号已被注册,请登录！') {
+                        swal("", obj.message, "warning");
+                    }else {
+                        //发送验证码
+                        $('#phoneInput').attr('disabled', 'disabled');
+                        $.ajax({
+                            url: '../../verificationCode',
+                            type: 'POST',
+                            data: {
+                                "phoneNum": $('#telPhoneNumber').val()
+                            },
+                            success: function (data) {
+                                var obj = eval("(" + data + ")");
+                                if (data != null) {
+                                    var time = 60;
+                                    var timeSet = setInterval(function () {
+                                        --time;
+                                        $('#phoneInput').prop('disabled', 'disabled');
+                                        $('#phoneInput').val('已发送(' + time + 's)')
+                                        if (time == -1) {
+                                            $('#phoneInput').removeAttr('disabled');
+                                            $('#phoneInput').val('发送验证码');
+                                            clearInterval(timeSet);
+                                        }
+                                    }, 1000);
+                                    // initValidate();
+                                    swal("", obj.message, "info");
+                                } else {
+                                    $('#phoneInput').removeAttr('disabled');
+                                }
+                            }
+                        })
+                    }
+                }
+            });
+
+            // alert("OK");    //test
+            // return;
+
+
+
+        });
+
+        $('#registerBtn').click(function () {
+//			var result = captchaObj.getValidate();
+//			if (!result) {
+//				$('#validateCodeCheck').text('亲~请进行安全验证。').removeClass().addClass("errorTips");
+//				return;
+//			}
+//			var validateResult = validatePasswords() + validateTelPhone() + validatePassword() + validateMessageCode() + ValidateCode();
+            var validateResult = validatePasswords() + validateTelPhone() + validatePassword() + validateMessageCode();
+            // var validateResult = validatePasswords() + validateTelPhone() + validatePassword();//+ validateMessageCode()
+            if (validateResult == 0) {
+                // var userPhoneTel = document.getElementById('telPhoneNumber').value
+                // var passwords = document.getElementById('password').value
+                // var messageCode = document.getElementById('messageCode').value
+                // $.post("../../register", "userPhoneTel="+userPhoneTel+"&password="+passwords+"&messageCode="+messageCode,
+                //     function (data) {
+                //     alert(data);
+                // })
+                $.ajax({
+                    type: "post",
+                    url: "../../register",
+                    data: {
+                        "userPhoneTel": document.getElementById('telPhoneNumber').value,
+                        "password": document.getElementById('password').value,
+                        "messageCode": document.getElementById('messageCode').value
+                    },
+                    error: function () {
+                        swal("", '服务器连接失败！', "warning");
+                    },
+                    success: function (data) {
+                        var obj = eval("(" + data + ")");
+                        // alert(obj);
+                        window.location.href = obj.url;
+                        if (obj.result == 'true') {
+                            sweetAlert("", obj.msg, "info");    //成功注册
+                            window.location.href = obj.url;
+                        } else {
+                            // siller.reset("captcha2");
+                            if (obj.message == '验证码不正确！') {
+                                // alert(123)
+                                swal("", obj.message, "warning");
+                            } else {
+//								sweetAlert("", obj.msg, "info");
+                                swal("", obj.message, "warning");
+                            }
+                        }
+                    }
+                });
+            }
+        });
+        //	    captchaObj.appendTo("#captcha2");
+        //	    captchaObj.onReady(function() {
+        //	        $("#wait2").hide();
+        //	    });
+        //	};
+        function initValidate() {
+            var env = getEnv();
+            $.ajax({
+                type: "post",
+                url: "/getIARToken.action",
+                success: function (data) {
+                    var obj = eval("(" + data + ")");
+                    if (obj.code == "1000") {
+                        sc = SnCaptcha.init({
+                            id: 'captcha', // 用于当一个页面上有多个验证码实例时进行区分
+                            // env : 'sit', // 环境sit，xgpre，prd
+                            env: env, // 环境sit，xgpre，prd
+                            type: 'inline', // inline:插入按钮, 点击按钮弹出验证码。popup：直接弹出验证码
+                            target: 'captcha', // 验证码按钮插入的 div 的 id，必填
+                            ticket: obj.data, // 通过注册接口获取的 ticket
+                            width: '262px',  // 按钮或者滑块宽度（必填)
+                            height: '36px',  // 滑块或按钮高度(必填，且必须用具体数值，禁止使用百分比)
+                            callback: function (token) { // 回调函数
+                                console.log(token);
+                            }
+                        });
+
+                    } else {
+                        swal("", obj.msg, "error");
+                    }
+                },
+                error: function (data) {
+                    ;
+                    console.log(data.returnMsg);
+
+                }
+            });
+        }
+    </script>
+
+    <div class="footer commonWrap">
+        <div class="footerCont fixedWid clearfix">
+            <div class="customer fl">
+                <span class="info">客服电话</span>
+                <span class="info tel">4001-888-888</span>
+                <span class="info timer">服务时间： 8:30 - 17:30</span>
+            </div>
+            <div class="hyperlink clearfix">
+                <div class="linkgroup fl">
+                    <a href="" class="link">客户服务</a>
+                    <a href="javascript:;" class="link">在线寄件</a>
+                    <a href="javascript:;" class="link">运单查询</a>
+                    <a href="javascript:;" class="link">网点查询</a>
+                    <a href="javascript:;" class="link">运费查询</a>
+                </div>
+                <div class="linkgroup fl">
+                    <a href="" class="link">客服服务</a>
+                    <a href="javascript:;" class="link">客服热线 </a>
+                    <a href="javascript:;" class="link">在线留言</a>
+                </div>
+                <div class="linkgroup fl">
+                    <a href="" class="link">加盟天天</a>
+                    <a href="javascript:;" class="link">加盟须知 </a>
+                    <a href="javascript:;" class="link">加盟流程</a>
+                    <a href="javascript:;" class="link">加盟热线</a>
+                    <a href="javascript:;" class="link">招商区域</a>
+                </div>
+                <div class="linkgroup fl">
+                    <a href="" class="link">人才招聘</a>
+                    <a href="javascript:;" class="link">职位信息</a>
+                    <a href="javascript:;" class="link">招聘介绍</a>
+                </div>
+                <div class="linkgroup fr smcodediv" style="text-align:center">
+                    <img class="smcode" src="/images/code_dyh.png" alt="">
+                    <span class="info">天天相知微信</span>
+                    <span class="info">订阅号扫码关注</span>
+                </div>
+                <div class="linkgroup fr smcodediv">
+                    <img class="smcode" src="/images/code_fwh.png" alt="">
+                    <span class="info">天天快递微信</span>
+                    <span class="info">服务号扫码关注</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footerbottom commonWrap">
+        <div class="fixedWid">
+            <p class='info'>©版权所有 2016 天天快递有限公司<a style="color: #A6A7AB;" href="javascript:;" target="_blank">
+                浙ICP备13006085</a>号
+
+                <a href="javascript:;" target="_blank" style="color: #A6A7AB;"> | 快递业务经营许可证</a><a href="javascript:;"
+                                                                                                  target="_blank"
+                                                                                                  style="color: #A6A7AB;">
+                    | <img src="/images/yyzz.png" style="width: 19px;height:19px;vertical-align: middle;"> 营业执照</a></p>
+        </div>
+    </div>
+    <div class="selfServiceBtnList">
+        <div class="customerBtn" data="/onlineCall.action">
+            <div class="onLineIcon"></div>
+            <span class="btnTip">在线客服</span>
+        </div>
+        <div class="customerBtns selfOrderServiceBtn" id="selfOrderServiceBtn">
+            <div class="selfServiceIcon"></div>
+            <span class="btnTip">自助投诉</span>
+        </div>
+        <div class="customerBtns selfOrderServiceBtn" id="toTopBtn">
+            <div class="returnTopIcon"></div>
+            <span class="btnTip">返回顶部</span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/index1.js"></script>
+<script type="text/javascript" src="/js/expressServiceTab.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+
+</body>
+</html>

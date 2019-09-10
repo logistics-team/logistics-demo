@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d4f0b813-303f-47d0-a97e-fb9b8179a018" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/comm/src/main/java/com/cssl/util/NonEmptyUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/register.html" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/comm/target/" />
+    <ignored path="$PROJECT_DIR$/user-server/target/" />
+    <ignored path="$PROJECT_DIR$/logistics-server/target/" />
+    <ignored path="$PROJECT_DIR$/code-genterator/target/" />
+    <ignored path="$PROJECT_DIR$/eureka-server/target/" />
+    <ignored path="$PROJECT_DIR$/consumer-server/target/" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="044fbe58-c3d3-40bd-a761-39d8b965abaa" value="Violet" />
+    </colors>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/ConsumerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="150" column="49" lean-forward="true" selection-start-line="150" selection-start-column="49" selection-end-line="150" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#show#0;class#ConsumerController#0" />
+                <element signature="method#l_statue#0;class#ConsumerController#0" />
+                <element signature="method#ls_update#0;class#ConsumerController#0" />
+                <element signature="method#confirmOrder#0;class#ConsumerController#0" />
+                <element signature="e#5594#5623#0" />
+                <element signature="docComment;method#userLogin#0;class#ConsumerController#0" />
+                <element signature="docComment;method#userRegister#0;class#ConsumerController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="44" column="127" selection-start-line="44" selection-start-column="127" selection-end-line="44" selection-end-column="127" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/ILogisticsUserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-85">
+              <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/impl/LogisticsUserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2352">
+              <caret line="174" column="9" lean-forward="true" selection-start-line="174" selection-start-column="9" selection-end-line="174" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getRoleByPhone#0;class#LogisticsUserServiceImpl#0" />
+                <element signature="method#getRoleByUsername#0;class#LogisticsUserServiceImpl#0" />
+                <element signature="method#isBackList#0;class#LogisticsUserServiceImpl#0" />
+                <element signature="method#isRedundant#0;class#LogisticsUserServiceImpl#0" />
+                <element signature="method#login#0;class#LogisticsUserServiceImpl#0" />
+                <element signature="method#shortMessage#0;class#LogisticsUserServiceImpl#0" />
+                <element signature="method#sendMessages#0;class#LogisticsUserServiceImpl#0" />
+                <element signature="method#isExistence#0;class#LogisticsUserServiceImpl#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/UserServerApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="FxmlFile" />
+        <option value="JavaScript File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>script</find>
+      <find>ctityTextHtml</find>
+      <find />
+      <find>/html/</find>
+      <find>addressType</find>
+      <find>receiveProvinceCode</find>
+      <find>area_div</find>
+      <find>_</find>
+      <find>toUrl</find>
+      <find>orderInfo.</find>
+      <find>customerService_submit</find>
+      <find>,]}</find>
+      <find>,]</find>
+      <find>receiveAddress</find>
+      <find>receivePhone</find>
+      <find>us</find>
+      <find>registerBtn</find>
+      <find>initValidate</find>
+      <find>validateMessageCode</find>
+      <find>validateResult</find>
+      <find>phoneInput</find>
+      <find>messageCode</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="9999" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/logistics-server/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/LogisticsServiceHystrix.java" />
+        <option value="$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/service/impl/ExpressProvincesCityAreasServiceImpl.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/method.js" />
+        <option value="$PROJECT_DIR$/logistics-server/src/test/java/com/cssl/LogisticsServerApplicationTests.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/placeOrder.js" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/checkInput.js" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/placeOrder.html" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/mailing/config/ServiceFeignConfiguration.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/mailing/service/LogisticsService.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/mapper/RoleUserMapper.java" />
+        <option value="$PROJECT_DIR$/user-server/target/classes/application.yml" />
+        <option value="$PROJECT_DIR$/user-server/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/mailing/controller/ConsumerController.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/mailing/service/UserServices.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/mailing/service/UserService.java" />
+        <option value="$PROJECT_DIR$/comm/src/main/java/com/cssl/entity/LogisticsOrders.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/UserServerApplication.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/config/ShiroConfig.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/orders/service/impl/EuserSerImpl.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/orders/service/impl/OrederSerImpl.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/orders/service/impl/UserSerImpl.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/orders/controller/Euser_Ctl.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/orders/controller/Orders_Status.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/orders/controller/User_Ctl.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/Euser_Ctl.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/User_Ctl.java" />
+        <option value="$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/service/ITransportationStatusService.java" />
+        <option value="$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/controller/MailingController.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/register.html" />
+        <option value="E:/Tim文档/1465031875/FileRecv/MaapCalculateUtil.java" />
+        <option value="$PROJECT_DIR$/comm/src/main/java/com/cssl/util/NonEmptyUtils.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/RegisterController.java" />
+        <option value="$PROJECT_DIR$/consumer-server/pom.xml" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/config/ServiceFeignConfiguration.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/LogisticsService.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/shiro/bean/ResultMap.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/ExceptionController.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/shiro/CustomRealm.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/login.html" />
+        <option value="$PROJECT_DIR$/user-server/pom.xml" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/UserServiceHystrix.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/UserService.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/ILogisticsUserService.java" />
+        <option value="$PROJECT_DIR$/user-server/src/test/java/com/cssl/UserServerApplicationTests.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/impl/LogisticsUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/GuestController.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/ConsumerController.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/register.html" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="user-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="user-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="Armed z2-Modules" pattern="" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="69" />
+    <option name="y" value="33" />
+    <option name="width" value="1379" />
+    <option name="height" value="735" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="添加" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cssl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cssl" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cssl" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Course" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="com.zeroturnaround.javarebel.idea.plugin.settings.JRebelSettingsComponent" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.cssl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\resources\templates\staticFiles\pages" />
+      <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\java\com\cssl\mailing\service\impl" />
+      <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\java\com\cssl\mailing\service" />
+      <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\java\com\cssl\mailing\controller" />
+      <recent name="D:\Y2\master\logistics_by_spring_cloud\user-server\src\main\java\com\cssl" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.cssl.service.impl" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Y2\logistics_cloud\logistics_by_spring_cloud\logistics-server\src\main\java\com\cssl\mailing\mapper" />
+      <recent name="D:\Y2\logistics_cloud\logistics_by_spring_cloud\logistics-server\src\main\java\com\cssl\mailing\mapper\xml" />
+      <recent name="D:\Y2\logistics_cloud\logistics_by_spring_cloud\logistics-server\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.UserServerApplicationTests.contextLoads">
+    <configuration name="LogisticsServerApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logistics-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cssl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cssl" />
+      <option name="MAIN_CLASS_NAME" value="com.cssl.LogisticsServerApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServerApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cssl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cssl" />
+      <option name="MAIN_CLASS_NAME" value="com.cssl.UserServerApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CodeGenteratorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="code-genterator" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cssl.CodeGenteratorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsumerServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="consumer-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cssl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cssl.ConsumerServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="eureka-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cssl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cssl.EurekaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogisticsServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="logistics-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cssl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cssl.LogisticsServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="user-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cssl.UserServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserServerApplicationTests.contextLoads" />
+        <item itemvalue="Spring Boot.ConsumerServerApplication" />
+        <item itemvalue="Spring Boot.EurekaServerApplication" />
+        <item itemvalue="Spring Boot.LogisticsServerApplication" />
+        <item itemvalue="JUnit.LogisticsServerApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4f0b813-303f-47d0-a97e-fb9b8179a018" name="默认更改列表" comment="" />
+      <created>1567515736674</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567515736674</updated>
+      <workItem from="1567515768037" duration="4772000" />
+      <workItem from="1567557247945" duration="14220000" />
+      <workItem from="1567601980413" duration="6914000" />
+      <workItem from="1567643873259" duration="14974000" />
+      <workItem from="1567667158455" duration="14902000" />
+      <workItem from="1567690631224" duration="6919000" />
+      <workItem from="1567729057577" duration="30196000" />
+      <workItem from="1567784956456" duration="234000" />
+      <workItem from="1567816003329" duration="21492000" />
+      <workItem from="1568013786608" duration="6477000" />
+      <workItem from="1568020573898" duration="3348000" />
+      <workItem from="1568027198698" duration="11101000" />
+      <workItem from="1568076887634" duration="27259000" />
+      <workItem from="1568111719393" duration="4376000" />
+    </task>
+    <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/logistics-team/logistics-demo&#10;&#10;# Conflicts:&#10;#&#9;logistics_by_spring_cloud/.idea/workspace.xml">
+      <created>1567520119153</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567520119154</updated>
+    </task>
+    <task id="LOCAL-00002" summary="实体类微调整合 9/4 12:20">
+      <created>1567570785357</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567570785357</updated>
+    </task>
+    <task id="LOCAL-00003" summary="登录注册，后台显示（2），寄件  2019年9月9日 18点02分">
+      <created>1568023454875</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1568023454875</updated>
+    </task>
+    <task id="LOCAL-00004" summary="登录注册，后台显示（2），寄件  2019年9月9日 18点02分">
+      <created>1568027882152</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568027882152</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="LogisticsServerApplicationTests_contextLoads - 2019.09.07 at 13h 01m 38s.xml">
+      <configuration name="LogisticsServerApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogisticsServerApplicationTests_contextLoads - 2019.09.07 at 13h 14m 19s.xml">
+      <configuration name="LogisticsServerApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogisticsServerApplicationTests_contextLoads - 2019.09.07 at 13h 16m 56s.xml">
+      <configuration name="LogisticsServerApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogisticsServerApplicationTests_contextLoads - 2019.09.07 at 13h 18m 39s.xml">
+      <configuration name="LogisticsServerApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogisticsServerApplicationTests_contextLoads - 2019.09.07 at 13h 24m 04s.xml">
+      <configuration name="LogisticsServerApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogisticsServerApplicationTests_contextLoads - 2019.09.07 at 13h 31m 32s.xml">
+      <configuration name="LogisticsServerApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServerApplicationTests_contextLoads - 2019.09.10 at 19h 31m 09s.xml">
+      <configuration name="UserServerApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServerApplicationTests_contextLoads - 2019.09.10 at 19h 34m 25s.xml">
+      <configuration name="UserServerApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServerApplicationTests_contextLoads - 2019.09.10 at 19h 35m 14s.xml">
+      <configuration name="UserServerApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServerApplicationTests_contextLoads - 2019.09.10 at 19h 35m 49s.xml">
+      <configuration name="UserServerApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="174703000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.497479" visible="true" weight="0.26894343" />
+      <window_info id="Structure" order="1" sideWeight="0.5016234" side_tool="true" weight="0.2913554" />
+      <window_info id="Learn" order="2" />
+      <window_info id="JRebel" order="3" sideWeight="0.50252104" side_tool="true" weight="0.26574174" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="设计器" order="8" />
+      <window_info id="Web" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733192" weight="0.43572986" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026681" side_tool="true" weight="0.23747277" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="11" />
+      <window_info anchor="bottom" id="Findings" order="12" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32897604" />
+      <window_info anchor="bottom" id="JRebel Executor" order="16" visible="true" weight="0.34422657" />
+      <window_info anchor="bottom" id="JRebel Console" order="17" side_tool="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Messages" order="18" weight="0.32897604" />
+      <window_info anchor="bottom" id="Z2-Info" order="19" weight="0.32897604" />
+      <window_info anchor="bottom" id="Pre-Commit Results" order="20" side_tool="true" />
+      <window_info anchor="bottom" id="调试" order="21" weight="0.37037036" />
+      <window_info anchor="bottom" id="MyBatis Log" order="22" />
+      <window_info anchor="bottom" id="Problems" order="23" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32977587" />
+      <window_info anchor="right" id="RestServices" order="4" weight="0.32977587" />
+      <window_info anchor="right" id="Mybatis Helper" order="5" weight="0.32977587" />
+      <window_info anchor="right" id="Key Promoter X" order="6" />
+      <window_info anchor="right" id="调色板" order="7" />
+      <window_info anchor="right" id="Mybatis datasource" order="8" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
+      <window_info anchor="right" id="Google Cloud Storage" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="13" weight="0.32977587" />
+      <window_info anchor="right" id="Bean Validation" order="14" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497479" visible="true" weight="0.26574174" />
+      <window_info id="Structure" order="1" sideWeight="0.5016234" side_tool="true" weight="0.2913554" />
+      <window_info id="Learn" order="2" />
+      <window_info id="JRebel" order="3" sideWeight="0.50252104" side_tool="true" weight="0.26574174" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="设计器" order="8" />
+      <window_info id="Web" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733192" weight="0.4019608" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026681" side_tool="true" weight="0.23747277" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="11" />
+      <window_info anchor="bottom" id="Findings" order="12" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.32897604" />
+      <window_info anchor="bottom" id="JRebel Executor" order="16" visible="true" weight="0.26252723" />
+      <window_info anchor="bottom" id="JRebel Console" order="17" side_tool="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Messages" order="18" weight="0.32897604" />
+      <window_info anchor="bottom" id="Z2-Info" order="19" weight="0.32897604" />
+      <window_info anchor="bottom" id="Pre-Commit Results" order="20" side_tool="true" />
+      <window_info anchor="bottom" id="调试" order="21" weight="0.37037036" />
+      <window_info anchor="bottom" id="MyBatis Log" order="22" />
+      <window_info anchor="bottom" id="Problems" order="23" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32977587" />
+      <window_info anchor="right" id="RestServices" order="4" weight="0.32977587" />
+      <window_info anchor="right" id="Mybatis Helper" order="5" weight="0.32977587" />
+      <window_info anchor="right" id="Key Promoter X" order="6" />
+      <window_info anchor="right" id="调色板" order="7" />
+      <window_info anchor="right" id="Mybatis datasource" order="8" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
+      <window_info anchor="right" id="Google Cloud Storage" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="13" weight="0.32977587" />
+      <window_info anchor="right" id="Bean Validation" order="14" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge branch 'master' of https://github.com/logistics-team/logistics-demo&#10;&#10;# Conflicts:&#10;#&#9;logistics_by_spring_cloud/.idea/workspace.xml" />
+    <MESSAGE value="实体类微调整合 9/4 12:20" />
+    <MESSAGE value="登录注册，后台显示（2），寄件  2019年9月9日 18点02分" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录注册，后台显示（2），寄件  2019年9月9日 18点02分" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/orders/controller/User_Ctl.java" />
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/Euser_Ctl.java" />
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/User_Ctl.java" />
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/ForwardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/service/IExpress_goodsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/service/IExpress_userService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/service/IExpressGoodsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/service/IExpressProvincesCityAreasService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/service/IExpressUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/service/IItemTypeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/service/ILogisticsOrdersService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/service/ITransportationStatusService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/service/ILogisticsStatusService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/controller/MailingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/orders/controller/Orders_Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1152">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/images/tips_rightMenu.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/images/tips_errorMenu.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/js/sweetalert-dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="302" column="22" selection-start-line="302" selection-start-column="22" selection-end-line="302" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Tim文档/1465031875/FileRecv/MaapCalculateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2411">
+          <caret line="106" column="16" lean-forward="true" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/LogisticsServiceHystrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding>
+            <element signature="e#588#589#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.1.2/mybatis-plus-core-3.1.2.jar!/com/baomidou/mybatisplus/core/toolkit/StringUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+          <folding>
+            <element signature="e#2289#2290#0" expanded="true" />
+            <element signature="e#2324#2325#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comm/src/main/java/com/cssl/util/NonEmptyUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1104">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="15" column="75" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
+          <folding>
+            <element signature="method#register#0;class#RegisterController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/github/openfeign/feign-core/10.2.3/feign-core-10.2.3.jar!/feign/Request.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="107" column="15" selection-start-line="107" selection-start-column="15" selection-end-line="107" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/ConsumerServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar!/org/apache/shiro/authc/AccountException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding>
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/LogisticsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-673">
+          <caret line="11" column="131" lean-forward="true" selection-start-line="11" selection-start-column="131" selection-end-line="11" selection-end-column="131" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/config/ShiroConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="31" column="64" lean-forward="true" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/config/ServiceFeignConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/shiro/bean/ResultMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/ExceptionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="17" column="95" selection-start-line="17" selection-start-column="95" selection-end-line="17" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/shiro/CustomRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1536">
+          <caret line="44" column="55" lean-forward="true" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1199">
+          <caret line="51" column="18" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="863">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="427" column="22" selection-start-line="427" selection-start-column="12" selection-end-line="427" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4992">
+          <caret line="104" column="15" selection-start-line="104" selection-start-column="15" selection-end-line="104" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="46" column="46" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="134" column="30" selection-start-line="134" selection-start-column="30" selection-end-line="134" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/UserServiceHystrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="48" column="22" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#655#656#0" expanded="true" />
+            <element signature="e#936#937#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
+            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1066#1067#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/test/java/com/cssl/UserServerApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/ILogisticsUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/UserServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/impl/LogisticsUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2352">
+          <caret line="174" column="9" lean-forward="true" selection-start-line="174" selection-start-column="9" selection-end-line="174" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getRoleByPhone#0;class#LogisticsUserServiceImpl#0" />
+            <element signature="method#getRoleByUsername#0;class#LogisticsUserServiceImpl#0" />
+            <element signature="method#isBackList#0;class#LogisticsUserServiceImpl#0" />
+            <element signature="method#isRedundant#0;class#LogisticsUserServiceImpl#0" />
+            <element signature="method#login#0;class#LogisticsUserServiceImpl#0" />
+            <element signature="method#shortMessage#0;class#LogisticsUserServiceImpl#0" />
+            <element signature="method#sendMessages#0;class#LogisticsUserServiceImpl#0" />
+            <element signature="method#isExistence#0;class#LogisticsUserServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/GuestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+          <folding>
+            <element signature="e#2011#2012#0" expanded="true" />
+            <element signature="e#2064#2065#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/ConsumerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="150" column="49" lean-forward="true" selection-start-line="150" selection-start-column="49" selection-end-line="150" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#show#0;class#ConsumerController#0" />
+            <element signature="method#l_statue#0;class#ConsumerController#0" />
+            <element signature="method#ls_update#0;class#ConsumerController#0" />
+            <element signature="method#confirmOrder#0;class#ConsumerController#0" />
+            <element signature="e#5594#5623#0" />
+            <element signature="docComment;method#userLogin#0;class#ConsumerController#0" />
+            <element signature="docComment;method#userRegister#0;class#ConsumerController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="44" column="127" selection-start-line="44" selection-start-column="127" selection-end-line="44" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>user-server</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

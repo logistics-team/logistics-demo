@@ -1,0 +1,157 @@
+body {
+    background: url(../images/graybg.jpg) repeat !important;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    zoom: 1;
+}
+
+.reg-protocol {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    font-family: "microsoft yahei";
+}
+
+.protocolmask {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .5;
+    position: absolute;
+    filter: alpha(opacity=50);
+}
+
+.reg-protocol .content {
+    position: relative;
+    width: 690px;
+    height: 440px;
+    margin: -220px auto 0;
+    background: #fff;
+    top: 50%;
+    box-shadow: rgba(255,255,255,0.5) 0 0 1px 1px;
+}
+
+.reg-protocol .content .head {
+    height:40px;
+    background:#F7F7F7;
+    line-height: 40px;
+    padding: 0 18px 0 26px;
+    font-size:16px;
+    font-family:MicrosoftYaHei-Bold;
+    font-weight:bold;
+    color:#333;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.reg-protocol .content .head a {
+    float: right;
+    width: 14px;
+    height: 12px;
+    margin-top: 14px;
+    background: url(../images/sprite.png) -163px -93px no-repeat;
+    cursor: pointer;
+}
+
+.reg-protocol .content .body {
+    padding: 20px 18px 30px 32px;
+    font-size:14px;
+    font-family:PingFangSC-Semibold;
+    color:#333333;
+}
+
+.reg-protocol .content .body p {
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.linkAgreement {
+    margin-bottom:10px;
+}
+
+.linkAgreement a {
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:#0293ED;
+    line-height:20px;
+    text-decoration: none;
+}
+
+.goOnBtn {
+    margin-top:40px;
+    text-align: center;
+}
+
+.goOnBtn button {
+    font-size:14px;
+    font-family:MicrosoftYaHei;
+    color:#fff;
+    border: 0;
+    cursor: pointer;
+    width:140px;
+    height:36px;
+    background:#0293ED;
+    border-radius:4px;
+}
+
+.about_main1 {
+    width: 1200px;
+    margin: 0px auto;
+    padding-top: 15px;
+}
+
+.customerservice {
+    width: 1200px;
+    background-color: #FFFFFF;
+    padding: 22px 0px 50px 0px;
+    margin: 20px auto auto auto;
+}
+
+.czdlmm {
+    margin: 0 15px 0 15px;
+    height: 38px;
+    font-size: 16px;
+    font-family: MicrosoftYaHei-Bold;
+    color: rgba(51,51,51,1);
+    line-height: 21px;
+    font-weight: bold;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.ltzi {
+    display: block;
+    float: left;
+    font-size: 16px;
+    color: #333;
+    line-height: 28px;
+}
+
+.agreeTextBody {
+    margin: 50px 50px 0;
+    border: 1px solid #E8E8E8;
+    max-height: 519px;
+    overflow-y: auto;
+    padding: 30px 30px;
+    font-size: 16px;
+    font-family: MicrosoftYaHei-Bold;
+}
+
+.agreeTextTitle {
+    margin-bottom: 20px;
+    font-size:16px;
+}
+
+.agreeTitleMargin {
+    margin-top: 20px;
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cssl.orders.mapper.Euser_index">
+    <resultMap id="all" type="com.cssl.entity.LogisticsOrders">
+        <id column="lo_id" property="loId"></id>
+        <id column="lo_gmt_modified" property="loGmtModified"></id>
+        <association property="expressUser" javaType="com.cssl.entity.ExpressUser">
+            <id column="eu_receipt_name" property="euReceiptName"></id>
+            <id column="eu_receipt_phone" property="euReceiptPhone"></id>
+            <id column="eu_sender_name" property="euSenderName"></id>
+            <id column="eu_sender_phone" property="euSenderPhone"></id>
+        </association>
+        <association property="expressProvincesCityAreas" javaType="com.cssl.entity.ExpressProvincesCityAreas">
+            <id column="a" property="epcaName"></id>
+        </association>
+
+    </resultMap>
+
+
+    <select id="selectAll" resultMap="all">
+        SELECT l.lo_id,u.eu_receipt_name,u.eu_receipt_phone,CONCAT(ep.epca_name , ec.epca_name , ea.epca_name,",",ep2.epca_name,ec2.epca_name ,ea2.epca_name ) AS a ,u.eu_sender_name,u.eu_sender_phone,l.lo_gmt_modified
+        FROM logistics_orders l
+        INNER JOIN express_user u ON l.eu_id=u.eu_id
+        INNER JOIN express_provinces_city_areas ep ON u.ep_receipt_id = ep.epca_id
+        INNER JOIN express_provinces_city_areas ec ON u.ec_receipt_id = ec.epca_id
+        INNER JOIN express_provinces_city_areas ea ON u.ea_receipt_id = ea.epca_id
+        INNER JOIN express_provinces_city_areas ep2 ON u.ep_sender_id = ep2.epca_id
+        INNER JOIN express_provinces_city_areas ec2 ON u.ec_sender_id = ec2.epca_id
+        INNER JOIN express_provinces_city_areas ea2 ON u.ea_sender_id = ea2.epca_id
+        where 1=1
+        <if test="id gt 0">
+            and l.lo_id like '%${id}%'
+        </if>
+        <if test="name != null and name != ''">
+            and u.eu_receipt_name like '%${name}%' or u.eu_sender_name like '%${name}%'
+        </if>
+        limit  #{page},#{limit}
+    </select>
+
+    <select id="count" resultType="int">
+        SELECT COUNT(0) FROM logistics_orders l
+        INNER JOIN express_user u ON l.eu_id=u.eu_id
+        where 1=1
+        <if test="id gt 0">
+            and l.lo_id like '%${id}%'
+        </if>
+        <if test="name != null and name != ''">
+            and u.eu_receipt_name like '%${name}%' or u.eu_sender_name like '%${name}%'
+        </if>
+    </select>
+
+</mapper>

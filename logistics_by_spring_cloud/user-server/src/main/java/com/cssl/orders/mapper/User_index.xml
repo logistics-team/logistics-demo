@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cssl.orders.mapper.User_index">
+    <resultMap id="user" type="com.cssl.entity.LogisticsUser">
+        <id column="lu_id" property="luId"></id>
+        <id column="lu_username" property="luUsername"></id>
+        <id column="lu_sex" property="luSex"></id>
+        <id column="lu_birthday" property="luBirthday"></id>
+        <id column="lu_gmt_modified" property="luGmtModified"></id>
+        <id column="lu_isblacklist" property="luIsblacklist"></id>
+        <id column="lu_phone" property="luPhone"></id>
+    </resultMap>
+
+   <select id="selectAll" resultMap="user">
+       SELECT lu_id,lu_username,lu_phone,lu_sex,lu_birthday,lu_gmt_modified,lu_isblacklist FROM logistics_user
+       <if test="name != null and name != ''">
+           where lu_username like '%${name}%'
+       </if>
+       limit  #{page},#{limit}
+   </select>
+
+    <select id="count" resultType="int">
+        SELECT count(0) FROM logistics_user
+        <if test="name != null and name != ''">
+            where lu_username like '%${name}%'
+        </if>
+    </select>
+
+    <update id="update">
+        UPDATE logistics_user SET lu_isblacklist=#{block},lu_gmt_modified=NOW() WHERE lu_id=#{id}
+    </update>
+</mapper>
