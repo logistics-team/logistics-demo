@@ -5,8 +5,6 @@ spring:
     restart:
       enabled: true
       trigger-file:
-  main:
-    allow-bean-definition-overriding: true
   application:
     name: user-server
   datasource:
@@ -19,6 +17,8 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
+#  main:
+#    allow-bean-definition-overriding: true
 
 
 eureka:

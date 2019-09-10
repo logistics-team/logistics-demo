@@ -1,0 +1,638 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>天天快递官网</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control " content="no-cache,must-revalidate">
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1">
+
+	<meta name="keyword" content="">
+	<meta name="description" content=""><meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="format-detection" content="email=no"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
+	<meta http-equiv="Pragma"   content="no-cache">
+	<link href="/css/public.css" rel="stylesheet" type="text/css" />
+	<link href="/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="/css/mystyle.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="/css/city-picker.css" />
+	<link type="text/css" rel="stylesheet" href="/css/common.css">
+	<link type="text/css" rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
+	<link type="text/css" rel="stylesheet" href="/css/expressServiceTab.css">
+	
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	
+
+	<script src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/sweetalert-dev.js"></script>
+	<script type="text/javascript" src="/js/goUrl.js"></script>
+	<script type="text/javascript" src="/js/env.js"></script>
+
+
+</head>
+<body>
+<div class="wrapper admin-content twolevelWrap">
+	<!--Created by 17120847 on 2018/5/23.-->
+	<div class="logAndRegister">
+		<div class="fixedWid clearfix">
+			<a href="javascript:void(0)" class="fl" onclick="addFavorite();">加入收藏</a>
+			<div  class="fr normal"><a href="/passPortIndex.action?login_type=0">登录</a><span></span><a href="/register.action">注册</a></div>
+			<div style="display:none" class="fr sucess"> <a href="/myOrderNew.action"><span class="username" id="username"></span></a><a class="exit"  href="/j_logout">退出</a></div>
+		</div>
+	</div>
+	<div id="navWrap" class="headerWrap whiteBack commonWrap">
+		<div class="fixedWid">
+			<div class="navWrap clearfix">
+				<div class="logo fl">
+					<a href="/"><img src="/images/logo.png" class="logoimg"></a>
+				</div>
+				<div class="fr">
+					<a href="/" class="link">首页</a><span
+						onclick="location.href='/staticFiles/pages/expressServiceTab.html'"
+						class="link kdyw">快递业务
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">增值服务</span> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=hdfk"
+										class="linka">货到付款</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=dzmd"
+										class="linka">电子面单</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=dffw"
+										class="linka">到付服务</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=bjfw"
+										class="linka">保价服务</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=smqj"
+										class="linka">上门取件</a>
+								</div>
+							</div>
+						</span><span
+						onclick="location.href='/staticFiles/pages/placeOrder.html'"
+						class="link khfw">客户服务
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">我要寄件</span>
+									<span class="linka wyjjlink" data-url="/staticFiles/pages/placeOrder.html">我要寄件</span>
+								</div>
+								<div class="content secondcontent">
+									<span class="linka second">我要查询</span>
+									<span class="linka cxydlink" data-url="/staticFiles/pages/queryExpress.html">运单查询</span>
+									<span class="linka cxwdlink" data-url="/staticFiles/pages/queryNetwork.html">网点查询</span>
+									<span class="linka yfcxlink" data-url="/staticFiles/pages/queryPrice.html">运费查询</span>
+								</div>
+							</div>
+						</span><span onclick="location.href='/staticFiles/pages/joiningTT.html'"
+									 class="link jmtt">加盟天天
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">加盟天天</span> <a
+										href="/staticFiles/pages/joiningTT.html?divId=jmxz"
+										class="linka">加盟须知</a> <a
+										href="/staticFiles/pages/joiningTT.html?divId=jmlc"
+										class="linka">加盟流程</a> <a
+										href="/staticFiles/pages/joiningTT.html?divId=jmrx"
+										class="linka">加盟热线</a> <a
+										href="/staticFiles/pages/joiningTT.html?divId=zsqy"
+										class="linka">招商区域</a>
+								</div>
+							</div>
+						</span><span onclick="location.href='/staticFiles/pages/recruitment.html'" class="link rczp">人才招聘
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">人才招聘</span><a
+										href="/staticFiles/pages/recruitment.html?tab=1" class="linka">职位信息</a><a
+										href="/staticFiles/pages/recruitment.html?tab=2" class="linka">招聘介绍</a>
+								</div>
+							</div>
+						</span>
+					<span onclick="window.open('http://wuliu.suning.com')" class="link">苏宁物流</span>
+						<span onclick="location.href='/article/baseArticleAction!aboutTT.action'" class="link gytt">关于天天
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">关于天天</span><span
+										class="linka qyjslink" data-url="/article/baseArticleAction!aboutTT.action#qyjs">企业介绍</span><span class="linka xwzxlink" data-url="/article/baseArticleAction!aboutTT.action#xwzx">新闻中心</span><span
+										class="linka lxwmlink" data-url="/article/baseArticleAction!aboutTT.action#lxwm">联系我们</span>
+								</div>
+							</div>
+						</span><span class="kfdh"><img
+						src="/images/kfrx.png" class="kfrx kfrx_1"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- ftl start -->
+
+<script src="/js/jquery.validate.js"></script>
+<script src="/js/additional-methods.js"></script>
+<script src="/js/messages_zh.js"></script>
+<script src="/js/city-picker.data.js"></script>
+<script src="/js/city-picker.js"></script>
+<script type="text/javascript" src="/js/expressServiceTab.js"></script>
+<script type="text/javascript" src="/js/login.js"></script>
+<script type="text/javascript" src="/js/pageOrderInfo.js"></script>
+
+<link type="text/css" rel="stylesheet" href="/css/renCaiZhaoPin.css">
+<div style="background:url(/images/customerCenter.jpg) no-repeat" class="t_content t_banner">
+    <div class="fixedWid">
+        <h3 class="title">个人中心</h3>
+        <line class="wid20line"></line>
+        <p class="info">天天快递提供快捷、安全、贴心、可靠的快递服务，是您的优质选择</p>
+    </div>
+</div>
+
+<!--弹出框背景色-->
+<div class="mask"></div>
+<!--查看订单弹出框-->
+<div class="queryOrderModel">
+    <div class="queryOrderGroup">
+        <div class="selectModelTitle">查看<img src="/images/close.png" class="closeModel"></div>
+        <div class="queryOrderModelData">
+            <label>订单编号：</label><span class="oneClumnWidth" id="orderId"></span>
+            <label>下单时间：</label><span id="orderTime"></span>
+            <div>
+                <label>物品重量：</label><span class="oneClumnWidth" id="goodsWeight"></span>
+                <label>物品备注：</label><span id="specialRemarks"></span>
+            </div>
+        </div>
+        <input type="hidden" id="tempMaiNo" />
+        <input type="hidden" id="tempOrderId" />
+        <div class="queryOrderModelProgress">
+            <div class="orderNumTilte" id="expressId"></div>
+            <div class="receiveAndTask">
+                <div class="receiveBox" id="sendBox" title="">
+                    <div class="nameAndPho" id="sendName"></div>
+                    <div class="receiveBoxAddr" id="sendAddr"></div>
+                </div>
+                <div class="receiveAndTaskImg"><img src="/images/progressStatu.png"><span id="orderStatus"></span></div>
+                <div class="receiveBox" id="receiveBox" title="">
+                    <div class="nameAndPho" id="receiveName"></div>
+                    <div class="receiveBoxAddr" id="receiveAddr"></div>
+                </div>
+            </div>
+            <div id="detail">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="personalCenterContent">
+    <div class="leftTabContent">
+        <div class="leftMainTitle">个人中心</div>
+        <div class="personInfo">
+            <a href="/myPerson.action">
+                
+                    <img src="/images/headerpic.png" />
+                
+                
+                <div>155****1419</div>
+            </a>
+        </div>
+        <div class="leftMainContent">
+            <a href="/myOrderNew.action"><div class="leftNodeTab leftNodeTabActive"> 我的订单</div></a>
+            <a href="/myOnlineOrder.action"> <div class="leftNodeTab">我要寄件</div></a>
+            <a href="/myAddress.action"><div class="leftNodeTab">我的地址簿</div></a>
+            <a href="/myPerson.action"><div class="leftNodeTab">会员信息</div></a>
+            <a href="/myWorkOrder.action"><div class="leftNodeTab">我的投诉</div></a>
+        </div>
+    </div>
+    <div style="display:inline-block;" class="rightTabContent">
+        <div class="rightSmallTitle myOrderTitle bold">我的订单</div>
+        <div class="netQueryInput clearfix">
+            <div class="nodeTab">全部<span>(0)</span></div>
+            <div class="nodeTab">未取件<span>(0)</span></div>
+            <div class="nodeTab">运送中<span>(0)</span></div>
+            <div class="nodeTab">已签收<span>(0)</span></div>
+            <div class="nodeTab">已取消<span>(0)</span></div>
+        </div>
+        <div class="cont">
+            <div style="display:block;" class="tabSwitchContent clearfix">
+                <div class="clearfix">
+                    <div class="myorderInputrow" style="float: right;">
+                        <label>关键字</label>
+                        <input placeHolder="运单号/姓名/电话/地址" id="AllExexpress"><a href="javascript:orderSerch('All')" class="forBtn blueBtn">查询</a>
+                    </div>
+                </div>
+                <div class="queryResultOrderTable" id="All">
+                    <table border="1">
+                        <thead>
+                        <tr>
+                            <th style="padding-left:10px;width:131px">订单编号</th>
+                            <th width="108px;">下单时间</th>
+                            <th width="126px;">运单编号</th>
+                            <th width="130px;">寄件人信息</th>
+                            <th width="82px;" class="center">运单状态</th>
+                            <th width="130px;">收件人信息</th>
+                            <th style="padding:0 13px 0 10px;width:100px">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+                        </tbody>
+                    </table>
+                    <form method='post' class="customerInfocont" id='pageUtilForm'><div class="tablegroup"><div class="page1 btngroup"> <a class="btn link" href="#">首页</a>  
+ <a class="current btn" style="color: #fff;" href='#' onclick = "turnPage('/mytt/customerAction!myOrderNewPages.action?parentUrl=All&page=' ,'/mytt/customerAction!myOrderNewPages.action?parentUrl=All&page=', 1);return false;" >1</a>
+ 
+ 
+<input type="hidden" name="curPage" id="curPage"  value="1"/><input type="hidden" name="Parameter" id="Parameter"  value="?parentUrl=All&page="/><input type="hidden" name="t" id="t"  value="1909062015271650036"/>
+</div></div></form>
+                </div>
+            </div>
+            <div class="tabSwitchContent">
+                <div class="clearfix">
+                    <div class="myorderInputrow" style="float: right;">
+                        <label>关键字</label>
+                        <input placeHolder="运单号/姓名/电话/地址" id="NotExexpress"><a href="javascript:orderSerch('Not')" class="forBtn blueBtn">查询</a>
+                    </div>
+                </div>
+                <div class="queryResultOrderTable" id="Not">
+                    <table border="1">
+                        <thead>
+                        <tr>
+                            <th style="padding-left:10px;width:131px">订单编号</th>
+                            <th width="108px;">下单时间</th>
+                            <th width="126px;">运单编号</th>
+                            <th width="130px;">寄件人信息</th>
+                            <th width="82px;" class="center">运单状态</th>
+                            <th width="130px;">收件人信息</th>
+                            <th style="padding:0 13px 0 10px;width:100px">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+                        </tbody>
+                    </table>
+                    <form method='post' class="customerInfocont" id='pageUtilForm'><div class="tablegroup"><div class="page1 btngroup"> <a class="btn link" href="#">首页</a>  
+ <a class="current btn" style="color: #fff;" href='#' onclick = "turnPage('/mytt/customerAction!myOrderNewPages.action?parentUrl=Not&page=' ,'/mytt/customerAction!myOrderNewPages.action?parentUrl=Not&page=', 1);return false;" >1</a>
+ 
+ 
+<input type="hidden" name="curPage" id="curPage"  value="1"/><input type="hidden" name="Parameter" id="Parameter"  value="?parentUrl=Not&page="/><input type="hidden" name="t" id="t"  value="1909062015271650036"/>
+</div></div></form>
+                </div>
+            </div>
+            <div class="tabSwitchContent">
+                <div class="clearfix">
+                    <div class="myorderInputrow" style="float: right;">
+                        <label>关键字</label>
+                        <input placeHolder="运单号/姓名/电话/地址" id="TransportExexpress"><a href="javascript:orderSerch('Transport')" class="forBtn blueBtn">查询</a>
+                    </div>
+                </div>
+                <div class="queryResultOrderTable" id="Transport">
+                    <table border="1">
+                        <thead>
+                        <tr>
+                            <th style="padding-left:10px;width:131px">订单编号</th>
+                            <th width="108px;">下单时间</th>
+                            <th width="126px;">运单编号</th>
+                            <th width="130px;">寄件人信息</th>
+                            <th width="82px;" class="center">运单状态</th>
+                            <th width="130px;">收件人信息</th>
+                            <th style="padding:0 13px 0 10px;width:100px">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+                        </tbody>
+                    </table>
+                    <form method='post' class="customerInfocont" id='pageUtilForm'><div class="tablegroup"><div class="page1 btngroup"> <a class="btn link" href="#">首页</a>  
+ <a class="current btn" style="color: #fff;" href='#' onclick = "turnPage('/mytt/customerAction!myOrderNewPages.action?parentUrl=Transport&page=' ,'/mytt/customerAction!myOrderNewPages.action?parentUrl=Transport&page=', 1);return false;" >1</a>
+ 
+ 
+<input type="hidden" name="curPage" id="curPage"  value="1"/><input type="hidden" name="Parameter" id="Parameter"  value="?parentUrl=Transport&page="/><input type="hidden" name="t" id="t"  value="1909062015271650036"/>
+</div></div></form>
+                </div>
+            </div>
+            <div class="tabSwitchContent">
+                <div class="clearfix">
+                    <div class="myorderInputrow" style="float: right;">
+                        <label>关键字</label>
+                        <input placeHolder="运单号/姓名/电话/地址" id="SignInExexpress"><a href="javascript:orderSerch('SignIn')" class="forBtn blueBtn">查询</a>
+                    </div>
+                </div>
+                <div class="queryResultOrderTable" id="SignIn">
+
+                    <table border="1">
+                        <thead>
+                        <tr>
+                            <th style="padding-left:10px;width:131px">订单编号</th>
+                            <th width="108px;">下单时间</th>
+                            <th width="126px;">运单编号</th>
+                            <th width="130px;">寄件人信息</th>
+                            <th width="82px;" class="center">运单状态</th>
+                            <th width="130px;">收件人信息</th>
+                            <th style="padding:0 13px 0 10px;width:100px">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+                        </tbody>
+                    </table>
+                    <form method='post' class="customerInfocont" id='pageUtilForm'><div class="tablegroup"><div class="page1 btngroup"> <a class="btn link" href="#">首页</a>  
+ <a class="current btn" style="color: #fff;" href='#' onclick = "turnPage('/mytt/customerAction!myOrderNewPages.action?parentUrl=SignIn&page=' ,'/mytt/customerAction!myOrderNewPages.action?parentUrl=SignIn&page=', 1);return false;" >1</a>
+ 
+ 
+<input type="hidden" name="curPage" id="curPage"  value="1"/><input type="hidden" name="Parameter" id="Parameter"  value="?parentUrl=SignIn&page="/><input type="hidden" name="t" id="t"  value="1909062015271650036"/>
+</div></div></form>
+                </div>
+            </div>
+            <div class="tabSwitchContent">
+                <div class="clearfix">
+                    <div class="myorderInputrow" style="float: right;">
+                        <label>关键字</label>
+                        <input placeHolder="运单号/姓名/电话/地址" id="CancelExexpress"><a href="javascript:orderSerch('Cancel')" class="forBtn blueBtn">查询</a>
+                    </div>
+                </div>
+                <div class="queryResultOrderTable" id="Cancel">
+                    <table border="1">
+                        <thead>
+                        <tr>
+                            <th style="padding-left:10px;width:131px">订单编号</th>
+                            <th width="108px;">下单时间</th>
+                            <th width="126px;">运单编号</th>
+                            <th width="130px;">寄件人信息</th>
+                            <th width="82px;" class="center">运单状态</th>
+                            <th width="130px;">收件人信息</th>
+                            <th style="padding:0 13px 0 10px;width:100px">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        
+                        </tbody>
+                    </table>
+                    <form method='post' class="customerInfocont" id='pageUtilForm'><div class="tablegroup"><div class="page1 btngroup"> <a class="btn link" href="#">首页</a>  
+ <a class="current btn" style="color: #fff;" href='#' onclick = "turnPage('/mytt/customerAction!myOrderNewPages.action?parentUrl=Cancel&page=' ,'/mytt/customerAction!myOrderNewPages.action?parentUrl=Cancel&page=', 1);return false;" >1</a>
+ 
+ 
+<input type="hidden" name="curPage" id="curPage"  value="1"/><input type="hidden" name="Parameter" id="Parameter"  value="?parentUrl=Cancel&page="/><input type="hidden" name="t" id="t"  value="1909062015271650036"/>
+</div></div></form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+    function cancelOrderInfo(orderId) {
+        swal({
+                title: "是否确认取消订单？",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "确定",
+                cancelButtonText: "取消",
+                closeOnConfirm: false
+            },
+            function(){
+                $.ajax({
+                    type : "post",
+                    url : "/customerAction!cancelOrderInfo.action",
+                    data :{"orderId":orderId},
+                    dataType: "JSON",
+                    success : function(data) {
+                        if (data != null) {
+                            if (data.returnStatus == "01") {
+                                swal({
+                                        title: "操作成功！",
+                                        type: "info"
+                                    },
+                                    function() {
+                                        location.reload();
+                                    });
+                            } else if (data.returnStatus == "02") {
+                                swal("", data.returnMsg, "info");
+                            }
+                        } else {
+                            swal("", "操作异常，请稍后再试！", "info");
+                        }
+                    },
+                    error:function(data){
+                        swal("操作异常，请稍后再试！");
+                    }
+                });
+            });
+    }
+    function orderSerch(parentUrl){
+        var exp = $("#"+parentUrl +"Exexpress").val();
+        $.ajax({
+            type : "post",
+            url : "/customerAction!myOrderNewSerch.action",
+            data :{"condition":exp,"parentUrl":parentUrl},
+            success : function(data) {
+                $("#"+parentUrl).html(data);
+            },
+            error:function(data){
+                swal("", "操作异常，请稍后再试！", "info");
+            }
+        });
+    }
+
+    function dealDataList(dataList) {
+        if("" != dataList[0].data){
+            var orderList = dataList[0].data;
+//            console.log(orderList);
+            var _html = '';
+//            if(orderList.length > 0){
+//                $("#detail").css("display","block");
+//            }
+            
+            
+            
+            
+            
+            var state =  dataList[0].state;
+
+            //循环放入值，取出详细信息
+            for(var j=orderList.length-1; j>=0 ;j--){
+                if("签收" == state){
+                    //揽件
+                    if(j == orderList.length-1){
+                        _html +='<div class="orderProgressRow"><span>'+orderList[j].time+'</span> <img src="/images/progressStart.png" class="bigImgProgress">  <span>'+orderList[j].context+'</span></div>'
+                    }else if (j == 0){
+                        _html +='<div class="orderProgressRow"><span>'+orderList[j].time+'</span> <img src="/images/progressEnd.png" class="bigImgProgress">  <span>'+orderList[j].context+'</span></div>'
+                    }else{
+                        _html +='<div class="orderProgressRow"><span>'+orderList[j].time+'</span><img src="/images/greyradius.png" class="smallImgProgress"><span>'+orderList[j].context+'</span></div>'
+
+                    }
+                }else{
+                    //未签收
+                    //揽件
+                    if(j == 0){
+                        _html +='<div class="orderProgressRow"><span>'+orderList[j].time+'</span> <img src="/images/progressEnd.png" class="bigImgProgress">  <span>'+orderList[j].context+'</span></div>'
+                    }else{
+                        _html +='<div class="orderProgressRow"><span>'+orderList[j].time+'</span><img src="/images/greyradius.png" class="smallImgProgress"><span>'+orderList[j].context+'</span></div>'
+                    }
+                }
+            }
+        }
+
+        $("#detail").html(_html);
+
+    }
+    function dealBaseInfo(orderInfo1) {
+        if(orderInfo1 != undefined){
+            var orderInfo = eval( "(" + orderInfo1 + ")" );
+            $("#orderId").html(orderInfo.orderId);
+            $("#orderTime").html(orderInfo.orderTime);
+            $("#goodsWeight").html((orderInfo.goodsWeight == undefined? "":orderInfo.goodsWeight) +'KG');
+            $("#specialRemarks").html(orderInfo.goodsRemarks);
+
+            var expressId = orderInfo.expressId;
+            if(expressId == undefined){
+                expressId='';
+            }
+            var orderStatus = orderInfo.orderStatus;
+            $("#tempMaiNo").val(expressId);
+            $("#tempOrderId").val(orderInfo.orderId);
+            $("#expressId").html('运单号：<span style="color:#333333">'+expressId+'</span><div style="margin-left: 60px;display: inline-block; cursor: pointer"><img style="margin-top: 5px" src="/images/ico_workOrder.png"/><span id="workOrderSelf" style="margin-left:3px;color:#666666;font-weight:normal">自助投诉</span></div>');
+            $("#sendName").html(orderInfo.sendName+' '+orderInfo.sendPhone);
+            $("#sendAddr").html(orderInfo.sendProvinceName+' '+orderInfo.sendCityName+' '+orderInfo.sendRegionName+' '+ orderInfo.sendAddress);
+            $("#sendBox").attr("title", orderInfo.sendName+' '+orderInfo.sendPhone + orderInfo.sendProvinceName+' '+orderInfo.sendCityName+' '+orderInfo.sendRegionName+' '+ orderInfo.sendAddress );
+
+            if(orderStatus=='01'){
+                $("#orderStatus").html('未揽件');
+            }else if(orderStatus=='02'){
+                $("#orderStatus").html('运送中');
+            }else if(orderStatus=='03'){
+                $("#orderStatus").html('已签收');
+            }else if(orderStatus=='04'){
+                $("#orderStatus").html('已取消');
+            }
+
+            $("#receiveName").html(orderInfo.receiveName+' '+orderInfo.receivePhone);
+            $("#receiveAddr").html(orderInfo.receiveProvinceName+' '+orderInfo.receiveCityName+' '+orderInfo.receiveRegionName+' '+ orderInfo.receiveAddress);
+            $("#receiveBox").attr("title", orderInfo.receiveName+' '+orderInfo.receivePhone + orderInfo.receiveProvinceName+' '+orderInfo.receiveCityName+' '+orderInfo.receiveRegionName+' '+ orderInfo.receiveAddress);
+        }
+    }
+    function queryOrderInfoByOrderId(orderId) {
+        $("#detail").html('');
+        $.ajax({
+            type : "post",
+            url : "/customerAction!queryOrderInfoByOrderId.action",
+            data :{"orderId":orderId},
+            dataType: "JSON",
+            success : function(data) {
+                if (data != null) {
+                    if (data.returnStatus == "01") {
+                        dealBaseInfo(data.orderInfo);
+
+                        var dataList = data.dataList;
+                        if(dataList != undefined){
+                            dealDataList(dataList);
+                        }
+
+                        $('.queryOrderModel').show();
+                        $('.mask').show();
+
+                    } else if (data.returnStatus == "02") {
+                        swal("", data.returnMsg, "info");
+                    }
+                } else {
+                    swal("", "操作异常，请稍后再试！", "info");
+                }
+            },
+            error:function(data){
+                swal("", "操作异常，请稍后再试！", "info");
+            }
+        });
+    }
+    function gotoWorkOrder(mailNo,orderId) {
+        window.open("/workOrder!initCustomerOrderWorkOrder.action?mailNo="+mailNo+"&orderId="+orderId);
+    }
+
+    $(".orderNumTilte").on("click","#workOrderSelf",function() {
+        window.open("/workOrder!initCustomerOrderWorkOrder.action?mailNo=" + $("#tempMaiNo").val() + "&orderId=" + $("#tempOrderId").val());
+    })
+</script>
+<!-- ftl end -->
+
+<div class="footer commonWrap">
+  <div class="footerCont fixedWid clearfix">
+    <div class="customer fl">
+      <span class="info">客服电话</span>
+      <span class="info tel">4001-888-888</span>
+      <span class="info timer">服务时间： 8:30 - 17:30</span>
+    </div>
+    <div class="hyperlink clearfix">
+      <div class="linkgroup fl">
+        <a href="" class="link">客户服务</a>
+        <a href="/staticFiles/pages/placeOrder.html" class="link">在线寄件</a>
+        <a href="/staticFiles/pages/queryExpress.html" class="link">运单查询</a>
+        <a href="/staticFiles/pages/queryNetwork.html" class="link">网点查询</a>
+        <a href="/staticFiles/pages/queryPrice.html" class="link">运费查询</a>
+      </div>
+      <div class="linkgroup fl">
+        <a href="" class="link">客服服务</a>
+        <a href="/article/baseArticleAction!aboutTT.action#lxwm" class="link">客服热线  </a>
+        <a href="/staticFiles/pages/customerServiceCenter.html#last" class="link">在线留言</a>
+      </div>
+      <div class="linkgroup fl">
+        <a href="" class="link">加盟天天</a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=jmxz" class="link">加盟须知   </a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=jmlc" class="link">加盟流程</a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=jmrx" class="link">加盟热线</a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=zsqy" class="link">招商区域</a>
+      </div>
+      <div class="linkgroup fl">
+        <a href="" class="link">人才招聘</a>
+        <a href="/staticFiles/pages/recruitment.html?tab=1" class="link">职位信息</a>
+        <a href="/staticFiles/pages/recruitment.html?tab=2" class="link">招聘介绍</a>
+      </div>
+      <div class="linkgroup fr smcodediv" style="text-align:center">
+        <img class="smcode" src="/images/code_dyh.png" alt="">
+        <span class="info">天天相知微信</span>
+        <span class="info">订阅号扫码关注</span>
+      </div>
+      <div class="linkgroup fr smcodediv">
+        <img class="smcode" src="/images/code_fwh.png" alt="">
+        <span class="info">天天快递微信</span>
+        <span class="info">服务号扫码关注</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footerbottom commonWrap">
+  <div class="fixedWid">
+    <p class='info'>©版权所有 2016 天天快递有限公司<a style="color: #A6A7AB;" href="http://www.beian.miit.gov.cn/" target="_blank"> 浙ICP备13006085</a>号
+
+    <a href="/images/businessLicense.png" target="_blank" style="color: #A6A7AB;" > | 快递业务经营许可证</a><a href="/staticFiles/pages/businessLincence.html" target="_blank" style="color: #A6A7AB;" > | <img src="/images/yyzz.png" style="width: 19px;height:19px;vertical-align: middle;"> 营业执照</a></p>
+  </div>
+</div>
+<div class="selfServiceBtnList">
+  <div class="customerBtn" data="/onlineCall.action">
+    <div class="onLineIcon"></div>
+    <span class="btnTip">在线客服</span>
+  </div>
+  <div class="customerBtns selfOrderServiceBtn" id="selfOrderServiceBtn">
+    <div class="selfServiceIcon"></div>
+    <span class="btnTip">自助投诉</span>
+  </div>
+  <div class="customerBtns selfOrderServiceBtn" id="toTopBtn">
+    <div class="returnTopIcon"></div>
+    <span class="btnTip">返回顶部</span>
+  </div>
+</div>
+</div>
+
+<script type="text/javascript" src="/js/index1.js"></script>
+<script type="text/javascript" src="/js/expressServiceTab.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1097 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>天天快递官网</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control " content="no-cache,must-revalidate">
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1">
+
+	<meta name="keyword" content="">
+	<meta name="description" content=""><meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="format-detection" content="email=no"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
+	<meta http-equiv="Pragma"   content="no-cache">
+	<link href="css/public.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/mystyle.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/city-picker.css" />
+	<link type="text/css" rel="stylesheet" href="css/common.css">
+	<link type="text/css" rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+	<link type="text/css" rel="stylesheet" href="css/expressServiceTab.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/sweetalert-dev.js"></script>
+	<script type="text/javascript" src="js/goUrl.js"></script>
+	<script type="text/javascript" src="js/env.js"></script>
+
+
+</head>
+<body>
+<div class="wrapper admin-content twolevelWrap">
+	<!--Created by 17120847 on 2018/5/23.-->
+	<div class="logAndRegister">
+		<div class="fixedWid clearfix">
+			<a href="javascript:void(0)" class="fl" onclick="addFavorite();">加入收藏</a>
+			<div  class="fr normal"><a href="/passPortIndex.action?login_type=0">登录</a><span></span><a href="/register.action">注册</a></div>
+			<div style="display:none" class="fr sucess"> <a href="/myOrderNew.action"><span class="username" id="username"></span></a><a class="exit"  href="/j_logout">退出</a></div>
+		</div>
+	</div>
+	<div id="navWrap" class="headerWrap whiteBack commonWrap">
+		<div class="fixedWid">
+			<div class="navWrap clearfix">
+				<div class="logo fl">
+					<a href="/"><img src="images/logo.png" class="logoimg"></a>
+				</div>
+				<div class="fr">
+					<a href="/" class="link">首页</a><span
+						onclick="location.href='/staticFiles/pages/expressServiceTab.html'"
+						class="link kdyw">快递业务
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">增值服务</span> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=hdfk"
+										class="linka">货到付款</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=dzmd"
+										class="linka">电子面单</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=dffw"
+										class="linka">到付服务</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=bjfw"
+										class="linka">保价服务</a> <a
+										href="/staticFiles/pages/expressServiceTab.html?divId=smqj"
+										class="linka">上门取件</a>
+								</div>
+							</div>
+						</span><span
+						onclick="location.href='/staticFiles/pages/placeOrder.html'"
+						class="link khfw">客户服务
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">我要寄件</span>
+									<span class="linka wyjjlink" data-url="/staticFiles/pages/placeOrder.html">我要寄件</span>
+								</div>
+								<div class="content secondcontent">
+									<span class="linka second">我要查询</span>
+									<span class="linka cxydlink" data-url="/staticFiles/pages/queryExpress.html">运单查询</span>
+									<span class="linka cxwdlink" data-url="/staticFiles/pages/queryNetwork.html">网点查询</span>
+									<span class="linka yfcxlink" data-url="/staticFiles/pages/queryPrice.html">运费查询</span>
+								</div>
+							</div>
+						</span><span onclick="location.href='/staticFiles/pages/joiningTT.html'"
+									 class="link jmtt">加盟天天
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">加盟天天</span> <a
+										href="/staticFiles/pages/joiningTT.html?divId=jmxz"
+										class="linka">加盟须知</a> <a
+										href="/staticFiles/pages/joiningTT.html?divId=jmlc"
+										class="linka">加盟流程</a> <a
+										href="/staticFiles/pages/joiningTT.html?divId=jmrx"
+										class="linka">加盟热线</a> <a
+										href="/staticFiles/pages/joiningTT.html?divId=zsqy"
+										class="linka">招商区域</a>
+								</div>
+							</div>
+						</span><span onclick="location.href='/staticFiles/pages/recruitment.html'" class="link rczp">人才招聘
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">人才招聘</span><a
+										href="/staticFiles/pages/recruitment.html?tab=1" class="linka">职位信息</a><a
+										href="/staticFiles/pages/recruitment.html?tab=2" class="linka">招聘介绍</a>
+								</div>
+							</div>
+						</span>
+					<span onclick="window.open('http://wuliu.suning.com')" class="link">苏宁物流</span>
+						<span onclick="location.href='/article/baseArticleAction!aboutTT.action'" class="link gytt">关于天天
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">关于天天</span><span
+										class="linka qyjslink" data-url="/article/baseArticleAction!aboutTT.action#qyjs">企业介绍</span><span class="linka xwzxlink" data-url="/article/baseArticleAction!aboutTT.action#xwzx">新闻中心</span><span
+										class="linka lxwmlink" data-url="/article/baseArticleAction!aboutTT.action#lxwm">联系我们</span>
+								</div>
+							</div>
+						</span><span class="kfdh"><img
+						src="images/kfrx.png" class="kfrx kfrx_1"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- ftl start -->
+
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/additional-methods.js"></script>
+    <script src="js/messages_zh.js"></script>
+    <script src="js/city-picker.data.js"></script>
+    <script src="js/city-picker.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/jquery.pagination.js"></script>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.13&key=a820db6476bc0642dfbf492706a7c989&plugin=AMap.Autocomplete"></script>
+
+    <link type="text/css" rel="stylesheet" href="css/renCaiZhaoPin.css">
+    <link type="text/css" rel="stylesheet" href="css/pagination.css">
+    <link type="text/css" rel="stylesheet" href="css/expressServiceTab.css">
+    <style>
+        .amap-sug-result{
+            /*margin-left: 10px !important;*/
+        }
+    </style>
+
+    <div style="background:url(/staticFiles/assets/customerCenter.jpg) no-repeat" class="t_content t_banner">
+        <div class="fixedWid">
+            <h3 class="title">个人中心</h3>
+            <line class="wid20line"></line>
+            <p class="info">天天快递提供快捷、安全、贴心、可靠的快递服务，是您的优质选择</p>
+        </div>
+    </div>
+
+    <div class="personalCenterContent">
+        <div class="leftTabContent">
+            <div class="leftMainTitle">个人中心</div>
+            <div class="personInfo">
+                <a href="/myPerson.action">
+                    
+                    
+                        <img  src="images/0000000000_01.jpg" />
+                    
+                    <div>155****1419</div>
+                </a>
+            </div>
+            <div class="leftMainContent">
+                <a href="/myOrderNew.action"><div class="leftNodeTab"> 我的订单</div></a>
+                <a href="/myOnlineOrder.action"> <div class="leftNodeTab">我要寄件</div></a>
+                <a href="/myAddress.action"><div class="leftNodeTab leftNodeTabActive">我的地址簿</div></a>
+                <a href="/myPerson.action"><div class="leftNodeTab">会员信息</div></a>
+                <a href="/myWorkOrder.action"><div class="leftNodeTab">我的投诉</div></a>
+            </div>
+        </div>
+
+        <input type="hidden" id="pageNum" name="pageNum" value="1" />
+        <input type="hidden" id="pageSize" name="pageSize" value="20" />
+        <input type="hidden" id="totalCount" name="totalCount" value="0" />
+        <input type="hidden" id="pageCount" name="pageCount" value="0" />
+        <div class="rightTabContent myAddressBookCon" style="display: inline-block;">
+            <div class="rightSmallTitle myAddressBook clearfix vipTitle">
+                <div class="vipInfo addressTab" addresstype="02">收件人地址</div>
+                <div class="addressTab" addresstype="01">寄件人地址</div>
+            </div>
+            <div class="addAddressRow">
+                <a href="javascript:void(0)" class="newAddBtn forBtn">新增地址</a>
+                <a href="javascript:void(0)" class="serchBtn forBtn blueBtn" onclick="queryFunc()">搜索</a>
+                <input placeHolder="手机号/姓名/标签" id="searchParam" value="" />
+            </div>
+            <div class="queryResultOrderTable">
+                <table border="1">
+                    <thead>
+                    <tr>
+                        <th width="95px">姓名</th>
+                        <th>联系方式</th>
+                        <th>地址</th>
+                        <th>标签</th>
+                        <th width="200px">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="M-box1 pageCont pageBottom"></div>
+        </div>
+    </div>
+
+    
+
+    <!-- 弹出框背景色 -->
+    <div class="mask"></div>
+
+    <!--新增地址弹出框-->
+    <div class="AddAddressModel">
+        <div class="AddAddressGroup">
+            <div class="selectModelTitle" style="display: block">管理地址<img src="images/close.png" class="closeModel closePic"></div>
+            <div class="intelligenceTip"><img src="images/tips.png">请检查拆分地址是否准确，如有遗漏请及时补充</div>
+            <form id="manageAddressBookForm">
+                <input type="hidden" id="aId" name="addressBook.id" />
+                <input type="hidden" id="custCode" name="addressBook.custCode" />
+                <input type="hidden" id="createTime" name="addressBook.createTime" />
+                <input type="hidden" id="addressType" name="addressBook.addressType" />
+                <div class="addModelContent">
+                    <div class="addModelRow">
+                        <div class="leftLabelCon"><span>*</span>
+                            <label>联系人</label>
+                        </div>
+                        <input placeHolder="请输入联系人" id="name" name="addressBook.name" />
+                    </div>
+                    <div style="margin-bottom:5px;">
+                        <div class="leftLabelCon"><span>*</span>
+                            <label>地址</label>
+                        </div>
+                        <input placeHolder="请选择省 请选择市 请选择区" id="area" name="addressBook.area">
+                    </div>
+                    <input type="hidden" id="provinceCode" name="addressBook.provinceCode" />
+                    <input type="hidden" id="cityCode" name="addressBook.cityCode" />
+                    <input type="hidden" id="regionCode" name="addressBook.regionCode" />
+                    <input type="hidden" id="provinceName" name="addressBook.provinceName" />
+                    <input type="hidden" id="cityName" name="addressBook.cityName" />
+                    <input type="hidden" id="regionName" name="addressBook.regionName" />
+                    <div class="addModelRow">
+                        <input placeHolder="街道名称和小区名称" type="text" class="streetname" id="address" name="addressBook.address" style="display: block">
+                    </div>
+                    <div class="addModelRow">
+                        <div class="leftLabelCon"><span>*</span>
+                            <label>手机</label>
+                        </div>
+                        <input placeHolder="请输入手机号" id="phone" name="addressBook.phone">
+                    </div>
+                    <div class="addModelRow" style="position: relative;">
+                        <div class="leftLabelCon">
+                            <label class="seatNumber">座机号</label>
+                        </div>
+                        <input placeHolder="请输入座机号" id="tel" name="addressBook.tel">
+                    </div>
+                    <div style="position: relative;">
+                        <div class="leftLabelCon">
+                            <label class="seatNumber">标签</label>
+                        </div>
+                        <input placeHolder="请输入标签,可选填，不超过10个字符" id="tag" name="addressBook.tag">
+                    </div>
+                    <div class="checkRow"><span class="checkboxDom noChecked">
+                          <input type="checkbox" id="defaultCheck"></span><span id="defaultSpan">设为默认地址</span>
+                    </div>
+                    <input type="hidden" id="defaultType" name="addressBook.defaultType" />
+                    <div class="intelligenceRow">
+                        <textarea id="intelligence"name="intelligence" placeholder="粘贴整段地址，自动识别姓名、电话和地址，例：小天天， 13298934285，江苏省南京市玄武区苏宁总部"></textarea>
+                        <span class="showLength"><span class="surplusLen">0</span>/150</span>
+                    </div>
+                    <div class="intelligenceBtnRow"><span class="disableTip">请输入要解析的内容！</span><a href="javascript:;" onclick="zntx()">智能填写</a></div>
+                    <div class="selectModelConfirm" style="margin-top: 17px;">
+                        <a href="javascript:void(0)" class="forBtn ConfirmBtn" onclick="submitFunc()">确认</a>
+                        <a href="javascript:void(0)" class="forBtn CancleBtn">取消</a>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        function zntx () {
+            if ($("#intelligence").val() === '') {
+                $('.intelligenceBtnRow .disableTip').html("请输入要解析的内容！");
+                $(".intelligenceBtnRow .disableTip").show()
+            } else {
+                $.ajax({
+                    type : "post",
+                    url : "/subscriptionBusiness!addressResolution.action",
+                    dataType: "JSON",
+                    data:{"addressInfo":$('#intelligence').val()},
+                    success : function(res) {
+                        if(res.code=="1000"){
+                            setAddFunc(res.data,$('#znType').val());
+                            $('.reg-protocol').hide()
+                            $(".city-picker-dropdown").hide();  // 防止地址控件弹出
+                            $('.intelligenceTip').slideDown(500);
+                            setTimeout(function () {
+                                $('.intelligenceTip').slideUp(500, function() {
+                                    if($('.amap-sug-result')) {
+                                        $('.amap-sug-result').offset({top:$('#address').offset().top + $('#address').height()})
+                                    }
+                                })
+                            }, 5000)
+                            $("#manageAddressBookForm").validate().resetForm();
+                        }else{
+                            $('.intelligenceBtnRow .disableTip').show().prev().find('textarea').css('borderColor','#FF5858');
+                            $('.intelligenceBtnRow .disableTip').html(res.msg);
+                        }
+                    },
+                    error:function(data){
+                        $('#intelligenceBtnRow .disableTip').show().prev().find('textarea').css('borderColor','#FF5858');
+                        $('#intelligenceBtnRow .disableTip').html("解析失败，请稍后重试");
+                    }
+                });
+            }
+        }
+
+        // 设置地址
+        var areaOld = "";
+        function setAddFunc(aBook, aType) {
+            var addType;
+            if (aType == "01") {    // 寄件
+                addType = "send";
+            } else if (aType == "02") { // 收件
+                addType = "receive";
+            }
+            $("#name").val(aBook.rname);
+            $("#provinceCode").val(aBook.province);
+            $("#provinceName").val(aBook.provinceCode);
+            $("#cityCode").val(aBook.cityCode);
+            $("#cityName").val(aBook.city);
+            $("#regionCode").val(aBook.countyCode);
+            $("#regionName").val(aBook.county);
+            var address = "";
+            if(aBook.address.length > 100){
+                address = aBook.address.substring(0, 99);
+            }else{
+                address = aBook.address;
+            }
+            $("#address").val(address);
+            var checkTel = /^\d{11}$/g;
+            if(checkTel.test(aBook.telenum)){
+                $("#phone").val(aBook.telenum);
+            }else{
+                $("#tel").val(aBook.telenum);
+            }
+            $("#area").citypicker("reset");
+            $("#area").citypicker("destroy");
+            $("#area").citypicker({
+                province: aBook.province,
+                city: aBook.city,
+                district: aBook.county,
+                onChange:function () {
+                    var area = $("#area").val();
+                    if (areaOld == area || area.split("/").length < 2) {
+                        return;
+                    }
+                    areaOld = area;
+                    if (area != "" && area != null && area != undefined) {
+                        for (var i = 0; i < $(".amap-sug-result").length - 1; i++) {
+                            $(".amap-sug-result")[i].parentNode.removeChild($(".amap-sug-result")[i]);
+                            console.log("close=ok");
+                        }
+
+                        var city = "";
+                        if ($("#ctityTextHtml").children(".select-item").length > 1) {
+                            var Object = document.getElementsByClassName('amap-sug-result');
+                            if (Object.length == 0) {
+                                // $(".amap-sug-result").css("margin-left", "10px !important");
+                            }
+                            if ($(".select-item")[1].innerHTML != "") {
+                                city = $(".select-item")[1].innerHTML;
+                                $("#address").css("display", "block");
+                                var auto3 = new AMap.Autocomplete({
+                                    city: area.split("/")[1],
+                                    input: "address"
+                                });
+                                AMap.event.addListener(auto3, "complete", function() {
+                                    setTimeout(function(){
+                                        $(".amap-sug-result").offset({
+                                            left:$("#address").offset().left
+                                        })
+                                    }, 1)
+                                });
+                                AMap.event.addListener(auto3, "select", select);//注册监听，当选中某条记录时会触发
+                                function select(data) {
+                                    if(data.poi.name.length>=3 && data.poi.name.length<=100){
+                                        $("#address-error").remove();
+                                    }
+                                }
+                                $(".amap-sug-result").css("z-index", 9999999999);
+                            }
+                        }
+                    }
+                }
+
+            });
+        }
+        $(function() {
+
+            /*字数限制*/
+            $("#intelligence").on("input propertychange", function () {
+                var _val = $(this).val()
+                if (_val.length > 150) {
+                    $(this).val(_val.substring(0, 150));
+                    $(this).next().find('.surplusLen').text(150);
+                } else {
+                    $(this).next().find('.surplusLen').text(_val.length);
+                }
+            })
+        })
+
+        // IE trim()方法支持问题
+        String.prototype.trim=function(){return this.replace(/(^\s*)|(\s*$)/g,"");};
+
+        var addressType = "";
+        $(function() {
+            initPaginationFunc(0, 20, 1, 0);
+            // 点击分页
+            $(".M-box1").find("a").click(function() {
+                var dataPage = $(this).attr("data-page");
+                if (typeof(dataPage) != "undefined") {  // 点击具体的页码
+                    $("#pageNum").val(dataPage);
+                } else {    // 点击“上一页”或“下一页”
+                    if ($(this).attr("class") == "prev") {
+                        $("#pageNum").val(parseInt($("#pageNum").val()) - 1);
+                    } else if ($(this).attr("class") == "next"){
+                        $("#pageNum").val(parseInt($("#pageNum").val()) + 1);
+                    }
+                }
+                queryFunc();
+            });
+
+            // 打开弹框
+            $(".newAddBtn").click(function() {
+                $('#name').val('')
+                $('#phone').val('')
+                $('#address').val('')
+                $('#tag').val('')
+                $('#tel').val('')
+
+                if ($('.AddAddressGroup .checkboxDom').hasClass('hasChecked')) {
+                    $('.AddAddressGroup .checkboxDom').removeClass('hasChecked').addClass('noChecked')
+                }
+                $('#manageAddressBookForm .placeholder').text('请选择省/市/区');
+                $('#manageAddressBookForm .placeholder').css("color","#aaa");
+                $('#manageAddressBookForm .title').html("<span style='color:#aaa;'>"+"请选择省/市/区"+"</span>");
+
+                // 地址最大值（100条）校验
+                $.ajax({
+                    type : "post",
+                    url : "/myAddress!addresMaxCountCheck.action",
+                    data : {"addressType": addressType},
+                    dataType: "JSON",
+                    success : function(data) {
+                        if (data != null) {
+                            if (data.returnStatus == "01") {    // 成功
+                                // 打开新增框
+                                openFunc();
+                            } else {
+                                var errorMsg = "";
+                                if (addressType == "01") {
+                                    errorMsg = "您的寄件地址薄条数已达上限！";
+                                } else {
+                                    errorMsg = "您的收件地址薄条数已达上限！";
+                                }
+                                swal("", errorMsg, "error");
+                            }
+                        } else {
+                            swal("", "地址数量最大值校验异常，请稍后再试！", "error");
+                        }
+                    },
+                    error:function(data){
+                        swal("", "提交失败！", "error");
+                    }
+                });
+            });
+
+            // 关闭弹框
+            $(".CancleBtn").click(function() {
+                // 恢复验证
+                $("#manageAddressBookForm").validate().resetForm();
+                closeFunc();
+            });
+
+            // 初始化地址
+            $("#area").citypicker();
+
+            // tab页切换
+            $(".addressTab").click(function() {
+                addressType = $(this).attr("addresstype");
+                $("#searchParam").val("");
+                $("#pageNum").val(1);  // 显示首页
+                queryFunc();
+            });
+
+            
+            
+                $(".addressTab[addresstype='01']").removeClass("vipACtive");
+                $(".addressTab[addresstype='02']").addClass("vipACtive");
+                addressType = "02";
+            
+        });
+
+        // 初始化分页控件
+        function initPaginationFunc(totalData, showData, current, pageCount) {
+            if (totalData != 0) {
+                $('.M-box1').pagination({
+                    totalData: totalData,
+                    showData: showData,
+                    current: current,
+                    keepShowPN: false,
+                    prevContent: '上一页',
+                    nextContent: '下一页',
+                    callback: function (api) {
+                    }
+                });
+                $(".pageCont").prepend('<a href="javascript:;" data-page="1" class="jumpClass">首页</a>');
+                $(".pageCont").append('<a href="javascript:;" data-page="' + pageCount + '" class="jumpClass">尾页</a>');
+            }
+        }
+
+        // 打开地址管理框
+        function openFunc() {
+            $('.intelligenceTip').hide();
+            $("#intelligence").val("");
+            $('.AddAddressModel .surplusLen').text('0')
+            // 初始化地址
+            $("#area").citypicker();
+
+            $(".mask").show();
+            $(".AddAddressModel").show();
+            $(".intelligenceBtnRow .disableTip").hide();
+            if ("01" == addressType) {
+                $("#defaultSpan").html("设为默认寄件地址");
+            } else if ("02" == addressType) {
+                $("#defaultSpan").html("设为默认收件地址");
+            }
+
+        }
+
+        $("#area").citypicker({
+            onChange: function () {//选择后触发的事件
+                console.log("area-close");
+                var area = $("#area").val();
+                if (areaOld == area || area.split("/").length < 2) {
+                    return;
+                }
+                areaOld = area;
+                if (area != "" && area != null && area != undefined) {
+                    for (var i = 0; i < $(".amap-sug-result").length - 1; i++) {
+                        $(".amap-sug-result")[i].parentNode.removeChild($(".amap-sug-result")[i]);
+                        console.log("close=ok");
+                    }
+
+                    var city = "";
+                    if ($("#ctityTextHtml").children(".select-item").length > 1) {
+                        var Object = document.getElementsByClassName('amap-sug-result');
+                        if (Object.length == 0) {
+                            // $(".amap-sug-result").css("margin-left", "10px !important");
+                        }
+                        if ($(".select-item")[1].innerHTML != "") {
+                            city = $(".select-item")[1].innerHTML;
+                            $("#address").css("display", "block");
+                            var auto3 = new AMap.Autocomplete({
+                                city: area.split("/")[1],
+                                input: "address"
+                            });
+                            AMap.event.addListener(auto3, "complete", function() {
+                                setTimeout(function(){
+                                    $(".amap-sug-result").offset({
+                                        left:$("#address").offset().left
+                                    })
+                                }, 1)
+                            });
+                            AMap.event.addListener(auto3, "select", select);//注册监听，当选中某条记录时会触发
+                            function select(data) {
+                                if(data.poi.name.length>=3 && data.poi.name.length<=100){
+                                    $("#address-error").remove();
+                                }
+                            }
+                            $(".amap-sug-result").css("position", "absolute !important");
+                            $(".amap-sug-result").css("z-index", 9999999999);
+                        }
+                    }
+                }
+            }
+        });
+        $(".closePic").click(function () {
+            $(".amap-sug-result").remove();
+            $("#ctityTextHtml").html('<span style="color:#aaa;">请选择省/市/区</span>');
+        })
+
+        // 关闭地址管理框
+        function closeFunc() {
+
+            $(".mask").hide();
+            $(".AddAddressModel").hide();
+
+            $("#aId").val("");
+            $("#custCode").val("");
+            $("#name").val("");
+            $("#provinceCode").val("");
+            $("#provinceName").val("");
+            $("#cityCode").val("");
+            $("#cityName").val("");
+            $("#regionCode").val("");
+            $("#regionName").val("");
+            $("#address").val("");
+            $("#phone").val("");
+            $("#tel").val("");
+            $("#intelligence").val("");
+            $("#area").citypicker("reset");
+            $("#area").citypicker("destroy");
+            $("#defaultCheck").prop("checked", false);
+            $("#defaultCheck").parent().removeClass("hasChecked").addClass("noChecked");
+            $("#createTime").val("");
+            $("#addressType").val("");
+            $("#tag").val("");
+        }
+
+        // 查询
+        function queryFunc() {
+            /*if (addressType.length == 1) {
+                addressType = "0" + addressType;
+            }*/
+            var pageNum = $("#pageNum").val();    // 页码
+            var pageSize = $("#pageSize").val();   // 每页显示的数量
+            var searchParam = window.encodeURI(encodeURI($("#searchParam").val()));    // 搜索条件
+            window.location.href = "/myAddress.action?addressType=" + addressType + "&pageNum=" + pageNum + "&pageSize=" + pageSize + "&searchParam="  + searchParam;
+        }
+
+        // 校验
+        $.validator.setDefaults({
+            submitHandler: function() {
+            },
+            debug: true,
+            errorElement: 'i',
+            errorClass: "errorClass",
+            errorPlacement: function(error, element) {
+                if ($(element).parent().hasClass('datetimepicker')) {
+                    error.insertAfter(element.parent());
+                } else {
+                    error.insertAfter(element);
+                }
+            }
+        });
+
+        $().ready(function() {
+            $('#address').on('input propertychange', function() {
+                var patt1 = /[^(·\-\(\)a-zA-Z0-9\u4e00-\u9fa5)]/ig;
+                $('#address').val($('#address').val().replace(patt1,''));
+            });
+            $('#name').on('input propertychange', function() {
+                var patt1 = /[^a-zA-Z\u4e00-\u9fa5]/ig;
+                $('#name').val($('#name').val().replace(patt1,''));
+            });
+            // IntelligenceSearch();
+            console.log("function");
+            /*字数限制*/
+            $("#intelligenceWrite ").on("input propertychange", function() {
+                var _val = $(this).val()
+                if (_val.length > 150) {
+                    $(this).val(_val.substring(0, 150));
+                    $(this).next().find('.surplusLen').text(150);
+                }else{
+                    $(this).next().find('.surplusLen').text(_val.length);
+                }
+            })
+            $("#manageAddressBookForm").validate({
+                onfocusout: function(element) {	// 失去焦点时校验，“onfocusout:true”报错
+                    $(element).valid();
+                },
+                onkeyup: false,
+                rules: {
+                    "addressBook.address": {
+                        required: true,
+                        rangelength: [3, 100],
+                        emptyCheck: "",
+                        receiveAreaCheck: ""
+                    },
+                    "addressBook.name": {
+                        required: true,
+                        rangelength: [2, 20],
+                        emptyCheck: ""
+                    },
+                    "addressBook.tel": {
+                        telCheck: ""
+                    },
+                    "addressBook.phone": {
+                        required: true,
+                        phoneCheck: ""
+                    },
+                    "addressBook.tag": {
+                        rangelength: [0, 10]
+                    }
+                },
+                messages: {
+                    "addressBook.address": {
+                        required: "请输入详细地址！",
+                        rangelength: "详细地址应该为3-100位之间！"
+                    },
+                    "addressBook.name": {
+                        required: "请输入姓名！",
+                        rangelength: "姓名应该为2-20位之间!"
+                    },
+                    "addressBook.phone": {
+                        required: "请输入手机！"
+                    },
+                    "addressBook.tag": {
+                        rangelength: "标签不可超过10个字符！"
+                    }
+                },
+                focusCleanup: true
+            });
+
+            /*
+             * 自定义校验方法
+             */
+            $.validator.addMethod("telCheck", function(value, element, params){
+//                var checkTel = /^\d{0,20}$/g;
+                //var checkTel = /0\d{2,3}-\d{7,8}/;    //000-00000000
+                var checkTel = /\d{3,4}\-\d{7,8}$/;
+                return this.optional(element)||(checkTel.test(value));
+            }, "请输入正确的座机电话！");
+
+            $.validator.addMethod("phoneCheck", function(value, element, params){
+                var checkTel = /^\d{11}$/g;
+                return this.optional(element)||(checkTel.test(value));
+            }, "请输入正确的手机号！");
+
+            $.validator.addMethod("receiveAreaCheck", function(value, element, params){
+                return validateAddressSplit($("#area").val());
+            }, "请选择省市区！");
+
+            $.validator.addMethod("emptyCheck", function(value, element, params){
+                var checkFlag = true;
+                if (value.trim() == "") {
+                    checkFlag = false;
+                }
+                return checkFlag;
+            }, "不能为空！");
+
+        });
+
+        function validateAddressSplit(addr){
+            var result = true;
+            var strs = new Array(); //定义一数组
+            strs = addr.split("/"); //字符分割
+            if(strs.length < 3){
+                result = false;
+            }
+            for (var i = 0; i<strs.length; i++ ){
+                if(strs[i] == null || strs[i].trim() == '' || strs[i] ==undefined){
+                    result = false;
+                }
+            }
+            return result;
+        }
+
+        function submitFunc() {
+            var aId = $("#aId").val();
+            if (aId == "") { // 新增
+                $("#addressType").val(addressType);
+                addFunc();
+            } else {    // 修改
+                editFunc(aId)
+            }
+        }
+
+        String.prototype.myReplace = function(f,e){//吧f替换成e
+            var reg = new RegExp(f, "g"); //创建正则RegExp对象
+            return this.replace(reg, e);
+        };
+
+        // 提交
+        function addFunc() {
+            if ($("#manageAddressBookForm").validate().form()) {	// 表单验证成功
+                getAddData();
+                if ($("#name").val().indexOf("use") != -1) {
+                    $("#name").val($("#name").val().myReplace("use", "***"));
+                }
+                $.ajax({
+                    type : "post",
+                    url : "/myAddress!addAddressBook.action",
+                    data : $("#manageAddressBookForm").serialize(),
+                    dataType: "JSON",
+                    success : function(data) {
+                        if (data != null) {
+                            if (data.returnStatus == "01") {
+                                swal({
+                                    title: "操作成功！",
+                                    type: "info"
+                                },
+                                function() {
+                                    queryFunc();
+                                });
+                            } else if (data.returnStatus == "02") {
+                                swal("", data.returnMsg, "error");
+                            }
+                        } else {
+                            swal("", "操作异常，请稍后再试！", "error");
+                        }
+                    },
+                    error:function(data){
+                        swal("", "提交失败！", "error");
+                    }
+                });
+            }
+
+        }
+
+        // 获取地区编码
+        function getAreaCode(eId, eName) {
+            return $("#" + eId).nextAll().find("#ctityTextHtml").find(".select-item[data-count='" + eName + "']").attr("data-code");
+        }
+
+        // 删除
+        function delFunc(aId) {
+            swal({
+                title: "确认删除地址？",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "确定",
+                cancelButtonText: "取消",
+                closeOnConfirm: false
+            },
+            function(){
+                $.ajax({
+                    type : "post",
+                    url : "/myAddress!removeAddressBook.action",
+                    data: {"aId": aId},
+                    dataType: "JSON",
+                    success : function(data) {
+                        if (data != null) {
+                            if (data.returnStatus == "01") {
+                                swal({
+                                    title: "操作成功！",
+                                    type: "info"
+                                },
+                                function() {
+                                    queryFunc();
+                                });
+                            } else if (data.returnStatus == "02") {
+                                swal("", data.returnMsg, "info");
+                            }
+                        } else {
+                            swal("", "操作异常，请稍后再试！", "info");
+                        }
+                    },
+                    error:function(data){
+                        swal("", "提交失败！", "info");
+                    }
+                });
+            });
+        }
+
+        // 打开修改
+        function openEditFunc(aId) {
+            $.ajax({
+                type : "post",
+                url : "/myAddress!queryAddressBookInfo.action",
+                data: {"aId": aId},
+                dataType: "JSON",
+                success : function(data) {
+                    if (data != null) {
+                        if (data.returnStatus == "01") {
+                            initAddressBook(data.addressBook);
+                            openFunc();
+                        } else if (data.returnStatus == "02") {
+                            swal("", data.returnMsg, "info");
+                        }
+                    } else {
+                        swal("", "操作异常，请稍后再试！", "info");
+                    }
+                },
+                error:function(data){
+                    swal("", "提交失败！", "info");
+                }
+            });
+        }
+
+        // 初始化修改
+        function initAddressBook(ab) {
+            $("#aId").val(ab.id);
+            $("#custCode").val(ab.custCode);
+            $("#name").val(ab.name);
+            $("#provinceCode").val(ab.provinceCode);
+            $("#provinceName").val(ab.provinceName);
+            $("#cityCode").val(ab.cityCode);
+            $("#cityName").val(ab.cityName);
+            $("#regionCode").val(ab.regionCode);
+            $("#regionName").val(ab.regionName);
+            $("#address").val(ab.address);
+            $("#phone").val(ab.phone);
+            $("#tel").val(ab.tel);
+            $("#area").citypicker("reset");
+            $("#area").citypicker("destroy");
+            $("#area").citypicker({
+                onChange: function () {//选择后触发的事件
+                    console.log("area");
+                    var area = $("#area").val();
+                    if(areaOld == area || area.split("/").length < 2){
+                        return;
+                    }
+                    areaOld = area;
+                    if(area != "" && area != null && area != undefined){
+                        for(var i=0;i<$(".amap-sug-result").length-1;i++){
+                            $(".amap-sug-result")[i].parentNode.removeChild( $(".amap-sug-result")[i] );
+                            console.log($(".amap-sug-result").length + "----------ok");
+                        }
+
+                        var city = "";
+                        if($("#ctityTextHtml").children(".select-item").length > 1){
+                            var Object = document.getElementsByClassName('amap-sug-result');
+                            if (Object.length == 0){
+                                // $(".amap-sug-result").css("margin-left","10px !important");
+                            }
+                            if($(".select-item")[1].innerHTML != ""){
+                                city = $(".select-item")[1].innerHTML;
+                                $("#address").css("display", "block");
+                                var auto3 = new AMap.Autocomplete({
+                                    city: area.split("/")[1],
+                                    input: "address"
+                                });
+                                AMap.event.addListener(auto3, "complete", function() {
+                                    setTimeout(function(){
+                                        $(".amap-sug-result").offset({
+                                            left:$("#address").offset().left
+                                        })
+                                    }, 1)
+                                });
+                                AMap.event.addListener(auto3, "select", select);//注册监听，当选中某条记录时会触发
+                                function select(data) {
+                                    if(data.poi.name.length>=3 && data.poi.name.length<=100){
+                                        $("#address-error").remove();
+                                    }
+                                }
+                                $(".amap-sug-result").css("position","absolute !important");
+                                $(".amap-sug-result").css("z-index",9999999999);
+                            }
+                        }
+                    }
+                },
+                province: ab.provinceName,
+                city: ab.cityName,
+                district: ab.regionName
+            });
+            if ("01" == ab.defaultType) {
+                $("#defaultCheck").prop("checked", true);
+                $("#defaultCheck").parent().removeClass("noChecked").addClass("hasChecked");
+            }
+            $("#createTime").val(ab.createTime);
+            $("#addressType").val(ab.addressType);
+            $("#tag").val(ab.tag);
+        }
+
+
+
+        // 修改
+        function editFunc(aId) {
+            if ($("#manageAddressBookForm").validate().form()) {	// 表单验证成功
+                getAddData();
+                if ($("#name").val().indexOf("use") != -1) {
+                    $("#name").val($("#name").val().myReplace("use", "***"));
+                }
+                $.ajax({
+                    type: "post",
+                    url: "/myAddress!modifyAddressBook.action",
+                    data: $("#manageAddressBookForm").serialize(),
+                    dataType: "JSON",
+                    success: function (data) {
+                        if (data != null) {
+                            if (data.returnStatus == "01") {
+                                swal({
+                                    title: "操作成功！",
+                                    type: "info"
+                                },
+                                function() {
+                                    queryFunc();
+                                });
+
+                            } else if (data.returnStatus == "02") {
+                                swal("", data.returnMsg, "info");
+                            }
+                        } else {
+                            swal("", "操作异常，请稍后再试！", "info");
+                        }
+                    },
+                    error: function (data) {
+                        swal("", "提交失败！", "info");
+                    }
+                });
+            }
+        }
+
+        // 获取参数
+        function getAddData() {
+            $("#provinceCode").val(getAreaCode("area", "province"));
+            $("#cityCode").val(getAreaCode("area", "city"));
+            $("#regionCode").val(getAreaCode("area", "district"));
+            var areaArr = $("#area").val().split("/");
+            $("#provinceName").val(areaArr[0]);
+            $("#cityName").val(areaArr[1]);
+            $("#regionName").val(areaArr[2]);
+
+            if ($("#defaultCheck").is(":checked")) {
+                $("#defaultType").val("01");
+            } else {
+                $("#defaultType").val("");
+            }
+        }
+
+    </script>
+
+<!-- ftl end -->
+
+
+<div class="footer commonWrap">
+  <div class="footerCont fixedWid clearfix">
+    <div class="customer fl">
+      <span class="info">客服电话</span>
+      <span class="info tel">4001-888-888</span>
+      <span class="info timer">服务时间： 8:30 - 17:30</span>
+    </div>
+    <div class="hyperlink clearfix">
+      <div class="linkgroup fl">
+        <a href="" class="link">客户服务</a>
+        <a href="/staticFiles/pages/placeOrder.html" class="link">在线寄件</a>
+        <a href="/staticFiles/pages/queryExpress.html" class="link">运单查询</a>
+        <a href="/staticFiles/pages/queryNetwork.html" class="link">网点查询</a>
+        <a href="/staticFiles/pages/queryPrice.html" class="link">运费查询</a>
+      </div>
+      <div class="linkgroup fl">
+        <a href="" class="link">客服服务</a>
+        <a href="/article/baseArticleAction!aboutTT.action#lxwm" class="link">客服热线  </a>
+        <a href="/staticFiles/pages/customerServiceCenter.html#last" class="link">在线留言</a>
+      </div>
+      <div class="linkgroup fl">
+        <a href="" class="link">加盟天天</a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=jmxz" class="link">加盟须知   </a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=jmlc" class="link">加盟流程</a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=jmrx" class="link">加盟热线</a>
+        <a href="/staticFiles/pages/joiningTT.html?divId=zsqy" class="link">招商区域</a>
+      </div>
+      <div class="linkgroup fl">
+        <a href="" class="link">人才招聘</a>
+        <a href="/staticFiles/pages/recruitment.html?tab=1" class="link">职位信息</a>
+        <a href="/staticFiles/pages/recruitment.html?tab=2" class="link">招聘介绍</a>
+      </div>
+      <div class="linkgroup fr smcodediv" style="text-align:center">
+        <img class="smcode" src="images/code_dyh.png" alt="">
+        <span class="info">天天相知微信</span>
+        <span class="info">订阅号扫码关注</span>
+      </div>
+      <div class="linkgroup fr smcodediv">
+        <img class="smcode" src="images/code_fwh.png" alt="">
+        <span class="info">天天快递微信</span>
+        <span class="info">服务号扫码关注</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footerbottom commonWrap">
+  <div class="fixedWid">
+    <p class='info'>©版权所有 2016 天天快递有限公司<a style="color: #A6A7AB;" href="http://www.beian.miit.gov.cn/" target="_blank"> 浙ICP备13006085</a>号
+
+    <a href="images/businessLicense.png" target="_blank" style="color: #A6A7AB;" > | 快递业务经营许可证</a><a href="/staticFiles/pages/businessLincence.html" target="_blank" style="color: #A6A7AB;" > | <img src="images/yyzz.png" style="width: 19px;height:19px;vertical-align: middle;"> 营业执照</a></p>
+  </div>
+</div>
+<div class="selfServiceBtnList">
+  <div class="customerBtn" data="/onlineCall.action">
+    <div class="onLineIcon"></div>
+    <span class="btnTip">在线客服</span>
+  </div>
+  <div class="customerBtns selfOrderServiceBtn" id="selfOrderServiceBtn">
+    <div class="selfServiceIcon"></div>
+    <span class="btnTip">自助投诉</span>
+  </div>
+  <div class="customerBtns selfOrderServiceBtn" id="toTopBtn">
+    <div class="returnTopIcon"></div>
+    <span class="btnTip">返回顶部</span>
+  </div>
+</div>
+</div>
+
+<script type="text/javascript" src="js/index1.js"></script>
+<script type="text/javascript" src="js/expressServiceTab.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+</body>
+</html>

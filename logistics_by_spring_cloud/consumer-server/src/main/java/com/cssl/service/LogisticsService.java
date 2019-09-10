@@ -36,5 +36,7 @@ public interface LogisticsService {
     //表单提交
     @RequestMapping(value = "mailing/submitOrders", method = RequestMethod.POST, consumes = "application/json")
     String confirmOrder(Map<String, Object> map);
+
+
 }
 

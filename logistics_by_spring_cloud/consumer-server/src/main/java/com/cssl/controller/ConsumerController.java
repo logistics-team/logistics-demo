@@ -4,24 +4,37 @@ import com.alibaba.fastjson.JSON;
 import com.cssl.entity.LogisticsStatus;
 import com.cssl.service.LogisticsService;
 import com.cssl.service.UserService;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.crypto.hash.SimpleHash;
+import org.apache.shiro.subject.Subject;
+import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//@RequestMapping("guest")
 @Controller
 public class ConsumerController {
     @Autowired
     private LogisticsService logisticsService;
     @Autowired
     private UserService userService;
+
+    @RequestMapping(value = "/notLogin", method = RequestMethod.GET)
+    public String notLogin() {
+        return "redirect:/staticFiles/pages/login.html";
+    }
+
+    @RequestMapping(value = "/notRole", method = RequestMethod.GET)
+    public String notRole() {
+        return "redirect:/staticFiles/pages/placeOrder.html";
+    }
 
     @RequestMapping("show")
     @ResponseBody//显示订单
@@ -113,45 +126,29 @@ public class ConsumerController {
         return logisticsService.confirmOrder(map);
     }
 
-//    @RequestMapping("save")
-//    public String save(){
-//        LocalDateTime now = LocalDateTime.now();
-//        System.out.println("now = " + now);
-////        System.out.println("name = " + name);
-//        ExpressGoods goods = new ExpressGoods();
-//        BigDecimal bigDecimal = BigDecimal.valueOf(15.5);
-//        goods.setWeight(bigDecimal);
-//        goods.setEgAppraisedPrice(bigDecimal);
-//        goods.setItId(1);
-//        goods.setEgGmtCreate(LocalDateTime.now());
-//        goods.setEgSpecialContext("四羊方尊鼎");
-//        ExpressUser user = new ExpressUser(1, LocalDateTime.now(), LocalDateTime.now(), "阿虎",
-//                430000, 431100, 431125, "13544250013",
-//                "王根基", 620000, 620800, 620822,
-//                "19989592362");
-//        System.out.println("user = " + user);
-//        System.out.println("goods = " + goods);
-//        //数据嵌入
-//        System.out.println("goods = " + goods);
-//        String save = logisticsService.save(goods);
-//        System.out.println("save = " + save);
-//        return save; //logisticsService.save(goods,user);
-//    }
 
     /**
      * 登录
-     * @param phone     手机号
-     * @param password  密码
-     * @param messageCode   验证码
+     * @param j_username     手机号
+     * @param j_password  密码
+     * @param encodinginput   验证码
      * @return
      */
     @ResponseBody
     @PostMapping("login")
-    public String userLogin(String phone, String password, String messageCode) {
-//        System.out.println("phone = " + phone);
-//        System.out.println("password = " + password);
-//        System.out.println("messageCode = " + messageCode);
-        return userService.userLogin(phone, password, messageCode);
+    public String userLogin(String j_username, String j_password, String encodinginput) {
+//        System.out.println("phone = " + j_username);
+//        System.out.println("password = " + j_password);
+//        System.out.println("encodinginput = " + encodinginput);
+        // 从SecurityUtils里边创建一个 subject
+        Subject subject = SecurityUtils.getSubject();
+        // 在认证提交前准备 token（令牌）
+        UsernamePasswordToken token = new UsernamePasswordToken(j_username, j_password);
+        // 执行认证登陆
+        subject.login(token);
+        String login = userService.userLogin(j_username, j_password, encodinginput);
+//        System.out.println("login = " + login);
+        return login;
     }
 
     /**
@@ -174,8 +171,12 @@ public class ConsumerController {
 //        map.put("url","http://localhost:9292/staticFiles/pages/login.html");
 //        String o = JSON.toJSONString(map);
 //        System.out.println("o = " + o);
-        String register = userService.userRegister(userPhoneTel, password, messageCode);
-//        System.out.println("register = " + register);
+        //给用户名作为加盐值
+        ByteSource salt = ByteSource.Util.bytes(userPhoneTel);
+        String newPwd = new SimpleHash("MD5", password, salt, 1024).toHex();
+        System.out.println("newPwd = " + newPwd);
+        String register = userService.userRegister(userPhoneTel, newPwd, messageCode);
+        System.out.println("register = " + register);
         return register;
     }
 
@@ -200,4 +201,15 @@ public class ConsumerController {
         //返回验证
     }
 
+    @RequestMapping("notLogin")
+    public String ontLogin(){       //未登录跳转页面
+        return userService.notLogin();
+    }
+
+
+    @ResponseBody
+    @RequestMapping("findpwd")
+    public String findpwd(String phone){
+        return userService.getRoleByPhone(phone);
+    }
 }

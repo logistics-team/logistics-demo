@@ -19,16 +19,10 @@ import com.cssl.entity.LogisticsRose;
 import com.cssl.entity.LogisticsUser;
 import com.cssl.entity.RoleUser;
 import com.cssl.util.NonEmptyUtils;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.AccountException;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.crypto.SecureRandomNumberGenerator;
-import org.apache.shiro.crypto.hash.SimpleHash;
-import org.apache.shiro.subject.Subject;
-import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.security.auth.login.AccountException;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -177,25 +171,14 @@ public class LogisticsUserServiceImpl extends ServiceImpl<LogisticsUserMapper, L
 
 
 
-        //给用户名作为加盐值
-        ByteSource salt = ByteSource.Util.bytes(usernameOrPhone);
-        /*
-         * MD5加密：
-         * 使用SimpleHash类对原始密码进行加密。
-         * 第一个参数代表使用MD5方式加密
-         * 第二个参数为原始密码
-         * 第三个参数为盐值，即用户名
-         * 第四个参数为加密次数
-         * 最后用toHex()方法将加密后的密码转成String
-         * */
-        String newPwd = new SimpleHash("MD5", password, salt, 1024).toHex();
+
 
 
         //--手机号注册
         LogisticsUser logisticsUser = new LogisticsUser();
         logisticsUser.setLuGmtCreate(LocalDateTime.now());      //创建时间
 
-        logisticsUser.setLuPassword(newPwd);
+        logisticsUser.setLuPassword(password);
         logisticsUser.setLuPhone(usernameOrPhone);
         int registerByPhone = userMapper.saveLogisticsUser(logisticsUser);
         //--用户名注册
@@ -229,26 +212,26 @@ public class LogisticsUserServiceImpl extends ServiceImpl<LogisticsUserMapper, L
     public String login(String phone, String password, String messageCode) {
 
         Map<String,Object> map = new HashMap<>();               //封装登录状态
-        String message = "登录成功！";                           //登录提示信息
-        boolean result = true;                                  //登录是否成功
-        String url = "redirect:/staticFiles/pages/index.html";  //用户后台
+        String message = "登录失败！";                           //登录提示信息
+        boolean result = false;                                  //登录是否成功
+        String url = "http://localhost:9292/staticFiles/pages/login.html";  //用户后台
         map.put("message",message);
         map.put("result",result);
         map.put("url",url);
 
 
-        if (NonEmptyUtils.isEmpty(phone)){  //手机非空判断
-            message = "手机号不能为空";
-            throw new AccountException(message);
-        }
-        if (NonEmptyUtils.isEmpty(password)){  //密码非空判断
-            message = "密码输入为空！";
-            throw new AccountException(message);
-        }
-        if (NonEmptyUtils.isEmpty(messageCode)){  //手机非空判断
-            message = "验证码不能为空！";
-            throw new AccountException(message);
-        }
+//        if (NonEmptyUtils.isEmpty(phone)){  //手机非空判断
+//            message = "手机号不能为空";
+//            throw new AccountException(message);
+//        }
+//        if (NonEmptyUtils.isEmpty(password)){  //密码非空判断
+//            message = "密码输入为空！";
+//            throw new AccountException(message);
+//        }
+//        if (NonEmptyUtils.isEmpty(messageCode)){  //手机非空判断
+//            message = "验证码不能为空！";
+//            throw new AccountException(message);
+//        }
         //手机号登录验证   ************************************** 待做
 
 
@@ -259,24 +242,26 @@ public class LogisticsUserServiceImpl extends ServiceImpl<LogisticsUserMapper, L
         boolean backList = isBackList(phone);
         if (backList){
             message = "你是黑名单用户，请前往客服咨询解封！";
-//            map.put("mess",mess);
-//            return JSON.toJSONString(map);
-            throw new AccountException(message);
+            map.put("message",message);
+            return JSON.toJSONString(map);
         }
 
-        // 从SecurityUtils里边创建一个 subject
-        Subject subject = SecurityUtils.getSubject();
-        // 在认证提交前准备 token（令牌）
-        UsernamePasswordToken token = new UsernamePasswordToken(phone, password);
-        // 执行认证登陆
-        subject.login(token);
+//        // 从SecurityUtils里边创建一个 subject
+//        Subject subject = SecurityUtils.getSubject();
+//        // 在认证提交前准备 token（令牌）
+//        UsernamePasswordToken token = new UsernamePasswordToken(phone, password);
+//        // 执行认证登陆
+//        subject.login(token);
         //根据权限，指定返回数据
 //        String role = userMapper.getRole(username);
         String role = getRoleByPhone(phone);
         if ("user".equals(role)) {
             message = "欢迎登陆,"+phone;      //返回用户后台
             map.put("message",message);
+            url = "http://localhost:9292/staticFiles/user/preOrder.html";
             map.put("url",url);
+            result = true;
+            map.put("result",result);
 //            将用户存入session中
 //            把session存入redis中
             return JSON.toJSONString(map);
@@ -284,14 +269,26 @@ public class LogisticsUserServiceImpl extends ServiceImpl<LogisticsUserMapper, L
         if ("admin".equals(role)) {
             message = "欢迎登陆管理员页面,"+phone;     //返回管理员后台页面
             map.put("message",message);
+            url = "http://localhost:9292/staticFiles/manage/backstage.html";
+            map.put("url",url);
+            result = true;
+            map.put("result",result);
+//            将用户存入session中
+//            把session存入redis中
             return JSON.toJSONString(map);
         }
         if ("root".equals(role)) {
             message = "欢迎登陆超级用户"+phone;;      //返回管理员页面
             map.put("message",message);
+            url = "http://localhost:9292/staticFiles/manage/backstage.html";
+            map.put("url",url);
+            result = true;
+            map.put("result",result);
+//            将用户存入session中
+//            把session存入redis中
             return JSON.toJSONString(map);
         }
-        throw new AccountException("权限不足");
+        return JSON.toJSONString(map);
     }
 
     //短信服务

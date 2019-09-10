@@ -9,14 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(value = "user-server", fallback = UserServiceHystrix.class, configuration = ServiceFeignConfiguration.class)
 public interface UserService {
-    /**
-     * 李
-     *
-     * @param id
-     * @param page
-     * @param limit
-     * @return
-     */
+
     //订单操作
     @RequestMapping(value = "orders/show", method = RequestMethod.POST, consumes = "application/json")
     String show(@RequestParam(value = "id") int id, @RequestParam(value = "page") int page, @RequestParam(value = "limit") int limit);
@@ -47,7 +40,14 @@ public interface UserService {
     @RequestMapping(value = "guest/isExistence", method = RequestMethod.POST, consumes = "application/json")
     String isExistence(@RequestParam(value = "phone")String phone);
 
-    /**
-     * 以上李代码
-     */
+    @RequestMapping(value = "guest/notLogin", method = RequestMethod.POST, consumes = "application/json")
+    String notLogin();
+
+    @RequestMapping(value = "guest/getPasswordByPhone", method = RequestMethod.POST, consumes = "application/json")
+    String getPasswordByPhone(@RequestParam(value = "phone")String phone);
+
+    @RequestMapping(value = "guest/getRoleByPhone", method = RequestMethod.POST, consumes = "application/json")
+    String getRoleByPhone(@RequestParam(value = "phone")String phone);
+
+
 }

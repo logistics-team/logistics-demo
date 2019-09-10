@@ -21,6 +21,16 @@ public class GuestController {
     @Autowired
     private ILogisticsUserService userService;
 
+    @RequestMapping(value = "/getPasswordByPhone", method = RequestMethod.POST)
+    public String getPasswordByPhone(String phone){
+        return userService.getPasswordByPhone(phone);
+    }
+
+
+    @RequestMapping(value = "/getRoleByPhone", method = RequestMethod.POST)
+    public String getRoleByPhone(String phone){
+        return userService.getRoleByPhone(phone);
+    }
 
     @RequestMapping(value = "/enter", method = RequestMethod.GET)
     public ResultMap login() {
@@ -35,10 +45,10 @@ public class GuestController {
 
     //用户登录
     @RequestMapping(value = "/userLogin", method = RequestMethod.POST)
-    public String userLogin(@RequestParam String phone, @RequestParam String password) {
+    public String userLogin(@RequestParam String phone, @RequestParam String password,String messageCode) {
         String messCode = "1234";
         String loginMessage = userService.login(phone, password, messCode);
-        System.out.println("loginMessage = " + loginMessage);
+//        System.out.println("loginMessage = " + loginMessage);
         return loginMessage;
     }
 

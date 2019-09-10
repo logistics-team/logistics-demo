@@ -46,6 +46,21 @@ public class UserServiceHystrix implements UserService {
 
     @Override
     public String isExistence(String phone) {
-        return null;//
+        return null;//是否存在
+    }
+
+    @Override
+    public String notLogin() {
+        return null;
+    }
+
+    @Override
+    public String getPasswordByPhone(String phone) {
+        return null;
+    }
+
+    @Override
+    public String getRoleByPhone(String phone) {
+        return null;
     }
 }

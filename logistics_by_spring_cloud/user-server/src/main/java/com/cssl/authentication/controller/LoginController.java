@@ -2,13 +2,9 @@ package com.cssl.authentication.controller;
 
 import com.cssl.authentication.service.ILogisticsUserService;
 import com.cssl.authentication.shiro.bean.ResultMap;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -31,13 +27,13 @@ public class LoginController {
         return resultMap.success().message("您没有权限！");
     }
 
-    @RequestMapping(value = "/logout")
-    public ResultMap logout() {
-        Subject subject = SecurityUtils.getSubject();
-        //注销
-        subject.logout();
-        return resultMap.success().message("成功注销！");
-    }
+//    @RequestMapping(value = "/logout")
+//    public ResultMap logout() {
+//        Subject subject = SecurityUtils.getSubject();
+//        //注销
+//        subject.logout();
+//        return resultMap.success().message("成功注销！");
+//    }
 
     /**
      * 登陆
