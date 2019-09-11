@@ -1,14 +1,9 @@
 package com.cssl.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.cssl.entity.LogisticsStatus;
 import com.cssl.service.LogisticsService;
+import com.cssl.service.SecurityService;
 import com.cssl.service.UserService;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.crypto.hash.SimpleHash;
-import org.apache.shiro.subject.Subject;
-import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -25,16 +20,9 @@ public class ConsumerController {
     private LogisticsService logisticsService;
     @Autowired
     private UserService userService;
+    @Autowired
+    private SecurityService securityService;
 
-    @RequestMapping(value = "/notLogin", method = RequestMethod.GET)
-    public String notLogin() {
-        return "redirect:/staticFiles/pages/login.html";
-    }
-
-    @RequestMapping(value = "/notRole", method = RequestMethod.GET)
-    public String notRole() {
-        return "redirect:/staticFiles/pages/placeOrder.html";
-    }
 
     @RequestMapping("show")
     @ResponseBody//显示订单
@@ -137,18 +125,7 @@ public class ConsumerController {
     @ResponseBody
     @PostMapping("login")
     public String userLogin(String j_username, String j_password, String encodinginput) {
-//        System.out.println("phone = " + j_username);
-//        System.out.println("password = " + j_password);
-//        System.out.println("encodinginput = " + encodinginput);
-        // 从SecurityUtils里边创建一个 subject
-        Subject subject = SecurityUtils.getSubject();
-        // 在认证提交前准备 token（令牌）
-        UsernamePasswordToken token = new UsernamePasswordToken(j_username, j_password);
-        // 执行认证登陆
-        subject.login(token);
-        String login = userService.userLogin(j_username, j_password, encodinginput);
-//        System.out.println("login = " + login);
-        return login;
+        return securityService.userLogin(j_username, j_password, encodinginput);
     }
 
     /**
@@ -161,55 +138,30 @@ public class ConsumerController {
     @ResponseBody
     @PostMapping("/register")
     public String userRegister(String userPhoneTel, String password, String messageCode) {
-//        System.out.println("123 = " + 123);
-//        System.out.println("userPhoneTel = " + userPhoneTel);
-//        System.out.println("password = " + password);
-//        System.out.println("messageCode = " + messageCode);
-//        Map<String, Object> map = new HashMap<String, Object>();
-//        map.put("result", "true");
-//        map.put("mess", "注册成功！");
-//        map.put("url","http://localhost:9292/staticFiles/pages/login.html");
-//        String o = JSON.toJSONString(map);
-//        System.out.println("o = " + o);
-        //给用户名作为加盐值
-        ByteSource salt = ByteSource.Util.bytes(userPhoneTel);
-        String newPwd = new SimpleHash("MD5", password, salt, 1024).toHex();
-        System.out.println("newPwd = " + newPwd);
-        String register = userService.userRegister(userPhoneTel, newPwd, messageCode);
-        System.out.println("register = " + register);
-        return register;
+        return securityService.userRegister(userPhoneTel, password, messageCode);
     }
 
 
     @ResponseBody
     @PostMapping("/isExistence")
-    public String isExistence(String phone){
-//        System.out.println("phone = " + phone);
-//        Map<String, Object> map = new HashMap<String, Object>();
-//        map.put("message", "该手机号已被注册,请登录！");
-        return userService.isExistence(phone);
+    public String isExistence(String phone){    //手机号是否已经注册
+        return securityService.isExistence(phone);
     }
 
     @ResponseBody
     @PostMapping("/verificationCode")
-    public String sendMessages(String phoneNum){
-//        System.out.println("phoneNum = " + phoneNum);
-        //像生产者发请求
-//        Map<String, Object> map = new HashMap<String, Object>();
-//        map.put("message", "验证码已发送！");
-        return userService.sendMessages(phoneNum);
-        //返回验证
+    public String sendMessages(String phoneNum){    //获取验证码，
+        return securityService.sendMessages(phoneNum);
     }
 
     @RequestMapping("notLogin")
-    public String ontLogin(){       //未登录跳转页面
-        return userService.notLogin();
+    public String notLogin(){     //未登录跳转页面
+        return "redirect:/staticFiles/pages/login.html";
     }
 
-
-    @ResponseBody
-    @RequestMapping("findpwd")
-    public String findpwd(String phone){
-        return userService.getRoleByPhone(phone);
+    @RequestMapping("notRole")
+    public String notRole(){     //未登录跳转页面
+        return "redirect:/staticFiles/pages/login.html";
     }
+
 }

@@ -1,7 +1,6 @@
 package com.cssl.authentication.controller;
 
 import com.cssl.authentication.service.ILogisticsUserService;
-import com.cssl.authentication.shiro.bean.ResultMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,22 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/guest")
 public class LoginController {
-    @Autowired
-    private ResultMap resultMap;
+
 
     @Autowired
     private ILogisticsUserService userService;
 
 
-    @RequestMapping(value = "/notLogin", method = RequestMethod.GET)
-    public ResultMap notLogin() {
-        return resultMap.success().message("您尚未登陆！");
-    }
 
-    @RequestMapping(value = "/notRole", method = RequestMethod.GET)
-    public ResultMap notRole() {
-        return resultMap.success().message("您没有权限！");
-    }
 
 //    @RequestMapping(value = "/logout")
 //    public ResultMap logout() {

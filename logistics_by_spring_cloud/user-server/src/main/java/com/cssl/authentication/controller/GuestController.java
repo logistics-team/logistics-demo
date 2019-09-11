@@ -1,8 +1,6 @@
 package com.cssl.authentication.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.cssl.authentication.service.ILogisticsUserService;
-import com.cssl.authentication.shiro.bean.ResultMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,8 +15,6 @@ import java.util.Map;
 @RequestMapping("/guest")
 public class GuestController {
     @Autowired
-    private ResultMap resultMap;
-    @Autowired
     private ILogisticsUserService userService;
 
     @RequestMapping(value = "/getPasswordByPhone", method = RequestMethod.POST)
@@ -30,17 +26,6 @@ public class GuestController {
     @RequestMapping(value = "/getRoleByPhone", method = RequestMethod.POST)
     public String getRoleByPhone(String phone){
         return userService.getRoleByPhone(phone);
-    }
-
-    @RequestMapping(value = "/enter", method = RequestMethod.GET)
-    public ResultMap login() {
-        return resultMap.success().message("欢迎进入，您的身份是游客");
-    }
-
-
-    @RequestMapping(value = "/getMessage", method = RequestMethod.GET)
-    public ResultMap submitLogin() {
-        return resultMap.success().message("您拥有获得该接口的信息的权限！");
     }
 
     //用户登录

@@ -14,7 +14,6 @@ import com.cssl.authentication.mapper.LogisticsUserMapper;
 import com.cssl.authentication.service.ILogisticsRoseService;
 import com.cssl.authentication.service.ILogisticsUserService;
 import com.cssl.authentication.service.IRoleUserService;
-import com.cssl.authentication.shiro.bean.ResultMap;
 import com.cssl.entity.LogisticsRose;
 import com.cssl.entity.LogisticsUser;
 import com.cssl.entity.RoleUser;
@@ -43,8 +42,6 @@ public class LogisticsUserServiceImpl extends ServiceImpl<LogisticsUserMapper, L
     private LogisticsUserMapper userMapper;     //用户mapper
     @Autowired
     private ILogisticsRoseService roseService;      //角色信息
-    @Autowired
-    private ResultMap resultMap;
     //短信随机数
     private Integer MessageCode;
 
@@ -258,7 +255,7 @@ public class LogisticsUserServiceImpl extends ServiceImpl<LogisticsUserMapper, L
         if ("user".equals(role)) {
             message = "欢迎登陆,"+phone;      //返回用户后台
             map.put("message",message);
-            url = "http://localhost:9292/staticFiles/user/preOrder.html";
+            url = "http://localhost:9292/staticFiles/user/preIndex.html";
             map.put("url",url);
             result = true;
             map.put("result",result);
