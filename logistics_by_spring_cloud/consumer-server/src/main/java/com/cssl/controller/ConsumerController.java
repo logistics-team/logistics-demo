@@ -15,13 +15,29 @@ import java.util.Map;
 
 //@RequestMapping("guest")
 @Controller
+//@RestController
 public class ConsumerController {
-    @Autowired
     private LogisticsService logisticsService;
     @Autowired
+    public LogisticsService logisticsService(LogisticsService logisticsService){
+        this.logisticsService = logisticsService;
+        return this.logisticsService;
+    }
+
+
     private UserService userService;
     @Autowired
+    public UserService userService(UserService userService){
+        this.userService = userService;
+        return this.userService;
+    }
+
     private SecurityService securityService;
+    @Autowired
+    public SecurityService securityService(SecurityService securityService){
+        this.securityService = securityService;
+        return this.securityService;
+    }
 
 
     @RequestMapping("show")
@@ -125,7 +141,20 @@ public class ConsumerController {
     @ResponseBody
     @PostMapping("login")
     public String userLogin(String j_username, String j_password, String encodinginput) {
-        return securityService.userLogin(j_username, j_password, encodinginput);
+        String s = securityService.userLogin(j_username, j_password, encodinginput);
+        System.out.println("s = " + s);
+        return s;
+    }
+
+    /**
+     * 注销  退出
+     * @return
+     */
+
+    @RequestMapping("logout")
+    public String logout() {
+        System.out.println("退出 ！");
+        return securityService.logout();
     }
 
     /**
@@ -154,14 +183,18 @@ public class ConsumerController {
         return securityService.sendMessages(phoneNum);
     }
 
-    @RequestMapping("notLogin")
-    public String notLogin(){     //未登录跳转页面
+    @RequestMapping("kickout")  //挤出跳转
+    public String kickout(){     //未登录跳转页面
         return "redirect:/staticFiles/pages/login.html";
     }
 
-    @RequestMapping("notRole")
+    @RequestMapping("notRole")  //无权页面跳转
     public String notRole(){     //未登录跳转页面
         return "redirect:/staticFiles/pages/login.html";
     }
 
+    @RequestMapping("notLogin")     //未登录跳转
+    public String notLogin(){     //未登录跳转页面
+        return "redirect:/staticFiles/pages/login.html";
+    }
 }

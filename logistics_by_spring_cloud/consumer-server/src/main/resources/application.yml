@@ -1,4 +1,14 @@
 spring:
+  redis:
+    port: 6379
+    host: 47.102.85.126
+    timeout: 0
+    jedis:
+      pool:
+        max-idle: 8
+        max-active: 8
+        max-wait: -1ms
+        min-idle: 0
   devtools:
     restart:
       enabled: true
@@ -28,7 +38,6 @@ spring:
       content-type: text/html
     prefix: classpath:/templates/
     suffix: .html
-
 
 server:
   port: 9292

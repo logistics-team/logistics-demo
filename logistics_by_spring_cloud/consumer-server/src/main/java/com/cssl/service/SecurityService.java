@@ -10,4 +10,6 @@ public interface SecurityService {
     String sendMessages(String phoneNum);
 
     String notLogin();
+
+    String logout();
 }
