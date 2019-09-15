@@ -13,6 +13,21 @@
     <script src="/js/echarts.min.js"></script>
     <script src="/layui/layui.js" charset="utf-8"></script>
     <script>
+
+        //头像用户名加载。。
+        $.getJSON("../../guest/getUserInfo", function (data) {
+            if (data != null) {
+                // alert(data.luPhone);
+                $(".username").html(data.luPhone);
+                // if (data.)
+                // alert(data.luImgLocation);
+                if ( null!=data.luImgLocation && ""!=data.luImgLocation){
+                    $(".layui-nav-img").attr("src",data.luImgLocation);
+                }
+            }
+        })
+
+
         var id;
         function xc(name) {
             var element = layui.element;
@@ -127,11 +142,11 @@
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                    贤心
+                    <img src="http://47.102.85.126:88/image/001.png" class="layui-nav-img">
+                    <span class="username"></span>
                 </a>
-                <dl class="layui-nav-child">
-                    <dd><a href="http://localhost:9292/logout">退出</a></dd>
+                <dl class="layui-nav-child">f
+                    <dd><a href="http://localhost:9292/guest/logout">退出</a></dd>
                 </dl>
             </li>
         </ul>
@@ -226,7 +241,7 @@
                                 //方法级渲染
                                 table.render({
                                     elem: '#LAY_table_user'
-                                    ,url: 'http://localhost:9292/show'
+                                    ,url: 'http://localhost:9292/guest/show'
                                     ,cols: [[
                                         {field:'loId', width:160, title: '订单ID', sort: true, align: 'center'}
                                         ,{field:'euReceiptName', width:120, title: '寄件人', align: 'center'}
@@ -306,7 +321,7 @@
                                     var loid="<span class='lois2'>订单ID:&nbsp;&nbsp;&nbsp;&nbsp;"+data.loId+"</span>";
                                     comtext=data.tsid;
                                     var lsid="";
-                                    $.ajax({url:"http://localhost:9292/l_statue?id="+data.lsId,success:function (result) {
+                                    $.ajax({url:"http://localhost:9292/guest/l_statue?id="+data.lsId,success:function (result) {
                                         //alert(result);
                                         $(result).each(function (index,element) {
                                             lsid+="<option class='l_statue' value='"+element.lsId+"'>"+element.lsContext+"</option>";
@@ -329,7 +344,7 @@
                                     //layer.msg(ts_id+":"+ls_id);
                                     layer.close(layer.index);//关闭最新弹出的框
                                     //进行后台的数据修改
-                                    $.ajax({url:"http://localhost:9292/ls_update?ts_id="+ts_id+"&ls_id="+ls_id,success:function (result) {
+                                    $.ajax({url:"http://localhost:9292/guest/ls_update?ts_id="+ts_id+"&ls_id="+ls_id,success:function (result) {
                                             if(result===0){
                                                 layer.msg("保存失败,请重试!",{icon:5});//哭脸提示
                                             }else{

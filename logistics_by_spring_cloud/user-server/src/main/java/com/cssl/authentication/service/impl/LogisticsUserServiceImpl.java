@@ -344,5 +344,13 @@ public class LogisticsUserServiceImpl extends ServiceImpl<LogisticsUserMapper, L
 
     }
 
+    @Override
+    public LogisticsUser findUserByPhone(String phone) {
+        if (NonEmptyUtils.isEmpty(phone)){
+            return null;
+        }
+        return userMapper.findUserByPhone(phone);
+    }
+
 
 }

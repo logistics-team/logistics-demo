@@ -135,7 +135,7 @@
             <div style="display:inline-block;" class="rightTabContent personRigthCont">
                 <div class="intelligenceTip"><img src="/images/tips.png">请检查拆分地址是否准确，如有遗漏请及时补充</div>
                 <div style="padding: 23px 37px 0 29px;">
-                    <form id="orderForm" method="post" action="/confirmSent">
+                    <form id="orderForm" method="post" action="guest/confirmSent">
 
                         <div class="rightSmallTitle bold">寄件人信息
                             <div class="addressBook"><img src="/images/zntx.png"><span class="addressBookDesc" onclick="openAddressBook('writeAddr', '01'
@@ -145,9 +145,14 @@
                             <div class="leftinputclumn"><span class="forRedTip">*</span>
                                 <label>寄件地区</label>
                                 <div class="area_div">
-                                    <select id="senderProvince" name="senderProvince" style="width: 130px;"></select>
-                                    <select id="senderCity" name="senderCity"  style="width: 130px;"></select>
-                                    <select id="senderArea" name="senderArea"  style="width: 130px;"></select>
+                                    <select id="senderProvince" name="senderProvince" style="width: 130px;">
+<!--                                        <option value="湖南省" selected >湖南省</option>-->
+                                    </select>
+                                    <select id="senderCity" name="senderCity"  style="width: 130px;">
+                                    </select>
+                                    <select id="senderArea" name="senderArea"  style="width: 130px;">
+
+                                    </select>
 
                                     <input type="text" name="sendAddress" placeholder="详细地址"
                                            required oninvalid="setCustomValidity('详细地址不能为空！')" oninput="setCustomValidity('')">
@@ -584,19 +589,23 @@ line-height:32px;font-family:微软雅黑">本协议履行过程中如发生争�
             if ($('#writeAddrModel #intelligenceWrite').val() === '') {
                 $('#writeAddrModel .disableTip').show().prev().find('textarea').css('borderColor','#FF5858')
             } else {
+                alert($('#writeAddrModel #intelligenceWrite').val());
                 $.ajax({
                     type : "post",
-                    url : "/subscriptionBusiness!addressResolution.action",
+                    url : "http://localhost:9292/guest/smartFillAddress",
                     dataType: "JSON",
                     data:{"addressInfo":$('#writeAddrModel #intelligenceWrite').val()},
                     success : function(res) {
+                        // var obj = eval("(" + res + ")");
+                        // alert("obj.msg="+obj.msg);
+                        // alert("res.msg="+res.msg);
                         if(res.code=="1000"){
-                            setAddFunc(res.data,$('#znType').val());
+                            // setAddFunc(res.data,$('#znType').val());
                             $('.reg-protocol').hide()
                             $(".city-picker-dropdown").hide();  // 防止地址控件弹出
                             $('.intelligenceTip').slideDown(500);
                             setTimeout(function () {
-                                $('.intelligenceTip').slideUp(500)
+                                $('.intelligenceTip').slideUp(2000)
                             }, 5000)
                         }else{
                             $('#writeAddrModel .disableTip').show().prev().find('textarea').css('borderColor','#FF5858');
@@ -628,16 +637,19 @@ line-height:32px;font-family:微软雅黑">本协议履行过程中如发生争�
             var sendAreaOld = "";
             var receiveAreaOld = "";
             var addType;
+            var addressType;
             if (aType == "01") {    // 寄件
                 addType = "send";
+                addressType = "sender";
             } else if (aType == "02") { // 收件
                 addType = "receive";
+                addressType = "accept"
             }
             $("#" + addType + "Name").val(aBook.rname);
-            $("#" + addType + "ProvinceCode").val(aBook.province);
-            $("#" + addType + "ProvinceName").val(aBook.provinceCode);
-            $("#" + addType + "CityCode").val(aBook.cityCode);
-            $("#" + addType + "CityName").val(aBook.city);
+            $("#" + addressType + "ProvinceCode").val(aBook.province);
+            $("#" + addressType + "ProvinceName").val(aBook.provinceCode);
+            $("#" + addressType + "CityCode").val(aBook.cityCode);
+            $("#" + addressType + "CityName").val(aBook.city);
             $("#" + addType + "RegionCode").val(aBook.countyCode);
             $("#" + addType + "RegionName").val(aBook.county);
             $("#" + addType + "Address").val(aBook.address);
@@ -647,9 +659,9 @@ line-height:32px;font-family:微软雅黑">本协议履行过程中如发生争�
             }else{
                 $("#" + addType + "Tel").val(aBook.telenum);
             }
-            $("#" + addType + "Area").citypicker("reset");
-            $("#" + addType + "Area").citypicker("destroy");
-            $("#" + addType + "Area").citypicker({
+            $("#" + addressType + "Area").citypicker("reset");
+            $("#" + addressType + "Area").citypicker("destroy");
+            $("#" + addressType + "Area").citypicker({
                 province: aBook.province,
                 city: aBook.city,
                 district: aBook.county,

@@ -49,5 +49,6 @@ public interface UserService {
     @RequestMapping(value = "guest/getRoleByPhone", method = RequestMethod.POST, consumes = "application/json")
     String getRoleByPhone(@RequestParam(value = "phone")String phone);
 
-
+    @RequestMapping(value = "user/findUserByPhone", method = RequestMethod.POST, consumes = "application/json")
+    String findUserByPhone(@RequestParam(value = "phone")String phone);
 }

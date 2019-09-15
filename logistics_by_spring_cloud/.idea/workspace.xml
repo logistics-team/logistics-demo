@@ -2,8 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4f0b813-303f-47d0-a97e-fb9b8179a018" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/comm/src/main/java/com/cssl/util/AddressResolutionUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/AddressInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/InfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/AddressInfoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/InfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/images/headerpic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/index/2/201908251728gmlibseaseajs3.0.0se.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/index/2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/index/201908251728gmlibseaseajs3.0.0se.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/index/201908251728gmlibunitsticknav1.0.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/index/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/index/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/index/jquery-1.4.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/static/index/jquery.cookie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/2/201908251728gmlibseaseajs3.0.0se.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/201908251728gmlibseaseajs3.0.0se.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/201908251728gmlibunitsticknav1.0.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/jquery-1.4.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/jquery.cookie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js_1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js_2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js_3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js_4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js_5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js_6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js_7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/ConsumerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/ConsumerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/GuestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/GuestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/SecurityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/SecurityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/UserServiceHystrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/UserServiceHystrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/bean/KickoutSessionControlFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/bean/KickoutSessionControlFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/config/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/three.html" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/three.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/manage/backstage.html" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/manage/backstage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/placeOrder.html" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/placeOrder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/user/preIndex.html" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/user/preIndex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer-server/src/test/java/com/cssl/ConsumerServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer-server/src/test/java/com/cssl/ConsumerServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/mapper/LogisticsUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/mapper/LogisticsUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/ILogisticsUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/ILogisticsUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/impl/LogisticsUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/impl/LogisticsUserServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/comm/target/" />
@@ -46,45 +92,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-10832">
+              <caret line="107" column="69" selection-start-line="107" selection-start-column="69" selection-end-line="107" selection-end-column="69" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="238" column="24" selection-start-line="238" selection-start-column="24" selection-end-line="238" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/placeOrder.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6">
+              <caret line="602" column="71" selection-start-line="602" selection-start-column="71" selection-end-line="602" selection-end-column="71" />
+              <folding>
+                <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#1;n#div#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#2;n#div#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/ConsumerController.java">
+        <entry file="file://$PROJECT_DIR$/comm/src/main/java/com/cssl/util/AddressResolutionUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-739">
-              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+            <state relative-caret-position="240">
+              <caret line="19" column="87" lean-forward="true" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#show#0;class#ConsumerController#0" />
-                <element signature="method#l_statue#0;class#ConsumerController#0" />
-                <element signature="method#ls_update#0;class#ConsumerController#0" />
-                <element signature="method#confirmOrder#0;class#ConsumerController#0" />
-                <element signature="docComment;method#userLogin#0;class#ConsumerController#0" />
-                <element signature="docComment;method#userRegister#0;class#ConsumerController#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/config/ShiroConfig.java">
+        <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/GuestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3423">
-              <caret line="144" column="52" lean-forward="true" selection-start-line="144" selection-start-column="52" selection-end-line="144" selection-end-column="52" />
+            <state relative-caret-position="233">
+              <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1793#1809#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/bean/KickoutSessionControlFilter.java">
+        <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/AddressInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-418">
-              <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+            <state relative-caret-position="96">
+              <caret line="2" column="28" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/AddressInfoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/js/method.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -97,42 +189,43 @@
         <option value="HTML File" />
         <option value="FxmlFile" />
         <option value="JavaScript File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>/html/</find>
-      <find>addressType</find>
-      <find>receiveProvinceCode</find>
-      <find>area_div</find>
-      <find>_</find>
-      <find>toUrl</find>
-      <find>orderInfo.</find>
-      <find>customerService_submit</find>
-      <find>,]}</find>
-      <find>,]</find>
-      <find>receiveAddress</find>
-      <find>receivePhone</find>
-      <find>us</find>
-      <find>registerBtn</find>
-      <find>initValidate</find>
-      <find>validateMessageCode</find>
-      <find>validateResult</find>
-      <find>phoneInput</find>
-      <find>messageCode</find>
-      <find>登录</find>
+      <find>../../</find>
+      <find>show</find>
+      <find>l_statue</find>
+      <find>ls_update</find>
+      <find>confirmSent</find>
+      <find>/logout</find>
+      <find>/login</find>
+      <find>kickout</find>
+      <find>verificationCode</find>
+      <find>layui-btn</find>
+      <find>reload3</find>
+      <find>layui-form</find>
+      <find>getUserInfo</find>
+      <find>notLogin</find>
+      <find>script type=&quot;text/javascript&quot; src</find>
       <find>css/</find>
       <find>js/</find>
-      <find>images/</find>
-      <find>submitValidate()</find>
-      <find>login</find>
-      <find>redisHost</find>
-      <find>kickoutUrl</find>
-      <find>subject</find>
-      <find>footer commonWrap</find>
-      <find>退出</find>
+      <find>href=</find>
+      <find>href=&quot;//myhome</find>
+      <find>href=&quot;//myhome.gome.com.cn</find>
+      <find>href=&quot;//</find>
+      <find>href=&quot;https://</find>
+      <find>href=&quot;www.</find>
+      <find>href=&quot;gome.</find>
+      <find>&lt;script type=&quot;text/javascript&quot;&gt;</find>
+      <find>confirmSubmit</find>
+      <find>city-picker-dropdown</find>
+      <find>reg-protocol</find>
+      <find>znType</find>
+      <find>intelligenceTip</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,43 +242,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/comm/src/main/java/com/cssl/entity/LogisticsOrders.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/UserServerApplication.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/orders/service/impl/EuserSerImpl.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/orders/service/impl/OrederSerImpl.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/orders/service/impl/UserSerImpl.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/orders/controller/Euser_Ctl.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/orders/controller/Orders_Status.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/orders/controller/User_Ctl.java" />
-        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/Euser_Ctl.java" />
-        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/User_Ctl.java" />
-        <option value="$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/service/ITransportationStatusService.java" />
-        <option value="$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/controller/MailingController.java" />
-        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/register.html" />
-        <option value="E:/Tim文档/1465031875/FileRecv/MaapCalculateUtil.java" />
-        <option value="$PROJECT_DIR$/comm/src/main/java/com/cssl/util/NonEmptyUtils.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/RegisterController.java" />
-        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/config/ServiceFeignConfiguration.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/ExceptionController.java" />
-        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/preIndex.html" />
-        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/LogisticsService.java" />
-        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/UserServiceHystrix.java" />
-        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/LogisticsServiceHystrix.java" />
         <option value="$PROJECT_DIR$/user-server/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/user-server/pom.xml" />
         <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/config/ShiroConfig.java" />
         <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/shiro/CustomRealm.java" />
         <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/bean/ResultMap.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/ILogisticsUserService.java" />
-        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/GuestController.java" />
-        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/UserService.java" />
-        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/register.html" />
         <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/bean/CustomRealm.java" />
-        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/login.html" />
         <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/shiro/bean/ResultMap.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/impl/LogisticsUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/GuestController.java" />
         <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/mapper/RoleUserMapper.java" />
         <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/mapper/xml/RoleUserMapper.xml" />
@@ -195,11 +259,40 @@
         <option value="$PROJECT_DIR$/consumer-server/pom.xml" />
         <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/SecurityService.java" />
         <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/index.html" />
-        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/manage/backstage.html" />
-        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/bean/KickoutSessionControlFilter.java" />
         <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/SecurityServiceImpl.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/bean/KickoutSessionControlFilter.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/InfoService.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/UserService.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/UserServiceHystrix.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/mapper/LogisticsUserMapper.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/impl/LogisticsUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/ILogisticsUserService.java" />
+        <option value="$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/InfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/register.html" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/login.html" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/manage/backstage.html" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/user/preIndex.html" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/static/index/index.html" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/static/index/2/index.html" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/three.html" />
         <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/config/ShiroConfig.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js2.js" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js1.js" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js3.js" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js4.js" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js5.js" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js6.js" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js7.js" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js8.js" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/index.html" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/static/js/method.js" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/AddressInfoImpl.java" />
         <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/ConsumerController.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/GuestController.java" />
+        <option value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/placeOrder.html" />
+        <option value="$PROJECT_DIR$/consumer-server/src/test/java/com/cssl/ConsumerServerApplicationTests.java" />
+        <option value="$PROJECT_DIR$/comm/src/main/java/com/cssl/util/AddressResolutionUtil.java" />
       </list>
     </option>
   </component>
@@ -243,6 +336,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -293,16 +388,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cssl" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cssl" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -321,6 +406,38 @@
               <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cssl" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cssl" type="462c0819:PsiDirectoryNode" />
+              <item name="shiro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cssl" type="462c0819:PsiDirectoryNode" />
+              <item name="shiro" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -339,16 +456,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -359,7 +466,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="staticFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
@@ -370,44 +477,14 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="staticFiles" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
               <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="staticFiles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="staticFiles" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
@@ -416,98 +493,13 @@
               <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
               <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="staticFiles" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="logistics-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="logistics-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="logistics-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="logistics-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="logistics-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cssl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="logistics-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cssl" type="462c0819:PsiDirectoryNode" />
-              <item name="mailing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="logistics-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cssl" type="462c0819:PsiDirectoryNode" />
-              <item name="mailing" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="logistics-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cssl" type="462c0819:PsiDirectoryNode" />
-              <item name="mailing" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="logistics-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="logistics-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="logistics-server" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -515,18 +507,72 @@
             <path>
               <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="logistics-server" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cssl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cssl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cssl" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logistics_by_spring_cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logistics_by_spring_cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="user-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cssl" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Course" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -539,7 +585,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/consumer-server/src/main/resources/templates/html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -559,11 +605,11 @@
       <recent name="com.cssl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\resources\templates\html" />
+      <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\resources\static" />
+      <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\resources\static\index" />
+      <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\resources\static\images" />
       <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\resources\templates\staticFiles\pages" />
-      <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\java\com\cssl\mailing\service\impl" />
-      <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\java\com\cssl\mailing\service" />
-      <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\java\com\cssl\mailing\controller" />
-      <recent name="D:\Y2\master\logistics_by_spring_cloud\user-server\src\main\java\com\cssl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.cssl.shiro.bean" />
@@ -571,11 +617,11 @@
       <recent name="com.cssl.shiro.config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\resources\static\index" />
       <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\resources\templates\staticFiles\pages" />
       <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\resources\templates\staticFiles\user" />
       <recent name="D:\Y2\master\logistics_by_spring_cloud\user-server\src\main\java\com\cssl\authentication\mapper\xml" />
       <recent name="D:\Y2\master\logistics_by_spring_cloud\user-server\src\main\java\com\cssl\authentication\mapper" />
-      <recent name="D:\Y2\master\logistics_by_spring_cloud\consumer-server\src\main\resources\templates\staticFiles\manage" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -600,7 +646,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServerApplication">
+  <component name="RunManager" selected="Application.AddressResolutionUtil">
+    <configuration name="AddressResolutionUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cssl.util.AddressResolutionUtil" />
+      <module name="comm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cssl.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsumerServerApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="consumer-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cssl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cssl" />
+      <option name="MAIN_CLASS_NAME" value="com.cssl.ConsumerServerApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LogisticsServerApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="logistics-server" />
       <extension name="coverage">
@@ -612,22 +687,6 @@
       <option name="PACKAGE_NAME" value="com.cssl" />
       <option name="MAIN_CLASS_NAME" value="com.cssl.LogisticsServerApplicationTests" />
       <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServerApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cssl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cssl" />
-      <option name="MAIN_CLASS_NAME" value="com.cssl.UserServerApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -666,19 +725,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LogisticsServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="logistics-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cssl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cssl.LogisticsServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UserServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="user-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.cssl.UserServerApplication" />
@@ -688,11 +734,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AddressResolutionUtil" />
+        <item itemvalue="JUnit.ConsumerServerApplicationTests.contextLoads" />
         <item itemvalue="Spring Boot.ConsumerServerApplication" />
         <item itemvalue="Spring Boot.EurekaServerApplication" />
         <item itemvalue="JUnit.LogisticsServerApplicationTests.test" />
-        <item itemvalue="JUnit.UserServerApplicationTests.contextLoads" />
-        <item itemvalue="Spring Boot.LogisticsServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -723,7 +769,9 @@
       <workItem from="1568161949876" duration="10950000" />
       <workItem from="1568173945081" duration="1473000" />
       <workItem from="1568202155503" duration="11297000" />
-      <workItem from="1568248732742" duration="12053000" />
+      <workItem from="1568248732742" duration="19775000" />
+      <workItem from="1568447980101" duration="16024000" />
+      <workItem from="1568515604995" duration="15978000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/logistics-team/logistics-demo&#10;&#10;# Conflicts:&#10;#&#9;logistics_by_spring_cloud/.idea/workspace.xml">
       <created>1567520119153</created>
@@ -757,9 +805,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LogisticsServerApplicationTests_contextLoads - 2019.09.07 at 13h 24m 04s.xml">
-      <configuration name="LogisticsServerApplicationTests.contextLoads" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LogisticsServerApplicationTests_contextLoads - 2019.09.07 at 13h 31m 32s.xml">
       <configuration name="LogisticsServerApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
@@ -787,9 +832,12 @@
     <history-entry file="LogisticsServerApplicationTests_test - 2019.09.11 at 23h 13m 19s.xml">
       <configuration name="LogisticsServerApplicationTests.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ConsumerServerApplicationTests_contextLoads - 2019.09.15 at 23h 20m 57s.xml">
+      <configuration name="ConsumerServerApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224165000" />
+    <option name="totallyTimeSpent" value="263889000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -803,7 +851,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497479" visible="true" weight="0.28175026" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.497479" visible="true" weight="0.28815368" />
       <window_info id="Structure" order="1" sideWeight="0.5016234" side_tool="true" weight="0.2913554" />
       <window_info id="Learn" order="2" />
       <window_info id="JRebel" order="3" sideWeight="0.50252104" side_tool="true" weight="0.26574174" />
@@ -814,16 +862,16 @@
       <window_info id="设计器" order="8" />
       <window_info id="Web" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733192" weight="0.33006537" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.38671023" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49786553" weight="0.3453159" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49626467" weight="0.332244" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49839914" visible="true" weight="0.3017429" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026681" side_tool="true" weight="0.23747277" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50160086" side_tool="true" weight="0.32026145" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="11" />
       <window_info anchor="bottom" id="Findings" order="12" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
@@ -915,328 +963,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="登录注册，后台显示（2），寄件  2019年9月9日 18点02分" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/shiro/CustomRealm.java" />
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/shiro/bean/ResultMap.java" />
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/impl/LogisticsUserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="docComment;class#LogisticsUserServiceImpl#0" />
-            <element signature="method#getRoleByPhone#0;class#LogisticsUserServiceImpl#0" />
-            <element signature="method#getRoleByUsername#0;class#LogisticsUserServiceImpl#0" />
-            <element signature="method#isBackList#0;class#LogisticsUserServiceImpl#0" />
-            <element signature="method#isRedundant#0;class#LogisticsUserServiceImpl#0" />
-            <element signature="method#register#0;class#LogisticsUserServiceImpl#0" />
-            <element signature="method#shortMessage#0;class#LogisticsUserServiceImpl#0" />
-            <element signature="method#sendMessages#0;class#LogisticsUserServiceImpl#0" />
-            <element signature="method#isExistence#0;class#LogisticsUserServiceImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/AdminController.java" />
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/UserController.java" />
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/GuestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#userLogin#0;class#GuestController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/config/ShiroConfig.java" />
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11616">
-          <caret line="242" column="59" selection-start-line="242" selection-start-column="59" selection-end-line="242" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/bean/ResultMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/User_Ctl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/ConsumerServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding>
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/mapper/RoleUserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/mapper/xml/RoleUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="4" column="64" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logistics-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/mapper/ExpressProvincesCityAreasMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/mapper/ExpressProvincesCityAreasMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/service/impl/ExpressProvincesCityAreasServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
-          <folding>
-            <element signature="e#2138#2139#0" expanded="true" />
-            <element signature="e#2191#2192#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logistics-server/src/main/java/com/cssl/mailing/service/IExpressProvincesCityAreasService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logistics-server/src/test/java/com/cssl/LogisticsServerApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/config/ServiceFeignConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="13" column="42" lean-forward="true" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-server/src/test/java/com/cssl/UserServerApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="23" column="78" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/crazycake/shiro-redis/3.2.3/shiro-redis-3.2.3.jar!/org/crazycake/shiro/RedisManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-          <folding>
-            <element signature="e#1179#1180#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4268">
-          <caret line="147" column="59" selection-start-line="147" selection-start-column="59" selection-end-line="147" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/target/classes/templates/staticFiles/user/placeOrder.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/target/classes/templates/staticFiles/pages/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-651">
-          <caret line="107" column="42" lean-forward="true" selection-start-line="107" selection-start-column="42" selection-end-line="107" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-202">
-          <caret line="104" column="54" lean-forward="true" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/manage/backstage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="134" column="21" lean-forward="true" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
-          <folding>
-            <element signature="e#25#31#0" expanded="true" />
-            <element signature="e#31#37#0" expanded="true" />
-            <element signature="e#37#43#0" expanded="true" />
-            <element signature="e#43#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/SecurityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="43" column="22" lean-forward="true" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/images/505.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/ExceptionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/crazycake/shiro-redis/2.4.2.1-RELEASE/shiro-redis-2.4.2.1-RELEASE.jar!/org/crazycake/shiro/RedisManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="148" column="34" selection-start-line="148" selection-start-column="34" selection-end-line="148" selection-end-column="34" />
-          <folding>
-            <element signature="e#3447#3448#0" expanded="true" />
-            <element signature="e#3483#3484#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.9.RELEASE/spring-context-5.1.9.RELEASE.jar!/org/springframework/context/annotation/ConfigurationClassEnhancer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/bean/CustomRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-997">
-          <caret line="48" column="44" lean-forward="true" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#788#789#0" expanded="true" />
-            <element signature="e#826#827#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.9.RELEASE/spring-core-5.1.9.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="118" selection-start-line="118" selection-end-line="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.1/shiro-core-1.4.1.jar!/org/apache/shiro/session/mgt/AbstractNativeSessionManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.1/shiro-core-1.4.1.jar!/org/apache/shiro/session/mgt/DelegatingSession.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.4.1/shiro-web-1.4.1.jar!/org/apache/shiro/web/filter/AccessControlFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.4.1/shiro-web-1.4.1.jar!/org/apache/shiro/web/filter/PathMatchingFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.4.1/shiro-web-1.4.1.jar!/org/apache/shiro/web/servlet/OncePerRequestFilter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -1265,27 +991,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/config/ShiroConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3423">
-          <caret line="144" column="52" lean-forward="true" selection-start-line="144" selection-start-column="52" selection-end-line="144" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1793#1809#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/bean/KickoutSessionControlFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-418">
-          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1344">
@@ -1293,26 +998,314 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/UserServiceHystrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+          <folding>
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1419#1420#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/orders/controller/Orders_Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comm/src/main/java/com/cssl/util/NonEmptyUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/mapper/LogisticsUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="55" column="48" lean-forward="true" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/InfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#userService#0;class#InfoServiceImpl#0" />
+            <element signature="method#findUserByPhone#0;class#InfoServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/InfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="27" column="60" lean-forward="true" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#login#0;class#LoginController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/images/headerpic.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/ILogisticsUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/controller/GuestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="57" column="34" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/SecurityServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="235">
+          <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#userLogin#0;class#SecurityServiceImpl#0" />
             <element signature="method#userRegister#0;class#SecurityServiceImpl#0" />
-            <element signature="e#2575#2576#0" expanded="true" />
-            <element signature="e#2632#2633#0" expanded="true" />
-            <element signature="e#2678#2679#0" expanded="true" />
-            <element signature="e#2723#2724#0" expanded="true" />
+            <element signature="e#2479#2480#0" expanded="true" />
+            <element signature="e#2532#2533#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/SecurityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="5" column="82" lean-forward="true" selection-start-line="5" selection-start-column="82" selection-end-line="5" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-server/src/main/java/com/cssl/authentication/service/impl/LogisticsUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="341" column="38" selection-start-line="341" selection-start-column="38" selection-end-line="341" selection-end-column="38" />
+          <folding>
+            <element signature="method#getRoleByPhone#0;class#LogisticsUserServiceImpl#0" />
+            <element signature="method#getRoleByUsername#0;class#LogisticsUserServiceImpl#0" />
+            <element signature="method#isBackList#0;class#LogisticsUserServiceImpl#0" />
+            <element signature="method#shortMessage#0;class#LogisticsUserServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/bean/KickoutSessionControlFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="73" column="39" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/manage/backstage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#25#31#0" expanded="true" />
+            <element signature="e#31#37#0" expanded="true" />
+            <element signature="e#37#43#0" expanded="true" />
+            <element signature="e#43#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/user/preIndex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/2/index.html" />
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="469" column="42" lean-forward="true" selection-start-line="460" selection-start-column="12" selection-end-line="469" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="62" column="53" lean-forward="true" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/index/jquery-1.4.2.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/index/jquery.cookie.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/index/2/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1065">
+          <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/2/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/three.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/shiro/config/ShiroConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="58" column="62" selection-start-line="58" selection-start-column="62" selection-end-line="58" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js_1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="1" column="28772" selection-start-line="1" selection-start-column="28772" selection-end-line="1" selection-end-column="28772" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js_3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7398" selection-start-column="7398" selection-end-column="7398" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js_4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="1" column="8744" selection-start-line="1" selection-start-column="8744" selection-end-line="1" selection-end-column="8744" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js_5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="1" column="5595" selection-start-line="1" selection-start-column="5595" selection-end-line="1" selection-end-column="5595" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js_6.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="28" column="4246" selection-start-line="28" selection-start-column="4246" selection-end-line="28" selection-end-column="4246" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js_7.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3697" selection-start-column="3697" selection-end-column="3697" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js_1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="1" column="28189" selection-start-line="1" selection-start-column="28189" selection-end-line="1" selection-end-column="28189" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/js/js_2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2042" selection-start-column="2042" selection-end-column="2042" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/html/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="679">
+          <caret line="113" column="1" selection-start-line="113" selection-start-column="1" selection-end-line="113" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/static/js/method.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/AddressInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/service/impl/AddressInfoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/ConsumerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-739">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        <state relative-caret-position="196">
+          <caret line="221" selection-start-line="221" selection-end-line="221" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#show#0;class#ConsumerController#0" />
@@ -1321,6 +1314,71 @@
             <element signature="method#confirmOrder#0;class#ConsumerController#0" />
             <element signature="docComment;method#userLogin#0;class#ConsumerController#0" />
             <element signature="docComment;method#userRegister#0;class#ConsumerController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10832">
+          <caret line="107" column="69" selection-start-line="107" selection-start-column="69" selection-end-line="107" selection-end-column="69" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/target/classes/com/cssl/controller/GuestController.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-720">
+          <folding>
+            <element signature="e#0#899#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/java/com/cssl/controller/GuestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="238" column="24" selection-start-line="238" selection-start-column="24" selection-end-line="238" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/test/java/com/cssl/ConsumerServerApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consumer-server/src/main/resources/templates/staticFiles/pages/placeOrder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="602" column="71" selection-start-line="602" selection-start-column="71" selection-end-line="602" selection-end-column="71" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#1;n#div#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#2;n#div#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#1;n#div#3;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comm/src/main/java/com/cssl/util/AddressResolutionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="87" lean-forward="true" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

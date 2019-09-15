@@ -226,7 +226,7 @@
 
                 $.ajax({
                     type: "post",
-                    url: "../../login",
+                    url: "../../guest/login",
                     data: {
                         "j_username": document.getElementById('userName').value,
                         "j_password": document.getElementById('passwordI').value,
@@ -288,7 +288,7 @@
 
                     </div>
                     <div class="clear"></div>
-                    <form action="/login" method="post" id="userForm" name="userForm">
+                    <form action="/guest/login" method="post" id="userForm" name="userForm">
                         <div class="yz usernameRow">
 
                             <input type="text" name="j_username" id="userName" class="usernamea"

@@ -112,7 +112,7 @@ public class KickoutSessionControlFilter extends AccessControlFilter {
                 Session kickoutSession = sessionManager.getSession(new DefaultSessionKey(kickoutSessionId));
                 if(kickoutSession != null) {
                     //设置会话的kickout属性表示踢出了
-                    System.out.println("用户被挤！");
+//                    System.out.println("用户被挤！");
                     kickoutSession.setAttribute("kickout", true);
                 }
             } catch (Exception e) {//ignore exception

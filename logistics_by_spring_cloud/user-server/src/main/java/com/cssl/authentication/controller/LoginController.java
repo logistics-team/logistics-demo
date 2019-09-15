@@ -1,29 +1,19 @@
 package com.cssl.authentication.controller;
 
 import com.cssl.authentication.service.ILogisticsUserService;
+import com.cssl.entity.LogisticsUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/guest")
+@RequestMapping("/user")
 public class LoginController {
 
 
     @Autowired
     private ILogisticsUserService userService;
-
-
-
-
-//    @RequestMapping(value = "/logout")
-//    public ResultMap logout() {
-//        Subject subject = SecurityUtils.getSubject();
-//        //注销
-//        subject.logout();
-//        return resultMap.success().message("成功注销！");
-//    }
 
     /**
      * 登陆
@@ -35,33 +25,9 @@ public class LoginController {
         return userService.login(phone,password,"123");
     }
 
+    @RequestMapping(value = "/findUserByPhone") //用手机号查找用户信息
+    public LogisticsUser findUserByPhone(String phone){
+        return userService.findUserByPhone(phone);
+    }
 
-//    @RequestMapping(value = "/userLogin", method = RequestMethod.POST)
-//    public String userLogin(@RequestParam String phone,@RequestParam String password) {
-//        //查黑名单
-//        boolean backList = userService.isBackList(phone);
-//        if (backList)
-//            return "黑名单用户";
-//        System.out.println("phone = " + phone);
-//        System.out.println("password = " + password);
-//        // 从SecurityUtils里边创建一个 subject
-//        Subject subject = SecurityUtils.getSubject();
-//        // 在认证提交前准备 token（令牌）
-//        UsernamePasswordToken token = new UsernamePasswordToken(phone, password);
-//        // 执行认证登陆
-//        subject.login(token);
-//        //根据权限，指定返回数据
-////        String role = userMapper.getRole(username);
-//        String role = userService.getRoleByPhone(phone);
-//        if ("user".equals(role)) {
-//            return "欢迎登陆";      //返回用户后台
-//        }
-//        if ("admin".equals(role)) {
-//            return "欢迎来到管理员页面";     //返回管理员后台页面
-//        }
-//        if ("root".equals(role)) {
-//            return "欢迎来到超级页面";      //返回管理员页面
-//        }
-//        return "权限错误！";
-//    }
 }

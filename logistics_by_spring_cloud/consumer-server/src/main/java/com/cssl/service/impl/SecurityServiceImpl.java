@@ -29,9 +29,9 @@ public class SecurityServiceImpl implements SecurityService {
     @Bean
     public RedisManager redisManager() {
         RedisManager redisManager = new RedisManager();
-        redisManager.setHost("127.0.0.1");
+        redisManager.setHost("47.102.85.126");
         redisManager.setPort(6379);
-        redisManager.setExpire(1800);// 配置缓存过期时间
+        redisManager.setExpire(60*60*30);// 配置缓存过期时间
         redisManager.setTimeout(0);
         // redisManager.setPassword(password);
         return redisManager;

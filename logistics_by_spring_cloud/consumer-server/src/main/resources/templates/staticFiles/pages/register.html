@@ -457,19 +457,20 @@
             if (validateTelPhone() != 0) {//手机校验
                 return;
             }
-
             //手机存在验证
             $.ajax({
-                type: "post",
-                url: "../../isExistence",
+                type: 'POST',
+                url: "../../guest/isExistence",
                 data: {
-                    "phone": document.getElementById('telPhoneNumber').value
+                    phone: $("#telPhoneNumber").val()
                 },
                 error: function () {
                     swal("", '服务器连接失败！', "warning");
                 },
-                success: function (data) {
-                    var obj = eval("(" + data + ")");
+                success: function (json) {
+                    // alert(123);
+                    alert(json);
+                    var obj = eval("(" + json + ")");
                     // alert(obj);
                     // siller.reset("captcha2");
                     if (obj.message == '该手机号已被注册,请登录！') {
@@ -478,7 +479,7 @@
                         //发送验证码
                         $('#phoneInput').attr('disabled', 'disabled');
                         $.ajax({
-                            url: '../../verificationCode',
+                            url: '../../guest/verificationCode',
                             type: 'POST',
                             data: {
                                 "phoneNum": $('#telPhoneNumber').val()
@@ -528,13 +529,13 @@
                 // var userPhoneTel = document.getElementById('telPhoneNumber').value
                 // var passwords = document.getElementById('password').value
                 // var messageCode = document.getElementById('messageCode').value
-                // $.post("../../register", "userPhoneTel="+userPhoneTel+"&password="+passwords+"&messageCode="+messageCode,
+                // $.post("../../guest/register", "userPhoneTel="+userPhoneTel+"&password="+passwords+"&messageCode="+messageCode,
                 //     function (data) {
                 //     alert(data);
                 // })
                 $.ajax({
                     type: "post",
-                    url: "../../register",
+                    url: "../../guest/register",
                     data: {
                         "userPhoneTel": document.getElementById('telPhoneNumber').value,
                         "password": document.getElementById('password').value,

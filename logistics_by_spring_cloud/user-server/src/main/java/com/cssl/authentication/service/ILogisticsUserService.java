@@ -34,4 +34,6 @@ public interface ILogisticsUserService extends IService<LogisticsUser> {
     String sendMessages(String phoneNum);
 
     String isExistence(String phone);
+
+    LogisticsUser findUserByPhone(String phone);
 }

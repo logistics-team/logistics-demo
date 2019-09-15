@@ -51,4 +51,7 @@ public interface LogisticsUserMapper extends BaseMapper<LogisticsUser> {
      */
     @Select("select max(lu_id) from logistics_user")
     Integer findMaxId();
+
+    @Select("select * from logistics_user where lu_phone = #{phone} ")
+    LogisticsUser findUserByPhone(String phone);
 }

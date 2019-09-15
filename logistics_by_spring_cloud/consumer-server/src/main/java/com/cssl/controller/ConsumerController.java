@@ -1,6 +1,7 @@
 package com.cssl.controller;
 
 import com.cssl.entity.LogisticsStatus;
+import com.cssl.service.InfoService;
 import com.cssl.service.LogisticsService;
 import com.cssl.service.SecurityService;
 import com.cssl.service.UserService;
@@ -8,12 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//@RequestMapping("guest")
+@RequestMapping("guest")
 @Controller
 //@RestController
 public class ConsumerController {
@@ -37,6 +39,13 @@ public class ConsumerController {
     public SecurityService securityService(SecurityService securityService){
         this.securityService = securityService;
         return this.securityService;
+    }
+
+    private InfoService infoService;
+    @Autowired
+    public InfoService infoService(InfoService infoService){
+        this.infoService = infoService;
+        return this.infoService;
     }
 
 
@@ -140,20 +149,27 @@ public class ConsumerController {
      */
     @ResponseBody
     @PostMapping("login")
-    public String userLogin(String j_username, String j_password, String encodinginput) {
+    public String userLogin(String j_username, String j_password, String encodinginput, HttpSession session) {
         String s = securityService.userLogin(j_username, j_password, encodinginput);
-        System.out.println("s = " + s);
+//        System.out.println("s = " + s);
         return s;
+    }
+
+    @ResponseBody
+    @GetMapping("getUserInfo")
+    public String getUserInfo(){
+        String userByPhone = infoService.findUserByPhone();
+        System.out.println("userByPhone = " + userByPhone);
+        return userByPhone;
     }
 
     /**
      * 注销  退出
      * @return
      */
-
-    @RequestMapping("logout")
+    @RequestMapping("/logout")
     public String logout() {
-        System.out.println("退出 ！");
+//        System.out.println("退出 ！");
         return securityService.logout();
     }
 
@@ -172,29 +188,42 @@ public class ConsumerController {
 
 
     @ResponseBody
-    @PostMapping("/isExistence")
+    @RequestMapping("/isExistence")    //是否重复手机号
     public String isExistence(String phone){    //手机号是否已经注册
-        return securityService.isExistence(phone);
+//        System.out.println("phone = " + phone);
+        String existence = securityService.isExistence(phone);
+//        System.out.println("existence = " + existence);
+        return existence;
     }
 
+
     @ResponseBody
-    @PostMapping("/verificationCode")
+    @PostMapping("/verificationCode")   //短信发送确认
     public String sendMessages(String phoneNum){    //获取验证码，
         return securityService.sendMessages(phoneNum);
     }
 
-    @RequestMapping("kickout")  //挤出跳转
+    @RequestMapping("/kickout")  //挤出跳转
     public String kickout(){     //未登录跳转页面
         return "redirect:/staticFiles/pages/login.html";
     }
 
-    @RequestMapping("notRole")  //无权页面跳转
+    @RequestMapping("/notRole")  //无权页面跳转
     public String notRole(){     //未登录跳转页面
         return "redirect:/staticFiles/pages/login.html";
     }
 
-    @RequestMapping("notLogin")     //未登录跳转
+    @RequestMapping("/notLogin")     //未登录跳转
     public String notLogin(){     //未登录跳转页面
         return "redirect:/staticFiles/pages/login.html";
     }
+
+
+//    @ResponseBody
+//    @RequestMapping("/test")
+//    public String test(String phone,String name){
+//        System.out.println("phone = " + phone);
+//        System.out.println("name = " + name);
+//        return "成功接收返回的数据";
+//    }
 }
