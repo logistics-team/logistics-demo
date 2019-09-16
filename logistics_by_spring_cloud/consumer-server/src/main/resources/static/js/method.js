@@ -1,8 +1,10 @@
-var addressInit = function (cmbProvince, cmbCity, cmbArea, cmbStreet, defaultProvince, defaultCity, defaultArea, defaultStreet) {
+var addressInit = function (cmbProvince, cmbCity, cmbArea, cmbStreet, defaultProvince, defaultCity, defaultArea) {
     var cmbProvince = document.getElementById(cmbProvince);
     var cmbCity = document.getElementById(cmbCity);
     var cmbArea = document.getElementById(cmbArea);
-    var cmbStreet = document.getElementById(cmbStreet);
+    // var cmbStreet = document.getElementById(cmbStreet);
+
+
 
     function cmbSelect(cmb, str) {
         for (var i = 0; i < cmb.options.length; i++) {
@@ -31,6 +33,8 @@ var addressInit = function (cmbProvince, cmbCity, cmbArea, cmbStreet, defaultPro
         cmbSelect(cmbArea, defaultArea);
     }
 
+
+
     function changeProvince() {
         cmbCity.options.length = 0;
         cmbCity.onchange = null;
@@ -46,10 +50,12 @@ var addressInit = function (cmbProvince, cmbCity, cmbArea, cmbStreet, defaultPro
 
     for (var i = 0; i < provinceList.length; i++) {
         cmbAddOption(cmbProvince, provinceList[i].name, provinceList[i]);
+
     }
     cmbSelect(cmbProvince, defaultProvince);
     changeProvince();
     cmbProvince.onchange = changeProvince;
+
 }
 
 var provinceList = [
@@ -873,8 +879,3 @@ var provinceList = [
         }, {name: '路环岛', areaList: ['圣方济各堂区']}]
     }, {name: '钓鱼岛', cityList: []}
 ]
-
-$.getJSON("json", "", function (data) {
-    alert(123);
-    alert(data);
-})

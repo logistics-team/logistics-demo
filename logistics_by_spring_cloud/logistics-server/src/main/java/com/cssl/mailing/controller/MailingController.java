@@ -45,22 +45,6 @@ public class MailingController {
         return url;//传输地址判断是否添加成功！
     }
 
-//    @RequestMapping("save") //寄件保存
-//    public Object save(@RequestBody ExpressGoods goods){
-//
-////        System.out.println("goods = " + goods);
-//        LogisticsOrders orders = ordersService.generateOrders(goods);
-//        String url = null;
-//        if (orders!=null) {
-////            System.out.println("orders = " + orders);
-//            url = "redirect:/staticFiles/pages/placeOrder.html?orderId=" + orders.getLoId();  //返回一个订单号
-//        }else {
-//            url = "redirect:/staticFiles/pages/placeOrder.html";
-//        }
-//
-//        return url;//传输地址判断是否添加成功！
-//
-//    }
 
 
     @PostMapping("test")
@@ -76,5 +60,12 @@ public class MailingController {
         return userService.list();
     }
 
+    @RequestMapping("findAddr")
+    public Object findAddr(String addr_p,String addr_c){//传市县
+//        System.out.println("addr = " + addr);
+        Map<String, Object> map = cityAreasService.findAddr(addr_p, addr_c);
+//        System.out.println("map = " + map);
+        return map;
+    }
 
 }

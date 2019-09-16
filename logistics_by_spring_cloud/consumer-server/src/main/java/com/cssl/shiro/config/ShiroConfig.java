@@ -57,6 +57,8 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/orders/**","anon");  //测试
         filterChainDefinitionMap.put("/index/**", "anon"); //测试
         filterChainDefinitionMap.put("/html/**", "anon"); //测试
+        filterChainDefinitionMap.put("/anon/**", "anon"); //测试
+
 
         //用户，需要角色权限 “user”
         filterChainDefinitionMap.put("/staticFiles/user/**", "roles[user]");

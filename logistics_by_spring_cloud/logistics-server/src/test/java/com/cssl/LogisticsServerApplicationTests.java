@@ -1,6 +1,8 @@
 package com.cssl;
 
 
+import com.cssl.entity.ExpressProvincesCityAreas;
+import com.cssl.mailing.mapper.ExpressProvincesCityAreasMapper;
 import com.cssl.mailing.mapper.Express_userDao;
 import com.cssl.mailing.service.IExpressProvincesCityAreasService;
 import com.cssl.mailing.service.ILogisticsOrdersService;
@@ -10,18 +12,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = LogisticsServerApplication.class)
 public class LogisticsServerApplicationTests {
 
     @Autowired
-    Express_userDao mapper;
+    ExpressProvincesCityAreasMapper mapper;
     @Autowired
     IExpressProvincesCityAreasService cityAreas;
     @Test
     public void contextLoads() {
         System.out.println("**************************************************************************");
+        List<ExpressProvincesCityAreas> addrByParentId = mapper.findAddrByParentName("湖南省");
+        System.out.println("addrByParentId = " + addrByParentId);
 //        System.out.println("provinceList = " + cityAreas.getJson());  格式获取
         System.out.println("**************************************************************************");
 //        List<ExpressUser> list = mapper.findUserByWhere();

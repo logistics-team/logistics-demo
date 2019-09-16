@@ -23,30 +23,35 @@ public class LogisticsServiceHystrix implements LogisticsService {
     }
 
     //测试
-    @Override
-    public String find(LogisticsStatus status) {
-        return "找不到资源";
-    }
-
-    @Override
-    public String save(ExpressGoods goods) {
-        return "客户端连接失败！请检查网络信息";
-    }
-
-    @Override
-    public String getJson() {
-        return "客服端网络问题！";
-    }
-
-    @Override
-    public String isOk(ExpressGoods goods) {
-        return "网络连接中断！！!...";
-    }
+//    @Override
+//    public String find(LogisticsStatus status) {
+//        return "找不到资源";
+//    }
+//
+//    @Override
+//    public String save(ExpressGoods goods) {
+//        return "客户端连接失败！请检查网络信息";
+//    }
+//
+//    @Override
+//    public String getJson() {
+//        return "客服端网络问题！";
+//    }
+//
+//    @Override
+//    public String isOk(ExpressGoods goods) {
+//        return "网络连接中断！！!...";
+//    }
 
     @Override
     public String confirmOrder(Map<String, Object> map) {
         //提交失败！返回原页面
         return "redirect:/staticFiles/pages/placeOrder.html";
+    }
+
+    @Override
+    public String findAddrByProvincesCity(String addr_p, String addr_c) {
+        return "查询地址失败";
     }
 
 

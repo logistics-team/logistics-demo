@@ -25,4 +25,11 @@
         WHERE epca_level = 3 AND epca_name LIKE  CONCAT( #{areas} ,'%')
     </select>
 
+    <select id="findAddrByParentName" parameterType="string" resultType="com.cssl.entity.ExpressProvincesCityAreas">
+        SELECT epca_id,epca_name FROM express_provinces_city_areas
+    WHERE parent_id =
+    (SELECT epca_id FROM express_provinces_city_areas
+    WHERE epca_name = #{addr})
+    </select>
+
 </mapper>

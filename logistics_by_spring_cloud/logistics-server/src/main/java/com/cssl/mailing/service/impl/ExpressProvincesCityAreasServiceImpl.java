@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -62,5 +63,16 @@ public class ExpressProvincesCityAreasServiceImpl extends ServiceImpl<ExpressPro
     @Override
     public Integer getAreasIdByName(String areas) {
         return mapper.getAreasIdByName(areas);
+    }
+
+    @Override
+    public Map<String,Object> findAddr(String addr_p, String addr_c) {
+        System.out.println("addr = " + addr_p);
+        List<ExpressProvincesCityAreas> clist = mapper.findAddrByParentName(addr_p);
+        List<ExpressProvincesCityAreas> alist = mapper.findAddrByParentName(addr_c);
+        Map<String,Object> map = new HashMap<>();
+        map.put("clist",clist);
+        map.put("alist",alist);
+        return map;
     }
 }

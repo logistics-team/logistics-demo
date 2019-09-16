@@ -32,4 +32,8 @@ public interface ExpressProvincesCityAreasMapper extends BaseMapper<ExpressProvi
     Integer getCityIdByName(String city);
 
     Integer getAreasIdByName(String areas);
+
+
+    List<ExpressProvincesCityAreas> findAddrByParentName(String addr);
+
 }

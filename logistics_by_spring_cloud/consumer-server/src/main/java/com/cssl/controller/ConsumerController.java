@@ -1,10 +1,7 @@
 package com.cssl.controller;
 
 import com.cssl.entity.LogisticsStatus;
-import com.cssl.service.InfoService;
-import com.cssl.service.LogisticsService;
-import com.cssl.service.SecurityService;
-import com.cssl.service.UserService;
+import com.cssl.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +16,13 @@ import java.util.Map;
 @Controller
 //@RestController
 public class ConsumerController {
+    //智能填写
+    private AddressInfo addressInfo;
+    @Autowired
+    public AddressInfo addressInfo(AddressInfo addressInfo){
+        this.addressInfo = addressInfo;
+        return this.addressInfo;
+    }
     private LogisticsService logisticsService;
     @Autowired
     public LogisticsService logisticsService(LogisticsService logisticsService){
@@ -219,11 +223,11 @@ public class ConsumerController {
     }
 
 
-//    @ResponseBody
-//    @RequestMapping("/test")
-//    public String test(String phone,String name){
-//        System.out.println("phone = " + phone);
-//        System.out.println("name = " + name);
-//        return "成功接收返回的数据";
-//    }
+    @ResponseBody
+    @RequestMapping("getAddr")
+    public String getAddr(String addr_p,String addr_c){
+        String address = addressInfo.findAddrByProvincesCity(addr_p, addr_c);
+        System.out.println("address = " + address);
+        return address;
+    }
 }
