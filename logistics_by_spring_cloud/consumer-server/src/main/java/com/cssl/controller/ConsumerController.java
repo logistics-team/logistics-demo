@@ -54,40 +54,38 @@ public class ConsumerController {
 
 
     @RequestMapping("show")
-    @ResponseBody//显示订单
-    public String show(@RequestParam(required = false, name = "id", defaultValue = "0") int id, int page, int limit) {
-        System.out.println("id:" + id + ",page:" + page + ",limit:" + limit);
-        String s = userService.show(id, page, limit);// 服务者 名 logistics-server 访问orders/show方法 获取String 数据
-//        System.out.println("数据显示:"+s);
+    @ResponseBody//显示订单,下拉框搜索,搜索框搜索,省市区搜索
+    public String show(@RequestParam(required=false,name="id",defaultValue="0")int id,int page,int limit,@RequestParam(required=false,name="name",defaultValue="")String name,@RequestParam(required=false,name="select01",defaultValue="0")int select01,@RequestParam(required=false,name="select02",defaultValue="0")int select02,@RequestParam(required=false,name="select03",defaultValue="0")int select03){
+        //System.out.println("id:"+id+",page:"+page+",limit:"+limit);
+        //System.out.println("name:"+name+",select01:"+select01+",select02:"+select02+",select03:"+select03);
+        String s=userService.show(id,page,limit,name,select01,select02,select03);// 服务者 名 logistics-server 访问orders/show方法 获取String 数据
+        //System.out.println("数据显示:"+s);
         return s;
     }
-
     @RequestMapping("l_statue")
     @ResponseBody//订单下拉框
-    public List<LogisticsStatus> l_statue(@RequestParam(required = false, name = "id", defaultValue = "0") int id) {
-//        System.out.println("id:"+id);
-        String s = userService.l_statue(id);// 服务者 名 logistics-server 访问orders/show方法 获取list 数据
-        List<LogisticsStatus> list = new ArrayList<LogisticsStatus>();
-        String[] ss = s.split(",");
-        for (int i = 0; i < ss.length; i += 2) {
-            LogisticsStatus ls = new LogisticsStatus();
+    public List<LogisticsStatus> l_statue(@RequestParam(required=false,name="id",defaultValue="0")int id){
+        //System.out.println("id:"+id);
+        String s=userService.l_statue(id);// 服务者 名 logistics-server 访问orders/show方法 获取list 数据
+        List<LogisticsStatus> list=new ArrayList<LogisticsStatus>();
+        String[] ss=s.split(",");
+        for (int i=0;i<ss.length;i+=2){
+            LogisticsStatus ls=new LogisticsStatus();
             ls.setLsId(Integer.parseInt(ss[i]));
-            ls.setLsContext(ss[i + 1]);
+            ls.setLsContext(ss[i+1]);
             list.add(ls);
         }
-//        System.out.println("下拉框显示:"+list);
+        //System.out.println("下拉框显示:"+list);
         return list;
     }
-
     @RequestMapping("ls_update")
     @ResponseBody//编辑订单
-    public int ls_update(@RequestParam(required = false, name = "ls_id", defaultValue = "0") int ls_id, @RequestParam(required = false, name = "ts_id", defaultValue = "") String ts_id) {
-//        System.out.println("ls_id:"+ls_id+",ts_id:"+ts_id);
-        String s = userService.ls_update(ls_id, ts_id);// 服务者 名 logistics-server 访问orders/show方法 获取int 数据
-        int i = Integer.parseInt(s);
+    public int ls_update(@RequestParam(required=false,name="ls_id",defaultValue="0")int ls_id,@RequestParam(required=false,name="ts_id",defaultValue="")String ts_id){
+        System.out.println("ls_id:"+ls_id+",ts_id:"+ts_id);
+        String s=userService.ls_update(ls_id,ts_id);// 服务者 名 logistics-server 访问orders/show方法 获取int 数据
+        int i=Integer.parseInt(s);
         return i;
     }
-
     //参数
 //    Integer it_id, BigDecimal weight, BigDecimal eg_appraised_price, String eg_special_context,
 //    String eu_receipt_name, Integer ep_receipt_id, Integer ec_receipt_id,Integer ea_receipt_id,

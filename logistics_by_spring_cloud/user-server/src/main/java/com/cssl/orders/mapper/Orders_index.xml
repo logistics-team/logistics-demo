@@ -40,8 +40,33 @@
         INNER JOIN transportation_status s ON l.ts_id=s.ts_id
         INNER JOIN logistics_status ls ON s.ls_id=ls.ls_id
         INNER JOIN transport_means m ON l.tm_id=m.tm_id
+        where 1=1
         <if test="id gt 0 and id lt 10">
-            WHERE t.it_id=${id}
+            and t.it_id=${id}
+        </if>
+        <if test="name!=null and name!=''">
+            and u.eu_receipt_name like '%${name}%'
+        </if>
+        <if test="select01 gt 0">
+            and s.ep_id like '%${select01}%'
+        </if>
+        <if test="select02 gt 0">
+            AND s.ec_id like '%${select02}%'
+        </if>
+        <if test="select03 gt 0">
+            AND s.ea_id like '%${select03}%'
+        </if>
+        <if test="name!=null and name!=''">
+            or u.eu_sender_name like '%${name}%'
+        </if>
+        <if test="select01 gt 0">
+            and s.ep_id like '%${select01}%'
+        </if>
+        <if test="select02 gt 0">
+            AND s.ec_id like '%${select02}%'
+        </if>
+        <if test="select03 gt 0">
+            AND s.ea_id like '%${select03}%'
         </if>
         limit  #{page},#{limit}
     </select>
@@ -64,8 +89,35 @@
         SELECT COUNT(0) FROM logistics_orders l
         INNER JOIN express_goods g ON l.eg_id=g.eg_id
         INNER JOIN item_type t ON g.it_id=t.it_id
+        INNER JOIN express_user u ON l.eu_id=u.eu_id
+        INNER JOIN transportation_status s ON l.ts_id=s.ts_id
+        where 1=1
         <if test="id gt 0 and id lt 10">
-            WHERE t.it_id=#{id}
+            and t.it_id=#{id}
+        </if>
+        <if test="name!=null and name!=''">
+            and u.eu_receipt_name like '%${name}%'
+        </if>
+        <if test="select01 gt 0">
+            and s.ep_id=${select01}
+        </if>
+        <if test="select02 gt 0">
+            AND s.ec_id=${select02}
+        </if>
+        <if test="select03 gt 0">
+            AND s.ea_id=${select03}
+        </if>
+        <if test="name!=null and name!=''">
+            or u.eu_sender_name like '%${name}%'
+        </if>
+        <if test="select01 gt 0">
+            and s.ep_id like '%${select01}%'
+        </if>
+        <if test="select02 gt 0">
+            AND s.ec_id like '%${select02}%'
+        </if>
+        <if test="select03 gt 0">
+            AND s.ea_id like '%${select03}%'
         </if>
     </select>
 </mapper>

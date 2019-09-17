@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class UserServiceHystrix implements UserService {
 
     @Override
-    public String show(int id,int age,int limit) {
+    public String show(int id,int age,int limit,String name,int select01,int select02,int select03) {
         return "找不到资源";
     }
 
@@ -28,6 +28,18 @@ public class UserServiceHystrix implements UserService {
     public String user(String name, int page, int limit) {
         return "未找到资源";
     }
+
+    @Override
+    public int user_update(int id, int block) { return 0; }
+
+    @Override
+    public String user_black() { return "错误"; }
+
+    @Override
+    public String select01() { return "0,请选择"; }
+
+    @Override
+    public String select02(int id) { return "0,请选择"; }
 
     @Override
     public String userLogin(String phone, String password, String messageCode) {

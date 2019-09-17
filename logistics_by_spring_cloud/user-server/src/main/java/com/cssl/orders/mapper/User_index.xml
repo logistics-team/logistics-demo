@@ -15,21 +15,34 @@
     </resultMap>
 
    <select id="selectAll" resultMap="user">
-       SELECT lu_id,lu_username,lu_phone,lu_sex,lu_birthday,lu_gmt_modified,lu_isblacklist FROM logistics_user
+       SELECT lu_id,lu_username,lu_phone,lu_sex,lu_birthday,lu_gmt_modified,lu_isblacklist FROM logistics_user where 1=1
        <if test="name != null and name != ''">
-           where lu_username like '%${name}%'
+           and lu_username like '%${name}%'
+       </if>
+       <if test="phone gt 0">
+           and lu_phone like '%${phone}%'
        </if>
        limit  #{page},#{limit}
    </select>
 
     <select id="count" resultType="int">
-        SELECT count(0) FROM logistics_user
+        SELECT count(0) FROM logistics_user where 1=1
         <if test="name != null and name != ''">
-            where lu_username like '%${name}%'
+            and lu_username like '%${name}%'
+        </if>
+        <if test="phone gt 0">
+            and lu_phone like '%${phone}%'
         </if>
     </select>
 
     <update id="update">
         UPDATE logistics_user SET lu_isblacklist=#{block},lu_gmt_modified=NOW() WHERE lu_id=#{id}
     </update>
+
+    <resultMap id="user2" type="com.cssl.entity.LogisticsUser">
+        <id column="lu_id" property="luId"></id>
+    </resultMap>
+    <select id="user_black" resultMap="user2">
+          SELECT lu_id FROM logistics_user WHERE lu_isblacklist=1
+    </select>
 </mapper>

@@ -9,6 +9,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
 @MapperScan("com.cssl.authentication.mapper")
 @MapperScan("com.cssl.orders.mapper")
+@MapperScan("com.cssl.complaint.mapper")
 public class UserServerApplication {
 
     public static void main(String[] args) {

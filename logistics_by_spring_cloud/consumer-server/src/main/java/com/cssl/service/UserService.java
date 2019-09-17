@@ -11,15 +11,22 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface UserService {
 
     //订单操作
+    /**
+     * 李
+     * @param id
+     * @param page
+     * @param limit
+     * @return
+     */
+    //订单操作
     @RequestMapping(value = "orders/show", method = RequestMethod.POST, consumes = "application/json")
-    String show(@RequestParam(value = "id") int id, @RequestParam(value = "page") int page, @RequestParam(value = "limit") int limit);
+    String show(@RequestParam(value = "id") int id, @RequestParam(value = "page") int page, @RequestParam(value = "limit") int limit,@RequestParam(value = "name") String name,@RequestParam(value = "select01") int select01,@RequestParam(value = "select02") int select02,@RequestParam(value = "select03") int select03);
 
     @RequestMapping(value = "orders/l_statue", method = RequestMethod.POST, consumes = "application/json")
     public String l_statue(@RequestParam(value = "id") int id);
 
     @RequestMapping(value = "orders/ts_update", method = RequestMethod.POST, consumes = "application/json")
-    public String ls_update(@RequestParam(value = "ls_id") int ls_id, @RequestParam(value = "ts_id") String ts_id);
-
+    public String ls_update(@RequestParam(value = "ls_id") int ls_id,@RequestParam(value = "ts_id") String ts_id);
     //收寄件人操作
     @RequestMapping(value = "orders/user_select", method = RequestMethod.POST, consumes = "application/json")
     String e_user(@RequestParam(value = "id") String id, @RequestParam(value = "page") int page, @RequestParam(value = "limit") int limit);
@@ -27,6 +34,25 @@ public interface UserService {
     //用户操作
     @RequestMapping(value = "orders/user_s", method = RequestMethod.POST, consumes = "application/json")
     String user(@RequestParam(value = "name") String name, @RequestParam(value = "page") int page, @RequestParam(value = "limit") int limit);
+
+    @RequestMapping(value = "orders/user_update", method=RequestMethod.POST,consumes = "applkication/json")
+    int user_update(@RequestParam(value = "id") int id,@RequestParam(value = "block") int block);
+
+    //获取黑名单者编号
+    @RequestMapping(value = "orders/user_black", method=RequestMethod.POST,consumes = "applkication/json")
+    public String user_black();
+
+    //获取所有省
+    @RequestMapping(value = "orders/select01", method=RequestMethod.POST,consumes = "applkication/json")
+    public String select01();
+
+    //获取所有市区,县
+    @RequestMapping(value = "orders/select02", method=RequestMethod.POST,consumes = "applkication/json")
+    public String select02(@RequestParam(value = "id")int id);
+
+    /**
+     * 以上李代码
+     */
 
     @RequestMapping(value = "guest/userLogin", method = RequestMethod.POST, consumes = "application/json")
     String userLogin(@RequestParam(value = "phone") String phone, @RequestParam(value = "password") String password, @RequestParam(value = "messageCode") String messageCode);

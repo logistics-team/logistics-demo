@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cssl.orders.mapper.ExpressProvincesCityAreas_index">
+    <resultMap id="select" type="com.cssl.entity.ExpressProvincesCityAreas">
+        <id column="epca_id" property="epcaId"></id>
+        <id column="epca_name" property="epcaName"></id>
+    </resultMap>
+
+    <select id="select01" resultMap="select">
+          SELECT epca_id,epca_name FROM express_provinces_city_areas WHERE parent_id=100000
+    </select>
+
+    <select id="select02" resultMap="select" parameterType="int">
+          SELECT epca_id,epca_name FROM express_provinces_city_areas WHERE parent_id=#{id}
+    </select>
+</mapper>

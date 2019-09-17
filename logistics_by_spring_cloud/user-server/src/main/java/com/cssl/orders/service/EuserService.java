@@ -9,7 +9,7 @@ import java.util.List;
 @Transactional
 public interface EuserService {
     //获取所有收寄件人信息
-    public List<LogisticsOrders> selectAll(int id, String name, int page, int limit);
+    public String selectAll(int id, String name, int page, int limit);
 
     public int count(int id, String name);
 }

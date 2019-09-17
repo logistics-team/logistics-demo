@@ -26,10 +26,26 @@
     </select>
 
     <select id="findAddrByParentName" parameterType="string" resultType="com.cssl.entity.ExpressProvincesCityAreas">
-        SELECT epca_id,epca_name FROM express_provinces_city_areas
+    SELECT epca_id,epca_name FROM express_provinces_city_areas
     WHERE parent_id =
     (SELECT epca_id FROM express_provinces_city_areas
     WHERE epca_name = #{addr})
+    </select>
+
+    <select id="getProvinceList" resultType="com.cssl.entity.ExpressProvincesCityAreas">
+        select * from express_provinces_city_areas where epca_level=1;
+    </select>
+
+    <select id="getCityListByProvinceId" parameterType="int" resultType="com.cssl.entity.ExpressProvincesCityAreas">
+        select * from express_provinces_city_areas WHERE parent_id = #{provinceId} and epca_level=2;
+    </select>
+
+    <select id="getAreasListByCityId" parameterType="int" resultType="com.cssl.entity.ExpressProvincesCityAreas">
+        select * from express_provinces_city_areas WHERE parent_id = #{cityId} and epca_level=3;
+    </select>
+
+    <select id="getCountyCode" resultType="int" parameterType="string">
+        select epca_id from express_provinces_city_areas where epca_name =#{cityTem};
     </select>
 
 </mapper>

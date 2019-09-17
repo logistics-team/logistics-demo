@@ -26,7 +26,7 @@ public class GuestController {
 
 
     @ResponseBody
-    @RequestMapping("/smartFillAddress")
+    @RequestMapping("smartFillAddress")
     public String smartAddress(String addressInfo){
         System.out.println("addressInfo = " + addressInfo);
         List<Map<String, String>> list = AddressResolutionUtil.addressResolution(addressInfo);
