@@ -29,4 +29,6 @@ public interface IExpressProvincesCityAreasService extends IService<ExpressProvi
     Integer getAreasIdByName(String areas);
 
     Map<String,Object> findAddr(String addr_p, String addr_c);
+
+    String getAddressDataInfo(String parentCode);
 }

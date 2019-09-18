@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cssl.mailing.mapper.LogisticsOrdersMapper">
+    <resultMap id="allOrders" type="com.cssl.entity.LogisticsOrders">
+        <id property="loId" column="loId"></id>
+        <result  property="loGmtCreate" column="loGmtCreate"></result>
+        <association property="expressGoods" javaType="com.cssl.entity.ExpressGoods">
+            <result property="itId" column="itId"></result>
+        </association>
+        <association property="transportationStatus" javaType="com.cssl.entity.TransportationStatus">
+            <id property="tsId" column="tsId"></id>
+            <result property="countId" column="countId"></result>
+        </association>
+        <association property="expressUser" javaType="com.cssl.entity.ExpressUser">
+            <result property="euReceiptName" column="euReceiptName"></result>
+            <result property="euSenderName" column="euSenderName"></result>
+        </association>
+        <association property="transportMeans" javaType="com.cssl.entity.TransportMeans">
+            <result property="tmType" column="tmType"></result>
+        </association>
+        <association property="logisticsStatus" javaType="com.cssl.entity.LogisticsStatus">
+            <id property="lsId" column="lsId"></id>
+            <result property="lsContext" column="lsContext"></result>
+        </association>
+    </resultMap>
+    <select id="showAllOrders" resultMap="allOrders" parameterType="Integer">
+        SELECT  lo.lo_id as loId,lo.lo_gmt_create as loGmtCreate,ts.ts_id as tsId ,eg.it_id as itId,eu.eu_receipt_name as euReceiptName,eu.eu_sender_name as euSenderName,tm.tm_type as tmType,ls.ls_id as lsId,ls.ls_context as lsContext,(SELECT COUNT(ts2.ls_id) FROM transportation_status ts2 WHERE ts2.ls_id=ts.ls_id) AS countId
+        FROM `logistics_orders`  lo
+        INNER JOIN `express_goods` eg ON(lo.`eg_id`=eg.eg_id)
+        INNER JOIN item_type it ON(eg.it_id=it.it_id)
+        INNER JOIN express_user	eu ON(lo.eu_id=eu.eu_id)
+        INNER JOIN transport_means tm ON(lo.tm_id=tm.tm_id)
+        INNER JOIN transportation_status ts ON(lo.ts_id=ts.ts_id)
+        INNER JOIN logistics_status ls ON (ls.ls_id=ts.ls_id)
+        where 1=1
+        <if test="lsId!=0 and lsId!=8 and lsId!=9 and lsId!=10">
+             and ts.ls_id &lt; 8
+        </if>
+        <if test="lsId!=0">
+            <if test="lsId==8 or lsId==9 or lsId==10">
+                and ts.ls_id =#{lsId}
+            </if>
+        </if>
 
+
+    </select>
+    <select id="ordersCount" resultType="java.lang.Integer">
+        select count(1) from logistics_orders
+    </select>
 </mapper>

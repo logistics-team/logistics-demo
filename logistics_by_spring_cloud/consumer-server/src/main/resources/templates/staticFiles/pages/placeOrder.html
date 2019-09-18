@@ -1,6 +1,5 @@
-<!-- Created by 17120847 on 2018/5/23.-->
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<!-- Created by 17120847 on 2018/5/23.--><!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html">
@@ -28,11 +27,9 @@
     <link type="text/css" rel="stylesheet" href="/css/expressServiceTab.css">
 
     <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <!--    <script type="text/javascript" src="/js/sweetalert-dev.js"></script>-->
-    <!--    <script type="text/javascript" src="/js/goUrl.js"></script>-->
-    <!--    <script src="/js/SnCaptcha.js"></script>-->
-    <script type="text/javascript" src="/js/method.js"></script>
-    <!--    <script type="text/javascript" src="/js/check.js"></script>-->
+    <script type="text/javascript" src="/js/sweetalert-dev.js"></script>
+    <script type="text/javascript" src="/js/goUrl.js"></script>
+    <script src="/js/SnCaptcha.js"></script>
 </head>
 <script type="text/javascript" src="/js/maps-1.4.13_a820db6476bc0642dfbf.js"></script>
 <body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-136"
@@ -40,13 +37,10 @@
 <div class="wrapper admin-content twolevelWrap" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-136"
      data-genuitec-path="/ttkdex-web/target/m2e-jee/web-resources/staticFiles/pages/placeOrder.html">
     <!--Created by 17120847 on 2018/5/23.-->
-    <!--Created by 17120847 on 2018/5/23.-->
-
     <div class="logAndRegister">
         <div class="fixedWid clearfix">
             <a href="javascript:void(0)" class="fl" onclick="addFavorite();">加入收藏</a>
-            <div class="fr normal"><a href="javascript:window.location.href='login.html';">登录</a><span></span><a
-                    href="javascript:;">注册</a></div>
+            <div class="fr normal"><a href="javascript:;">登录</a><span></span><a href="javascript:;">注册</a></div>
             <div style="display:none" class="fr sucess"><a href="javascript:;"><span class="username"
                                                                                      id="username"></span></a><a
                     class="exit" href="javascript:;">退出</a></div>
@@ -157,7 +151,7 @@
             <div style="display:inline-block;" class="rightTabContent personRigthCont">
                 <div class="intelligenceTip"><img src="/images/tips.png">请检查拆分地址是否准确，如有遗漏请及时补充</div>
                 <div style="padding: 23px 37px 0 29px;">
-                    <form id="orderForm" method="post" action="../../guest/confirmSent">
+                    <form id="orderForm">
 
                         <div class="rightSmallTitle bold">寄件人信息
                             <div class="addressBook"><img src="/images/zntx.png"><span class="addressBookDesc" onclick="openAddressBook('writeAddr', '01'
@@ -167,58 +161,38 @@
                             <div class="leftinputclumn"><span class="forRedTip">*</span>
                                 <label>寄件地区</label>
                                 <div class="area_div">
-                                    <select id="senderProvince" name="senderProvince" style="width: 130px;" onchange="clare('sendAddress')">
-                                    </select>
-                                    <select id="senderCity" name="senderCity" style="width: 130px;" onchange="clare('sendAddress')">
-                                    </select>
-                                    <select id="senderArea" name="senderArea" style="width: 130px;" onchange="clare('sendAddress')">
-                                    </select>
-                                    <script >
-                                        function clare(strid) {
-                                            // alert()
-                                            $("#"+strid).val("")
-                                        }
-                                    </script>
-
-                                    <input type="text" id="sendAddress" name="sendAddress" placeholder="详细地址"
-                                           required oninvalid="setCustomValidity('详细地址不能为空！')"
-                                           oninput="setCustomValidity('')">
-
-                                    <!--                                    <input placeholder="请选择省/市/区" id="sendArea" name="sendArea"-->
-                                    <!--                                           readonly="" type="text">-->
-                                    <!--                                    <input type="hidden" id="sendProvinceCode" name="sendProvinceCode">-->
-                                    <!--                                    <input type="hidden" id="sendCityCode" name="sendCityCode">-->
-                                    <!--                                    <input type="hidden" id="sendRegionCode" name="sendRegionCode">-->
-                                    <!--                                    <input type="hidden" id="sendProvinceName" name="sendProvinceName">-->
-                                    <!--                                    <input type="hidden" id="sendCityName" name="sendCityName">-->
-                                    <!--                                    <input type="hidden" id="sendRegionName" name="sendRegionName">-->
+                                    <input placeholder="请选择省/市/区" id="sendArea" name="orderInfo.sendArea" readonly=""
+                                           type="text">
+                                    <input type="hidden" id="sendProvinceCode" name="orderInfo.sendProvinceCode">
+                                    <input type="hidden" id="sendCityCode" name="orderInfo.sendCityCode">
+                                    <input type="hidden" id="sendRegionCode" name="orderInfo.sendRegionCode">
+                                    <input type="hidden" id="sendProvinceName" name="orderInfo.sendProvinceName">
+                                    <input type="hidden" id="sendCityName" name="orderInfo.sendCityName">
+                                    <input type="hidden" id="sendRegionName" name="orderInfo.sendRegionName" required>
                                 </div>
                             </div>
                             <input type="hidden" id="aCity">
-                            <!--                            <div class="rightinputclumn"><span class="forRedTip">*</span>-->
-                            <!--                                <label>详细地址</label>-->
-                            <!--                                <input placeholder="请输入详细地址" type="text" autocomplete="off" class="detailedAddress" id="sendAddress" name="sendAddress">-->
-                            <!--                                <div id="hid-address"></div>-->
-                            <!--                            </div>-->
+                            <div class="rightinputclumn"><span class="forRedTip">*</span>
+                                <label>详细地址</label>
+                                <input placeholder="请输入详细地址" type="text" autocomplete="off" class="detailedAddress"
+                                       id="sendAddress" name="orderInfo.sendAddress" required>
+                                <div id="hid-address"></div>
+                            </div>
                         </div>
                         <div class="rightinputRow">
                             <div class="leftinputclumn"><span class="forRedTip">*</span>
                                 <label>姓名</label>
-                                <input placeholder="请输入寄件人姓名" id="sendName" name="sendName"
-                                       required oninvalid="setCustomValidity('姓名不能为空！')"
-                                       oninput="setCustomValidity('')">
+                                <input placeholder="请输入寄件人姓名" id="sendName" name="orderInfo.sendName" required>
                             </div>
                             <div class="rightinputclumn"><span style="margin-left: 11px;" class="forRedTip"></span>
                                 <label>座机电话</label>
-                                <input placeholder="请输入寄件人座机电话" id="sendTel" name="sendTel">
+                                <input placeholder="请输入寄件人座机电话" id="sendTel" name="orderInfo.sendTel">
                             </div>
                         </div>
                         <div class="rightinputRow">
                             <div class="leftinputclumn"><span class="forRedTip">*</span>
                                 <label>手机</label>
-                                <input placeholder="请输入手机号" id="sendPhone" name="sendPhone"
-                                       required oninvalid="setCustomValidity('手机号不能为空！')"
-                                       oninput="setCustomValidity('')">
+                                <input placeholder="请输入手机号" id="sendPhone" name="orderInfo.sendPhone" required>
                             </div>
                         </div>
 
@@ -230,47 +204,36 @@
                             <div class="leftinputclumn"><span class="forRedTip">*</span>
                                 <label>收件地区</label>
                                 <div class="area_div">
-                                    <select id="acceptProvince" name="acceptProvince" style="width: 130px;" onchange="clare('receiveAddress')"></select>
-                                    <select id="acceptCity" name="acceptCity" style="width: 130px;" onchange="clare('receiveAddress')"></select>
-                                    <select id="acceptArea" name="acceptArea" style="width: 130px;" onchange="clare('receiveAddress')"></select>
-
-                                    <input type="text" placeholder="详细地址" name="receiveAddress" id="receiveAddress"
-                                           required oninvalid="setCustomValidity('详细地址不正确！')"
-                                           oninput="setCustomValidity('')">
-
-                                    <!--                                    <input placeholder="请选择省/市/区" id="receiveArea" name="receiveArea" readonly="" type="text">-->
-                                    <!--                                    <input type="hidden" id="receiveProvinceCode" name="receiveProvinceCode">-->
-                                    <!--                                    <input type="hidden" id="receiveCityCode" name="receiveCityCode">-->
-                                    <!--                                    <input type="hidden" id="receiveRegionCode" name="receiveRegionCode">-->
-                                    <!--                                    <input type="hidden" id="receiveProvinceName" name="receiveProvinceName">-->
-                                    <!--                                    <input type="hidden" id="receiveCityName" name="receiveCityName">-->
-                                    <!--                                    <input type="hidden" id="receiveRegionName" name="receiveRegionName">-->
+                                    <input placeholder="请选择省/市/区" id="receiveArea" name="orderInfo.receiveArea"
+                                           readonly="" type="text">
+                                    <input type="hidden" id="receiveProvinceCode" name="orderInfo.receiveProvinceCode">
+                                    <input type="hidden" id="receiveCityCode" name="orderInfo.receiveCityCode">
+                                    <input type="hidden" id="receiveRegionCode" name="orderInfo.receiveRegionCode">
+                                    <input type="hidden" id="receiveProvinceName" name="orderInfo.receiveProvinceName">
+                                    <input type="hidden" id="receiveCityName" name="orderInfo.receiveCityName">
+                                    <input type="hidden" id="receiveRegionName" name="orderInfo.receiveRegionName" required>
                                 </div>
                             </div>
-                            <!--                            <div class="rightinputclumn"><span class="forRedTip">*</span>-->
-                            <!--                                <label>详细地址</label>-->
-                            <!--                                <input placeholder="请输入详细地址" id="receiveAddress" autocomplete="off" name="receiveAddress" class="detailedAddress">-->
-                            <!--                            </div>-->
+                            <div class="rightinputclumn"><span class="forRedTip">*</span>
+                                <label>详细地址</label>
+                                <input placeholder="请输入详细地址" id="receiveAddress" autocomplete="off"
+                                       name="orderInfo.receiveAddress" class="detailedAddress" required>
+                            </div>
                         </div>
                         <div class="rightinputRow">
                             <div class="leftinputclumn"><span class="forRedTip">*</span>
                                 <label>姓名</label>
-                                <input placeholder="请输入收件人姓名." id="receiveName" name="receiveName"
-                                       required oninvalid="setCustomValidity('姓名格式错误！')"
-                                       oninput="setCustomValidity('')">
+                                <input placeholder="请输入收件人姓名." id="receiveName" name="orderInfo.receiveName" required>
                             </div>
                             <div class="rightinputclumn"><span class="forRedTip"></span>
                                 <label>座机电话</label>
-                                <input placeholder="收件人手机号和座机电话必填一项" id="receiveTel" name="receiveTel"
-                                       oninvalid="setCustomValidity('座机格式错误！')" oninput="setCustomValidity('')">
+                                <input placeholder="收件人手机号和座机电话必填一项" id="receiveTel" name="orderInfo.receiveTel">
                             </div>
                         </div>
                         <div class="rightinputRow">
                             <div class="leftinputclumn"><span class="forRedTip">*</span>
                                 <label>手机</label>
-                                <input placeholder="收件人手机号和座机电话必填一项" id="receivePhone" name="receivePhone"
-                                       required oninvalid="setCustomValidity('手机号格式错误！')"
-                                       oninput="setCustomValidity('')">
+                                <input placeholder="收件人手机号和座机电话必填一项" id="receivePhone" name="orderInfo.receivePhone" required>
                             </div>
                         </div>
 
@@ -289,21 +252,20 @@
                                     <a class="noActiveRemarks remarksBtn nextRow">易碎品</a>
                                     <a class="noActiveRemarks remarksBtn nextRow">其他</a>
                                 </div>
-                                <input type="hidden" id="goodsType" name="goodsType" value="文件">
+                                <input type="hidden" id="goodsType" name="orderInfo.goodsType" value="文件">
                             </div>
                         </div>
                         <div class="rightinputRow">
                             <div class="leftinputclumn insuredContentRow"><span class="forRedTip">*</span>
                                 <label>物品重量</label>
-                                <input placeholder="0.1-50KG之间" id="goodsWeight" name="goodsWeight"
-                                       required oninvalid="setCustomValidity('物品重量格式错误！')"
-                                       oninput="setCustomValidity('')">
-                                <span class="unit">KG</span>
-                                <!--                                <span class="checkboxDom noChecked"><input type="checkbox" id="insuranceCheck"></span><span>保价预估</span>-->
-                                <span class="insuredContent" style="display: inline">保值
-                                    <input placeholder="声明价值，1-5000间整数" id="insuranceMoney" name="insuranceMoney">
-                                    ><span>元</span></span>
-                                <!--                                <input type="button" class="insuredBtn forBtn" name="transportMoney" onclick="" value="运费预估" disabled="disabled" title="请输入收/寄件人地区、物品重量！">-->
+                                <input placeholder="0.1-50KG之间" id="goodsWeight" name="orderInfo.goodsWeight" required><span
+                                        class="unit">KG</span>
+                                <span class="checkboxDom noChecked"><input type="checkbox"
+                                                                           id="insuranceCheck"></span><span>保价预估</span>
+                                <span class="insuredContent">保值<input placeholder="声明价值，1-5000间整数" id="insuranceMoney"
+                                                                      name="orderInfo.insuranceMoney"><span>元</span></span>
+                                <input type="button" class="insuredBtn forBtn" name="orderInfo.transportMoney"
+                                       onclick="" value="运费预估" disabled="disabled" title="请输入收/寄件人地区、物品重量！">
                             </div>
                         </div>
                         <div class="rightinputRow">
@@ -313,17 +275,17 @@
                                         class="noActiveRemarks remarksBtn">来前电话</a><a
                                         class="noActiveRemarks remarksBtn">我没胶带</a>
                             </div>
-                            <input type="hidden" id="specialRemarks" name="specialRemarks">
+                            <input type="hidden" id="specialRemarks" name="orderInfo.specialRemarks">
                         </div>
                         <textarea placeholder="易碎品、液体、贵重物品等特别说明" class="prohibitedInput" id="goodsRemarks"
-                                  name="goodsRemarks" maxlength="100"></textarea><a href="javascript:void(0)"
-                                                                                    class="prohibitedGood whiteBtn">违禁品须知</a>
+                                  name="orderInfo.goodsRemarks" maxlength="100"></textarea><a href="javascript:void(0)"
+                                                                                              class="prohibitedGood whiteBtn">违禁品须知</a>
 
                         <div class="rightinputRow">
                             <div class="leftinputclumn insuredContentRow"><span class="forRedTip">*</span>
                                 <label>运输</label>
-                                <input type="radio" name="transport" checked="checked" value="汽运" style="width: 25px">汽运
-                                <input type="radio" name="transport" value="空运" style="width: 25px">空运
+                                <input type="radio" name="transport" id="transport" checked="checked" value="汽运" style="width: 25px">汽运
+                                <input type="radio" name="transport" id="transport"  value="空运" style="width: 25px">空运
                                 <!--<input placeHolder="请输入验证码" style="width:130px;" id="vercode" name="vercode" maxlength="6" />-->
                                 <!--<img  id="verificationCodeImg" onclick="changeValidateCode(this)" height="36px" src="/verificationCodeAction!getRandomPictrue.action"/>-->
                                 <div id="captcha" style="margin-top: -40px;"></div>
@@ -333,8 +295,8 @@
 					  <input type="checkbox" id="agreeProtocols"></span><span>我已阅读并同意</span><span
                                 class="blueFont kdfuxybtn">《快递服务协议》</span></div>
                         <div class="forSubmitDiv">
-                            <!--                onclick="submitFunc('/staticFiles/pages/placeOrder.html')"          disabled="disabled"-->
-                            <button id="submitOrder" type="submit" class="submitOrder" disabled="disabled"
+                            <button id="submitOrder" class="submitOrder"
+                                    onclick="submitFunc('/staticFiles/pages/placeOrder.html')" disabled="disabled"
                                     style="color: #B3B3B3;">提交订单
                             </button>
                         </div>
@@ -691,63 +653,24 @@ line-height:32px;font-family:微软雅黑">本协议履行过程中如发生争�
     </div>
 
     <script type="text/javascript">
-
-        function select(sltNamep, sltNamec, sltNamea, valuep, valuec, valuea) {
-            // alert(sltNamep+","+valuep);
-            for (var i = 0; i < document.getElementById(sltNamep).options.length; i++) {
-                if (document.getElementById(sltNamep).options[i].value == valuep) {
-                    document.getElementById(sltNamep).options[i].selected = true;
-                    $.getJSON("../../guest/getAddr", "addr_p=" + valuep + "&addr_c=" + valuec, function (data) {
-                        var selectp = $("#" + sltNamep).next();
-                        var selectc = selectp.next();
-                        // alert(data.clist.length)
-                        selectp.children(0).remove();
-                        for (var j = 0; j < data.clist.length; j++) {
-                            selectp.append("<option value='" + data.clist[j].epcaName + "'>" + data.clist[j].epcaName + "</option>")
-                        }
-                        for (var i = 0; i < document.getElementById(sltNamec).options.length; i++) {
-                            if (document.getElementById(sltNamec).options[i].value == valuec) {
-                                document.getElementById(sltNamec).options[i].selected = true;
-                            }
-                        }
-                        selectc.children(0).remove();
-                        for (var k = 0; k < data.alist.length; k++) {
-                            selectc.append("<option value='" + data.alist[k].epcaName + "'>" + data.alist[k].epcaName + "</option>")
-                        }
-                        for (var i = 0; i < document.getElementById(sltNamea).options.length; i++) {
-                            if (document.getElementById(sltNamea).options[i].value == valuea) {
-                                document.getElementById(sltNamea).options[i].selected = true;
-                            }
-                        }
-                    });
-                }
-            }
-
-
-        }
-
         // 智能填写地址验证
         $(document).on('click', '#writeAddrModel .confirmSubmit', function () {
             if ($('#writeAddrModel #intelligenceWrite').val() === '') {
                 $('#writeAddrModel .disableTip').show().prev().find('textarea').css('borderColor', '#FF5858')
             } else {
-                // alert($('#writeAddrModel #intelligenceWrite').val());
                 $.ajax({
                     type: "post",
-                    url: "../../anon/smartFillAddress",
+                    url: "../../anon/smartFillAddress",//填写地址
                     dataType: "JSON",
                     data: {"addressInfo": $('#writeAddrModel #intelligenceWrite').val()},
                     success: function (res) {
-                        // var obj = eval("(" + res + ")");
-                        // alert("obj.msg="+obj.msg);
-
                         if (res.code == "1000") {
                             setAddFunc(res.data, $('#znType').val());
                             $('.reg-protocol').hide()
                             $(".city-picker-dropdown").hide();  // 防止地址控件弹出
-                            $('.intelligenceTip').slideDown(1000);
+                            $('.intelligenceTip').slideDown(500);
                             setTimeout(function () {
-                                $('.intelligenceTip').slideUp(1000)
+                                $('.intelligenceTip').slideUp(500)
                             }, 5000)
                         } else {
                             $('#writeAddrModel .disableTip').show().prev().find('textarea').css('borderColor', '#FF5858');
@@ -781,40 +704,36 @@ line-height:32px;font-family:微软雅黑">本协议履行过程中如发生争�
             var sendAreaOld = "";
             var receiveAreaOld = "";
             var addType;
-            var addressType;
             if (aType == "01") {    // 寄件
                 addType = "send";
-                addressType = "sender";
             } else if (aType == "02") { // 收件
                 addType = "receive";
-                addressType = "accept"
             }
-            // alert(aBook.rname);
-            // select(addressType + "Province",aBook.province)
-
-            select((addressType + "Province"), (addressType + "City"), (addressType + "Area"), aBook.province, aBook.city, aBook.areas)
             $("#" + addType + "Name").val(aBook.rname);
-            // $("#" + addressType + "Province").val(aBook.province);
-            // cmbSelect(addressType + "Province",aBook.province);
-            // $("#" + addressType + "Province").select(aBook.province);
-            // $("#" + addressType + "ProvinceName").val(aBook.provinceCode);
-            // $("#" + addressType + "CityCode").val(aBook.cityCode);
-            // $("#" + addressType + "City").val(aBook.city);
-            // $("#" + addressType + "Area").val(aBook.areas);
-            // $("#" + addressType + "City").select(aBook.city);
-            // $("#" + addressType + "Area").select(aBook.areas);
-            // $("#" + addType + "RegionCode").val(aBook.countyCode);
-            // $("#" + addType + "RegionName").val(aBook.county);
+            $("#" + addType + "ProvinceCode").val(aBook.province);
+            $("#" + addType + "ProvinceName").val(aBook.provinceCode);
+            $("#" + addType + "CityCode").val(aBook.cityCode);
+            $("#" + addType + "CityName").val(aBook.city);
+            $("#" + addType + "RegionCode").val(aBook.countyCode);
+            $("#" + addType + "RegionName").val(aBook.county);
             $("#" + addType + "Address").val(aBook.address);
             var checkTel = /^\d{11}$/g;
-            if (checkTel.test(aBook.phoneNum)) {
-                $("#" + addType + "Phone").val(aBook.phoneNum);
+            if (checkTel.test(aBook.telenum)) {
+                $("#" + addType + "Phone").val(aBook.telenum);
             } else {
-                $("#" + addType + "Tel").val(aBook.phoneNum);
+                $("#" + addType + "Tel").val(aBook.telenum);
             }
-
-            // alert($("#"+addressType+"City").children(2).val())
-
+            $("#" + addType + "Area").citypicker("reset");
+            $("#" + addType + "Area").citypicker("destroy");
+            $("#" + addType + "Area").citypicker({
+                province: aBook.province,
+                city: aBook.city,
+                district: aBook.county,
+                onChange: function () {
+                    transportPriceCheckFunc();
+                    searchAmap(aType);
+                }
+            });
         }
 
         // 关闭地址弹框
@@ -831,21 +750,23 @@ line-height:32px;font-family:微软雅黑">本协议履行过程中如发生争�
                 } else {
                     $(this).next().find('.surplusLen').text(_val.length);
                 }
-            })
+            });
+            //登录校验
             // $.ajax({
-            //     type : "post",
-            //     url : "/mytt/customerAction!validateCustomer.action",
+            //     type: "post",
+            //     url: "/mytt/customerAction!validateCustomer.action",
             //     dataType: "JSON",
-            //     success : function(data) {
-            //         if (data != null) {                    if (data.status == "02") {
-            //             window.location.href = "/myOnlineOrder.action";
-            //         }
+            //     success: function (data) {
+            //         if (data != null) {
+            //             if (data.status == "02") {
+            //                 window.location.href = "/myOnlineOrder.action";
+            //             }
             //         } else {
             //             swal("", "登录校验失败", "error");
             //         }
             //     },
-            //     error:function(data){
-            //         // swal("", "登录校验异常！", "error");
+            //     error: function (data) {
+            //         swal("", "登录校验异常！", "error");
             //     }
             // });
 
@@ -938,14 +859,9 @@ line-height:32px;font-family:微软雅黑">本协议履行过程中如发生争�
 <script type="text/javascript" src="/js/index1.js"></script>
 <script type="text/javascript" src="/js/expressServiceTab.js"></script>
 <script type="text/javascript" src="/js/Base64.js"></script>
-<!--<script src="/js/placeOrder.js"></script>-->
+<script src="/js/placeOrder.js"></script>
 <script src="/js/env.js"></script>
 <script type="text/javascript" src="/js/common.js"></script>
 
-<script type="text/javascript">
-    addressInit('senderProvince', 'senderCity', 'senderArea');
-    addressInit('acceptProvince', 'acceptCity', 'acceptArea');
-</script>
-<script type="text/javascript"></script>
 </body>
 </html>

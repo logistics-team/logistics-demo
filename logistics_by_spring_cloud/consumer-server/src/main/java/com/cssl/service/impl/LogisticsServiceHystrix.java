@@ -2,6 +2,7 @@ package com.cssl.service.impl;
 
 import com.cssl.entity.ExpressGoods;
 import com.cssl.entity.LogisticsStatus;
+import com.cssl.entity.LogisticsUser;
 import com.cssl.service.LogisticsService;
 import org.springframework.stereotype.Component;
 
@@ -22,26 +23,41 @@ public class LogisticsServiceHystrix implements LogisticsService {
         return "数据获取异常";
     }
 
-    //测试
-//    @Override
-//    public String find(LogisticsStatus status) {
-//        return "找不到资源";
-//    }
-//
-//    @Override
-//    public String save(ExpressGoods goods) {
-//        return "客户端连接失败！请检查网络信息";
-//    }
-//
-//    @Override
-//    public String getJson() {
-//        return "客服端网络问题！";
-//    }
-//
-//    @Override
-//    public String isOk(ExpressGoods goods) {
-//        return "网络连接中断！！!...";
-//    }
+    /**
+     * 查询全部地区
+     * @return json
+     */
+    @Override
+    public String cityAreasFindAll() {
+        return "数据获取失败";
+    }
+
+    /**
+     * 按照城市等级查询
+     *
+     * @param level
+     * @return json
+     */
+    @Override
+    public String cityAreasFindByLevel(int level) {
+        return "啊♂";
+    }
+
+    /**
+     * 按照id查询城市
+     *
+     * @param id id
+     * @return json
+     */
+    @Override
+    public String cityAreasFindByID(int id) {
+        return "李嘉兴是沙雕";
+    }
+
+    @Override
+    public String freightEstimate(Map<String,Object> map) {
+        return null;
+    }
 
     @Override
     public String confirmOrder(Map<String, Object> map) {
@@ -52,6 +68,21 @@ public class LogisticsServiceHystrix implements LogisticsService {
     @Override
     public String findAddrByProvincesCity(String addr_p, String addr_c) {
         return "查询地址失败";
+    }
+
+    @Override
+    public String updateUser(LogisticsUser logisticsUser) {
+        return null;
+    }
+
+    @Override
+    public String showAllOrders(String search, Integer pageIndex, Integer pageSize) {
+        return null;
+    }
+
+    @Override
+    public String getAddressDataInfo(String parentCode) {
+        return null;
     }
 
 

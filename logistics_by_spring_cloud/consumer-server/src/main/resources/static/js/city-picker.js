@@ -408,7 +408,7 @@
                 // 获取数据库市、区数据
                 $.ajax({
                     type : "post",
-                    url : "/myMdmAddress!getCityDistrictData.action",
+                    url : "../../address/getAddressDataInfo",
                     async: false,
                     data: {"parentCode": code, "areaType": $select.attr("data-count")},
                     dataType: "JSON",

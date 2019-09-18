@@ -13,22 +13,26 @@
 	<meta name="format-detection" content="email=no"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
 	<meta http-equiv="Pragma"   content="no-cache">
-	<link href="css/public.css" rel="stylesheet" type="text/css" />
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<link href="css/mystyle.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" type="text/css" href="css/city-picker.css" />
-	<link type="text/css" rel="stylesheet" href="css/common.css">
-	<link type="text/css" rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/sweetalert.css">
-	<link type="text/css" rel="stylesheet" href="css/expressServiceTab.css">
+	<link href="/css/public.css" rel="stylesheet" type="text/css" />
+	<link href="/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="/css/mystyle.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="/css/city-picker.css" />
+	<link type="text/css" rel="stylesheet" href="/css/common.css">
+	<link type="text/css" rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
+	<link type="text/css" rel="stylesheet" href="/css/expressServiceTab.css">
 	
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
 	
 
-	<script src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/sweetalert-dev.js"></script>
-	<script type="text/javascript" src="js/goUrl.js"></script>
-	<script type="text/javascript" src="js/env.js"></script>
+	<script src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/sweetalert-dev.js"></script>
+	<script type="text/javascript" src="/js/goUrl.js"></script>
+	<script type="text/javascript" src="/js/env.js"></script>
+    <script src="/js/method.js"></script>
+    <script>
+        addressInit('acceptProvince', 'acceptCity', 'acceptArea');
+    </script>
 
 
 </head>
@@ -46,7 +50,7 @@
 		<div class="fixedWid">
 			<div class="navWrap clearfix">
 				<div class="logo fl">
-					<a href="/"><img src="images/logo.png" class="logoimg"></a>
+					<a href="/"><img src="/images/logo.png" class="logoimg"></a>
 				</div>
 				<div class="fr">
 					<a href="/" class="link">首页</a><span
@@ -116,7 +120,7 @@
 								</div>
 							</div>
 						</span><span class="kfdh"><img
-						src="images/kfrx.png" class="kfrx kfrx_1"></span>
+						src="/images/kfrx.png" class="kfrx kfrx_1"></span>
 				</div>
 			</div>
 		</div>
@@ -124,18 +128,18 @@
 
 <!-- ftl start -->
 
-    <script src="js/jquery.validate.js"></script>
-    <script src="js/additional-methods.js"></script>
-    <script src="js/messages_zh.js"></script>
-    <script src="js/city-picker.data.js"></script>
-    <script src="js/city-picker.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
-    <script type="text/javascript" src="js/jquery.pagination.js"></script>
+    <script src="/js/jquery.validate.js"></script>
+    <script src="/js/additional-methods.js"></script>
+    <script src="/js/messages_zh.js"></script>
+    <script src="/js/city-picker.data.js"></script>
+    <script src="/js/city-picker.js"></script>
+    <script type="text/javascript" src="/js/login.js"></script>
+    <script type="text/javascript" src="/js/jquery.pagination.js"></script>
     <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.13&key=a820db6476bc0642dfbf492706a7c989&plugin=AMap.Autocomplete"></script>
 
-    <link type="text/css" rel="stylesheet" href="css/renCaiZhaoPin.css">
-    <link type="text/css" rel="stylesheet" href="css/pagination.css">
-    <link type="text/css" rel="stylesheet" href="css/expressServiceTab.css">
+    <link type="text/css" rel="stylesheet" href="/css/renCaiZhaoPin.css">
+    <link type="text/css" rel="stylesheet" href="/css/pagination.css">
+    <link type="text/css" rel="stylesheet" href="/css/expressServiceTab.css">
     <style>
         .amap-sug-result{
             /*margin-left: 10px !important;*/
@@ -157,7 +161,7 @@
                 <a href="/myPerson.action">
                     
                     
-                        <img  src="images/0000000000_01.jpg" />
+                        <img  src="/images/0000000000_01.jpg" />
                     
                     <div>155****1419</div>
                 </a>
@@ -214,8 +218,8 @@
     <!--新增地址弹出框-->
     <div class="AddAddressModel">
         <div class="AddAddressGroup">
-            <div class="selectModelTitle" style="display: block">管理地址<img src="images/close.png" class="closeModel closePic"></div>
-            <div class="intelligenceTip"><img src="images/tips.png">请检查拆分地址是否准确，如有遗漏请及时补充</div>
+            <div class="selectModelTitle" style="display: block">管理地址<img src="/images/close.png" class="closeModel closePic"></div>
+            <div class="intelligenceTip"><img src="/images/tips.png">请检查拆分地址是否准确，如有遗漏请及时补充</div>
             <form id="manageAddressBookForm">
                 <input type="hidden" id="aId" name="addressBook.id" />
                 <input type="hidden" id="custCode" name="addressBook.custCode" />
@@ -232,14 +236,11 @@
                         <div class="leftLabelCon"><span>*</span>
                             <label>地址</label>
                         </div>
-                        <input placeHolder="请选择省 请选择市 请选择区" id="area" name="addressBook.area">
+<!--                        <input placeHolder="请选择省 请选择市 请选择区" id="area" name="addressBook.area">-->
+                        <select id="acceptProvince" name="acceptProvince" style="width: 90px;"></select>
+                        <select id="acceptCity" name="acceptCity" style="width: 90px;"></select>
+                        <select id="acceptArea" name="acceptArea" style="width: 90px;"></select>
                     </div>
-                    <input type="hidden" id="provinceCode" name="addressBook.provinceCode" />
-                    <input type="hidden" id="cityCode" name="addressBook.cityCode" />
-                    <input type="hidden" id="regionCode" name="addressBook.regionCode" />
-                    <input type="hidden" id="provinceName" name="addressBook.provinceName" />
-                    <input type="hidden" id="cityName" name="addressBook.cityName" />
-                    <input type="hidden" id="regionName" name="addressBook.regionName" />
                     <div class="addModelRow">
                         <input placeHolder="街道名称和小区名称" type="text" class="streetname" id="address" name="addressBook.address" style="display: block">
                     </div>
@@ -1054,12 +1055,12 @@
         <a href="/staticFiles/pages/recruitment.html?tab=2" class="link">招聘介绍</a>
       </div>
       <div class="linkgroup fr smcodediv" style="text-align:center">
-        <img class="smcode" src="images/code_dyh.png" alt="">
+        <img class="smcode" src="/images/code_dyh.png" alt="">
         <span class="info">天天相知微信</span>
         <span class="info">订阅号扫码关注</span>
       </div>
       <div class="linkgroup fr smcodediv">
-        <img class="smcode" src="images/code_fwh.png" alt="">
+        <img class="smcode" src="/images/code_fwh.png" alt="">
         <span class="info">天天快递微信</span>
         <span class="info">服务号扫码关注</span>
       </div>
@@ -1070,7 +1071,7 @@
   <div class="fixedWid">
     <p class='info'>©版权所有 2016 天天快递有限公司<a style="color: #A6A7AB;" href="http://www.beian.miit.gov.cn/" target="_blank"> 浙ICP备13006085</a>号
 
-    <a href="images/businessLicense.png" target="_blank" style="color: #A6A7AB;" > | 快递业务经营许可证</a><a href="/staticFiles/pages/businessLincence.html" target="_blank" style="color: #A6A7AB;" > | <img src="images/yyzz.png" style="width: 19px;height:19px;vertical-align: middle;"> 营业执照</a></p>
+    <a href="/images/businessLicense.png" target="_blank" style="color: #A6A7AB;" > | 快递业务经营许可证</a><a href="/staticFiles/pages/businessLincence.html" target="_blank" style="color: #A6A7AB;" > | <img src="/images/yyzz.png" style="width: 19px;height:19px;vertical-align: middle;"> 营业执照</a></p>
   </div>
 </div>
 <div class="selfServiceBtnList">
@@ -1089,9 +1090,9 @@
 </div>
 </div>
 
-<script type="text/javascript" src="js/index1.js"></script>
-<script type="text/javascript" src="js/expressServiceTab.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="/js/index1.js"></script>
+<script type="text/javascript" src="/js/expressServiceTab.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
 
 </body>
 </html>

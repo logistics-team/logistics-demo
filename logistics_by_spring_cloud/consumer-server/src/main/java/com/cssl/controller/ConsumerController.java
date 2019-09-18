@@ -1,7 +1,9 @@
 package com.cssl.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.cssl.entity.LogisticsStatus;
 import com.cssl.service.*;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -86,60 +88,113 @@ public class ConsumerController {
         int i=Integer.parseInt(s);
         return i;
     }
-    //参数
-//    Integer it_id, BigDecimal weight, BigDecimal eg_appraised_price, String eg_special_context,
-//    String eu_receipt_name, Integer ep_receipt_id, Integer ec_receipt_id,Integer ea_receipt_id,
-//    String eu_receipt_phone, String eu_sender_name, Integer ep_sender_id,Integer ec_sender_id,
-//    Integer ea_sender_id, String eu_sender_phone, Integer eg_id
 
-
+    /**
+     *   寄件下单
+     * @param sendProvinceCode
+     * @param sendCityCode
+     * @param sendRegionCode
+     * @param sendProvinceName
+     * @param sendCityName
+     * @param sendRegionName
+     * @param sendAddress
+     * @param sendName
+     * @param sendTel
+     * @param sendPhone
+     * @param receiveProvinceCode
+     * @param receiveCityCode
+     * @param receiveRegionCode
+     * @param receiveProvinceName
+     * @param receiveCityName
+     * @param receiveRegionName
+     * @param receiveAddress
+     * @param receiveName
+     * @param receiveTel
+     * @param receivePhone
+     * @param goodsType
+     * @param goodsWeight
+     * @param insuranceMoney
+     * @param goodsRemarks
+     * @param transport
+     * @return
+     */
     @PostMapping("confirmSent")
-    public String confirmOrder(String senderProvince, String senderCity, String senderArea, String sendAddress, String sendName, String sendTel, String sendPhone,
-                               String acceptProvince, String acceptCity, String acceptArea, String receiveAddress, String receiveName, String receiveTel, String receivePhone,
-                               String goodsType, String goodsWeight, String insuranceMoney, String goodsRemarks, String transport) {
-//        System.out.println("senderProvince = " + senderProvince);
-//        System.out.println("senderCity = " + senderCity);
-//        System.out.println("senderArea = " + senderArea);
-//        System.out.println("sendAddress = " + sendAddress);
-//        System.out.println("sendName = " + sendName);
-//        System.out.println("sendTel = " + sendTel);
-//        System.out.println("sendPhone = " + sendPhone);
-//        System.out.println("acceptProvince = " + acceptProvince);
-//        System.out.println("acceptCity = " + acceptCity);
-//        System.out.println("acceptArea = " + acceptArea);
-//        System.out.println("receiveAddress = " + receiveAddress);
-//        System.out.println("receiveName = " + receiveName);
-//        System.out.println("receiveTel = " + receiveTel);
-//        System.out.println("receivePhone = " + receivePhone);
-//        System.out.println("goodsType = " + goodsType);
-//        System.out.println("goodsWeight = " + goodsWeight);
-//        System.out.println("insuranceMoney = " + insuranceMoney);
-//        System.out.println("goodsRemarks = " + goodsRemarks);
-//        System.out.println("transport = " + transport);
+    @ResponseBody
+    public String confirmOrder(String sendProvinceCode,String sendCityCode,String sendRegionCode,
+                               String sendProvinceName,String sendCityName,String sendRegionName,
+                               String sendAddress,String sendName,String sendTel,String sendPhone,
+                               String receiveProvinceCode,String receiveCityCode,String receiveRegionCode,
+                               String receiveProvinceName,String receiveCityName,String receiveRegionName,
+                               String receiveAddress,String receiveName,String receiveTel,String receivePhone,
+                               String goodsType,String goodsWeight,String insuranceMoney,String goodsRemarks,
+                               String transport){
         Map<String, Object> map = new HashMap<String, Object>();
-        map.put("sendProvince", senderProvince);
-        map.put("sendCity", senderCity);
-        map.put("sendArea", senderArea);
+        //寄件人信息
+        map.put("sendProvinceCode", sendProvinceCode);
+        map.put("sendCityCode", sendCityCode);
+        map.put("sendRegionCode", sendRegionCode);
+        map.put("sendProvinceName", sendProvinceName);
+        map.put("sendCityName", sendCityName);
+        map.put("sendRegionName", sendRegionName);
         map.put("sendAddress", sendAddress);
         map.put("sendName", sendName);
         map.put("sendTel", sendTel);
         map.put("sendPhone", sendPhone);
-        map.put("receiveProvince", acceptProvince);
-        map.put("receiveCity", acceptCity);
-        map.put("receiveArea", acceptArea);
+
+        //收寄人信息
+        map.put("receiveProvinceCode", receiveProvinceCode);
+        map.put("receiveCityCode", receiveCityCode);
+        map.put("receiveRegionCode", receiveRegionCode);
+        map.put("receiveProvinceName", receiveProvinceName);
+        map.put("receiveCityName", receiveCityName);
+        map.put("receiveRegionName", receiveRegionName);
         map.put("receiveAddress", receiveAddress);
         map.put("receiveName", receiveName);
         map.put("receiveTel", receiveTel);
         map.put("receivePhone", receivePhone);
+
+        //物品信息
         map.put("goodsType", goodsType);
         map.put("goodsWeight", goodsWeight);
         map.put("insuranceMoney", insuranceMoney);
         map.put("goodsRemarks", goodsRemarks);
         map.put("transport", transport);
-//        logisticsService.confirmOrder(map);
-//        System.out.println("logisticsService.confirmOrder(map) = " + logisticsService.confirmOrder(map));//转发到沙箱支付页面
+
         return logisticsService.confirmOrder(map);
     }
+
+
+    /**
+     * 运费预估   2
+     * @return
+     */
+    @RequestMapping("freightEstimate")
+    @ResponseBody
+    public String freightEstimate(String sendProvinceCode,String sendRegionCode,String receiveProvinceCode,String receiveRegionCode,String goodsWeight,String insuranceMoney,Boolean transport){
+        System.out.println("sendProvinceCode = " + sendProvinceCode);           //发出省
+        System.out.println("sendRegionCode = " + sendRegionCode);               //发出区县
+        System.out.println("receiveProvinceCode = " + receiveProvinceCode);     //接收省
+        System.out.println("receiveRegionCode = " + receiveRegionCode);         //接收 区县
+        System.out.println("goodsWeight = " + goodsWeight);                     //物品重量
+        System.out.println("insuranceMoney = " + insuranceMoney);               //保价
+        System.out.println("transport = " + transport);
+        boolean isProvince = sendProvinceCode.equals(receiveProvinceCode);
+        System.out.println("isProvince = " + isProvince);
+        boolean isMoney =  null == insuranceMoney;
+        System.out.println("isMoney = " + isMoney);
+        Map<String,Object> map = new HashMap();
+        map.put("sendRegionCode",Integer.parseInt(sendRegionCode));   //状态
+        map.put("receiveRegionCode",Integer.parseInt(receiveRegionCode));          //首重
+        map.put("goodsWeight",Double.valueOf(goodsWeight));    //续重
+        map.put("transport",transport);
+        map.put("isProvince",isProvince);   //保费
+        map.put("insuranceMoney",isMoney);      //预计运费
+
+//        JSON.toJSONString(map);
+
+        return logisticsService.freightEstimate(map);
+    }
+
 
 
     /**
@@ -151,17 +206,19 @@ public class ConsumerController {
      */
     @ResponseBody
     @PostMapping("login")
-    public String userLogin(String j_username, String j_password, String encodinginput, HttpSession session) {
+    public String userLogin(String j_username, String j_password, String encodinginput) {
         String s = securityService.userLogin(j_username, j_password, encodinginput);
-//        System.out.println("s = " + s);
         return s;
     }
 
+    /**
+     *   获取登录的用户信息 2
+     * @return
+     */
     @ResponseBody
     @GetMapping("getUserInfo")
     public String getUserInfo(){
         String userByPhone = infoService.findUserByPhone();
-        System.out.println("userByPhone = " + userByPhone);
         return userByPhone;
     }
 
@@ -171,7 +228,6 @@ public class ConsumerController {
      */
     @RequestMapping("/logout")
     public String logout() {
-//        System.out.println("退出 ！");
         return securityService.logout();
     }
 
@@ -192,9 +248,7 @@ public class ConsumerController {
     @ResponseBody
     @RequestMapping("/isExistence")    //是否重复手机号
     public String isExistence(String phone){    //手机号是否已经注册
-//        System.out.println("phone = " + phone);
         String existence = securityService.isExistence(phone);
-//        System.out.println("existence = " + existence);
         return existence;
     }
 
@@ -221,11 +275,19 @@ public class ConsumerController {
     }
 
 
+//    @ResponseBody
+//    @RequestMapping("getAddr")
+//    public String getAddr(String addr_p,String addr_c){
+//        String address = addressInfo.findAddrByProvincesCity(addr_p, addr_c);
+//        return address;
+//    }
+
+    //查询所有的订单
+    @RequestMapping("showOrdersAll")
     @ResponseBody
-    @RequestMapping("getAddr")
-    public String getAddr(String addr_p,String addr_c){
-        String address = addressInfo.findAddrByProvincesCity(addr_p, addr_c);
-        System.out.println("address = " + address);
-        return address;
+    public String htAllOrder(String search,Integer pageIndex,Integer pageSize) throws JsonProcessingException {
+        String orders = logisticsService.showAllOrders(search,pageIndex,pageSize);
+
+        return orders;
     }
 }

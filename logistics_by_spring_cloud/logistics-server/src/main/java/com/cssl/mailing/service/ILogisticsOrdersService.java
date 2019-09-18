@@ -3,6 +3,7 @@ package com.cssl.mailing.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.cssl.entity.LogisticsOrders;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,6 +17,9 @@ import java.util.Map;
 public interface ILogisticsOrdersService extends IService<LogisticsOrders> {
 
     //订单生成
-    LogisticsOrders generateOrders(Map<String,Object> map);
+    Object generateOrders(Map<String,Object> map);
+
+    //查询所有的订单
+    List<LogisticsOrders> showAllLogisticsOrders(Integer loId);
 
 }

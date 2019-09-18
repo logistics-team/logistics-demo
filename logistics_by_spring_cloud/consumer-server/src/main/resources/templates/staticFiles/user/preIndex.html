@@ -31,7 +31,7 @@
     <script type="text/javascript" src="/js/sweetalert-dev.js"></script>
     <script type="text/javascript" src="/js/goUrl.js"></script>
     <script type="text/javascript" src="/js/env.js"></script>
-
+    <script type="text/javascript" src="/js/lc_js.js"></script>
     <script type="text/javascript">
         $.getJSON("../../guest/getUserInfo", function (data) {
             if (data != null) {
@@ -48,21 +48,23 @@
         });
     </script>
 
+
 </head>
 <body>
-
 <div class="wrapper admin-content twolevelWrap">
     <!--Created by 17120847 on 2018/5/23.-->
+    <!--Created by 17120847 on 2018/5/23.-->
+    <!--以下导入header.html.-->
     <div class="logAndRegister">
         <div class="fixedWid clearfix">
             <a href="javascript:void(0)" class="fl" onclick="addFavorite();">加入收藏</a>
             <div class="fr normal"><a href="/passPortIndex.action?login_type=0">登录</a><span></span><a
                     href="/register.action">注册</a></div>
-            <div style="display:none" class="fr sucess"><a href="/staticFiles/user/preIndex.html"><span class="username"
-                                                                                                        id="username"></span></a><a
-                    class="exit" href="../../guest/logout">退出</a></div>
+            <div style="display:none" class="fr sucess"><a href="/staticFiles/user/preIndex.html"><span class="username" id="username"></span></a>
+                <a class="exit" href="../../guest/logout">退出</a></div>
         </div>
     </div>
+    <!--以上导入header.html.-->
     <div id="navWrap" class="headerWrap whiteBack commonWrap">
         <div class="fixedWid">
             <div class="navWrap clearfix">
@@ -160,7 +162,7 @@
     <script src="/js/city-picker.js"></script>
     <script type="text/javascript" src="/js/expressServiceTab.js"></script>
     <script type="text/javascript" src="/js/login.js"></script>
-    <script type="text/javascript" src="/js/pageOrderInfo.js"></script>
+    <script type="text/javascript" src="/js/pageOrder.js"></script>
 
     <link type="text/css" rel="stylesheet" href="/css/renCaiZhaoPin.css">
     <div style="background:url(/images/customerCenter.jpg) no-repeat" class="t_content t_banner">
@@ -202,8 +204,6 @@
                     </div>
                 </div>
                 <div id="detail">
-
-
                 </div>
             </div>
         </div>
@@ -213,24 +213,21 @@
             <div class="leftMainTitle">个人中心</div>
             <div class="personInfo">
                 <a href="/myPerson.action">
-
-                    <img src="http://47.102.85.126:88/image/001.png"/>
-                    <div></div>
-
-
+                    <img src="/images/headerpic.png"/>
+                    <div>155****1419</div>
                 </a>
             </div>
             <div class="leftMainContent">
-                <a href="/myOrderNew.action">
+                <a href="#">
                     <div class="leftNodeTab leftNodeTabActive"> 我的订单</div>
                 </a>
-                <a href="/myOnlineOrder.action">
+                <a href="/staticFiles/user/preOrder.html">
                     <div class="leftNodeTab">我要寄件</div>
                 </a>
-                <a href="/myAddress.action">
+                <a href="/staticFiles/user/myAddress.html">
                     <div class="leftNodeTab">我的地址簿</div>
                 </a>
-                <a href="/myPerson.action">
+                <a href="/staticFiles/user/myPerson.html">
                     <div class="leftNodeTab">会员信息</div>
                 </a>
                 <a href="/myWorkOrder.action">
@@ -241,11 +238,11 @@
         <div style="display:inline-block;" class="rightTabContent">
             <div class="rightSmallTitle myOrderTitle bold">我的订单</div>
             <div class="netQueryInput clearfix">
-                <div class="nodeTab">全部<span>(0)</span></div>
-                <div class="nodeTab">未取件<span>(0)</span></div>
-                <div class="nodeTab">运送中<span>(0)</span></div>
-                <div class="nodeTab">已签收<span>(0)</span></div>
-                <div class="nodeTab">已取消<span>(0)</span></div>
+                <div class="nodeTab">全部<span class="index1">(0)</span></div>
+                <div class="nodeTab notToTake">未取件<span class="index2">(0)</span></div>
+                <div class="nodeTab inTheTransport">运送中<span class="index3">(0)</span></div>
+                <div class="nodeTab signed">已签收<span class="index4">(0)</span></div>
+                <div class="nodeTab canceled">已取消<span class="index5">(0)</span></div>
             </div>
             <div class="cont">
                 <div style="display:block;" class="tabSwitchContent clearfix">
@@ -270,21 +267,12 @@
                             </tr>
                             </thead>
                             <tbody>
-
                             </tbody>
                         </table>
                         <form method='post' class="customerInfocont" id='pageUtilForm'>
                             <div class="tablegroup">
-                                <div class="page1 btngroup"><a class="btn link" href="#">首页</a>
-                                    <a class="current btn" style="color: #fff;" href='#'
-                                       onclick="turnPage('/mytt/customerAction!myOrderNewPages.action?parentUrl=All&page=' ,'/mytt/customerAction!myOrderNewPages.action?parentUrl=All&page=', 1);return false;">1</a>
-
-
-                                    <input type="hidden" name="curPage" id="curPage" value="1"/><input type="hidden"
-                                                                                                       name="Parameter"
-                                                                                                       id="Parameter"
-                                                                                                       value="?parentUrl=All&page="/><input
-                                            type="hidden" name="t" id="t" value="1909062015271650036"/>
+                                <div class="page1 btngroup listAll">
+                                    <a class="btn link" href="#">首页</a>
                                 </div>
                             </div>
                         </form>
@@ -317,16 +305,9 @@
                         </table>
                         <form method='post' class="customerInfocont" id='pageUtilForm'>
                             <div class="tablegroup">
-                                <div class="page1 btngroup"><a class="btn link" href="#">首页</a>
-                                    <a class="current btn" style="color: #fff;" href='#'
-                                       onclick="turnPage('/mytt/customerAction!myOrderNewPages.action?parentUrl=Not&page=' ,'/mytt/customerAction!myOrderNewPages.action?parentUrl=Not&page=', 1);return false;">1</a>
+                                <div class="page1 btngroup list2" >
+                                    <a class="btn link" href="#">首页</a>
 
-
-                                    <input type="hidden" name="curPage" id="curPage" value="1"/><input type="hidden"
-                                                                                                       name="Parameter"
-                                                                                                       id="Parameter"
-                                                                                                       value="?parentUrl=Not&page="/><input
-                                            type="hidden" name="t" id="t" value="1909062015271650036"/>
                                 </div>
                             </div>
                         </form>
@@ -359,16 +340,9 @@
                         </table>
                         <form method='post' class="customerInfocont" id='pageUtilForm'>
                             <div class="tablegroup">
-                                <div class="page1 btngroup"><a class="btn link" href="#">首页</a>
-                                    <a class="current btn" style="color: #fff;" href='#'
-                                       onclick="turnPage('/mytt/customerAction!myOrderNewPages.action?parentUrl=Transport&page=' ,'/mytt/customerAction!myOrderNewPages.action?parentUrl=Transport&page=', 1);return false;">1</a>
+                                <div class="page1 btngroup list3" >
+                                    <a class="btn link" href="#">首页</a>
 
-
-                                    <input type="hidden" name="curPage" id="curPage" value="1"/><input type="hidden"
-                                                                                                       name="Parameter"
-                                                                                                       id="Parameter"
-                                                                                                       value="?parentUrl=Transport&page="/><input
-                                            type="hidden" name="t" id="t" value="1909062015271650036"/>
                                 </div>
                             </div>
                         </form>
@@ -402,16 +376,9 @@
                         </table>
                         <form method='post' class="customerInfocont" id='pageUtilForm'>
                             <div class="tablegroup">
-                                <div class="page1 btngroup"><a class="btn link" href="#">首页</a>
-                                    <a class="current btn" style="color: #fff;" href='#'
-                                       onclick="turnPage('/mytt/customerAction!myOrderNewPages.action?parentUrl=SignIn&page=' ,'/mytt/customerAction!myOrderNewPages.action?parentUrl=SignIn&page=', 1);return false;">1</a>
+                                <div class="page1 btngroup list4" >
+                                    <a class="btn link" href="#">首页</a>
 
-
-                                    <input type="hidden" name="curPage" id="curPage" value="1"/><input type="hidden"
-                                                                                                       name="Parameter"
-                                                                                                       id="Parameter"
-                                                                                                       value="?parentUrl=SignIn&page="/><input
-                                            type="hidden" name="t" id="t" value="1909062015271650036"/>
                                 </div>
                             </div>
                         </form>
@@ -444,16 +411,8 @@
                         </table>
                         <form method='post' class="customerInfocont" id='pageUtilForm'>
                             <div class="tablegroup">
-                                <div class="page1 btngroup"><a class="btn link" href="#">首页</a>
-                                    <a class="current btn" style="color: #fff;" href='#'
-                                       onclick="turnPage('/mytt/customerAction!myOrderNewPages.action?parentUrl=Cancel&page=' ,'/mytt/customerAction!myOrderNewPages.action?parentUrl=Cancel&page=', 1);return false;">1</a>
-
-
-                                    <input type="hidden" name="curPage" id="curPage" value="1"/><input type="hidden"
-                                                                                                       name="Parameter"
-                                                                                                       id="Parameter"
-                                                                                                       value="?parentUrl=Cancel&page="/><input
-                                            type="hidden" name="t" id="t" value="1909062015271650036"/>
+                                <div class="page1 btngroup list5" >
+                                    <a class="btn link" href="#" name="1">首页</a>
                                 </div>
                             </div>
                         </form>

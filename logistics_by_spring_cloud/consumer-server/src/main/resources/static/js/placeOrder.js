@@ -100,7 +100,7 @@ $.validator.setDefaults({
 });
 
 $().ready(function() {
-    init()
+    // init()
     $('#receiveAddress').on('input propertychange', function() {
         var patt1 = /[^(·\-\(\)a-zA-Z0-9\u4e00-\u9fa5)]/ig;
         $('#receiveAddress').val($('#receiveAddress').val().replace(patt1,''));
@@ -109,14 +109,14 @@ $().ready(function() {
         var patt1 = /[^(·\-\(\)a-zA-Z0-9\u4e00-\u9fa5)]/ig;
         $('#sendAddress').val($('#sendAddress').val().replace(patt1,''));
     });
-    $('#receiveName').on('input propertychange', function() {
-        var patt1 = /[^a-zA-Z\u4e00-\u9fa5]/ig;
-        $('#receiveName').val($('#receiveName').val().replace(patt1,''));
-    });
-    $('#sendName').on('input propertychange', function() {
-        var patt1 = /[^a-zA-Z\u4e00-\u9fa5]/ig;
-        $('#sendName').val($('#sendName').val().replace(patt1,''));
-    });
+    // $('#receiveName').on('input propertychange', function() {
+    //     var patt1 = /[^a-zA-Z\u4e00-\u9fa5]/ig;
+    //     $('#receiveName').val($('#receiveName').val().replace(patt1,''));
+    // });
+    // $('#sendName').on('input propertychange', function() {
+    //     var patt1 = /[^a-zA-Z\u4e00-\u9fa5]/ig;
+    //     $('#sendName').val($('#sendName').val().replace(patt1,''));
+    // });
     $("#orderForm").validate({
         onfocusout: function(element) {	// 失去焦点时校验，“onfocusout:true”报错
             $(element).valid();
@@ -353,14 +353,14 @@ function submitFunc(toUrl) {
                 }
             },
             success:function(data){
-                var json = eval('(' + data + ')');
-                if(json.code != 1000){
-                    if(sc && !sc.queryStatus()) {
-                        swal("","请进行安全验证。","info");
-                        return false;
-                    }
-                }
-
+                // var json = eval('(' + data + ')');
+                // if(json.code != 1000){
+                //     if(sc && !sc.queryStatus()) {
+                //         swal("","请进行安全验证。","info");
+                //         return false;
+                //     }
+                // }
+                // alert(data);
             }
         });
 
@@ -404,25 +404,54 @@ function submitFunc(toUrl) {
         if ($("#saveAddress02").is(":checked")) {
             saveAddressFunc("02", "receive");
         }
-        var args
-        if(sc) {
-            args = $.param({
-                // token
-                "token" : sc.queryToken()
-            }) + "&" + $("#orderForm").serialize();
-        }else{
-            args = $("#orderForm").serialize();
-        }
+        // var args
+        // if(sc) {
+        //     args = $.param({
+        //         // token
+        //         "token" : sc.queryToken()
+        //     }) + "&" + $("#orderForm").serialize();
+        // }else{
+        //     args = $("#orderForm").serialize();
+        // }
 
         // 提交订单
         $.ajax({
             type : "post",
-            url : "/customerService_submit",
-            data : args,
+            url : "../../guest/confirmSent",
+            data : {
+                //寄件人信息
+                "sendProvinceCode":$("#sendProvinceCode").val(),
+                "sendCityCode":$("#sendCityCode").val(),
+                "sendRegionCode":$("#sendRegionCode").val(),
+                "sendProvinceName":$("#sendProvinceName").val(),
+                "sendCityName":$("#sendCityName").val(),
+                "sendRegionName":$("#sendRegionName").val(),
+                "sendAddress":$("#sendAddress").val(),
+                "sendName":$("#sendName").val(),
+                "sendTel":$("#sendTel").val(),
+                "sendPhone":$("#sendPhone").val(),
+                //收件人信息
+                "receiveProvinceCode":$("#receiveProvinceCode").val(),
+                "receiveCityCode":$("#receiveCityCode").val(),
+                "receiveRegionCode":$("#receiveRegionCode").val(),
+                "receiveProvinceName":$("#receiveProvinceName").val(),
+                "receiveCityName":$("#receiveCityName").val(),
+                "receiveRegionName":$("#receiveRegionName").val(),
+                "receiveAddress":$("#receiveAddress").val(),
+                "receiveName":$("#receiveName").val(),
+                "receiveTel":$("#receiveTel").val(),
+                "receivePhone":$("#receivePhone").val(),
+                //物品信息
+                "goodsType":$("#goodsType").val(),
+                "goodsWeight":$("#goodsWeight").val(),
+                "insuranceMoney":$("#insuranceMoney").val(),
+                "goodsRemarks":$("#goodsRemarks").val(),
+                "transport": $("#transport").val()
+            },
             dataType: "JSON",
             success : function(data) {
                 if (data != null) {
-                    if (true) {//data.returnStatus == "01"
+                    if (data.loId != null) {//data.returnStatus == "01"
                         swal({
                                 title: "下单成功",
                                 type: "info"
@@ -431,16 +460,16 @@ function submitFunc(toUrl) {
                                 window.location.href = toUrl;
                             });
                     } else{
-                        init()
-                        swal("", data.returnMsg, "warning");
+                        // init()
+                        swal("", data, "warning");
                     }
                 } else {
-                    init()
+                    // init()
                     swal("", "下单失败，请稍后再试！", "warning");
                 }
             },
             error:function(data){
-                init()
+                // init()
                 swal("", "下单失败，请稍后再试！", "error");
             }
         });
@@ -468,7 +497,7 @@ function init(){
                      // env : 'sit', // 环境sit，xgpre，prd
                      env : env, // 环境sit，xgpre，prd
                     type : 'inline', // inline:插入按钮, 点击按钮弹出验证码。popup：直接弹出验证码
-                    target : 'captcha', // 验证码按钮插入的 div 的 id，必填
+                    // target : 'captcha', // 验证码按钮插入的 div 的 id，必填
                     ticket : obj.data, // 通过注册接口获取的 ticket
                     width : '250px',  // 按钮或者滑块宽度（必填)
                     height : '40px',  // 滑块或按钮高度(必填，且必须用具体数值，禁止使用百分比)
@@ -636,14 +665,15 @@ function areaExceedCheckFunc(value, element, params) {
 function transportMoneyFunc() {
     var goodsWeight = $("#goodsWeight").val();
     var insuranceMoney = $("#insuranceMoney").val();    // 保值
-    var sendCityCode = getAreaCode("sendArea", "city");
+    var sendProvinceCode =  getAreaCode("sendArea", "province");
     var sendRegionCode = getAreaCode("sendArea", "district");
-    var receiveCityCode = getAreaCode("receiveArea", "city");
+    var receiveProvinceCode =  getAreaCode("receiveArea", "province");
     var receiveRegionCode = getAreaCode("receiveArea", "district");
+    var transport = $("#transport").val()=="空运"?true:false;
     $.ajax({
         type: 'post',
-        url: "/customerService!transportMoneyEstimate.action",
-        data:{ "sendCityCode": sendCityCode, "sendRegionCode": sendRegionCode, "receiveCityCode": receiveCityCode, "receiveRegionCode": receiveRegionCode, "goodsWeight": goodsWeight, "insuranceMoney": insuranceMoney },
+        url: "../../guest/freightEstimate",
+        data:{ "sendProvinceCode": sendProvinceCode, "sendRegionCode": sendRegionCode, "receiveProvinceCode": receiveProvinceCode, "receiveRegionCode": receiveRegionCode, "goodsWeight": goodsWeight, "insuranceMoney": insuranceMoney ,"transport": transport},
         dataType: 'json',
         success: function(data) {
             if (data != null) {
@@ -656,11 +686,11 @@ function transportMoneyFunc() {
                     var td4 = x.insertCell(4);
                     var td5 = x.insertCell(5);
                     td0.innerHTML = "天天标快";
-                    td1.innerHTML = data.count;
-                    td2.innerHTML = data.firstPrice;
-                    td3.innerHTML = data.price;
-                    td4.innerHTML = data.afterRate2;
-                    td5.innerHTML = data.afterRate;
+                    td1.innerHTML = data.weight;
+                    td2.innerHTML = data.first;
+                    td3.innerHTML = data.continued;
+                    td4.innerHTML = data.hedgingcosts;
+                    td5.innerHTML = data.totalprices;
 
                     $("#transportPriceDiv").show();
                     $('.mask').show();

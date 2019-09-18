@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cssl.mailing.mapper.LogisticsUserMapper">
+    <update id="updateUser" parameterType="com.cssl.entity.LogisticsUser" >
+        UPDATE `logistics_user`
+        <trim prefix="set"  suffixOverrides="," suffix=" where `lu_id`=#{luId} ">
+            <if test="#{luUsername}!=null||#{luUsername}!=''">
+                `lu_username`=#{luUsername},
+            </if>
+            <if test="#{luBirthday}!=null||#{luBirthday}!=''">
+                `lu_birthday`=#{luBirthday},
+            </if>
+            <if test="#{luSex}!=null||#{luSex}!=''">
+                `lu_sex`=#{luSex},
+            </if>
+            <if test="#{luImgLocation}!=null||#{luImgLocation}!=''">
+                `lu_img_location`=#{luImgLocation},
+            </if>
+        </trim>
+    </update>
+</mapper>

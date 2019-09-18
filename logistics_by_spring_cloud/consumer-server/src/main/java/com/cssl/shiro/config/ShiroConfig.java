@@ -1,5 +1,6 @@
 package com.cssl.shiro.config;
 
+import com.cssl.controller.ExceptionController;
 import com.cssl.shiro.bean.CustomRealm;
 import com.cssl.shiro.bean.KickoutSessionControlFilter;
 import org.apache.shiro.mgt.SecurityManager;
@@ -54,6 +55,7 @@ public class ShiroConfig {
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
         //游客，开发权限
         filterChainDefinitionMap.put("/guest/**", "anon");
+        filterChainDefinitionMap.put("/address/**", "anon");
         filterChainDefinitionMap.put("/orders/**","anon");  //测试
         filterChainDefinitionMap.put("/index/**", "anon"); //测试
         filterChainDefinitionMap.put("/html/**", "anon"); //测试
@@ -61,6 +63,8 @@ public class ShiroConfig {
 
 
         //用户，需要角色权限 “user”
+        filterChainDefinitionMap.put("/fileUploadController/**", "roles[user]");
+        filterChainDefinitionMap.put("/guest/showOrdersAll", "roles[user]");
         filterChainDefinitionMap.put("/staticFiles/user/**", "roles[user]");
         //管理员，需要角色权限 “admin”
         filterChainDefinitionMap.put("/staticFiles/manage/**", "roles[admin]");
@@ -144,7 +148,7 @@ public class ShiroConfig {
      */
     public RedisManager redisManager() {
         RedisManager redisManager = new RedisManager();
-        redisManager.setHost("47.102.85.126");  //47.102.85.126  127.0.0.1
+        redisManager.setHost("127.0.0.1");  //47.102.85.126  127.0.0.1
         redisManager.setPort(6379);
         redisManager.setExpire(1800);// 配置缓存过期时间
         redisManager.setTimeout(0);
@@ -158,8 +162,11 @@ public class ShiroConfig {
     @Bean
     public DefaultWebSessionManager sessionManager() {
         DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
-        sessionManager.setSessionDAO(redisSessionDAO());
-        return sessionManager;
+        if(sessionManager!=null){
+            sessionManager.setSessionDAO(redisSessionDAO());
+            return sessionManager;
+        }
+        return null;
     }
 
     /**
@@ -204,10 +211,6 @@ public class ShiroConfig {
 
     /***
      * 使授权注解起作用不如不想配置可以在pom文件中加入
-     * <dependency>
-     *<groupId>org.springframework.boot</groupId>
-     *<artifactId>spring-boot-starter-aop</artifactId>
-     *</dependency>
      * @param securityManager
      * @return
      */

@@ -1,6 +1,7 @@
 package com.cssl;
 
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.cssl.entity.ExpressProvincesCityAreas;
 import com.cssl.mailing.mapper.ExpressProvincesCityAreasMapper;
@@ -14,7 +15,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -30,15 +33,14 @@ public class LogisticsServerApplicationTests {
     @Test
     public void contextLoads() {
         System.out.println("**************************************************************************");
-
-        List<ExpressProvincesCityAreas> provinceList =mapper.getProvinceList();
-        System.out.println("provinceList = " + provinceList);
-        for (ExpressProvincesCityAreas prov:provinceList
-             ) {
-            List<ExpressProvincesCityAreas> cityList = mapper.getCityListByProvinceId(prov.getEpcaId());
-            System.out.println("cityList = " + cityList);
+        List<ExpressProvincesCityAreas> addressDataInfo = mapper.getAddressDataInfo("710000");
+        Map<Integer,String> map = new HashMap<>();
+        for (ExpressProvincesCityAreas addr:addressDataInfo){
+            if (addr!=null)
+                map.put(addr.getEpcaId(),addr.getEpcaName());
         }
-
+        String s = JSON.toJSONString(map);
+        System.out.println("s = " + cityAreas.getAddressDataInfo("710000"));
 //        List<ExpressProvincesCityAreas> addrByParentId = mapper.findAddrByParentName("湖南省");
 //        System.out.println("addrByParentId = " + addrByParentId);
 //        System.out.println("provinceList = " + cityAreas.getJson());  格式获取

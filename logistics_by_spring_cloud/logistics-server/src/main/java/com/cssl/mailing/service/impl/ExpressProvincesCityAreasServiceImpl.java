@@ -28,7 +28,6 @@ public class ExpressProvincesCityAreasServiceImpl extends ServiceImpl<ExpressPro
 
     @Override
     public String getJson() {
-        HashMap<String, Object> map_1 = new HashMap<>();
         List<ExpressProvincesCityAreas> parents = mapper.getParent();
         StringBuilder plist = new StringBuilder();
         for (ExpressProvincesCityAreas p:parents){
@@ -67,12 +66,25 @@ public class ExpressProvincesCityAreasServiceImpl extends ServiceImpl<ExpressPro
 
     @Override
     public Map<String,Object> findAddr(String addr_p, String addr_c) {
-        System.out.println("addr = " + addr_p);
         List<ExpressProvincesCityAreas> clist = mapper.findAddrByParentName(addr_p);
         List<ExpressProvincesCityAreas> alist = mapper.findAddrByParentName(addr_c);
         Map<String,Object> map = new HashMap<>();
         map.put("clist",clist);
         map.put("alist",alist);
         return map;
+    }
+
+    @Override
+    public String getAddressDataInfo(String parentCode) {
+        List<ExpressProvincesCityAreas> addressDataInfo = mapper.getAddressDataInfo(parentCode);
+        Map<String,String> map_c = new HashMap<>();
+        for (ExpressProvincesCityAreas addr:addressDataInfo){
+            if (addr!=null)
+                map_c.put(addr.getEpcaId().toString(),addr.getEpcaName());
+        }
+        Map<String,Object> map = new HashMap<>();
+        map.put("returnStatus","01");
+        map.put("areaData",map_c);
+        return JSON.toJSONString(map);
     }
 }

@@ -25,23 +25,16 @@ public class GuestController {
     }
 
 
+    /**
+     * 智能识别 2
+     * @param addressInfo
+     * @return
+     */
     @ResponseBody
     @RequestMapping("smartFillAddress")
     public String smartAddress(String addressInfo){
-        System.out.println("addressInfo = " + addressInfo);
-        List<Map<String, String>> list = AddressResolutionUtil.addressResolution(addressInfo);
-        Map<String,Object> map = new HashMap<>();
-        Map<String, String> addr = null;
-        if (list!=null){
-            addr = list.get(0);
-            map.put("code","1000");
-            map.put("data",addr);
-        }else {
-            map.put("code","0");
-            map.put("msg","智能填写失败！");
-        }
-        System.out.println("map = " + map);
-        return JSON.toJSONString(map);
+        String s = this.addressInfo.findAddrData(addressInfo);
+        return s;
     }
 
 

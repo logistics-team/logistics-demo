@@ -1,12 +1,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script type="text/javascript">
+        $.getJSON("../../guest/getUserInfo", function (data) {
+            if (data != null) {
+                // alert(data.luPhone);
+                $(".sucess").css("display", "block");
+                $(".normal").css("display", "none");
+                $(".username").html(data.luPhone);
+                $(".personInfo div").html(data.luPhone)
+                //如有头像则加载非默认头像
+                if ( null!=data.luImgLocation && ""!=data.luImgLocation){
+                    $(".personInfo img").attr("src",data.luImgLocation);
+                }
+            }
+        });
+    </script>
+    <script src="/js/jquery-1.4.2.min.js"></script>
+</head>
 <body>
-<div th:fragment="header">
-    <div class="logAndRegister">
-        <div class="fixedWid clearfix">
-            <a href="javascript:void(0)" class="fl" onclick="addFavorite();">加入收藏</a>
-            <div class="fr normal"><a href="javascript:window.location.href='login.html';">登录</a><span></span><a href="javascript:;">注册</a></div>
-            <div style="display:none" class="fr sucess"> <a href="javascript:;"><span class="username" id="username"></span></a><a class="exit" href="javascript:;">退出</a></div>
-        </div>
+<!--        头部导入文件-->
+<div class="logAndRegister">
+    <div class="fixedWid clearfix">
+        <a href="javascript:void(0)" class="fl" onclick="addFavorite();">加入收藏</a>
+        <div class="fr normal"><a href="/passPortIndex.action?login_type=0">登录</a><span></span><a
+                href="/register.action">注册</a></div>
+        <div style="display:none" class="fr sucess"><a href="/staticFiles/user/preIndex.html"><span class="username" id="username"></span></a>
+            <a class="exit" href="../../guest/logout">退出</a></div>
     </div>
 </div>
 </body>

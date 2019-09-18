@@ -450,15 +450,15 @@
 
                                 table.render({
                                     elem: '#test5'
-                                    ,url:'/demo.json'
+                                    ,url:'../../anon/complaintInfo'
                                     ,cols: [[
-                                        {field:'loId', width:160, title: '订单ID', sort: true, align: 'center'}
-                                        ,{field:'luUserName', width:120, title: '用户名', align: 'center'}
-                                        ,{field:'luPhone', width:120, title: '手机号', align: 'center'}
-                                        ,{field:'luSex', width:120, title: '性别', align: 'center'}
-                                        ,{field:'luBirthday', width:180, title: '生日', sort: true, align: 'center'}
-                                        ,{field:'luGmtModified', width:180, title: '修改时间', align: 'center'}
-                                        ,{field:'lock',title: '状态',templet: '#switchTp2',unresize: true, width:145, align: 'center'}
+                                        {field:'loId', width:160, title: '投诉订单号', sort: true, align: 'center'}
+                                        ,{field:'complaintTime', width:120, title: '投诉时间', align: 'center'}
+                                        ,{field:'sender', width:120, title: '寄件人', align: 'center'}
+                                        ,{field:'consignee', width:120, title: '收件人', align: 'center'}
+                                        ,{field:'typeOfComplaint', width:180, title: '投诉类型', sort: true, align: 'center'}
+                                        ,{field:'complaintDescription', width:180, title: '投诉描述', align: 'center'}
+                                        ,{field:'processingStatus',title: '处理状态',templet: '#switchTp2',unresize: true, width:145, align: 'center'}
                                         ,{field:'button',title: '投诉图片',templet: '#switchTpbutton', width:145, align: 'center', fixed: 'right'}
                                     ]]
                                     ,page: true

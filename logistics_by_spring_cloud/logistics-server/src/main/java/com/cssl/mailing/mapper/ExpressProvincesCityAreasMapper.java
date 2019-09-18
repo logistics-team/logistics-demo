@@ -72,4 +72,8 @@ public interface ExpressProvincesCityAreasMapper extends BaseMapper<ExpressProvi
 
     @Select("select epca_name from express_provinces_city_areas where epca_id = #{cityCode} and epca_level = 2;")
     String getCityName(String cityCode);
+
+    @Select("select * from express_provinces_city_areas where parent_id = #{parentCode} ;")
+    List<ExpressProvincesCityAreas> getAddressDataInfo(String parentCode);
+
 }

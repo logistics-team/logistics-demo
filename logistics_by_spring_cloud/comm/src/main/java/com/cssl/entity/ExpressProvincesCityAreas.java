@@ -35,6 +35,8 @@ public class ExpressProvincesCityAreas implements Serializable {
 
     private String epcaPinyin;
 
+    private Boolean epcaCenter;
+
     private List<ExpressProvincesCityAreas> cityList;
 
     private List<ExpressProvincesCityAreas> areaList;
@@ -135,6 +137,14 @@ public class ExpressProvincesCityAreas implements Serializable {
         this.areaList = areaList;
     }
 
+    public Boolean getEpcaCenter() {
+        return epcaCenter;
+    }
+
+    public void setEpcaCenter(Boolean epcaCenter) {
+        this.epcaCenter = epcaCenter;
+    }
+
     public ExpressProvincesCityAreas() {
     }
 
@@ -152,6 +162,7 @@ public class ExpressProvincesCityAreas implements Serializable {
                 ", epcaLng='" + epcaLng + '\'' +
                 ", epcaLat='" + epcaLat + '\'' +
                 ", epcaPinyin='" + epcaPinyin + '\'' +
+                ", epcaCenter=" + epcaCenter +
                 ", cityList=" + cityList +
                 ", areaList=" + areaList +
                 '}';
