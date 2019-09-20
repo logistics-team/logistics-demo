@@ -1,6 +1,7 @@
 package com.cssl.entity;
 
-import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 
 import java.io.Serializable;
 
@@ -10,12 +11,13 @@ import java.io.Serializable;
  * </p>
  *
  * @author Devil
- * @since 2019-09-03
+ * @since 2019-09-20
  */
 public class ComplainantInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @TableId(value = "ci_id", type = IdType.AUTO)
     private Integer ciId;
 
     private String ciName;
@@ -53,6 +55,15 @@ public class ComplainantInfo implements Serializable {
     }
 
     public void setCiAddress(String ciAddress) {
+        this.ciAddress = ciAddress;
+    }
+
+    public ComplainantInfo() {
+    }
+
+    public ComplainantInfo(String ciName, String ciPhone, String ciAddress) {
+        this.ciName = ciName;
+        this.ciPhone = ciPhone;
         this.ciAddress = ciAddress;
     }
 

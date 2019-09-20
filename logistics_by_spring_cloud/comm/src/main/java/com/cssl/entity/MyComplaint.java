@@ -1,20 +1,27 @@
 package com.cssl.entity;
 
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.time.LocalDateTime;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+
+import java.io.Serializable;
+
 /**
-* <p>
-    * 记录个人对物流不满的投诉，投诉信息表
-    * </p>
-*
-* @author Devil
-* @since 2019-09-03
-*/
-    public class MyComplaint implements Serializable {
+ * <p>
+ * 记录个人对物流不满的投诉，投诉信息表
+ * </p>
+ *
+ * @author Devil
+ * @since 2019-09-20
+ */
+public class MyComplaint implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @TableId(value = "mc_id", type = IdType.AUTO)
     private Integer mcId;
 
     private LocalDateTime mcGmtCreate;
@@ -37,98 +44,143 @@ import java.time.LocalDateTime;
 
     private String mcContext;
 
-        public Integer getMcId() {
+    @TableField("mc_creatorRole")
+    private Integer mcCreatorrole;
+
+    private String mcCreator;
+
+    @TableField("mc_creatorMobilePhone")
+    private String mcCreatormobilephone;
+
+    public Integer getMcId() {
         return mcId;
-        }
+    }
 
-            public void setMcId(Integer mcId) {
+    public void setMcId(Integer mcId) {
         this.mcId = mcId;
-        }
-        public LocalDateTime getMcGmtCreate() {
+    }
+
+    public LocalDateTime getMcGmtCreate() {
         return mcGmtCreate;
-        }
+    }
 
-            public void setMcGmtCreate(LocalDateTime mcGmtCreate) {
+    public void setMcGmtCreate(LocalDateTime mcGmtCreate) {
         this.mcGmtCreate = mcGmtCreate;
-        }
-        public LocalDateTime getMcGmtModified() {
+    }
+
+    public LocalDateTime getMcGmtModified() {
         return mcGmtModified;
-        }
+    }
 
-            public void setMcGmtModified(LocalDateTime mcGmtModified) {
+    public void setMcGmtModified(LocalDateTime mcGmtModified) {
         this.mcGmtModified = mcGmtModified;
-        }
-        public String getLoId() {
+    }
+
+    public String getLoId() {
         return loId;
-        }
+    }
 
-            public void setLoId(String loId) {
+    public void setLoId(String loId) {
         this.loId = loId;
-        }
-        public LocalDateTime getMcComplaintTime() {
+    }
+
+    public LocalDateTime getMcComplaintTime() {
         return mcComplaintTime;
-        }
+    }
 
-            public void setMcComplaintTime(LocalDateTime mcComplaintTime) {
+    public void setMcComplaintTime(LocalDateTime mcComplaintTime) {
         this.mcComplaintTime = mcComplaintTime;
-        }
-        public Integer getTocId() {
+    }
+
+    public Integer getTocId() {
         return tocId;
-        }
+    }
 
-            public void setTocId(Integer tocId) {
+    public void setTocId(Integer tocId) {
         this.tocId = tocId;
-        }
-        public Integer getPsId() {
+    }
+
+    public Integer getPsId() {
         return psId;
-        }
+    }
 
-            public void setPsId(Integer psId) {
+    public void setPsId(Integer psId) {
         this.psId = psId;
-        }
-        public Integer getCiId() {
+    }
+
+    public Integer getCiId() {
         return ciId;
-        }
+    }
 
-            public void setCiId(Integer ciId) {
+    public void setCiId(Integer ciId) {
         this.ciId = ciId;
-        }
-        public Integer getCiAilingId() {
+    }
+
+    public Integer getCiAilingId() {
         return ciAilingId;
-        }
+    }
 
-            public void setCiAilingId(Integer ciAilingId) {
+    public void setCiAilingId(Integer ciAilingId) {
         this.ciAilingId = ciAilingId;
-        }
-        public String getMcImgLocation() {
+    }
+
+    public String getMcImgLocation() {
         return mcImgLocation;
-        }
+    }
 
-            public void setMcImgLocation(String mcImgLocation) {
+    public void setMcImgLocation(String mcImgLocation) {
         this.mcImgLocation = mcImgLocation;
-        }
-        public String getMcContext() {
-        return mcContext;
-        }
+    }
 
-            public void setMcContext(String mcContext) {
+    public String getMcContext() {
+        return mcContext;
+    }
+
+    public void setMcContext(String mcContext) {
         this.mcContext = mcContext;
-        }
+    }
+
+    public Integer getMcCreatorrole() {
+        return mcCreatorrole;
+    }
+
+    public void setMcCreatorrole(Integer mcCreatorrole) {
+        this.mcCreatorrole = mcCreatorrole;
+    }
+
+    public String getMcCreator() {
+        return mcCreator;
+    }
+
+    public void setMcCreator(String mcCreator) {
+        this.mcCreator = mcCreator;
+    }
+
+    public String getMcCreatormobilephone() {
+        return mcCreatormobilephone;
+    }
+
+    public void setMcCreatormobilephone(String mcCreatormobilephone) {
+        this.mcCreatormobilephone = mcCreatormobilephone;
+    }
 
     @Override
     public String toString() {
-    return "MyComplaint{" +
-            "mcId=" + mcId +
-            ", mcGmtCreate=" + mcGmtCreate +
-            ", mcGmtModified=" + mcGmtModified +
-            ", loId=" + loId +
-            ", mcComplaintTime=" + mcComplaintTime +
-            ", tocId=" + tocId +
-            ", psId=" + psId +
-            ", ciId=" + ciId +
-            ", ciAilingId=" + ciAilingId +
-            ", mcImgLocation=" + mcImgLocation +
-            ", mcContext=" + mcContext +
-    "}";
+        return "MyComplaint{" +
+                "mcId=" + mcId +
+                ", mcGmtCreate=" + mcGmtCreate +
+                ", mcGmtModified=" + mcGmtModified +
+                ", loId=" + loId +
+                ", mcComplaintTime=" + mcComplaintTime +
+                ", tocId=" + tocId +
+                ", psId=" + psId +
+                ", ciId=" + ciId +
+                ", ciAilingId=" + ciAilingId +
+                ", mcImgLocation=" + mcImgLocation +
+                ", mcContext=" + mcContext +
+                ", mcCreatorrole=" + mcCreatorrole +
+                ", mcCreator=" + mcCreator +
+                ", mcCreatormobilephone=" + mcCreatormobilephone +
+                "}";
     }
 }

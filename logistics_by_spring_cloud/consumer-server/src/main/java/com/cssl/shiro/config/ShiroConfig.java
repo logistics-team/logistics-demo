@@ -28,10 +28,10 @@ import java.util.Map;
 @Configuration
 public class ShiroConfig {
     @Value("${spring.redis.host}")
-    private String redisHost;
+    private String redisHost = "127.0.0.1";  //47.102.85.126  127.0.0.1
 
     @Value("${spring.redis.port}")
-    private int redisPort;
+    private int redisPort = 6379;
 
 
     @Bean
@@ -148,8 +148,8 @@ public class ShiroConfig {
      */
     public RedisManager redisManager() {
         RedisManager redisManager = new RedisManager();
-        redisManager.setHost("127.0.0.1");  //47.102.85.126  127.0.0.1
-        redisManager.setPort(6379);
+        redisManager.setHost(redisHost);
+        redisManager.setPort(redisPort);
         redisManager.setExpire(1800);// 配置缓存过期时间
         redisManager.setTimeout(0);
         // redisManager.setPassword(password);
@@ -162,11 +162,8 @@ public class ShiroConfig {
     @Bean
     public DefaultWebSessionManager sessionManager() {
         DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
-        if(sessionManager!=null){
-            sessionManager.setSessionDAO(redisSessionDAO());
-            return sessionManager;
-        }
-        return null;
+        sessionManager.setSessionDAO(redisSessionDAO());
+        return sessionManager;
     }
 
     /**

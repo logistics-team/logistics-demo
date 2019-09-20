@@ -58,39 +58,50 @@ public class ExpressProvincesCityAreasControllerC {
 
     /**
      * <p>计算运费</p>
-     * @param id  起点
-     * @param id2   终点
+     * @param id  区县起点
+     * @param id2   区县终点
      * @param weight   重量
+     * @param hedging  物品的估值
      * @param transportation    运输方式 false陆运  true 空运
      * @param boo    是否同省
-     * @param hedging   是否保值
-     * @return  <p>一个map</p>
+     * @return  <p>返回一个map</p>
      * <p>weight 重量</p><p>first 首重价格</p><p>continued 续重价格</p><p>hedgingcosts 保价费用</p><p>totalprices 总价</p>
      */
     @RequestMapping("freight")
-    public Object freightCharge (int id , int id2 ,double weight,boolean transportation ,boolean boo , boolean hedging){
+    public Object freightCharge (int id , int id2 ,double weight,int hedging,boolean transportation ,boolean boo ){
+        //这个map根据是否同省来初始化
         Map <String ,Object> map ;
         if(boo){
+            //同省
             map = CityAreasCalculateUtil.freightCharge();
         }else {
+            //不同省
             ExpressProvincesCityAreas city = cityAreasService.findByID(id);
             ExpressProvincesCityAreas city2 = cityAreasService.findByID(id2);
             //调用util 根据两个点坐标计算路程
-            int distance = CityAreasCalculateUtil.distance(Integer.parseInt(city.getEpcaLat()), Integer.parseInt(city.getEpcaLng()),
-                    Integer.parseInt(city2.getEpcaLat()), Integer.parseInt(city2.getEpcaLng()));
+            int distance = CityAreasCalculateUtil.distance(Double.parseDouble(city.getEpcaLat()), Double.parseDouble(city.getEpcaLng()),
+                    Double.parseDouble(city2.getEpcaLat()), Double.parseDouble(city2.getEpcaLng()));
             map = CityAreasCalculateUtil.freightCharge(distance,transportation);
         }
+        //从初始化完成了的map中获取首重和续重费用
         int first = (int) map.get("first");
         int continued = (int) map.get("continued");
-        double cw = weight * continued + first;
+        //向上取整后的重量 , 因为重量得按整数算,但前台传过来的是double
+        int  wg = (int)Math.ceil(weight);
+        //总价
+        int cw = wg * continued + first;
+        //保值费用,默认0
         int hg =0;
-        if (hedging){
-            hg= (int)Math.ceil(cw * 0.01);
-            cw = cw + (hg>50?50:hg);
+        //当物品估值大于0(也就是存在保值的时候)
+        if (hedging>0){
+            //保值费用取物品估值的百分之一
+            hg= (int)Math.ceil(hedging * 0.01);
+            //加入总价
+            cw = cw + hg;
         }
         map.put("hedgingcosts",hg);
         map.put("totalprices",cw);
-        map.put("weight",weight);
+        map.put("weight",wg);
         return  map;
     }
 

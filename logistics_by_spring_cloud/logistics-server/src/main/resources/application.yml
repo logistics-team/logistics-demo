@@ -12,7 +12,7 @@ spring:
       min-idle: 5
       initial-size: 5
       max-total: 5
-      max-wait-millis: 200
+      max-wait-millis: 20000
 
 #  resources:
 #    static-locations: classpath:/static/,classpath:/templates/,classpath:/public/
@@ -24,4 +24,5 @@ eureka:
       defaultZone: http://localhost:18000/eureka/
 mybatis:
   type-aliases-package: classpath*:com.cssl.entity
-  mapper-locations: classpath*:com/cssl/mailing/mapper/*.xml
+  mapper-locations: classpath*:com/cssl/mailing/mapper/*.xml,classpath*:com/cssl/complaint/mapper/*.xml
+

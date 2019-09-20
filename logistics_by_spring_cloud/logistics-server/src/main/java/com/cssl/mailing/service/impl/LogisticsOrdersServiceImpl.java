@@ -2,12 +2,14 @@ package com.cssl.mailing.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.cssl.cy.controller.ExpressProvincesCityAreasControllerC;
 import com.cssl.entity.*;
 import com.cssl.mailing.mapper.LogisticsOrdersMapper;
 import com.cssl.mailing.service.*;
 import com.cssl.util.IdSequenceUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
@@ -25,13 +27,14 @@ import java.util.Map;
  * @since 2019-09-04
  */
 @Service
+@EnableTransactionManagement
 public class LogisticsOrdersServiceImpl extends ServiceImpl<LogisticsOrdersMapper, com.cssl.entity.LogisticsOrders> implements ILogisticsOrdersService {
     //订单表
     @Autowired
     private LogisticsOrdersMapper ordersMapper;
-    //物流状态表
+    //运费估算
     @Autowired
-    private ILogisticsStatusService logisticsStatusService;
+    private ExpressProvincesCityAreasControllerC controllerC;
 
     @Autowired
     private ITransportationStatusService statusService;        //运单信息
@@ -54,18 +57,14 @@ public class LogisticsOrdersServiceImpl extends ServiceImpl<LogisticsOrdersMappe
     @Autowired
     private ITransportationStatusService transportationStatusService;
 
+    @Autowired
+    private IOrderUserRelaService orderUserRelaService;//订单用户关系表
+
     @Transactional
     @Override
     public Object generateOrders(Map<String, Object> map) {
 //        boolean flag = false;       //确认生成订单
-        for (String key : map.keySet()) {
-            System.out.println(key);
-        }
-        for (Object value : map.values()) {
-            System.out.println(value);
-        }
-        //if (true)
-//            return null;
+        System.out.println("map = " + map);
 
         IdSequenceUtils utils = new IdSequenceUtils();          //订单生成类
         ExpressUser user = new ExpressUser();              //收寄人信息
@@ -83,7 +82,7 @@ public class LogisticsOrdersServiceImpl extends ServiceImpl<LogisticsOrdersMappe
         if (map.get("receiveRegionCode") != null && map.get("receiveRegionCode") != "") {
             String receiveArea = (String) map.get("receiveRegionCode");
             user.setEaReceiptId(Integer.valueOf(receiveArea));//存入收件人区县id
-        }else {
+        } else {
             return "未选择收件地址！";
         }
         if (map.get("receiveName") == null || map.get("receiveName") == "")
@@ -104,7 +103,7 @@ public class LogisticsOrdersServiceImpl extends ServiceImpl<LogisticsOrdersMappe
         if (map.get("sendRegionCode") != null && map.get("sendRegionCode") != "") {
             String sendRegionCode = (String) map.get("sendRegionCode");
             user.setEaSenderId(Integer.parseInt(sendRegionCode));//存入寄件人区县id
-        }else {
+        } else {
             return "未选择寄件地址！";
         }
         if (map.get("sendName") == null || map.get("sendName") == "")
@@ -120,17 +119,17 @@ public class LogisticsOrdersServiceImpl extends ServiceImpl<LogisticsOrdersMappe
             String goodsType = (String) map.get("goodsType");
             goods.setItId(typeService.getItIdByName(goodsType));//存入物品类型id
         }
-        if (map.get("goodsWeight") != null && map.get("goodsWeight") != ""){
-            if(Double.valueOf(map.get("goodsWeight").toString())>50||Double.valueOf(map.get("goodsWeight").toString())<0){
+        if (map.get("goodsWeight") != null && map.get("goodsWeight") != "") {
+            if (Double.valueOf(map.get("goodsWeight").toString()) > 50 || Double.valueOf(map.get("goodsWeight").toString()) < 0) {
                 return "请标注物品重量 0.1 ～ 50 KG";
             }
             goods.setWeight(BigDecimal.valueOf(Double.parseDouble(map.get("goodsWeight").toString()))); //物品质量
-        }else {
+        } else {
             return "请标注物品重量 0.1 ～ 50 KG";
         }
 
-        if (map.get("insuranceMoney") != null && map.get("insuranceMoney") != ""){
-            if (Double.valueOf(map.get("insuranceMoney").toString())>5000||(Double.valueOf(map.get("insuranceMoney").toString()))<0){
+        if (map.get("insuranceMoney") != null && map.get("insuranceMoney") != "") {
+            if (Double.valueOf(map.get("insuranceMoney").toString()) > 5000 || (Double.valueOf(map.get("insuranceMoney").toString())) < 0) {
                 return "声明价值，1-5000间整数";
             }
             goods.setEgAppraisedPrice(BigDecimal.valueOf(Double.parseDouble(map.get("insuranceMoney").toString())));//预估价格
@@ -154,6 +153,7 @@ public class LogisticsOrdersServiceImpl extends ServiceImpl<LogisticsOrdersMappe
         if (map.get("transport") != null && map.get("transport") != "")
             means.setTmType(map.get("transport").toString());   //运输类型
 
+
         //数据插入
         means = meansService.saveMeans(means);
         status = statusService.saveStatus(status);
@@ -161,6 +161,22 @@ public class LogisticsOrdersServiceImpl extends ServiceImpl<LogisticsOrdersMappe
         goods = goodsService.saveGoods(goods);
         //订单类
         if (means != null & status != null & goods != null & user != null) {
+
+            //运费计算
+            boolean isprov = user.getEpSenderId() == user.getEpReceiptId();//是否同省
+            boolean tran = "空运".equals(means.getTmType());
+            int inMoney = 0;
+            int goodsWeight = 0;
+            if (goods.getEgAppraisedPrice() != null)
+                inMoney = goods.getEgAppraisedPrice().intValue();
+            if (goods.getWeight() != null) {
+                final double v = goods.getWeight().doubleValue();
+                goodsWeight = (int) Math.ceil(v);
+            }
+            Map<String, Object> o = (Map<String, Object>) controllerC.freightCharge(user.getEaSenderId(), user.getEaReceiptId(), goodsWeight, inMoney, isprov, tran);
+
+            System.out.println("o = " + o);
+            //订单加入
             final LogisticsOrders orders = new LogisticsOrders();   //订单类
             orders.setLoId(utils.nextId());     //订单生成
             orders.setLoGmtCreate(now);   //同运单一起 创建
@@ -168,11 +184,27 @@ public class LogisticsOrdersServiceImpl extends ServiceImpl<LogisticsOrdersMappe
             orders.setEuId(user.getEuId());         //收寄人信息
             orders.setTmId(means.getTmId());        //运输方式  后台分配运输方法
             orders.setTsId(status.getTsId());       //运输单号
-            //orders.setLoCharge(BigDecimal.valueOf(199.9)); //运费计算 ？？？
-//        System.out.println("orders = " + orders);
+            Integer totalprices = 0;
+            if (o.get("totalprices") != null) //若价格不为0则加入运费
+            {
+                totalprices = (Integer) o.get("totalprices");
+                System.out.println("totalprices = " + totalprices);
+            }
+            orders.setLoCharge(BigDecimal.valueOf(totalprices)); //运费计算
+
             int insert = ordersMapper.insert(orders);
 
             if (insert > 0) {
+                Object luId = map.get("luId");
+                System.out.println("luId = " + ""!=luId);
+                if (""!=luId){
+                    //添加用户订单关系
+                    OrderUserRela rela = new OrderUserRela();
+                    rela.setLuId(Integer.parseInt((String)luId));
+                    rela.setLoId(orders.getLoId());
+                    if (!orderUserRelaService.save(rela))
+                        return null;
+                }
                 return JSON.toJSONString(orders);
             }
         }
@@ -184,5 +216,11 @@ public class LogisticsOrdersServiceImpl extends ServiceImpl<LogisticsOrdersMappe
     @Override
     public List<LogisticsOrders> showAllLogisticsOrders(Integer loId) {
         return ordersMapper.showAllOrders(loId);
+    }
+
+    //查询订单是否为存在
+    @Override
+    public LogisticsOrders findOrder(String mailNo) {
+        return ordersMapper.findOrder(mailNo);
     }
 }

@@ -60,6 +60,11 @@ public class LogisticsServiceHystrix implements LogisticsService {
     }
 
     @Override
+    public String workOrderCustomerSubmit(Map<String, Object> complaintInfoMap) {
+        return null;
+    }
+
+    @Override
     public String confirmOrder(Map<String, Object> map) {
         //提交失败！返回原页面
         return "redirect:/staticFiles/pages/placeOrder.html";

@@ -31,6 +31,16 @@ public class TransportationStatus implements Serializable {
 
     private String loId;
 
+    private Integer countId;
+
+    public Integer getCountId() {
+        return countId;
+    }
+
+    public void setCountId(Integer countId) {
+        this.countId = countId;
+    }
+
     public String getTsId() {
         return tsId;
     }

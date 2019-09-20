@@ -9,9 +9,9 @@ import java.io.Serializable;
  * <p>
  *
  * </p>
- *投诉用户关系
+ *
  * @author Devil
- * @since 2019-09-17
+ * @since 2019-09-20
  */
 public class ComplaintUserRela implements Serializable {
 

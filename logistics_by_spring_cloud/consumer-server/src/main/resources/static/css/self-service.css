@@ -1,0 +1,290 @@
+.self_service {
+  width:1100px;
+  background:#FFFFFF;
+  font-size:14px;
+  font-family:MicrosoftYaHei;
+  color: #666666;
+  line-height:19px;
+  padding: 0px 0px 50px 0px;
+}
+.self_service_header {
+  background:#F9FAFC;
+  width: 1100px;
+  height: 98px;
+  color: #666666;
+  vertical-align: middle;
+  padding: 30px 50px;
+}
+.self_service_header span {
+  display: block;
+  line-height: 19px;
+}
+
+.self_service_body {
+  padding: 0px 50px;
+}
+.block {
+  margin-top: 35px;
+}
+.block:first-child{
+  margin-top: 15px;
+}
+.block .title{
+  font-size:16px;
+  font-family:MicrosoftYaHei-Bold;
+  font-weight:bold;
+  color:#333333;
+  line-height:21px;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 10px 0;
+}
+.self_service_body .label {
+  width: 120px;
+  height: 36px;
+  line-height: 36px;
+  text-align: right;
+  float: left;
+  margin-right: 12px;
+}
+.self_service_body .bill_no {
+  line-height: 36px;
+  color:rgba(51,51,51,1);
+}
+.self_service_body .label > em {
+  color: #FF5858;
+  padding-right: 5px;
+  position: relative;
+  top: 3px;
+  right: 5px;
+}
+.input_field {
+  height:36px;
+}
+.input_field > div {
+  position: relative;
+  display: inline-block;
+}
+.self_service_body .error_tip {
+  color: #FF5858;
+  display: none;
+}
+.self_service_body .error {
+  border:1px solid #FF5858;
+}
+.input_field input {
+  display: inline-block;
+  width:298px;
+  height:36px;
+  background:#FFFFFF;
+  border:1px solid #E0E0E0;
+  padding-left:10px; 
+}
+.input_field .address {
+  width:480px;
+}
+.complaint_type {
+  height: 87px;
+}
+.complaint_type_label {
+  float: left;
+}
+.complaint_type_content {
+  width: 818px;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.complaint_type_content ul {
+  margin: 0;
+  padding: 0;
+}
+.complaint_type .complaint_type_btn {
+  width:88px;
+  height:36px;
+  background:#FFFFFF;
+  border:1px solid #E0E0E0;
+  color:#333333;
+  line-height:36px;
+  text-align: center;
+  margin-right: 15px;
+  float: left;
+  list-style: none;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.complaint_type .focus {
+  background:#0293ED14;
+  border:1px solid #0293ED;
+  color:#0293ED;
+}
+.question_desc {
+  position: relative;
+  margin-top: 35px;
+  clear: both;
+}
+.question_desc > div{
+  display: inline-block;
+}
+.question_desc textarea {
+  width:776px;
+  height:120px;
+  background:#FFFFFF;
+  border:1px solid #E0E0E0;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.question_desc .num {
+  color:#999999;
+  margin-left: 10px;
+  display: inline-block;
+  position: absolute;
+  top: 103px;
+}
+.question_upload {
+  margin-top: 15px;
+  margin-left: 132px;
+  height:88px;
+  clear: both;
+}
+.question_upload_img_btn {
+  float: left;
+  width:88px;
+  height:88px;
+  background:#F1F1F1;
+  border-radius:3px;
+  border:1px dashed #979797;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.question_upload_img_btn > img {
+  width:20px;
+  height:20px;
+  margin-top: 20px;
+}
+.question_upload_img_btn > span {
+  color:#999999;
+  display: block;
+}
+.question_upload_img_btn > input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 88px;
+  opacity: 0;
+  filter: alpha(Opacity=0);
+  cursor: pointer;
+}
+.question_upload_tip {
+  clear: both;
+  color:#999999;
+  margin-top: 15px;
+  margin-left: 132px;
+}
+.self_service_body .fl {
+  float: left;
+}
+.self_service_body .fr {
+  float: right;
+}
+.self_service_body .cleara {
+  clear: both;
+}
+.self_service_body .ml40 {
+  margin-left: 40px;
+}
+.self_service_body .mt20 {
+  margin-top: 20px;
+}
+.self_service_body .mt35 {
+  margin-top: 35px;
+}
+.self_service_body .row {
+  clear: both;
+  height: 36px;
+}
+.block .title .adderss_tip {
+  font-size:12px;
+  font-family:MicrosoftYaHei;
+  color:#008EEA;
+  line-height:21px;
+  vertical-align: middle;
+  cursor: pointer;
+  font-weight: normal;
+}
+.block .title img {
+  vertical-align: middle;
+}
+.block .title .address {
+  margin-left: 57px;
+}
+.block .title .ai_input {
+  margin-left: 10px;
+}
+.self_service_body .validate_block {
+  height:44px;
+}
+.self_service_body .validate_block > span {
+  margin-right: 12px;
+  width: 120px;
+  float: left;
+  line-height:44px;
+  text-align: right;
+}
+.self_service_body .validate {
+  float: left;
+  width:154px;
+  height:34px;
+  background:rgba(247,247,247,1);
+  border:1px solid rgba(224,224,224,1);
+  color:rgba(51,51,51,1);
+  line-height:34px;
+  text-align: center;
+}
+.self_service_body .submit_btn {
+  width:188px;
+  height:36px;
+  background:#0293ED;
+  border-radius:4px;
+  color:#FFFFFF;
+  line-height:36px;
+  text-align: center;
+  margin: 25px auto 0px;
+}
+.question_upload_img_list {
+  float: left;
+  position: relative;
+}
+.image_preview_item {
+  float: left;
+  width:90px;
+  height:90px;
+  border-radius:3px;
+  position: relative;
+  margin-right: 20px;
+}
+.image_preview_item img:first-child {
+  float: left;
+  width:90px;
+  height:90px;
+  border-radius:3px;
+}
+.image_preview_item .close_icon {
+  position: absolute;
+  width:14px;
+  height:14px;
+  top: -7px;
+  right: -7px;
+  cursor: pointer;
+}
+.input_field select {
+  width: 298px;
+  height:36px;
+  background:#FFFFFF;
+  border:1px solid #E0E0E0;
+  padding-left:10px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -khtml-border-radius: 0;
+}

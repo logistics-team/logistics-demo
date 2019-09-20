@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpSession;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -127,8 +127,9 @@ public class ConsumerController {
                                String receiveProvinceName,String receiveCityName,String receiveRegionName,
                                String receiveAddress,String receiveName,String receiveTel,String receivePhone,
                                String goodsType,String goodsWeight,String insuranceMoney,String goodsRemarks,
-                               String transport){
+                               String transport,String luId){
         Map<String, Object> map = new HashMap<String, Object>();
+        map.put("luId",luId);
         //寄件人信息
         map.put("sendProvinceCode", sendProvinceCode);
         map.put("sendCityCode", sendCityCode);
@@ -159,7 +160,7 @@ public class ConsumerController {
         map.put("insuranceMoney", insuranceMoney);
         map.put("goodsRemarks", goodsRemarks);
         map.put("transport", transport);
-
+        System.out.println("map = " + map);
         return logisticsService.confirmOrder(map);
     }
 
@@ -170,7 +171,7 @@ public class ConsumerController {
      */
     @RequestMapping("freightEstimate")
     @ResponseBody
-    public String freightEstimate(String sendProvinceCode,String sendRegionCode,String receiveProvinceCode,String receiveRegionCode,String goodsWeight,String insuranceMoney,Boolean transport){
+    public String freightEstimate(Integer sendProvinceCode,Integer sendRegionCode,Integer receiveProvinceCode,Integer receiveRegionCode,Double goodsWeight,Integer insuranceMoney,Boolean transport){
         System.out.println("sendProvinceCode = " + sendProvinceCode);           //发出省
         System.out.println("sendRegionCode = " + sendRegionCode);               //发出区县
         System.out.println("receiveProvinceCode = " + receiveProvinceCode);     //接收省
@@ -180,15 +181,17 @@ public class ConsumerController {
         System.out.println("transport = " + transport);
         boolean isProvince = sendProvinceCode.equals(receiveProvinceCode);
         System.out.println("isProvince = " + isProvince);
-        boolean isMoney =  null == insuranceMoney;
-        System.out.println("isMoney = " + isMoney);
-        Map<String,Object> map = new HashMap();
-        map.put("sendRegionCode",Integer.parseInt(sendRegionCode));   //状态
-        map.put("receiveRegionCode",Integer.parseInt(receiveRegionCode));          //首重
-        map.put("goodsWeight",Double.valueOf(goodsWeight));    //续重
+
+
+
+        Map<String,Object> map = new HashMap<String,Object>();
+        map.put("sendRegionCode",sendRegionCode);   //状态
+        map.put("receiveRegionCode",receiveRegionCode);          //首重
+        map.put("goodsWeight",goodsWeight);    //续重
         map.put("transport",transport);
         map.put("isProvince",isProvince);   //保费
-        map.put("insuranceMoney",isMoney);      //预计运费
+        map.put("insuranceMoney",insuranceMoney);      //预计运费
+//        map.put("sendRegionCode","123456");   //状态
 
 //        JSON.toJSONString(map);
 
@@ -274,13 +277,6 @@ public class ConsumerController {
         return "redirect:/staticFiles/pages/login.html";
     }
 
-
-//    @ResponseBody
-//    @RequestMapping("getAddr")
-//    public String getAddr(String addr_p,String addr_c){
-//        String address = addressInfo.findAddrByProvincesCity(addr_p, addr_c);
-//        return address;
-//    }
 
     //查询所有的订单
     @RequestMapping("showOrdersAll")

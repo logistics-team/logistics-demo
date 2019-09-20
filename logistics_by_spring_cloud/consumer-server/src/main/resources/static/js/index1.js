@@ -73,33 +73,33 @@ function passportIsLoginSuccess(data){
 }
 
 $(function () {
-    Check.getHttpRequest("/authStatus",passportIsLoginSuccess,passportIsLoginFail,null);
+    // Check.getHttpRequest("/authStatus",passportIsLoginSuccess,passportIsLoginFail,null);
     var logistic = new Logistic();
     logistic.init();
-	$.ajax({
-		type:"post",	
-		url:"/customerAction!isLogin.action",
-		error: function(){
-		},
-		success:function(data){
-		    try{
-		    	var obj = eval('(' + data + ')');
-		    	if(obj.success != null || obj.success != ""){
-                    $("#username").html(obj.msg);
-                    $('.sucess').css("display","block");
-                    $('.normal').css("display","none");
-		    	}else{
-                    $('.normal').css("display","block");
-                    $('.sucess').css("display","none");
-		    	}
-                $('.customerBtn').attr("data","/onlineCallVip.action")
-		    }catch(error){
-                $('.normal').css("display","block");
-                $('.sucess').css("display","none");
-                $('.customerBtn').attr("data","/onlineCall.action")
-		    }
-		} 	 		
-	});
+	// $.ajax({
+	// 	type:"post",
+	// 	url:"/customerAction!isLogin.action",
+	// 	error: function(){
+	// 	},
+	// 	success:function(data){
+	// 	    try{
+	// 	    	var obj = eval('(' + data + ')');
+	// 	    	if(obj.success != null || obj.success != ""){
+    //                 $("#username").html(obj.msg);
+    //                 $('.sucess').css("display","block");
+    //                 $('.normal').css("display","none");
+	// 	    	}else{
+    //                 $('.normal').css("display","block");
+    //                 $('.sucess').css("display","none");
+	// 	    	}
+    //             $('.customerBtn').attr("data","/onlineCallVip.action")
+	// 	    }catch(error){
+    //             $('.normal').css("display","block");
+    //             $('.sucess').css("display","none");
+    //             $('.customerBtn').attr("data","/onlineCall.action")
+	// 	    }
+	// 	}
+	// });
 
     $(".khfwContent .orderTextInput").on("keyup", function() {
         var str = $('.khfwContent .orderTextInput').val();

@@ -28,4 +28,8 @@ public interface LogisticsOrdersMapper extends BaseMapper<LogisticsOrders> {
     Integer ordersCount();
     //查询订单状态showAllOrders
     List<LogisticsOrders> showAllOrders(@RequestParam(value = "lsId") Integer lsId);
+
+    @Select("SELECT *  FROM `logistics_orders` where lo_id = #{mailNo} ")
+    LogisticsOrders findOrder(String mailNo);
+
 }

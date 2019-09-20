@@ -4,6 +4,7 @@ package com.cssl;
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.cssl.entity.ExpressProvincesCityAreas;
+import com.cssl.entity.LogisticsOrders;
 import com.cssl.mailing.mapper.ExpressProvincesCityAreasMapper;
 import com.cssl.mailing.mapper.Express_userDao;
 import com.cssl.mailing.service.IExpressProvincesCityAreasService;
@@ -30,6 +31,16 @@ public class LogisticsServerApplicationTests {
     ExpressProvincesCityAreasMapper mapper;
     @Autowired
     IExpressProvincesCityAreasService cityAreas;
+
+    @Autowired
+    ILogisticsOrdersService ordersService;
+
+    @Test
+    public void test1(){
+        LogisticsOrders order = ordersService.findOrder("2443453626187776");
+        System.out.println("order = " + order);
+    }
+
     @Test
     public void contextLoads() {
         System.out.println("**************************************************************************");
@@ -55,8 +66,7 @@ public class LogisticsServerApplicationTests {
 //        System.out.println("s.length() = " + l.length());
     }
 
-    @Autowired
-    ILogisticsOrdersService ordersService;
+
     @Test
     public void  test(){
 

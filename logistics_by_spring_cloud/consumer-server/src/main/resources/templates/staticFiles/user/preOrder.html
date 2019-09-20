@@ -30,18 +30,23 @@
 	<script type="text/javascript" src="/js/goUrl.js"></script>
 	<script type="text/javascript" src="/js/env.js"></script>
 
+    <script src="/js/jquery-1.4.2.min.js"></script>
 
 </head>
 <body>
 <div class="wrapper admin-content twolevelWrap">
 	<!--Created by 17120847 on 2018/5/23.-->
-	<div class="logAndRegister">
-		<div class="fixedWid clearfix">
-			<a href="javascript:void(0)" class="fl" onclick="addFavorite();">加入收藏</a>
-			<div  class="fr normal"><a href="/passPortIndex.action?login_type=0">登录</a><span></span><a href="/register.action">注册</a></div>
-			<div style="display:none" class="fr sucess"> <a href="/myOrderNew.action"><span class="username" id="username"></span></a><a class="exit"  href="/j_logout">退出</a></div>
-		</div>
-	</div>
+    <div class="logAndRegister">
+        <div class="fixedWid clearfix">
+            <a href="javascript:void(0)" class="fl" onclick="addFavorite();">加入收藏</a>
+            <div class="fr normal"><a href="/passPortIndex.action?login_type=0">登录</a><span></span><a
+                    href="/register.action">注册</a></div>
+            <div style="display:none" class="fr sucess">
+                <input type="hidden" id="userId" value="">
+                <a href="/staticFiles/user/preIndex.html"><span class="username" id="username"></span></a>
+                <a class="exit" href="../../guest/logout">退出</a></div>
+        </div>
+    </div>
 	<div id="navWrap" class="headerWrap whiteBack commonWrap">
 		<div class="fixedWid">
 			<div class="navWrap clearfix">
@@ -149,8 +154,6 @@
         <div class="leftMainTitle">个人中心</div>
         <div class="personInfo">
             <a href="/myPerson.action">
-                
-                
                     <img  src="/images/0000000000_01.jpg" />
                 
                 <div>155****1419</div>
@@ -215,7 +218,7 @@
                             <input type="checkbox" id="saveAddress01" value="01" />
                         </span>保存到地址簿
                     </div>
-                    
+
                 </div>
 
                 <div class="rightSmallTitle">收件人信息
@@ -301,7 +304,7 @@
                 </div>
 
                 <div class="forSubmitDiv">
-                    <button id="submitOrder" class="submitOrder" onclick="submitFunc('/myOnlineOrder.action')" disabled="disabled" style="color: #B3B3B3;">提交订单</button>
+                    <button id="submitOrder" class="submitOrder" onclick="submitFunc('/staticFiles/user/preIndex.html')" disabled="disabled" style="color: #B3B3B3;">提交订单</button>
                 </div>
             </form>
         </div>
@@ -1027,6 +1030,22 @@ line-height:32px;font-family:微软雅黑">本协议履行过程中如发生争�
 <script type="text/javascript" src="/js/index1.js"></script>
 <script type="text/javascript" src="/js/expressServiceTab.js"></script>
 <script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript">
+    $.getJSON("../../guest/getUserInfo", function (data) {
+        if (data != null) {
+            // alert(data.luPhone);
+            $(".sucess").css("display", "block");
+            $(".normal").css("display", "none");
+            $(".username").html(data.luPhone);
+            $("#userId").val(data.luId);
+            $(".personInfo div").html(data.luPhone);
+            //如有头像则加载非默认头像
+            if ( null!=data.luImgLocation && ""!=data.luImgLocation){
+                $(".personInfo img").attr("src",data.luImgLocation);
+            }
+        }
+    });
+</script>
 
 </body>
 </html>

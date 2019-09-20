@@ -22,6 +22,7 @@ public class AddressInfoImpl implements AddressInfo {
         this.logisticsService = logisticsService;
         return this.logisticsService;
     }
+
     @Override
     public String findAddrByProvincesCity(String addr_p,String addr_c) {
         return logisticsService.findAddrByProvincesCity(addr_p, addr_c);

@@ -1,0 +1,344 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.alertcontainer {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+}
+.alertMask {
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  position: fixed;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+}
+.alert .header {
+  position: relative;
+  height: 40px;
+  background: #f7f7f7;
+  vertical-align: middle;
+  border-bottom: 1px solid #d8d8d8;
+}
+.alert .header .title {
+  height: 21px;
+  font-size: 16px;
+  font-family: MicrosoftYaHei-Bold;
+  font-weight: bold;
+  color: #333333;
+  line-height: 40px;
+  margin-left: 21px;
+  display: inline-block;
+}
+.alert .header .closeBtn {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  right: 20px;
+  top: 50%;
+  margin: -7px 0 0 0;
+}
+.alert .content {
+  padding: 25px;
+  text-align: center;
+}
+.alert .content textarea::placeholder{
+    color: #999999;
+}
+.alert .content .tip {
+  color: #666666;
+  text-align: left;
+}
+.alert .content .mt15 {
+  margin-top: 15px;
+}
+.alert .content .footer {
+  margin-top: 25px;
+  background: none !important;
+}
+.content .footer .confirm {
+  width: 76px;
+  height: 29px;
+  background: #0293ed;
+  color: #ffffff;
+  border: 1px solid #0293ed;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+.content .footer .cancel {
+  width: 76px;
+  height: 29px;
+  background: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  color: #333333;
+  border-radius: 2px;
+}
+.complaintDetail {
+  display: none;
+}
+.complaintDetail .alert {
+  width: 841px;
+  height: auto;
+  background: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -299px 0 0 -421px;
+}
+.complaintDetail .alert .alertBody {
+    max-height: 588px;
+    overflow-y: auto;
+}
+.complaintDetail .alert .content {
+  padding: 15px 32px 26px;
+  font-size: 14px;
+  font-family: MicrosoftYaHei;
+  color: #333333;
+  line-height: 20px;
+  text-align: left;
+}
+.complaintDetail .alert .feedbackContent {
+  padding: 45px 32px;
+}
+.complaintDetail .alert .content .billInfo {
+  clear: both;
+  margin-bottom: 25px;
+  text-align: left;
+}
+.complaintDetail .alert .content .billNum {
+  margin: 0;
+}
+.complaintDetail .alert .content .billNum dt {
+  color: #666666;
+  font-family: MicrosoftYaHei-Bold;
+  font-weight: bold;
+}
+.complaintDetail .alert .content .billNum dd {
+  color: #333333;
+  font-family: MicrosoftYaHei-Bold;
+  font-weight: bold;
+}
+.complaintDetail .alert .content .billNum {
+  float: left;
+}
+.complaintDetail .alert .content .billStatus {
+  margin-left: 45px;
+  font-size: 14px;
+  font-family: MicrosoftYaHei-Bold;
+  font-weight: bold;
+  color: #0293ED;
+}
+.complaintDetail .alert .content dl {
+  clear: both;
+  margin: 10px 0 0;
+  text-align: left;
+}
+.complaintDetail .alert .content dt {
+  color: #666666;
+  float: left;
+  width: 70px;
+  line-height: 19px;
+}
+.complaintDetail .alert .content dd {
+  margin-left: 70px;
+  line-height: 19px;
+  word-wrap:break-word;
+}
+.complaintDetail .alert .content .imgList {
+  margin-left: 70px;
+  margin-top: 10px;
+}
+.complaintDetail .alert .content .imgList img {
+  width: 90px;
+  height: 90px;
+  margin-right: 10px;
+  border-radius: 2px;
+}
+.complaintDetail .alert .feedbackTitle {
+  height: 35px;
+  background: #f9f9f9;
+  color: #999999;
+  line-height: 35px;
+  font-size: 14px;
+  font-family: MicrosoftYaHei;
+  padding-left: 32px;
+}
+.complaintDetail .alert .feedbackInfo {
+  display: none;
+  height: 200px;
+}
+.complaintDetail .alert .noContent {
+  margin: 29px auto 19px;
+  text-align: center;
+}
+.complaintDetail .alert .noContent p {
+  font-size: 12px;
+  font-family: MicrosoftYaHei;
+  color: #a7c2e4;
+  line-height: 16px;
+  margin-top: 23px;
+}
+.popup {
+  display: none;
+}
+.popup .alert {
+  width: 310px;
+  height: 185px;
+  background: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -92px 0 0 -150px;
+}
+.popup .content {
+  text-align: center;
+}
+.popup .content .icon {
+  margin-top: 17px;
+  width: 38px;
+  height: 38px;
+}
+.popup .content .message {
+  margin-top: 10px;
+}
+.popup .btns {
+  margin-top: 40px;
+  width: 100%;
+}
+.popup .btns button {
+  width: 76px;
+  height: 29px;
+  background-color: #0293ed;
+  color: #fff;
+  border: 1px solid #e0e0e0;
+}
+.myRating {
+  display: none;
+}
+.myRating .alert {
+  width: 455px;
+  background: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -191px 0 0 -227px;
+}
+
+.myRating .content .ratingImg {
+  width: 38px;
+  height: 38px;
+  margin-top: 15px;
+}
+.myRating .content .button {
+  width: 90px;
+  height: 36px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  font-family: MicrosoftYaHei;
+  color: #333333;
+  line-height: 19px;
+  border-radius: 2px;
+}
+.myRating .content .active {
+  background: rgba(2, 147, 237, 0.08);
+  border: 1px solid #0293ed;
+  color: #0293ed;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#140293ED, endColorstr=#140293ED);
+}
+.myRating textarea {
+  width: 391px;
+  height: 100px;
+  border: 1px solid #e0e0e0;
+  color: #333;
+  font-size: 14px;
+  padding: 10px;
+}
+.feedback {
+  display: none;
+}
+.feedback .alert {
+  width: 455px;
+  background: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -191px 0 0 -227px;
+  font-size:14px;
+  font-family:MicrosoftYaHei;
+  color:#333333;
+  line-height:19px;
+}
+.feedback .remark {
+  vertical-align: middle;
+}
+.feedback .remark img {
+  width: 38px;
+  height: 38px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+.feedback .remark span {
+  vertical-align: middle;
+}
+.feedback .split {
+  clear: both;
+  margin-top: 30px;
+  height: 30px;
+}
+.feedback .split hr {
+  height: 1px;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  float: left;
+  width: 175px;
+}
+.feedback .split span {
+  float: left;
+  margin-left: 5px;
+  color: #999999;
+  margin-top: -10px;
+}
+.feedback .split hr:last-child {
+  margin-left: 5px;
+}
+.feedback .message {
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.urgent .alert {
+  width: 455px;
+  background: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -191px 0 0 -227px;
+  font-size:14px;
+  font-family:MicrosoftYaHei;
+  color:#333333;
+  line-height:19px;
+}
+
+.urgent textarea {
+  width: 391px;
+  height: 100px;
+  border: 1px solid #e0e0e0;
+  color: #333333;
+  font-size: 14px;
+  padding: 10px;
+}

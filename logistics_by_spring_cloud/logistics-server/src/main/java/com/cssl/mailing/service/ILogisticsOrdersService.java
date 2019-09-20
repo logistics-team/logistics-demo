@@ -22,4 +22,5 @@ public interface ILogisticsOrdersService extends IService<LogisticsOrders> {
     //查询所有的订单
     List<LogisticsOrders> showAllLogisticsOrders(Integer loId);
 
+    LogisticsOrders findOrder(String mailNo);
 }

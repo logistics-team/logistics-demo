@@ -342,27 +342,27 @@ function transportPriceEnableClick() {
 function submitFunc(toUrl) {
 
     if ($("#orderForm").validate().form()) {	// 表单验证成功
-        $.ajax({
-            type:"post",
-            url:"/isLogin.action",
-            async:false,
-            error: function(){
-                if(sc && !sc.queryStatus()) {
-                    swal("","请进行安全验证。","info");
-                    return false;
-                }
-            },
-            success:function(data){
-                // var json = eval('(' + data + ')');
-                // if(json.code != 1000){
-                //     if(sc && !sc.queryStatus()) {
-                //         swal("","请进行安全验证。","info");
-                //         return false;
-                //     }
-                // }
-                // alert(data);
-            }
-        });
+        // $.ajax({
+        //     type:"post",
+        //     url:"/isLogin.action",
+        //     async:false,
+        //     error: function(){
+        //         if(sc && !sc.queryStatus()) {
+        //             swal("","请进行安全验证。","info");
+        //             return false;
+        //         }
+        //     },
+        //     success:function(data){
+        //         // var json = eval('(' + data + ')');
+        //         // if(json.code != 1000){
+        //         //     if(sc && !sc.queryStatus()) {
+        //         //         swal("","请进行安全验证。","info");
+        //         //         return false;
+        //         //     }
+        //         // }
+        //         // alert(data);
+        //     }
+        // });
 
         /*
          * 获取地址数据
@@ -404,21 +404,16 @@ function submitFunc(toUrl) {
         if ($("#saveAddress02").is(":checked")) {
             saveAddressFunc("02", "receive");
         }
-        // var args
-        // if(sc) {
-        //     args = $.param({
-        //         // token
-        //         "token" : sc.queryToken()
-        //     }) + "&" + $("#orderForm").serialize();
-        // }else{
-        //     args = $("#orderForm").serialize();
-        // }
+
+        alert($("#userId").val())
 
         // 提交订单
         $.ajax({
             type : "post",
             url : "../../guest/confirmSent",
             data : {
+                //个人用户Id
+                "luId":$("#userId").val(),
                 //寄件人信息
                 "sendProvinceCode":$("#sendProvinceCode").val(),
                 "sendCityCode":$("#sendCityCode").val(),

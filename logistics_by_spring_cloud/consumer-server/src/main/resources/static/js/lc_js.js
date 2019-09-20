@@ -20,7 +20,7 @@ $(function () {
 
     function allOrders(allExexpress, pageIndex, pageSize) {
         $("div table tbody tr").remove();
-        $.getJSON("/consumerController/showOrdersAll", "search=" + allExexpress + "&pageIndex=" + pageIndex + "&pageSize=" + pageSize, function (json) {
+        $.getJSON("../../guest/showOrdersAll", "search=" + allExexpress + "&pageIndex=" + pageIndex + "&pageSize=" + pageSize, function (json) {
             var num8 = 0;
             var num9 = 0;
             var num10 = 0;

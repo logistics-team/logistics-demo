@@ -2,10 +2,12 @@ package com.cssl.service;
 
 import com.cssl.config.ServiceFeignConfiguration;
 import com.cssl.service.impl.LogisticsServiceHystrix;
+import org.apache.shiro.crypto.hash.Hash;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 import com.cssl.entity.*;
 
+import java.util.HashMap;
 import java.util.Map;
 
 
@@ -93,8 +95,11 @@ public interface LogisticsService {
      * 运费预估 2
      * @return 返回JSON
      */
-    @RequestMapping(value="address/freightEstimate",method = RequestMethod.POST,consumes = "application/json")
-    String freightEstimate(Map<String,Object> map);
+    @RequestMapping(value="address/getFreightEstimate",method = RequestMethod.POST,consumes = "application/json")
+    String freightEstimate(@RequestBody Map<String, Object> map);
+
+    @RequestMapping(value="complaint/workOrderCustomerSubmit",method = RequestMethod.POST,consumes = "application/json")
+    String workOrderCustomerSubmit(@RequestBody Map<String, Object> complaintInfoMap);
 
 
 //    String freightEstimate(String sendRegionCode, String receiveRegionCode, String goodsWeight, boolean transport, boolean isProvince, boolean preservation);

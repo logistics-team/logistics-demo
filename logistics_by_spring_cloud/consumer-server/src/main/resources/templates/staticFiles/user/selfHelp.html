@@ -1,0 +1,1557 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css" class="AMap.style">.vml {
+        behavior: url(#default#VML);
+        display: inline-block;
+        position: absolute
+    }
+
+    .amap-custom {
+        top: 0;
+        left: 0;
+        position: absolute
+    }
+
+    .amap-container img {
+        max-width: none !important;
+        max-height: none !important
+    }
+
+    .amap-container {
+        touch-action: none;
+        position: relative;
+        overflow: hidden;
+        background: #fcf9f2 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0AgMAAAC2uDcZAAAADFBMVEX////////////////1pQ5zAAAABHRSTlMAgP/AWuZC2AAAAVhJREFUeAFiYGAQYGDEQjAB2rcDC4BiGIqiU7abdKlO2QkeIClyPsDHweMKtOPHIJ1Op6/w7Y4fdqfT6VpndzqdrnV2p9PpWmd3Oj3qWndSoKp+2J1Op7vr7E6n07XO7nQ6XevsTqfTtc7udPo4/f787E6n0911dqfT6VpndzqdrnV2p9PpWmd3Ot27Ce8m6HS6u85dR6fTtU7r6HS61mkdnU7XOrvT6XTvJuxOp9PddXan0+laZ3c6na51dDpd67SOTqd7N+HdBJ1Od9e56+h0utZpHZ1O1zq70+l0rbM7nU73bsLudDrdXWd3Ol3rtI5Op2ud1tHpdK3TOjqd7t2EdxN0Ot1dZ3c6na51dqfT6VpndzqdrnV2p9Pp3k3Q6XR3nbuOTqdrndbR6XSt0zo6na51Wken072bsDudTnfX2Z1Op2ud3el0utbZnU7XOq2j0+t0uncTD1gO4zoT5doZAAAAAElFTkSuQmCC);
+        -ms-touch-action: none
+    }
+
+    .amap-drags, .amap-layers {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden
+    }
+
+    .amap-layers canvas {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+    }
+
+    .amap-layer img {
+        pointer-events: none
+    }
+
+    .amap-e, .amap-maps {
+        width: 100%;
+        height: 100%
+    }
+
+    .amap-maps, .amap-e, .amap-layers, .amap-tile, .amap-tile-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden
+    }
+
+    .amap-context {
+        position: absolute;
+        left: 0;
+        top: 0
+    }
+
+    .amap-overlays, .amap-markers, .amap-marker {
+        position: absolute;
+        left: 0;
+        top: 0
+    }
+
+    .amap-layers {
+        z-index: 0
+    }
+
+    .amap-overlays {
+        z-index: 110;
+        cursor: default
+    }
+
+    .amap-markers {
+        z-index: 120
+    }
+
+    .amap-controls {
+        z-index: 150
+    }
+
+    .amap-copyright {
+        position: absolute;
+        display: block !important;
+        left: 77px;
+        height: 16px;
+        bottom: 0;
+        padding-bottom: 3px;
+        font-size: 11px;
+        font-family: Arial, sans-serif;
+        z-index: 160
+    }
+
+    .amap-logo {
+        position: absolute;
+        bottom: 1px;
+        left: 1px;
+        z-index: 160;
+        height: 20px
+    }
+
+    .amap-logo img {
+        width: 73px !important;
+        height: 20px !important;
+        border: 0;
+        vertical-align: baseline !important
+    }
+
+    .amap-icon {
+        position: relative;
+        z-index: 1
+    }
+
+    .amap-icon img {
+        position: absolute;
+        z-index: -1
+    }
+
+    .amap-marker-label {
+        position: absolute;
+        z-index: 2;
+        border: 1px solid blue;
+        background-color: white;
+        white-space: nowrap;
+        cursor: default;
+        padding: 3px;
+        font-size: 12px;
+        line-height: 14px
+    }
+
+    .amap-info {
+        position: absolute;
+        left: 0;
+        z-index: 140;
+        width: 320px
+    }
+
+    .amap-menu {
+        position: absolute;
+        z-index: 140;
+        _width: 100px
+    }
+
+    .amap-info-close {
+        position: absolute;
+        right: 5px;
+        _right: 12px;
+    + right: 11 px;
+        top: 5px;
+        _top: 2px;
+    + top: 2 px;
+        color: #c3c3c3;
+        text-decoration: none;
+        font: bold 16px/14px Tahoma, Verdana, sans-serif;
+        width: 14px;
+        height: 14px
+    }
+
+    .amap-info-outer, .amap-menu-outer {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        background: none repeat scroll 0 0 white;
+        border-radius: 2px;
+        padding: 1px;
+        text-align: left
+    }
+
+    .amap-menu-outer:hover {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3)
+    }
+
+    .amap-info-contentContainer:hover .amap-info-outer {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3)
+    }
+
+    .amap-info-content {
+        position: relative;
+        background: #fff;
+        padding: 10px 18px 10px 10px;
+        line-height: 1.4;
+        overflow: auto
+    }
+
+    .amap-marker-content {
+        position: relative
+    }
+
+    .amap-info {
+        _width: 320px
+    }
+
+    .amap-menu {
+        _width: 100px
+    }
+
+    .amap-info-sharp-old {
+        overflow: hidden;
+        position: absolute;
+        background-image: url(http://webapi.amap.com/images/arrows.png)
+    }
+
+    .bottom-center .amap-info-sharp-old {
+        height: 12px;
+        margin: 0 auto;
+        width: 20px;
+        background-position: center 12px;
+        top: 100%;
+        margin-top: -9px;
+        left: 50%;
+        margin-left: -10px
+    }
+
+    .bottom-left .amap-info-sharp-old {
+        height: 12px;
+        width: 13px;
+        background-position: -16px -46px;
+        top: 100%;
+        margin-top: -9px
+    }
+
+    .bottom-right .amap-info-sharp-old {
+        height: 12px;
+        width: 13px;
+        top: -1px;
+        background-position: -56px -46px;
+        left: 100%;
+        margin-left: -13px;
+        top: 100%;
+        margin-top: -9px
+    }
+
+    .middle-left .amap-info-sharp-old {
+        height: 20px;
+        width: 12px;
+        background-position: left;
+        top: 50%;
+        margin-top: -10px;
+        margin-left: -11px
+    }
+
+    .center .amap-info-sharp-old {
+        display: none
+    }
+
+    .middle-right .amap-info-sharp-old {
+        height: 20px;
+        margin-right: 0;
+        width: 12px;
+        background-position: right;
+        left: 100%;
+        margin-left: -9px;
+        top: 50%;
+        margin-top: -10px
+    }
+
+    .top-center .amap-info-sharp-old {
+        height: 12px;
+        margin: 0 auto;
+        width: 20px;
+        background-position: top;
+        top: 0;
+        margin-top: -3px;
+        left: 50%;
+        margin-left: -10px
+    }
+
+    .top-left .amap-info-sharp-old {
+        height: 12px;
+        width: 13px;
+        background-position: -16px -3px;
+        top: 0;
+        margin-top: -3px
+    }
+
+    .top-right .amap-info-sharp-old {
+        height: 12px;
+        width: 13px;
+        background-position: -56px -3px;
+        left: 100%;
+        margin-left: -13px;
+        top: 0;
+        margin-top: -3px
+    }
+
+    .amap-info-sharp {
+        position: absolute
+    }
+
+    .bottom-center .amap-info-sharp {
+        bottom: 0;
+        left: 50%;
+        margin-left: -8px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid #fff
+    }
+
+    .bottom-center .amap-info-sharp:after {
+        position: absolute;
+        content: "";
+        margin-left: -8px;
+        margin-top: -7px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid rgba(0, 0, 0, 0.3);
+        filter: blur(2px);
+        z-index: -1
+    }
+
+    .amap-info-contentContainer:hover.bottom-center .amap-info-sharp:after {
+        border-top: 8px solid rgba(0, 0, 0, 0.5)
+    }
+
+    .bottom-left .amap-info-sharp {
+        border-color: transparent #fff;
+        border-width: 0 0 10px 10px;
+        border-style: solid
+    }
+
+    .bottom-left .amap-info-sharp:after {
+        position: absolute;
+        content: "";
+        margin-left: -10px;
+        border-color: transparent rgba(0, 0, 0, 0.3);
+        border-width: 0 0 10px 10px;
+        border-style: solid;
+        filter: blur(1px);
+        z-index: -1
+    }
+
+    .amap-info-contentContainer:hover.bottom-left .amap-info-sharp:after {
+        border-color: transparent rgba(0, 0, 0, 0.5)
+    }
+
+    .bottom-left .amap-info-content {
+        border-radius: 2px 2px 2px 0
+    }
+
+    .bottom-right .amap-info-sharp {
+        right: 0;
+        border-top: 10px solid #fff;
+        border-left: 10px solid transparent
+    }
+
+    .bottom-right .amap-info-sharp:after {
+        position: absolute;
+        margin-top: -9px;
+        margin-left: -10px;
+        content: "";
+        border-top: 10px solid rgba(0, 0, 0, 0.3);
+        border-left: 10px solid transparent;
+        filter: blur(1px);
+        z-index: -1
+    }
+
+    .amap-info-contentContainer:hover.bottom-right .amap-info-sharp:after {
+        border-top: 10px solid rgba(0, 0, 0, 0.5)
+    }
+
+    .bottom-right .amap-info-content {
+        border-radius: 2px 2px 0 2px
+    }
+
+    .top-center .amap-info-sharp {
+        top: 0;
+        left: 50%;
+        margin-left: -8px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid #fff
+    }
+
+    .top-center .amap-info-sharp:after {
+        position: absolute;
+        content: "";
+        margin-top: 0;
+        margin-left: -8px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid rgba(0, 0, 0, 0.3);
+        filter: blur(1px);
+        z-index: -1
+    }
+
+    .top-left .amap-info-sharp {
+        left: 0;
+        top: 0;
+        border-bottom: 10px solid #fff;
+        border-right: 10px solid transparent
+    }
+
+    .top-left .amap-info-sharp:after {
+        position: absolute;
+        content: "";
+        margin-top: 0;
+        margin-left: 0;
+        border-bottom: 10px solid rgba(0, 0, 0, 0.3);
+        border-right: 10px solid transparent;
+        filter: blur(1px);
+        z-index: -1
+    }
+
+    .top-right .amap-info-sharp {
+        right: 0;
+        top: 0;
+        border-bottom: 10px solid #fff;
+        border-left: 10px solid transparent
+    }
+
+    .top-right .amap-info-sharp:after {
+        position: absolute;
+        content: "";
+        margin-top: 0;
+        margin-left: -10px;
+        border-bottom: 10px solid rgba(0, 0, 0, 0.3);
+        border-left: 10px solid transparent;
+        filter: blur(1px);
+        z-index: -1
+    }
+
+    .middle-right .amap-info-sharp {
+        right: 0;
+        top: 50%;
+        margin-top: -8px;
+        border-top: 8px solid transparent;
+        border-left: 8px solid #fff;
+        border-bottom: 8px solid transparent
+    }
+
+    .middle-right .amap-info-sharp:after {
+        position: absolute;
+        content: "";
+        margin-top: -8px;
+        margin-left: -8px;
+        border-top: 8px solid transparent;
+        border-left: 8px solid rgba(0, 0, 0, 0.3);
+        border-bottom: 8px solid transparent;
+        filter: blur(1px);
+        z-index: -1
+    }
+
+    .amap-info-contentContainer:hover.middle-right .amap-info-sharp:after {
+        border-left: 8px solid rgba(0, 0, 0, 0.5)
+    }
+
+    .middle-left .amap-info-sharp {
+        left: 0;
+        top: 50%;
+        margin-top: -8px;
+        border-top: 8px solid transparent;
+        border-right: 8px solid #fff;
+        border-bottom: 8px solid transparent
+    }
+
+    .middle-left .amap-info-sharp:after {
+        position: absolute;
+        content: "";
+        margin-top: -8px;
+        margin-left: 0;
+        border-top: 8px solid transparent;
+        border-right: 8px solid rgba(0, 0, 0, 0.3);
+        border-bottom: 8px solid transparent;
+        filter: blur(1px);
+        z-index: -1
+    }
+
+    .amap-info-contentContainer:hover.middle-left .amap-info-sharp:after {
+        border-right: 8px solid rgba(0, 0, 0, 0.5)
+    }
+
+    .amap-info-contentContainer.top-left, .amap-info-contentContainer.top-center, .amap-info-contentContainer.top-right {
+        padding-top: 8px
+    }
+
+    .amap-info-contentContainer.bottom-left, .amap-info-contentContainer.bottom-center, .amap-info-contentContainer.bottom-right {
+        padding-bottom: 8px
+    }
+
+    .amap-info-contentContainer.middle-right {
+        padding-right: 8px
+    }
+
+    .amap-info-contentContainer.middle-left {
+        padding-left: 8px
+    }
+
+    .amap-menu-outer {
+        margin: 0;
+        padding: 0;
+        list-style-type: none
+    }
+
+    ul.amap-menu-outer li {
+        cursor: pointer;
+        height: 35px;
+        line-height: 35px;
+        word-break: break-all;
+        padding: 0 10px;
+        font-size: 12px;
+        white-space: nowrap
+    }
+
+    ul.amap-menu-outer li a {
+        text-decoration: none;
+        font-size: 13px;
+        margin: 0 5px;
+        color: #000;
+        padding: 5px 5px
+    }
+
+    ul.amap-menu-outer li:hover {
+        background-color: #f3f3ee
+    }
+
+    .amap-overlay-text-container {
+        display: block;
+        width: auto;
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background: #fff;
+        padding: 2px 3px;
+        border: 1px solid #ccc;
+        border-radius: 3px
+    }
+
+    .amap-overlay-text-container.amap-overlay-text-empty {
+        display: none
+    }
+
+    .amap-info-content-ie8 {
+        border: 1px solid #9c9c9c
+    }</style>
+    <title>自助投诉</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control " content="no-cache,must-revalidate">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1">
+
+    <meta name="keyword" content="">
+    <meta name="description" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link href="/css/public.css" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/css/mystyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/city-picker.css">
+    <link type="text/css" rel="stylesheet" href="/css/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
+    <link type="text/css" rel="stylesheet" href="/css/expressServiceTab.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/sweetalert-dev.js"></script>
+    <script src="/js/goUrl.js"></script>
+    <script src="/js/env.js"></script>
+
+
+    <style type="text/css">.amap-container {
+        cursor: url(https://webapi.amap.com/theme/v1.3/openhand.cur), default;
+    }
+
+    .amap-drag {
+        cursor: url(https://webapi.amap.com/theme/v1.3/closedhand.cur), default;
+    }</style>
+    <link href="/css/stylepc.1.3-p.css" rel="stylesheet">
+    <script type="text/javascript" charset="UTF-8" async="" src="/js/mgr.Em2w8zbe5mMa4qs.js"></script>
+    <script type="text/javascript" charset="UTF-8" async="" src="/js/fp.js"></script>
+    <script charset="UTF-8" async="" src="/js/fp.EEp8F0xqGi6h7Kt.js"></script>
+    <link rel="stylesheet" href="/css/self-service.css">
+    <link rel="stylesheet" href="/css/pagination.css">
+    <link rel="stylesheet" href="/css/stylepc.1.3-p.css">
+    <script src="/js/jquery-1.4.2.min.js"></script>
+
+</head>
+<body>
+<div class="wrapper admin-content twolevelWrap">
+    <!--Created by 17120847 on 2018/5/23.-->
+    <div class="logAndRegister">
+        <div class="fixedWid clearfix">
+            <a href="javascript:void(0)" class="fl" onclick="addFavorite();">加入收藏</a>
+            <div class="fr normal"><a href="/passPortIndex.action?login_type=0">登录</a><span></span><a
+                    href="/register.action">注册</a></div>
+            <div style="display:none" class="fr sucess"><a href="/staticFiles/user/preIndex.html"><span class="username" id="username"></span></a>
+                <a class="exit" href="../../guest/logout">退出</a></div>
+        </div>
+    </div>
+    <div id="navWrap" class="headerWrap whiteBack commonWrap">
+        <div class="fixedWid">
+            <div class="navWrap clearfix">
+                <div class="logo fl">
+                    <a href="http://localhost:9292/"><img src="/images/logo.png" class="logoimg"></a>
+                </div>
+                <div class="fr">
+                    <a href="http://localhost:9292/" class="link">首页</a><span
+                        onclick="location.href='/staticFiles/pages/expressServiceTab.html'" class="link kdyw">快递业务
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">增值服务</span> <a
+                                        href="http://localhost:9292/staticFiles/pages/expressServiceTab.html?divId=hdfk"
+                                        class="linka">货到付款</a> <a
+                                        href="http://localhost:9292/staticFiles/pages/expressServiceTab.html?divId=dzmd"
+                                        class="linka">电子面单</a> <a
+                                        href="http://localhost:9292/staticFiles/pages/expressServiceTab.html?divId=dffw"
+                                        class="linka">到付服务</a> <a
+                                        href="http://localhost:9292/staticFiles/pages/expressServiceTab.html?divId=bjfw"
+                                        class="linka">保价服务</a> <a
+                                        href="http://localhost:9292/staticFiles/pages/expressServiceTab.html?divId=smqj"
+                                        class="linka">上门取件</a>
+								</div>
+							</div>
+						</span><span onclick="location.href='/staticFiles/pages/placeOrder.html&#39'"
+                                     class="link khfw">客户服务
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">我要寄件</span>
+									<span class="linka wyjjlink"
+                                          data-url="/staticFiles/pages/placeOrder.html">我要寄件</span>
+								</div>
+								<div class="content secondcontent">
+									<span class="linka second">我要查询</span>
+									<span class="linka cxydlink"
+                                          data-url="/staticFiles/pages/queryExpress.html">运单查询</span>
+									<span class="linka cxwdlink"
+                                          data-url="/staticFiles/pages/queryNetwork.html">网点查询</span>
+									<span class="linka yfcxlink"
+                                          data-url="/staticFiles/pages/queryPrice.html">运费查询</span>
+								</div>
+							</div>
+						</span><span onclick="location.href='/staticFiles/pages/joiningTT.html'"
+                                     class="link jmtt">加盟天天
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">加盟天天</span> <a
+                                        href="http://localhost:9292/staticFiles/pages/joiningTT.html?divId=jmxz"
+                                        class="linka">加盟须知</a> <a
+                                        href="http://localhost:9292/staticFiles/pages/joiningTT.html?divId=jmlc"
+                                        class="linka">加盟流程</a> <a
+                                        href="http://localhost:9292/staticFiles/pages/joiningTT.html?divId=jmrx"
+                                        class="linka">加盟热线</a> <a
+                                        href="http://localhost:9292/staticFiles/pages/joiningTT.html?divId=zsqy"
+                                        class="linka">招商区域</a>
+								</div>
+							</div>
+						</span><span onclick="location.href='/staticFiles/pages/recruitment.html'"
+                                     class="link rczp">人才招聘
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">人才招聘</span><a
+                                        href="http://localhost:9292/staticFiles/pages/recruitment.html?tab=1"
+                                        class="linka">职位信息</a><a
+                                        href="http://localhost:9292/staticFiles/pages/recruitment.html?tab=2"
+                                        class="linka">招聘介绍</a>
+								</div>
+							</div>
+						</span>
+                    <span onclick="window.open('http://wuliu.suning.com')" class="link">苏宁物流</span>
+                    <span onclick="location.href='/article/baseArticleAction!aboutTT.action'" class="link gytt">关于天天
+							<div class="cont">
+								<div class="content">
+									<span class="linka first">关于天天</span><span class="linka qyjslink"
+                                                                               data-url="/article/baseArticleAction!aboutTT.action#qyjs">企业介绍</span><span
+                                        class="linka xwzxlink"
+                                        data-url="/article/baseArticleAction!aboutTT.action#xwzx">新闻中心</span><span
+                                        class="linka lxwmlink"
+                                        data-url="/article/baseArticleAction!aboutTT.action#lxwm">联系我们</span>
+								</div>
+							</div>
+						</span><span class="kfdh"><img src="/images/kfrx.png" class="kfrx kfrx_1"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/self-service1.js"></script>
+    <script src="/js/jquery.pagination.js"></script>
+    <link rel="stylesheet" href="/css/self-service.css">
+    <script src="/js/jquery.validate.js"></script>
+    <script src="/js/additional-methods.js"></script>
+    <script src="/js/messages_zh.js"></script>
+    <script src="/js/city-picker.data.js"></script>
+    <script src="/js/gt.js"></script>
+    <script src="/js/city-picker.js"></script>
+    <script src="/js/jquery.SuperSlide.2.1.1_2.js"></script>
+    <script src="/js/jquery.slideBox.min.js"></script>
+    <script src="/js/jquery.form.js"></script>
+    <script src="/js/env.js"></script>
+    <script src="/js/maps.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/siller.css">
+    <script src="/js/SnCaptcha.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="/css/pagination.css">
+    <style>
+        .selectAddressModel {
+            width: 0px !important;
+        }
+
+        .addressDIv {
+            display: none;
+            margin-left: 60px;
+            margin-top: -22px;
+        }
+
+        .sa-placeholder {
+            left: -12px !important;
+            top: -22px !important;;
+        }
+
+        .animateSuccessTip {
+            left: 3px !important;
+            top: 28px !important;
+        }
+
+        .animateSuccessLong {
+            right: -11px !important;
+            top: 21px !important;
+        }
+
+        .sa-fix {
+            display: none;
+        }
+
+        .t_banner {
+            width: 100%;
+        }
+
+        .addressPopupContainer {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 1111;
+            display: none;
+        }
+
+        .addressPopup {
+            background: #FFFFFF;
+            width: 700px !important;
+            height: 429px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .addressPopupMask {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: #000;
+            opacity: .5;
+            filter: alpha(opacity=50);
+            -moz-opacity: 0.5;
+            opacity: 0.5;
+            display: block;
+        }
+
+    </style>
+    <div style="background:url(../../images/bg_workorder.png) no-repeat" class="t_content t_banner">
+        <div class="fixedWid">
+            <h3 class="title">自助投诉</h3>
+            <line class="wid20line"></line>
+            <p class="info">天天快递提供快捷、安全、贴心、可靠的快递服务，是您最好的选择</p>
+        </div>
+    </div>
+    <div class="about_cx"></div>
+    <div class="Dmain_about">
+        <div class="serviceTabContent self_service">
+            <form id="workOrderForm" enctype="multipart/form-data">
+                <div class="self_service_header">
+                    <span>亲爱的用户，感谢您选择天天快递。</span>
+                    <span>您对我们有任何意见和建议，都可以在此留言，请准确、无误地填写您的姓名、联系方法，方便我们联系，客服人员将及时解答您的问题。</span>
+                </div>
+                <div class="self_service_body">
+                    <div class="block">
+                        <div class="title">投诉信息</div>
+                        <div class="input_field mt20">
+                            <span class="label"><em>*</em>运单号</span>
+                            <div>
+                                <input type="hidden" id="userId" name="userId" value="">
+                                <input id="billNoInput" type="text" placeholder="请输入运单号" name="mailNo"
+                                       maxlength="30" value="">
+                                <div class="error_tip"></div>
+                            </div>
+                        </div>
+                        <div class="complaint_type mt35">
+                            <dl>
+                                <dt class="complaint_type_label">
+                                    <span class="label"><em>*</em>投诉类型</span>
+                                </dt>
+                                <dd class="complaint_type_content">
+                                    <ul>
+                                        <li class="complaint_type_btn" value="1" vals="1">催派件</li>
+                                        <li class="complaint_type_btn" value="2" vals="2">催揽发件</li>
+                                        <li class="complaint_type_btn" value="3" vals="3">虚假签收</li>
+                                        <li class="complaint_type_btn" value="4" vals="4">服务态度</li>
+                                        <li class="complaint_type_btn" value="5" vals="5">不送货上门</li>
+                                        <li class="complaint_type_btn" value="6" vals="6">修改信息</li>
+                                        <li class="complaint_type_btn" value="7" vals="7">快件遗失</li>
+                                        <li class="complaint_type_btn" value="8" vals="8">快件损毁</li>
+                                        <li class="complaint_type_btn" value="9" vals="9">退件问题</li>
+                                        <li class="complaint_type_btn" value="10" vals="10">其他</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+
+                            <input type="hidden" id="bizType" name="bizType" value="">
+
+                            <input type="hidden" id="problemDesc" name="problemDesc" value="">
+                        </div>
+                        <div class="question_desc">
+                            <span class="label"><em>*</em>问题描述</span>
+                            <div>
+                                <textarea id="questionDesc" type="text" name="memo" value=""
+                                          maxlength="500" placeholder="请描述自助投诉的具体原因"></textarea>
+                                <div class="error_tip"></div>
+                            </div>
+                            <span class="num">0/500</span>
+                        </div>
+                        <div class="question_upload">
+                            <div class="question_upload_img_list">
+                            </div>
+                            <div id="addImageBtn" class="question_upload_img_btn">
+                                <img src="/images/upload_img.png">
+                                <span>添加图片</span>
+                                <input type="file" name="file" id="file" accept="image/*">
+                            </div>
+                        </div>
+                        <div class="question_upload_tip">如需图片说明问题，请上传（选填，最多5张，jpg/jpeg/png/gif格式，不超过2M）</div>
+                    </div>
+                    <input type="hidden" id="urls" name="urls">
+                    <div class="block">
+                        <div class="title">联系人信息</div>
+                        <div class="row cleara mt20">
+                            <div class="input_field fl">
+                                <span class="label"><em>*</em>您的身份</span>
+                                <select name="creatorRole">
+                                    <option value="1">收件人</option>
+                                    <option value="2">发件人</option>
+                                    <option value="3">其他</option>
+                                </select>
+                            </div>
+                            <div class="input_field fl ml40">
+                                <span class="label"><em>*</em>联系人姓名</span>
+                                <div>
+                                    <input id="contactName" type="text" placeholder="请输入联系人"
+                                           name="creator" value="">
+                                    <div class="error_tip"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input_field mt35">
+                            <span class="label"><em>*</em>联系电话</span>
+                            <div>
+                                <input id="contactPhone" type="text" placeholder="请输入联系电话"
+                                       name="creatorMobilePhone" value="17700244411">
+                                <div class="error_tip"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="title">
+                            <span>收件人信息</span>
+                            <div class="addressDIv" style="display: block;">
+                                <img class="address" src="/images/icon_dizhibu.png">
+                                <span class="adderss_tip" onclick="openAddressBook('02')">地址簿</span>
+
+                            </div>
+                        </div>
+                        <div class="row cleara mt20">
+                            <div class="input_field fl">
+                                <span class="label"><em>*</em>收件人姓名</span>
+                                <div>
+                                    <input id="recipientName" type="text" placeholder="请输入收件人姓名"
+                                           name="receiver" value="">
+                                    <div class="error_tip"></div>
+                                </div>
+                            </div>
+                            <div class="input_field fl ml40">
+                                <span class="label"><em>*</em>收件人电话</span>
+                                <div>
+                                    <input id="recipientPhone" type="text" placeholder="请输入收件人联系电话"
+                                           name="receiverMobilePhone" value="">
+                                    <div class="error_tip"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input_field mt35">
+                            <span class="label"><em>*</em>收件人地址</span>
+                            <div>
+                                <input class="address" id="recipientAddr" maxlength="200" type="text"
+                                       placeholder="请输入收件人地址" name="receiverAddress" value="">
+                                <div class="error_tip"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <div class="title">
+                            <span>发件人信息</span>
+                            <div class="addressDIv" style="display: block;">
+                                <img class="address" src="/images/icon_dizhibu.png">
+                                <span class="adderss_tip" onclick="openAddressBook('01')">地址簿</span>
+
+                            </div>
+                        </div>
+                        <div class="row cleara mt20">
+                            <div class="input_field fl">
+                                <span class="label">发件人姓名</span>
+                                <div>
+                                    <input id="senderName" type="text" placeholder="请输入发件人姓名"
+                                           name="sender" value="">
+                                    <div class="error_tip"></div>
+                                </div>
+                            </div>
+                            <div class="input_field fl ml40">
+                                <span class="label">发件人电话</span>
+                                <div>
+                                    <input id="senderPhone" type="text" placeholder="请输入发件人联系电话"
+                                           name="senderMobilePhone" value="">
+                                    <div class="error_tip"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input_field mt35">
+                            <span class="label">发件人地址</span>
+                            <div>
+                                <input class="address" id="senderAddr" type="text" placeholder="请输入发件人地址"
+                                       maxlength="200" name="senderAddress" value="">
+                                <div class="error_tip"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="validate_block mt35 cleara">
+                        <span>安全验证</span>
+                        <div>
+                            <!--                            <div id="captcha"-->
+                            <!--                                 style="width: 278px;float: left;margin-bottom: 10px;vertical-align: middle;">-->
+                            <!--                                <div class="sncaptcha-init-button sncaptcha-init-button-unverified"-->
+                            <!--                                     id="captcha_sncaptcha_button"-->
+                            <!--                                     style="width: 250px; height: 36px; line-height: 36px;"><img-->
+                            <!--                                        class="sncaptcha-init-button-logo"-->
+                            <!--                                        src="data:image/png;base64,+EEhgu+/+oA+/9u4yEv5hqrYtayoay2OV0pgZVs9Rv5jYFIFm+8FTYKMrQB7EC8+i8baAwOxgwlkT4xFO3cijC8bUHmFgrkQiBFzn0N4sAKfP5Hqi7FH/tOL7SewVkfwr/stwoVlA8Fq8mYDiRMm3V5d8FcZpwEhAwwtbGUPw8zLWCrt/j794IyzGuGJMpu3otxLynqPbG4cyOcoI0BmkDJ/Z2XLHIzul0DGDRlHWUPKWtZPIOOMB/0FkepIR+VtCokHSZ/h0OTcjLIBME/hW8G4E3vMdtI6nJhrIzwE1IbGU+0kbtSzzPyjJwPZ3Isgi0rAyj5E38JLNPekOTcNET/NsyOIbsaILQnUntYEMXcuwl3AXCA+yEf1ZVLJRRIA487RoiLTTZUxmeVjDpNWg3jrbOh+BOSaCvThojxFIfF6kC1/ZXLzEXltsK92kLfqpOfcvO1Fxn+wk2fR1DIDz2tGmBi6scf5NFr7yOaeAXm8CNON8hVSfQfaORHhu5IYnjFXyLrrQRcXGduwrToy7q3BEYSvz7Ctq4Izj7t/A6NCYfm4SaJrOipbS+26QcjmvgSZWcK+wYyTcWZiyBcRQrqeVHIrGedhhBfCMRwjZdWy0r0HQzeGEPhKyOR+RqQ+RIAT8KSOKt0b4vgrDdYURJSsswB0EsgFwC1FQttFKnkRGWcVwvLSPfSAT6AdkeElRqm6kq78TmJGG4IxOLA8Sspc1/ft6ZZaur2fgLOLtLQFOzmPTG47InNCfqTdJ3AckZGlRlmCbT5PxvkeYVrRn61DaEPlRWzzL7LuxwhXlYpMFtJobiLrtACjQzJwwtfAAZApIcY3SSVvj1C4Dz+OZZo4LctBnwoXYCKJURhHVZCdkKW/+AR2gFwRYj1OjTmWdncGBp+E2Dfi8QYG/ssZUv91J3ZyGlm3MZIg+nXUNezd725sazPZ3C6QqYNIeHI/hq6NLLdwJ7b1GhlnP8K5ERnYEFGITsFVd5NKTiXrXg3q/2nPUj0JcgjhvPDAHCZvnkNVyywM/TACA0EhCmq20xp6E3o8T/1J7nVE5kUGG2gQvY4V1nay7u7o5723FPuOmdwGRO4L14n+TUHrYViCeH43MGFIEr1PbVNuMSrro7H6EnbyvlOvod8JdRwc4jl+H9u6idXuBPL6aeSZqm6jYN1AwpmCx87w6x0cYSf56ok8OepIv3qz7hrQpZGMlU0UzEWQG07ceBW4cRBWaQ5atFjLWPB+QMSfGSKWrMU2g+ann0AweLg7SorOwBCqH2BULwh6/Z4n1u8NfkOr0qRG7yDjXgre5tDS3q/gH6mxLucx8WeHovubPmYR79pV5pzbwHgAe8yWvpjpIyOJGY0Ifgaje0LlEIXEtL4+IRQctOVdH4FMLiO2PQhfotqNyL2Rz3F/kAra8l6wP5h4Bf/+XlLRtSsHOq3BpDdY0Kq5S0HtymfCYib+jCjZ0x/NBsbxhxU6fLGd/nBKTWrgEBKWqPLTca9X1HiuKCJO33iuxjsU/Pa8svH8P8lbEY2H2BJDAAAAAElFTkSuQmCC"><span-->
+                            <!--                                        class="sncaptcha-init-button-text">点击按钮进行验证</span></div>-->
+                            <!--                            </div>-->
+                            <input id="token" type="hidden" name="token">
+                        </div>
+                        <div class="cxhqyam">
+                            <p id="validateCodeCheck" style="margin-top: 12px;padding-top: 2px;"></p>
+                        </div>
+
+
+                    </div>
+                    <div class="submit_btn cleara" id="submitOrder" style="cursor:pointer">
+                        提交
+                    </div>
+                </div>
+            </form>
+
+            <!-- 弹出框背景色 -->
+
+
+            <div class="reg-protocol" id="writeAddrModel" style="margin-top: 32px;">
+                <div class="protocolmask"></div>
+                <div class="content">
+                    <div class="head">智能填写地址<a href="javascript:;"></a></div>
+                    <div class="body">
+                        <div class="intelligenceWriteRow">
+                            <textarea id="intelligenceWrite"
+                                      placeholder="粘贴整段地址，自动识别姓名、电话和地址，例：小天天， 13298934285，江苏省南京市玄武区苏宁总部"></textarea>
+                            <span class="showLength"><span class="surplusLen">0</span>/150</span>
+                        </div>
+                        <div class="disableTip">请输入要解析的内容！</div>
+                        <div class="operateBtnRow">
+                            <button class="confirmSubmit" style="margin-left:148px;">确定</button>
+                            <button class="cancleSubmit">取消</button>
+                        </div>
+                        <input type="hidden" id="znType" value="01">
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $('#questionDesc').bind('input propertychange', function () {
+                    $(".num").html($("#questionDesc").val().length + "/500");
+                });
+
+                // $.ajax({
+                //     type: "post",
+                //     url: "/customerAction!isLogin.action",
+                //     error: function () {
+                //     },
+                //     success: function (data) {
+                //         try {
+                //             var obj = eval('(' + data + ')');
+                //             if (obj.success) {  //已经登录
+                //                 $(".addressDIv").css("display", "block");
+                //             }
+                //         } catch (error) {
+                //             $(".addressDIv").css("display", "none");
+                //         }
+                //
+                //     }
+                // });
+                // var type = $(".complaint_type_content").find(".complaint_type_btn");
+                // type[0].className += ' focus';
+                // 打开选择地址簿
+                function openAddressBook(addressType) {
+                    $("#perType").val(addressType);
+                    var pageNum = $("#pageNum").val();
+                    var pageSize = $("#pageSize").val();
+                    $.ajax({
+                        type: "post",
+                        url: "/myAddress!queryAddressBookList.action",
+                        data: {"addressType": addressType, "pageNum": pageNum, "pageSize": pageSize},
+                        dataType: "JSON",
+                        success: function (data) {
+                            if (data != null) {
+                                if (data.returnStatus == "01") {
+                                    $("#pageNum").val(data.pageNum);
+                                    $("#pageSize").val(data.pageSize);
+                                    $("#totalCount").val(data.totalCount);
+                                    $("#pageCount").val(data.pageCount);
+                                    initPaginationFunc(data.totalCount, data.pageSize, data.pageNum, data.pageCount);
+                                    // 点击分页
+                                    $(".M-box1").find("a").click(function () {
+                                        var dataPage = $(this).attr("data-page");
+                                        if (typeof (dataPage) != "undefined") {  // 点击具体的页码
+                                            $("#pageNum").val(dataPage);
+                                        } else {    // 点击“上一页”或“下一页”
+                                            if ($(this).attr("class") == "prev") {
+                                                $("#pageNum").val(parseInt($("#pageNum").val()) - 1);
+                                            } else if ($(this).attr("class") == "next") {
+                                                $("#pageNum").val(parseInt($("#pageNum").val()) + 1);
+                                            }
+                                        }
+                                        openAddressBook(toAddressType);
+                                    });
+                                    showAddressBook(data.addressBookList, addressType);
+                                } else if (data.returnStatus == "02") {
+                                    exploreAlert("", data.returnMsg, "warning");
+                                }
+                            } else {
+                                exploreAlert("", "操作异常，请稍后再试！", "warning");
+                            }
+                        },
+                        error: function (data) {
+                            exploreAlert("", "提交失败！", "error");
+                        }
+                    });
+                }
+
+                // 初始化分页控件
+                function initPaginationFunc(totalData, showData, current, pageCount) {
+                    if (totalData != 0) {
+                        $('.M-box1').pagination({
+                            totalData: totalData,
+                            showData: showData,
+                            current: current,
+                            coping: false,
+                            homePage: '首页',
+                            endPage: '末页',
+                            keepShowPN: false,
+                            prevContent: '上一页',
+                            nextContent: '下一页',
+                            mode: "unfixed",
+                            count: 3
+                        });
+                        $(".pageCont").prepend('<a href="javascript:;" data-page="1" class="jumpClass">首页</a>');
+                        $(".pageCont").append('<a href="javascript:;" data-page="' + pageCount + '" class="jumpClass">尾页</a>');
+                    }
+                }
+
+                // 展示地址簿
+                var toAddressType;
+
+                function showAddressBook(addressBookList, addressType) {
+                    toAddressType = addressType;
+                    if ("01" == addressType) {
+                        $(".addressSpan").html("寄件");
+                    } else {
+                        $(".addressSpan").html("收件");
+                    }
+                    if (addressBookList != null && addressBookList.length > 0) {
+                        clearFunc();
+                        $.each(addressBookList, function (i, ab) {
+                            var x = document.getElementById("addressBookTable").insertRow();
+                            var td0 = x.insertCell(0);
+                            var td1 = x.insertCell(1);
+                            var td2 = x.insertCell(2);
+                            var td3 = x.insertCell(3);
+                            $(td0).addClass('tdChecked');
+                            if (ab.default_type == "01") {  // 默认地址
+                                td0.innerHTML = '<div class="inputRadio radiohasChecked"><input type="radio" class="addClass" name="addressBookRadio" aid="' + ab.id + '" addresstype="' + ab.address_type + '" checked="checked"></div>';
+                            } else {
+                                td0.innerHTML = '<div class="inputRadio radioNoChecked"><input type="radio" class="addClass" name="addressBookRadio" aid="' + ab.id + '" addresstype="' + ab.address_type + '"></div>';
+                            }
+
+                            td1.innerHTML = ab.name;
+                            td2.innerHTML = ab.phone;
+                            td3.innerHTML = ab.province_name + ab.city_name + ab.region_name + ab.address;
+                        });
+                        $('.selectAddressModel').show();
+                    } else {
+                        $(".selectNoAddressModel").show();
+                    }
+                    $('.addressPopupContainer').show();
+                }
+
+                // 清空表格
+                function clearFunc() {
+                    var tableObj = document.getElementById("addressBookTable");
+                    if (tableObj != null) {
+                        var rowLen = tableObj.rows.length;
+                        for (var i = rowLen - 1; i != 0; i--) {
+                            tableObj.deleteRow(i);
+                        }
+                    }
+                }
+
+                // 选择地址簿
+                function selFunc() {
+                    if ($(".addClass:checked").parent().parent().parent().children().size() > 0) {
+                        var name = $(".addClass:checked").parent().parent().parent().children().get(1).innerHTML;
+                        var phone = $(".addClass:checked").parent().parent().parent().children().get(2).innerHTML;
+                        var address = $(".addClass:checked").parent().parent().parent().children().get(3).innerHTML;
+                        var addressType = $("#perType").val();
+                        if (addressType == "01") {  //01 发件
+                            $("#senderName").val(name);
+                            $("#senderPhone").val(phone);
+                            $("#senderAddr").val(address);
+                        } else {
+                            $("#recipientName").val(name);
+                            $("#recipientPhone").val(phone);
+                            $("#recipientAddr").val(address);
+                        }
+                        closeFunc();
+                    } else {
+                        exploreAlert("", "请选择地址！", "error");
+                        return;
+                    }
+                }
+
+                // 关闭
+                function closeFunc() {
+                    $("#addressBookDiv").hide();
+                    $('.addressPopupContainer').hide();
+                    clearFunc();
+                    $(".city-picker-dropdown").hide();  // 防止地址控件弹出
+                }
+
+                // 跳转到新增地址页面
+                function toAddAddressFunc() {
+                    window.location.href = "/myAddress.0" +
+                        ".0=" + toAddressType;
+                }
+
+                // 超区校验 01-收件 02-寄件
+                function areaExceedCheckFunc(value, element, params) {
+                    var area, address, type;
+                    if (params == "01") {
+                        area = $("#receiveArea").val();
+                        address = $("#receiveAddress").val();
+                        type = "WE";
+                    } else if (params == "02") {
+                        area = $("#sendArea").val();
+                        address = $("#sendAddress").val();
+                        type = "Z1";
+                    }
+                    var areaArr = area.split("/");
+                    var province = areaArr[0];
+                    var city = areaArr[1];
+                    var region = areaArr[2];
+
+//                 var checkflag = true;
+//                 $.ajax({
+//                     type: 'post',
+//                     url: "/customerService!areaExceedCheck.action",
+//                     data:{ "province": province, "city": city, "region": region, "address": address},
+//                     dataType: 'json',
+//                     async: "false",	// 同步执行
+//                     success: function(data) {
+//                         if (data != null) {
+//                             if (data.returnStatus == "01") {
+//                                 checkflag = true;
+// //							alert(data.returnMsg);
+//                             } else {
+//                                 checkflag = false;
+//                                 alert(data.returnMsg);
+//                             }
+//                         }
+//                     },
+//                     error: function(){
+//                         alert("请求失败！");
+//                     }
+//                 });
+
+                    $.ajax({
+                        type: 'post',
+                        url: "/customerService!exceedAreaCheck.action", //验证省市县
+                        data: {"province": province, "city": city, "region": region, "address": address, "type": type},
+                        dataType: 'json',
+                        success: function (data) {
+                            if (data != null) {
+                                if (data.code == "1000") {
+                                    checkflag = true;
+//							alert(data.returnMsg);
+                                } else {
+                                    checkflag = false;
+                                    swal("", data.msg, "warning");
+                                    $address.val("");   // 校验不通过，清空详细地址
+                                }
+                            }
+                        },
+                        error: function () {
+                            swal("", "请求失败！", "error");
+                        }
+                    });
+
+                    return checkflag;
+                }
+
+                // 打开弹框
+                function openZnjxAddressBook(n) {
+                    $('#intelligenceWrite').val('').css('borderColor', '#E0E0E0').parent().next().hide()
+                    $('#writeAddrModel').show()
+                    $('#writeAddrModel .surplusLen').text('0')
+                    $('#writeAddrModel .content').css('marginTop', -$('writeAddrModel .content').height() / 2)
+                    $('#znType').val(n)
+                }
+
+                // 智能填写地址验证
+                $(document).on('click', '#writeAddrModel .confirmSubmit', function () {
+                    if ($('#writeAddrModel #intelligenceWrite').val() === '') {
+                        $('#writeAddrModel .disableTip').show().prev().find('textarea').css('borderColor', '#FF5858')
+                    } else {
+                        $.ajax({
+                            type: "post",
+                            url: "/subscriptionBusiness!addressResolution.action",
+                            dataType: "JSON",
+                            data: {"addressInfo": $('#writeAddrModel #intelligenceWrite').val()},
+                            success: function (res) {
+                                if (res.code == "1000") {
+                                    setAddFuncZntx(res.data, $('#znType').val());
+                                    $('.reg-protocol').hide()
+                                    $(".city-picker-dropdown").hide();  // 防止地址控件弹出
+                                    $('.intelligenceTip').slideDown(500);
+                                    setTimeout(function () {
+                                        $('.intelligenceTip').slideUp(500)
+                                    }, 5000)
+                                } else {
+                                    $('#writeAddrModel .disableTip').show().prev().find('textarea').css('borderColor', '#FF5858');
+                                    $('#writeAddrModel .disableTip').html(res.msg);
+                                }
+                            },
+                            error: function (data) {
+                                exploreAlert("", "登录校验异常！", "error");
+                            }
+                        });
+                    }
+                    $('#writeAddrModel .content').css('marginTop', -$('#writeAddrModel .content').height() / 2)
+                })
+
+                // 设置地址
+                function setAddFuncZntx(aBook, aType) {
+                    if (aType == "01") {  //01 发件
+                        $("#senderName").val(aBook.rname);
+                        $("#senderPhone").val(aBook.telenum);
+                        $("#senderAddr").val(aBook.province + aBook.city + aBook.county + aBook.address);
+                    } else {
+                        $("#recipientName").val(aBook.rname);
+                        $("#recipientPhone").val(aBook.telenum);
+                        $("#recipientAddr").val(aBook.province + aBook.city + aBook.county + aBook.address);
+                    }
+
+                }
+
+                function init() {
+                    var env = getEnv();
+                    $.ajax({
+                        type: "post",
+                        url: "/getIARToken.action",
+                        success: function (data) {
+                            var obj = eval("(" + data + ")");
+                            if (obj.code == "1000") {
+                                sc = SnCaptcha.init({
+                                    id: 'captcha', // 用于当一个页面上有多个验证码实例时进行区分
+                                    // env : 'sit', // 环境sit，xgpre，prd
+                                    env: env, // 环境sit，xgpre，prd
+                                    type: 'inline', // inline:插入按钮, 点击按钮弹出验证码。popup：直接弹出验证码
+                                    target: 'captcha', // 验证码按钮插入的 div 的 id，必填
+                                    ticket: obj.data, // 通过注册接口获取的 ticket
+                                    width: '250px',  // 按钮或者滑块宽度（必填)
+                                    height: '36px',  // 滑块或按钮高度(必填，且必须用具体数值，禁止使用百分比)
+                                    callback: function (token) { // 回调函数
+                                        console.log(token);
+                                    }
+                                });
+
+                            } else {
+                                swal("", obj.msg, "error");
+                            }
+                        },
+                        error: function (data) {
+                            ;
+                            console.log(data.returnMsg);
+
+                        }
+                    });
+                }
+
+                // 关闭地址弹框
+                $(document).on('click', '.reg-protocol .head a, .protocolmask, #writeAddrModel .cancleSubmit', function () {
+                    $('.reg-protocol').hide()
+                });
+
+                $(document).ready(function () {
+                    document.title = '自助投诉';
+                    // init()
+                    $("#submitOrder").click(function (e) {
+                        // if (!sc.queryStatus()) {
+                        //     exploreAlert("", "亲~请进行安全验证。", "warning");
+                        //     return;
+                        // }
+                        // $("#token").val(sc.queryToken());
+                        //表单验证
+                        var verificationIds = ['billNoInput', 'questionDesc', 'contactName', 'contactPhone',
+                            'recipientName', 'recipientPhone', 'recipientAddr']
+                        for (var i = 0; i < verificationIds.length; i++) {
+                            $("#" + verificationIds[i]).blur();
+                        }
+                        if ($("#billNoInput").val() == "" ||
+                            $("#questionDesc").val() == "" ||
+                            $("#contactName").val() == "" ||
+                            $("#contactPhone").val() == "" ||
+                            $("#recipientName").val() == "" ||
+                            $("#recipientPhone").val() == "" ||
+                            $("#recipientAddr").val() == "" ||
+                            $("#bizType").val() == "") {
+                            canCommit = false;
+                            if ($("#bizType").val() == "") {
+                                exploreAlert("", "请选择投诉类型", "warning");
+                                return;
+                            }
+                        }
+                        if (canCommit) {
+                            $.ajax({
+                                type: "post",
+                                url: "../../user/workOrderCustomerSubmit",
+                                data: $("#workOrderForm").serialize(),
+                                dataType: "JSON",
+                                success: function (data) {
+                                    if (data != null) {
+                                        if (data.code == "1000") {
+                                            // init()
+                                            // exploreAlert("投诉意见成功提交", '您可以在我的投诉中查看和了解投诉处理进度', "success");
+                                            swal({
+                                                title: "",
+                                                text: "投诉意见成功提交",
+                                                type: "info",
+                                                confirmButtonColor: "#0293ED"
+                                            });
+                                            open("http://localhost:9292/staticFiles/user/myWorkOrder.html");
+                                        }else {
+                                            exploreAlert("", data.msg, "warning");
+                                        }
+                                    } else {
+                                        // init()
+                                        exploreAlert("", data.msg, "warning");
+                                    }
+                                },
+                                error: function(){
+                                    // init()
+                                    exploreAlert("", "操作异常，请稍后再试!", "warning");
+                                }
+                            });
+                        }
+                        //提交流程
+                        // var orderPic = document.getElementsByClassName("orderPic");
+                        // var url = "";
+                        // if (orderPic.length > 0) {
+                        //     for (var i = 0; i < orderPic.length; i++) {
+                        //         url = url + "," + orderPic[i].src;
+                        //     }
+                        //     ;
+                        //     $("#urls").val(url.substring(1));
+                        // }
+                        // $("#urls").val(url.substring(1));
+
+                    })
+                });
+            </script>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+
+    <!-- 弹出框背景色 -->
+    <div class="addressPopupContainer">
+        <div class="addressPopupMask"></div>
+        <!--选择地址弹出框-->
+        <div class="selectAddressModel addressPopup" id="addressBookDiv">
+            <input type="hidden" id="perType">
+            <div class="selectAddressGroup">
+                <input type="hidden" id="pageNum" name="pageNum" value="">
+                <input type="hidden" id="pageSize" name="pageSize" value="">
+                <input type="hidden" id="totalCount" name="totalCount" value="">
+                <input type="hidden" id="pageCount" name="pageCount" value="">
+                <div class="selectModelTitle">选择<span class="addressSpan"></span>地址<img src="/images/close.png"
+                                                                                        class="closeModel"></div>
+                <div class="selectModelContent" id="selModelContent">
+                    <div class="queryResultOrderTable">
+                        <table border="1" id="addressBookTable">
+                            <thead>
+                            <tr>
+                                <th width="49px;"></th>
+                                <th width="129px;">姓名</th>
+                                <th width="170px;">联系方式</th>
+                                <th width="237px;">地址</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="M-box1 pageCont"></div>
+                    <div class="selectModelConfirm"><a href="javascript:void(0)" class="forBtn ConfirmBtn"
+                                                       onclick="selFunc()">确认</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer commonWrap">
+        <div class="footerCont fixedWid clearfix">
+            <div class="customer fl">
+                <span class="info">客服电话</span>
+                <span class="info tel">4001-888-888</span>
+                <span class="info timer">服务时间： 8:30 - 17:30</span>
+            </div>
+            <div class="hyperlink clearfix">
+                <div class="linkgroup fl">
+                    <a href="http://localhost:9292/staticFiles/user/selfHelp.html" class="link"
+                       style="color: rgb(255, 255, 255); margin-bottom: 13px;">客户服务</a>
+                    <a href="http://localhost:9292/staticFiles/pages/placeOrder.html" class="link">在线寄件</a>
+                    <a href="http://localhost:9292/staticFiles/pages/queryExpress.html" class="link">运单查询</a>
+                    <a href="http://localhost:9292/staticFiles/pages/queryNetwork.html" class="link">网点查询</a>
+                    <a href="http://localhost:9292/staticFiles/pages/queryPrice.html" class="link">运费查询</a>
+                </div>
+                <div class="linkgroup fl">
+                    <a href="http://localhost:9292/staticFiles/user/selfHelp.html" class="link"
+                       style="color: rgb(255, 255, 255); margin-bottom: 13px;">客服服务</a>
+                    <a href="http://localhost:9292/article/baseArticleAction!aboutTT.action#lxwm" class="link">客服热线 </a>
+                    <a href="http://localhost:9292/staticFiles/pages/customerServiceCenter.html#last"
+                       class="link">在线留言</a>
+                </div>
+                <div class="linkgroup fl">
+                    <a href="http://localhost:9292/staticFiles/user/selfHelp.html" class="link"
+                       style="color: rgb(255, 255, 255); margin-bottom: 13px;">加盟天天</a>
+                    <a href="http://localhost:9292/staticFiles/pages/joiningTT.html?divId=jmxz" class="link">加盟须知 </a>
+                    <a href="http://localhost:9292/staticFiles/pages/joiningTT.html?divId=jmlc" class="link">加盟流程</a>
+                    <a href="http://localhost:9292/staticFiles/pages/joiningTT.html?divId=jmrx" class="link">加盟热线</a>
+                    <a href="http://localhost:9292/staticFiles/pages/joiningTT.html?divId=zsqy" class="link">招商区域</a>
+                </div>
+                <div class="linkgroup fl">
+                    <a href="http://localhost:9292/staticFiles/user/selfHelp.html" class="link"
+                       style="color: rgb(255, 255, 255); margin-bottom: 13px;">人才招聘</a>
+                    <a href="http://localhost:9292/staticFiles/pages/recruitment.html?tab=1" class="link">职位信息</a>
+                    <a href="http://localhost:9292/staticFiles/pages/recruitment.html?tab=2" class="link">招聘介绍</a>
+                </div>
+                <div class="linkgroup fr smcodediv" style="text-align:center">
+                    <img class="smcode" src="/images/code_dyh.png" alt="">
+                    <span class="info">天天相知微信</span>
+                    <span class="info">订阅号扫码关注</span>
+                </div>
+                <div class="linkgroup fr smcodediv">
+                    <img class="smcode" src="/images/code_fwh.png" alt="">
+                    <span class="info">天天快递微信</span>
+                    <span class="info">服务号扫码关注</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footerbottom commonWrap">
+        <div class="fixedWid">
+            <p class="info">©版权所有 2016 天天快递有限公司<a style="color: #A6A7AB;" href="http://www.beian.miit.gov.cn/"
+                                                  target="_blank"> 浙ICP备13006085</a>号
+
+                <a href="http://localhost:9292/include/img/businessLicense.png" target="_blank" style="color: #A6A7AB;">
+                    | 快递业务经营许可证</a><a href="http://localhost:9292/staticFiles/pages/businessLincence.html"
+                                      target="_blank" style="color: #A6A7AB;"> | <img src="/images/yyzz.png"
+                                                                                      style="width: 19px;height:19px;vertical-align: middle;">
+                    营业执照</a></p>
+        </div>
+    </div>
+    <div class="selfServiceBtnList">
+        <div class="customerBtn" data="/onlineCallVip.action">
+            <div class="onLineIcon"></div>
+            <span class="btnTip">在线客服</span>
+        </div>
+        <div class="customerBtns selfOrderServiceBtn" id="selfOrderServiceBtn">
+            <div class="selfServiceIcon"></div>
+            <span class="btnTip">自助投诉</span>
+        </div>
+        <div class="customerBtns selfOrderServiceBtn" id="toTopBtn">
+            <div class="returnTopIcon"></div>
+            <span class="btnTip">返回顶部</span>
+        </div>
+    </div>
+</div>
+
+<script src="/js/index1.js"></script>
+<script src="/js/expressServiceTab.js"></script>
+<script src="/js/common.js"></script>
+<script type="text/javascript">
+    $.getJSON("../../guest/getUserInfo", function (data) {
+        if (data != null) {
+            // alert(data.luPhone);
+            $(".sucess").css("display", "block");
+            $(".normal").css("display", "none");
+
+            $("#contactPhone").val(data.luPhone);
+            $("#contactName").val(data.luUsername);
+            $("#userId").val(data.luId);
+            // alert(data.luId);
+            $(".username").html(data.luPhone);
+            $(".personInfo div").html(data.luPhone);
+
+
+            //如有头像则加载非默认头像
+            if ( null!=data.luImgLocation && ""!=data.luImgLocation){
+                $(".personInfo img").attr("src",data.luImgLocation);
+            }
+        }
+    });
+</script>
+
+<!--<iframe src="./自助投诉_files/ifm.html" id="_fsd" style="display: none;"></iframe>-->
+</body>
+</html>

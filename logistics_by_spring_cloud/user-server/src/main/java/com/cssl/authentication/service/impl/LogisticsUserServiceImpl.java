@@ -157,18 +157,10 @@ public class LogisticsUserServiceImpl extends ServiceImpl<LogisticsUserMapper, L
         }
 
         //手机号注册验证   ************************************** 待做
-//        System.out.println("MessageCode = " + MessageCode);
-//        System.out.println("messageCode = " + messageCode);
-//        System.out.println(Integer.parseInt(messageCode.trim())==MessageCode);
         if (Integer.parseInt(messageCode.trim())!=MessageCode){
             map.put("message","验证码输入错误，注册失败");
             return JSON.toJSONString(map);
         }
-
-
-
-
-
 
 
         //--手机号注册
@@ -217,24 +209,6 @@ public class LogisticsUserServiceImpl extends ServiceImpl<LogisticsUserMapper, L
         map.put("url",url);
 
 
-//        if (NonEmptyUtils.isEmpty(phone)){  //手机非空判断
-//            message = "手机号不能为空";
-//            throw new AccountException(message);
-//        }
-//        if (NonEmptyUtils.isEmpty(password)){  //密码非空判断
-//            message = "密码输入为空！";
-//            throw new AccountException(message);
-//        }
-//        if (NonEmptyUtils.isEmpty(messageCode)){  //手机非空判断
-//            message = "验证码不能为空！";
-//            throw new AccountException(message);
-//        }
-        //手机号登录验证   ************************************** 待做
-
-
-
-
-
         //查黑名单
         boolean backList = isBackList(phone);
         if (backList){
@@ -281,8 +255,6 @@ public class LogisticsUserServiceImpl extends ServiceImpl<LogisticsUserMapper, L
             map.put("url",url);
             result = true;
             map.put("result",result);
-//            将用户存入session中
-//            把session存入redis中
             return JSON.toJSONString(map);
         }
         return JSON.toJSONString(map);
@@ -339,9 +311,8 @@ public class LogisticsUserServiceImpl extends ServiceImpl<LogisticsUserMapper, L
             map.put("message", "该手机号已被注册,请登录！");
             return JSON.toJSONString(map);
         }
-        map.put("message", "手机未被注册！");
+//        map.put("message", "手机未被注册！");
         return JSON.toJSONString(map);
-
     }
 
     @Override

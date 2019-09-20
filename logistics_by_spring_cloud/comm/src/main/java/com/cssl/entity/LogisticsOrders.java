@@ -45,6 +45,16 @@ public class LogisticsOrders implements Serializable {
 
     private ExpressProvincesCityAreas expressProvincesCityAreas;//地点表
 
+    private TransportationStatus transportationStatus;//运单表
+
+    public TransportationStatus getTransportationStatus() {
+        return transportationStatus;
+    }
+
+    public void setTransportationStatus(TransportationStatus transportationStatus) {
+        this.transportationStatus = transportationStatus;
+    }
+
     public Integer getTmId() {
         return tmId;
     }

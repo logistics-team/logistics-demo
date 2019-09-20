@@ -340,10 +340,11 @@
 
             var goodsWeight = $("#goodsWeight2").val();
             var insuranceMoney = $("#insuranceMoney2").val();    // 保值
-            var sendCityCode = getAreaCode("sendArea2", "city");
+            var sendProvinceCode =  getAreaCode("sendArea2", "province");
             var sendRegionCode = getAreaCode("sendArea2", "district");
-            var receiveCityCode = getAreaCode("receiveArea2", "city");
+            var receiveProvinceCode =  getAreaCode("receiveArea2", "province");
             var receiveRegionCode = getAreaCode("receiveArea2", "district");
+            var transport = false;
             var orderDate = $("#orderDate").val();
 
             var orderDate1 = $("#orderDate").val().replace("-","").replace("-","");
@@ -370,18 +371,18 @@
 
             $.ajax({
                 type: 'post',
-                url: "/customerService!transportMoneyEstimate.action",
-                data:{ "sendCityCode": sendCityCode, "sendRegionCode": sendRegionCode, "receiveCityCode": receiveCityCode, "receiveRegionCode": receiveRegionCode, "goodsWeight": goodsWeight, "orderDate": orderDate, "insuranceMoney": insuranceMoney },
+                url: "../../guest/freightEstimate",
+                data:{ "sendProvinceCode": sendProvinceCode, "sendRegionCode": sendRegionCode, "receiveProvinceCode": receiveProvinceCode, "receiveRegionCode": receiveRegionCode, "goodsWeight": goodsWeight, "insuranceMoney": insuranceMoney ,"transport": transport},
                 dataType: 'json',
                 success: function(data) {
                     if (data != null) {
                         if (data.returnStatus == "01") {	// 成功
                             td0.innerHTML = "天天标快";
-                            td1.innerHTML = data.count;
-                            td2.innerHTML = data.firstPrice;
-                            td3.innerHTML = data.price;
-                            // td4.innerHTML = "";
-                            td5.innerHTML = data.afterRate;
+                            td1.innerHTML = data.weight;
+                            td2.innerHTML = data.first;
+                            td3.innerHTML = data.continued;
+                            // td4.innerHTML = orderDate1;
+                            td5.innerHTML = data.totalprices;
 
 
                         } else if (data.returnStatus == "02") {	// 失败

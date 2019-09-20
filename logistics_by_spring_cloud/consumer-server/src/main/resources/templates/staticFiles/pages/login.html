@@ -30,6 +30,8 @@
     <script type="text/javascript" src="/js/sweetalert-dev.js"></script>
     <script type="text/javascript" src="/js/goUrl.js"></script>
     <script type="text/javascript" src="/js/env.js"></script>
+    <link rel="stylesheet" href="/css/slider.css">
+
 
 
 </head>
@@ -208,13 +210,15 @@
 
 
         function submitValidate() {
+            //验证码
+        // else if ($("#encodinginput").val().length < 1) {
+        //         $("#cuxs").html("<span><img src='/images/tips_errorMenu.png'></span><font>请输入验证码</font>");
+        //     }
             if ($("#userName").val().length < 1 || !reg.test($("#userName").val())) {
                 $("#cuxs").html("<span><img src='/images/tips_errorMenu.png'></span><font>请输入正确的手机号</font>");
             } else if ($("#passwordI").val().length < 1) {
                 $("#cuxs").html("<span><img src='/images/tips_errorMenu.png'></span><font>请输入密码</font>");
-            } else if ($("#encodinginput").val().length < 1) {
-                $("#cuxs").html("<span><img src='/images/tips_errorMenu.png'></span><font>请输入验证码</font>");
-            } else {
+            }else {
                 var password = $("#passwordI").val();
 //		    var publicKey = $("#publicKey").val();
 //            var encrypt = new JSEncrypt();
@@ -230,7 +234,7 @@
                     data: {
                         "j_username": document.getElementById('userName').value,
                         "j_password": document.getElementById('passwordI').value,
-                        "encodinginput": document.getElementById('encodinginput').value
+                        "encodinginput": "true"
                     },
                     error: function () {
                         swal("", '服务器连接失败！', "warning");
@@ -298,14 +302,20 @@
                             <input type="password" name="j_password" id="passwordI" onkeydown="onkeyDownEvent(event)"
                                    class="usernamea" placeholder="请输入密码">
                         </div>
-                        <div class="yza">
-                            <input name="encodinginput" type="text" id="encodinginput" onkeydown="onkeyDownEvent(event)"
-                                   class="encodinginput" placeholder="请填写验证码">
+<!--                        <div class="yza">-->
+<!--                            <input name="encodinginput" type="text" id="encodinginput" onkeydown="onkeyDownEvent(event)"-->
+<!--                                   class="encodinginput" placeholder="请填写验证码">-->
+<!--                        </div>-->
+
+<!--                        <div class="yzm"><img id="verificationCodeImg" onclick="changeValidateCode(this)"-->
+<!--                                              src="/images/verificationCodeAction!getRandom.jpg"></div>-->
+<!--                        <div class="clear"></div>-->
+                        <div class="drag">
+                            <div class="bg"></div>
+                            <div class="text" onselectstart="return false;" style="margin: 0px auto">请拖动滑块解锁</div>
+                            <div class="btn">&gt;&gt;</div>
                         </div>
-                        <div class="yzm"><img id="verificationCodeImg" onclick="changeValidateCode(this)"
-                                              src="/images/verificationCodeAction!getRandom.jpg"></div>
-                        <div class="clear"></div>
-                        <input type="button" onclick="submitValidate()" value="登录" class="login">
+                        <input type="button" onclick="submitValidate()" value="登录" class="login" id="login" disabled="disabled">
                         <input type="hidden" id="publicKey"
                                value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDPCwJNPWT/swvQvp7fgEYvgKy53D5pxaD7H0jCNMphp0koUl8AQuRg3vXTPo6uFe1aBsh5XZJtDQ4kIZkiILk0BL5WVBCR8bLfsWQHebBWhrs2Z2Zb1stEpmuTP0WGc27WKAVam8TZqjn4PLVqaxHJE+H6yvLs6CRGFRdmDcNtwIDAQAB">
                     </form>
@@ -313,6 +323,98 @@
             </div>
         </div>
     </div>
+    <script>
+        //一、定义一个获取DOM元素的方法
+        var slider = function (selector) {
+                return document.querySelector(selector);
+            },
+            box = slider(".drag"),//容器
+            bg = slider(".bg"),//背景
+            text = slider(".text"),//文字
+            btn = slider(".btn"),//滑块
+            success = false,//是否通过验证的标志
+            distance = box.offsetWidth - btn.offsetWidth;//滑动成功的宽度（距离）
+
+        //二、给滑块注册鼠标按下事件
+        btn.onmousedown = function (e) {
+
+            //1.鼠标按下之前必须清除掉后面设置的过渡属性
+            btn.style.transition = "";
+            bg.style.transition = "";
+
+            //说明：clientX 事件属性会返回当事件被触发时，鼠标指针向对于浏览器页面(或客户区)的水平坐标。
+
+            //2.当滑块位于初始位置时，得到鼠标按下时的水平位置
+            var e = e || window.event;
+            var downX = e.clientX;
+
+            //三、给文档注册鼠标移动事件
+            document.onmousemove = function (e) {
+
+                var e = e || window.event;
+                //1.获取鼠标移动后的水平位置
+                var moveX = e.clientX;
+
+                //2.得到鼠标水平位置的偏移量（鼠标移动时的位置 - 鼠标按下时的位置）
+                var offsetX = moveX - downX;
+
+                //3.在这里判断一下：鼠标水平移动的距离 与 滑动成功的距离 之间的关系
+                if (offsetX > distance) {
+                    offsetX = distance;//如果滑过了终点，就将它停留在终点位置
+                } else if (offsetX < 0) {
+                    offsetX = 0;//如果滑到了起点的左侧，就将它重置为起点位置
+                }
+
+                //4.根据鼠标移动的距离来动态设置滑块的偏移量和背景颜色的宽度
+                btn.style.left = offsetX + "px";
+                bg.style.width = offsetX + "px";
+
+                //如果鼠标的水平移动距离 = 滑动成功的宽度
+                if (offsetX == distance) {
+
+                    //1.设置滑动成功后的样式
+                    text.innerHTML = "验证通过";
+                    text.style.color = "#fff";
+                    btn.innerHTML = "&radic;";
+                    btn.style.color = "green";
+                    bg.style.backgroundColor = "lightgreen";
+
+                    //2.设置滑动成功后的状态
+                    success = true;
+                    //成功后，清除掉鼠标按下事件和移动事件（因为移动时并不会涉及到鼠标松开事件）
+                    btn.onmousedown = null;
+                    document.onmousemove = null;
+
+                    //3.成功解锁后的回调函数
+                    setTimeout(function () {
+                        alert('解锁成功！');
+                        $("#login").removeAttr("disabled")
+                    }, 100);
+                }
+            }
+
+            //四、给文档注册鼠标松开事件
+            document.onmouseup = function (e) {
+
+                //如果鼠标松开时，滑到了终点，则验证通过
+                if (success) {
+                    return;
+                } else {
+                    //反之，则将滑块复位（设置了1s的属性过渡效果）
+                    btn.style.left = 0;
+                    bg.style.width = 0;
+                    btn.style.transition = "left 1s ease";
+                    bg.style.transition = "width 1s ease";
+                }
+                //只要鼠标松开了，说明此时不需要拖动滑块了，那么就清除鼠标移动和松开事件。
+                document.onmousemove = null;
+                document.onmouseup = null;
+            }
+
+
+        }
+
+    </script>
     <script type="text/javascript" src="/js/Base64.js"></script>
     <script type="text/javascript" src="/js/jsencrypt.min.js"></script>
 
@@ -382,7 +484,7 @@
                 <a href="javascript:window.open('https://www.ttkdex.com/include/img/businessLicense.png');"
                    target="_blank" style="color: #A6A7AB;"> | 快递业务经营许可证</a><a
                         href="javascript:window.open('https://www.ttkdex.com/staticFiles/pages/businessLincence.html');"
-                        target="_blank" style="color: #A6A7AB;"> | <img src="include/img/yyzz.png"
+                        target="_blank" style="color: #A6A7AB;"> | <img src="/images/yyzz.png"
                                                                         style="width: 19px;height:19px;vertical-align: middle;">
                     营业执照</a></p>
         </div>
@@ -406,6 +508,10 @@
 <script type="text/javascript" src="/js/index1.js"></script>
 <script type="text/javascript" src="/js/expressServiceTab.js"></script>
 <script type="text/javascript" src="/js/common.js"></script>
+<!--滑块验证-->
+<link rel="stylesheet" href="/css/slider.css">
+
+
 
 
 </body>
