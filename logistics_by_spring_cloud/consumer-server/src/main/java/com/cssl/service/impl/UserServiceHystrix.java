@@ -80,4 +80,55 @@ public class UserServiceHystrix implements UserService {
     public String findUserByPhone(String phone) {
         return "未找到任何信息";
     }
+
+    @Override
+    public String select_untreated(int page, int limit) {
+        return null;
+    }
+
+    @Override
+    public String select_inHand(int page, int limit) {
+        return null;
+    }
+
+    @Override
+    public String select_processed(int page, int limit) {
+        return null;
+    }
+
+    @Override
+    public int update_psid(int id, int psid) {
+        return 0;
+    }
+
+    /**
+     * 前台--显示投诉信息 根据用户id
+     *
+     * @param id
+     * @param page
+     */
+    @Override
+    public String select_user_id(int id, int page) {
+        return null;
+    }
+
+    /**
+     * 前台--显示投诉详情信息 根据订单id
+     *
+     * @param id
+     */
+    @Override
+    public String select_mc_id(String id) {
+        return null;
+    }
+
+    /**
+     * 前台--个根据id删除投诉
+     *
+     * @param id
+     */
+    @Override
+    public int remove_mc_id(String id) {
+        return 0;
+    }
 }

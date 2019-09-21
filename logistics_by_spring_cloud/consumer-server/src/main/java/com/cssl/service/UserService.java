@@ -77,4 +77,45 @@ public interface UserService {
 
     @RequestMapping(value = "user/findUserByPhone", method = RequestMethod.POST, consumes = "application/json")
     String findUserByPhone(@RequestParam(value = "phone")String phone);
+    
+    /*
+    *李嘉兴
+     */
+//未处理的投诉查询
+    @RequestMapping(value = "orders/select_untreated", method=RequestMethod.POST,consumes = "applkication/json")
+    public String select_untreated(@RequestParam(value = "page")int page,@RequestParam(value = "limit")int limit);
+
+    //处理中的投诉信息查询
+    @RequestMapping(value = "orders/select_inHand", method=RequestMethod.POST,consumes = "applkication/json")
+    public String select_inHand(@RequestParam(value = "page")int page,@RequestParam(value = "limit")int limit);
+
+    //已处理的投诉信息查询
+    @RequestMapping(value = "orders/select_processed", method=RequestMethod.POST,consumes = "applkication/json")
+    public String select_processed(@RequestParam(value = "page")int page,@RequestParam(value = "limit")int limit);
+
+    //修改处理状态
+    @RequestMapping(value = "orders/update_psid", method=RequestMethod.POST,consumes = "applkication/json")
+    public int update_psid(@RequestParam(value = "id")int id,@RequestParam(value = "psid")int psid);
+
+    /**
+     * 前台--显示投诉信息 根据用户id
+     */
+    @RequestMapping(value = "orders/select_user_id", method=RequestMethod.POST,consumes = "applkication/json")
+    public String select_user_id(@RequestParam(value = "id")int id,@RequestParam(value = "page") int page);
+
+    /**
+     * 前台--显示投诉详情信息 根据订单id
+     */
+    @RequestMapping(value = "orders/select_mc_id", method=RequestMethod.POST,consumes = "applkication/json")
+    public String select_mc_id(@RequestParam(value = "id")String id);
+
+    /**
+     * 前台--个根据id删除投诉
+     */
+    @RequestMapping(value = "orders/removae_mc_id", method=RequestMethod.POST,consumes = "applkication/json")
+    public int remove_mc_id(@RequestParam(value = "id")String id);
+
+    /**
+     * 以上李代码
+     */
 }

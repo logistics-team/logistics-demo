@@ -1,75 +1,76 @@
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>天天快递官网</title>
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="Cache-Control " content="no-cache,must-revalidate">
-	<meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1">
+    <meta charset="UTF-8">
+    <title>天天快递官网</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control " content="no-cache,must-revalidate">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1">
 
-	<meta name="keyword" content="">
-	<meta name="description" content=""><meta name="apple-mobile-web-app-capable" content="yes"/>
-	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-	<meta name="format-detection" content="telephone=no"/>
-	<meta name="format-detection" content="email=no"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
-	<meta http-equiv="Pragma"   content="no-cache">
-	<link href="/css/public.css" rel="stylesheet" type="text/css" />
-	<link href="/css/style.css" rel="stylesheet" type="text/css" />
-	<link href="/css/mystyle.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" type="text/css" href="/css/city-picker.css" />
-	<link type="text/css" rel="stylesheet" href="/css/common.css">
-	<link type="text/css" rel="stylesheet" href="/css/main.css">
-	<link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
-	<link type="text/css" rel="stylesheet" href="/css/expressServiceTab.css">
-	
-	<link rel="stylesheet" type="text/css" href="/css/style.css" />
-	
+    <meta name="keyword" content="">
+    <meta name="description" content=""><meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
+    <meta http-equiv="Pragma"   content="no-cache">
+    <link href="/css/public.css" rel="stylesheet" type="text/css" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/css/mystyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/css/city-picker.css" />
+    <link type="text/css" rel="stylesheet" href="/css/common.css">
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
+    <link type="text/css" rel="stylesheet" href="/css/expressServiceTab.css">
 
-	<script src="/js/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/sweetalert-dev.js"></script>
-	<script type="text/javascript" src="/js/goUrl.js"></script>
-	<script type="text/javascript" src="/js/env.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/sweetalert-dev.js"></script>
+    <script type="text/javascript" src="/js/goUrl.js"></script>
+    <script type="text/javascript" src="/js/env.js"></script>
 
 
 </head>
 <body>
 <div class="wrapper admin-content twolevelWrap">
-	<!--Created by 17120847 on 2018/5/23.-->
-	<div class="logAndRegister">
-		<div class="fixedWid clearfix">
-			<a href="javascript:void(0)" class="fl" onclick="addFavorite();">加入收藏</a>
-			<div  class="fr normal"><a href="/passPortIndex.action?login_type=0">登录</a><span></span><a href="/register.action">注册</a></div>
-			<div style="display:none" class="fr sucess"> <a href="/myOrderNew.action"><span class="username" id="username"></span></a><a class="exit"  href="/j_logout">退出</a></div>
-		</div>
-	</div>
-	<div id="navWrap" class="headerWrap whiteBack commonWrap">
-		<div class="fixedWid">
-			<div class="navWrap clearfix">
-				<div class="logo fl">
-					<a href="/"><img src="/images/logo.png" class="logoimg"></a>
-				</div>
-				<div class="fr">
-					<a href="/" class="link">首页</a><span
-						onclick="location.href='pages/expressServiceTab.html'"
-						class="link kdyw">快递业务
+    <!--Created by 17120847 on 2018/5/23.-->
+
+    <div class="logAndRegister">
+        <div class="fixedWid clearfix">
+            <a href="javascript:void(0)" class="fl" onclick="addFavorite();">加入收藏</a>
+            <div  class="fr normal"><a href="/passPortIndex.action?login_type=0">登录</a><span></span><a href="/register.action">注册</a></div>
+            <div style="display:none" class="fr sucess"> <a href="/myOrderNew.action"><span class="username" id="username"></span></a><a class="exit"  href="/j_logout">退出</a></div>
+        </div>
+    </div>
+    <div id="navWrap" class="headerWrap whiteBack commonWrap">
+        <div class="fixedWid">
+            <div class="navWrap clearfix">
+                <div class="logo fl">
+                    <a href="/"><img src="/images/logo.png" class="logoimg"></a>
+                </div>
+                <div class="fr">
+                    <a href="/" class="link">首页</a><span
+                        onclick="location.href='pages/expressServiceTab.html'"
+                        class="link kdyw">快递业务
 							<div class="cont">
 								<div class="content">
 									<span class="linka first">增值服务</span> <a
-										href="pages/expressServiceTab.html?divId=hdfk"
-										class="linka">货到付款</a> <a
-										href="pages/expressServiceTab.html?divId=dzmd"
-										class="linka">电子面单</a> <a
-										href="pages/expressServiceTab.html?divId=dffw"
-										class="linka">到付服务</a> <a
-										href="pages/expressServiceTab.html?divId=bjfw"
-										class="linka">保价服务</a> <a
-										href="pages/expressServiceTab.html?divId=smqj"
-										class="linka">上门取件</a>
+                                        href="pages/expressServiceTab.html?divId=hdfk"
+                                        class="linka">货到付款</a> <a
+                                        href="pages/expressServiceTab.html?divId=dzmd"
+                                        class="linka">电子面单</a> <a
+                                        href="pages/expressServiceTab.html?divId=dffw"
+                                        class="linka">到付服务</a> <a
+                                        href="pages/expressServiceTab.html?divId=bjfw"
+                                        class="linka">保价服务</a> <a
+                                        href="pages/expressServiceTab.html?divId=smqj"
+                                        class="linka">上门取件</a>
 								</div>
 							</div>
 						</span><span
-						onclick="location.href='pages/placeOrder.html'"
-						class="link khfw">客户服务
+                        onclick="location.href='pages/placeOrder.html'"
+                        class="link khfw">客户服务
 							<div class="cont">
 								<div class="content">
 									<span class="linka first">我要寄件</span>
@@ -83,614 +84,695 @@
 								</div>
 							</div>
 						</span><span onclick="location.href='pages/joiningTT.html'"
-									 class="link jmtt">加盟天天
+                                     class="link jmtt">加盟天天
 							<div class="cont">
 								<div class="content">
 									<span class="linka first">加盟天天</span> <a
-										href="pages/joiningTT.html?divId=jmxz"
-										class="linka">加盟须知</a> <a
-										href="pages/joiningTT.html?divId=jmlc"
-										class="linka">加盟流程</a> <a
-										href="pages/joiningTT.html?divId=jmrx"
-										class="linka">加盟热线</a> <a
-										href="pages/joiningTT.html?divId=zsqy"
-										class="linka">招商区域</a>
+                                        href="pages/joiningTT.html?divId=jmxz"
+                                        class="linka">加盟须知</a> <a
+                                        href="pages/joiningTT.html?divId=jmlc"
+                                        class="linka">加盟流程</a> <a
+                                        href="pages/joiningTT.html?divId=jmrx"
+                                        class="linka">加盟热线</a> <a
+                                        href="pages/joiningTT.html?divId=zsqy"
+                                        class="linka">招商区域</a>
 								</div>
 							</div>
 						</span><span onclick="location.href='pages/recruitment.html'" class="link rczp">人才招聘
 							<div class="cont">
 								<div class="content">
 									<span class="linka first">人才招聘</span><a
-										href="pages/recruitment.html?tab=1" class="linka">职位信息</a><a
-										href="pages/recruitment.html?tab=2" class="linka">招聘介绍</a>
+                                        href="pages/recruitment.html?tab=1" class="linka">职位信息</a><a
+                                        href="pages/recruitment.html?tab=2" class="linka">招聘介绍</a>
 								</div>
 							</div>
 						</span>
-					<span onclick="window.open('http://wuliu.suning.com')" class="link">苏宁物流</span>
-						<span onclick="location.href='/article/baseArticleAction!aboutTT.action'" class="link gytt">关于天天
+                    <span onclick="window.open('http://wuliu.suning.com')" class="link">苏宁物流</span>
+                    <span onclick="location.href='/article/baseArticleAction!aboutTT.action'" class="link gytt">关于天天
 							<div class="cont">
 								<div class="content">
 									<span class="linka first">关于天天</span><span
-										class="linka qyjslink" data-url="/article/baseArticleAction!aboutTT.action#qyjs">企业介绍</span><span class="linka xwzxlink" data-url="/article/baseArticleAction!aboutTT.action#xwzx">新闻中心</span><span
-										class="linka lxwmlink" data-url="/article/baseArticleAction!aboutTT.action#lxwm">联系我们</span>
+                                        class="linka qyjslink" data-url="/article/baseArticleAction!aboutTT.action#qyjs">企业介绍</span><span class="linka xwzxlink" data-url="/article/baseArticleAction!aboutTT.action#xwzx">新闻中心</span><span
+                                        class="linka lxwmlink" data-url="/article/baseArticleAction!aboutTT.action#lxwm">联系我们</span>
 								</div>
 							</div>
 						</span><span class="kfdh"><img
-						src="/images/kfrx.png" class="kfrx kfrx_1"></span>
-				</div>
-			</div>
-		</div>
-	</div>
+                        src="/images/kfrx.png" class="kfrx kfrx_1"></span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!-- ftl start -->
-<script src="/js/jquery.validate.js"></script>
-<script src="/js/additional-methods.js"></script>
-<script src="/js/messages_zh.js"></script>
-<script src="/js/city-picker.data.js"></script>
-<script src="/js/city-picker.js"></script>
-<script type="text/javascript" src="/js/expressServiceTab.js"></script>
-<script type="text/javascript" src="/js/login.js"></script>
-<script type="text/javascript" src="/js/pageWorkOrder.js"></script>
-<Script type="text/javascript" src="/js/viewer.min.js"></script>
-<script type="text/javascript" src="/js/myWordOrderPopup.js"></script>
-<<style>
-.queryResultOrderTable table td {
-    border-width: 0 0px 1px 0;
-    height: 40px;
-    color: #333333;
-    padding-left: 0px;
-    text-align:center;
-}
-</style>
-<link type="text/css" rel="stylesheet" href="/css/renCaiZhaoPin.css">
-<link type="text/css" rel="stylesheet" href="/css/viewer.min.css">
-<link type="text/css" rel="stylesheet" href="/css/myWordOrderPopup.css">
-<div style="background:url(/images/customerCenter.jpg) no-repeat" class="t_content t_banner">
-    <div class="fixedWid">
-        <h3 class="title">个人中心</h3>
-        <line class="wid20line"></line>
-        <p class="info">天天快递提供快捷、安全、贴心、可靠的快递服务，是您的优质选择</p>
-    </div>
-</div>
-
-<!--弹出框背景色-->
-<div class="mask"></div>
-<!--查看订单弹出框-->
-<div class="queryOrderModel">
-  <div class="queryOrderGroup">
-    <div class="selectModelTitle">查看<img src="/images/close.png" class="closeModel"></div>
-    <div class="queryOrderModelData">
-      <label>订单编号：</label><span class="oneClumnWidth" id="orderId"></span>
-      <label>下单时间：</label><span id="orderTime"></span>
-      <div>
-        <label>物品重量：</label><span class="oneClumnWidth" id="goodsWeight"></span>
-        <label>物品备注：</label><span id="specialRemarks"></span>
-      </div>
-    </div>
-      <input type="hidden" id="tempMaiNo" />
-      <input type="hidden" id="tempOrderId" />
-    <div class="queryOrderModelProgress">
-      <div class="orderNumTilte" id="expressId"></div>
-      <div class="receiveAndTask">
-        <div class="receiveBox" id="sendBox" title="">
-          <div class="nameAndPho" id="sendName"></div>
-          <div class="receiveBoxAddr" id="sendAddr"></div>
-        </div>
-        <div class="receiveAndTaskImg"><img src="/images/progressStatu.png"><span id="orderStatus"></span></div>
-        <div class="receiveBox" id="receiveBox" title="">
-          <div class="nameAndPho" id="receiveName"></div>
-          <div class="receiveBoxAddr" id="receiveAddr"></div>
-        </div>
-      </div>
-        <div id="detail"></div>
-    </div>
-  </div>
-</div>
-<div class="personalCenterContent">
-    <div class="leftTabContent">
-        <div class="leftMainTitle">个人中心</div>
-        <div class="personInfo">
-            <a href="/myPerson.action">
-                
-                
-                    <img  src="/images/0000000000_01.jpg" />
-                
-                <div>155****1419</div>
-            </a>
-        </div>
-        <div class="leftMainContent">
-            <a href="/myOrderNew.action"><div class="leftNodeTab"> 我的订单</div></a>
-            <a href="/myOnlineOrder.action"> <div class="leftNodeTab">我要寄件</div></a>
-            <a href="/myAddress.action"><div class="leftNodeTab">我的地址簿</div></a>
-            <a href="/myPerson.action"><div class="leftNodeTab">会员信息</div></a>
-            <a href="/myWorkOrder.action"><div class="leftNodeTab leftNodeTabActive">我的投诉</div></a>
-        </div>
-    </div>
-    <div style="display:inline-block;" class="rightTabContent">
-        <div class="rightsmalltitle myordertitle bold">我的投诉</div>
-        <div class="cont">
-            <div style="display:block;" class="tabswitchcontent clearfix">
-                <div class="queryresultordertable" id="workOrder">
-                    <table border="1">
-                        <thead>
-                        <tr>
-                            <th style="padding-left:10px;text-align:center">单号</th>
-                            <th style="width:108px;text-align:center">投诉时间</th>
-                            <th style="width:150px;text-align:center">投诉类型</th>
-                            <th style="width:80px;text-align:center">处理状态</th>
-                            <th style="padding:0 13px 0 10px;width:250px;text-align:center">操作</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        
-                        </tbody>
-                    </table>
-                    <form method='post' class="customerInfocont" id='pageUtilForm'><div class="tablegroup"><div class="page1 btngroup"> <a class="btn link" href="#">首页</a>  
- <a class="current btn" style="color: #fff;" href='#' onclick = "turnPage('/mytt/customerAction!myWorkOrderPages.action?page=' ,'/mytt/customerAction!myWorkOrderPages.action?page=', 1);return false;" >1</a>
- 
- 
-<input type="hidden" name="curPage" id="curPage"  value="1"/><input type="hidden" name="Parameter" id="Parameter"  value="?page="/></div></div></form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--工单详情-->
-    <div class="complaintDetail alertContainer">
-      <div class="alertMask"></div>
-      <div class="alert">
-        <div class="header">
-          <span class="title">投诉详情</span>
-          <img class="closeBtn" src="/images/close.png"/>
-        </div>
-        <div class="alertBody">
-            <div class="content">
-              <div class="billInfo">
-                <dl class="billNum">
-                  <dt id="workorderTextDT">运单编号：</dt>
-                  <dd id="workorderidDD">123456789012</dd>
-                </dl>
-                <span class="billStatus" id="workOrderStatusDD">处理中</span>
-              </div>
-              <dl>
-                <dt>投诉时间：</dt>
-                <dd id="createTimeDD">2019-06-13 10:35</dd>
-              </dl>
-              <dl>
-                <dt>投诉类型：</dt>
-                <dd id="problemdescDD">虚假签收</dd>
-              </dl>
-              <dl>
-                <dt>详细描述：</dt>
-                <dd id="memoDD">某某快递员虚假签收，快递实际上都没有到达本人手里，快递状态就显示已签收。某某快递员虚假签收，快递实际上都没有到达本人手里，快递状态就显示已签收。某某快递员虚假签收，快递实际上都没有到达本人手里，快递状态就显示已签收。</dd>
-              </dl>
-              <div class="imgList" id="myComplaintViewer"></div>
-            </div>
-            <div class="feedbackTitle">处理回复</div>
-            <div class="content">
-              <p class="feedbackInfo" id="replyContentDD"></p>
-              <div class="noContent">
-                <img src="/images/no_content.png"/>
-                <p>暂无处理结果</p>
-              </div>
-            </div>
-        </div>
-      </div>
-    </div>
-    <!--催处理-->
-    <div class="urgent alertContainer" style="display: none;">
-        <div class="alertMask"></div>
-        <div class="alert">
-            <div class="header">
-                <span class="title">催处理</span>
-                <img class="closeBtn" src="/images/close.png"/>
-            </div>
-            <div class="content">
-                <div class="tip">
-                    请您留言：
-                </div>
-                <div class="mt15">
-                    <input type="hidden" id="reminderWorkOrderId"/>
-                    <textarea maxlength="100" id="reminderContentTextArea" placeholder="有什么话留给小天天，我们看到后会尽快处理～"></textarea>
-                </div>
-                <div class="footer">
-                    <button class="confirm" onclick="reminderWorkOrder()">确定</button>
-                    <button class="cancel">取消</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--查看评价-->
-    <div class="feedback alertContainer">
-        <div class="alertMask"></div>
-        <div class="alert" style="width: 455px;">
-            <div class="header">
-                <span class="title">评价详情</span>
-                <img class="closeBtn" src="/images/close.png"/>
-            </div>
-            <div class="content">
-                <div class="tip">
-                    您对本次服务评价：
-                </div>
-                <div class="remark mt15">
-                    <img  id="evaluationStarImg" src="/images/star1.png"/>
-                    <span id="evaluationStarSpan"></span>
-                </div>
-                <div class="split">
-                    <hr/>
-                    <span>留言</span>
-                    <hr/>
-                </div>
-                <div class="message" id="evaluationContentSpan">
-                    暂无留言
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--评价-->
-    <div class="myRating alertContainer">
-        <div class="alertMask"></div>
-        <div class="alert">
-            <div class="header">
-                <span class="title">服务评价</span>
-                <img class="closeBtn" src="/images/close.png"/>
-            </div>
-            <div class="content">
-                <div class="tip">
-                    请您对本次服务进行评价并留言：
-                </div>
-                <img class="ratingImg" src="/images/star1.png"/>
-                <div class="mt15 btns" id="evaluationDiv">
-                    <button id="evaluationBtnOne" data-value="1" class="button active">非常满意</button>
-                    <button id="evaluationBtnTwo" data-value="2" class="button">满意</button>
-                    <button id="evaluationBtnThree" data-value="3" class="button">不满意</button>
-                </div>
-                <div class="mt15">
-                    <input type="hidden" id="evaluationWorkOrderId"/>
-                    <textarea placeholder="您的留言是我们努力的动力" id="evaluationContentTextarea" maxlength="100"></textarea>
-                </div>
-                <div class="footer">
-                    <button class="confirm" onclick="evaluationWorkOrder()">确定</button>
-                    <button class="cancel">取消</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script type="text/javascript">
-    function removeWorkOrder(workOrderId){
-        swal({
-                title: "确认删除该条投诉记录吗？",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
-                closeOnConfirm: false
-            },
-            function(){
-                $.ajax({
-                    type : "post",
-                    url : "/workOrder!removeWorkOrder.action",
-                    data :{"selfHelpWorkOrder.workOrderId":workOrderId},
-                    dataType: "JSON",
-                    success : function(data) {
-                        if (data != null) {
-                            if (data.code == "1000") {
-                                swal({
-                                        title: "投诉已删除",
-                                        type: "info"
-                                    },
-                                    function() {
-                                        location.reload();
-                                    });
-                            } else {
-                                swal("", data.msg, "info");
-                            }
-                        } else {
-                            swal("", "操作异常，请稍后再试！", "info");
-                        }
-                    },
-                    error:function(data){
-                        swal("操作异常，请稍后再试！");
-                    }
-                });
-            }
-        );
+    <!-- ftl start -->
+    <script src="/js/jquery.validate.js"></script>
+    <script src="/js/additional-methods.js"></script>
+    <script src="/js/messages_zh.js"></script>
+    <script src="/js/city-picker.data.js"></script>
+    <script src="/js/city-picker.js"></script>
+    <script type="text/javascript" src="/js/expressServiceTab.js"></script>
+    <script type="text/javascript" src="/js/login.js"></script>
+    <script type="text/javascript" src="/js/pageWorkOrder.js"></script>
+    <Script type="text/javascript" src="/js/viewer.min.js"></script>
+    <script type="text/javascript" src="/js/myWordOrderPopup.js"></script>
+    <style>
+    .queryResultOrderTable table td {
+        border-width: 0 0px 1px 0;
+        height: 40px;
+        color: #333333;
+        padding-left: 0px;
+        text-align:center;
     }
-    function cancelWorkOrder(workOrderId){
-        swal({
-                title: "取消后将不在受理，确认取消吗？",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "确定",
-                cancelButtonText: "取消",
-                closeOnConfirm: false
-            },
-            function(){
-                $.ajax({
-                    type : "post",
-                    url : "/workOrder!cancelWorkOrder.action",
-                    data :{"selfHelpWorkOrder.workOrderId":workOrderId},
-                    dataType: "JSON",
-                    success : function(data) {
-                        if (data != null) {
-                            if (data.code == "1000") {
-                                swal({
-                                        title: "投诉已取消",
-                                        type: "info"
-                                    },
-                                    function() {
-                                        location.reload();
-                                    });
-                            } else{
-                                swal("", data.msg, "error");
+</style>
+    <link type="text/css" rel="stylesheet" href="/css/renCaiZhaoPin.css">
+    <link type="text/css" rel="stylesheet" href="/css/viewer.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/myWordOrderPopup.css">
+    <div style="background:url(/images/customerCenter.jpg) no-repeat" class="t_content t_banner">
+        <div class="fixedWid">
+            <h3 class="title">个人中心</h3>
+            <line class="wid20line"></line>
+            <p class="info">天天快递提供快捷、安全、贴心、可靠的快递服务，是您的优质选择</p>
+        </div>
+    </div>
+
+    <!--弹出框背景色-->
+    <div class="mask"></div>
+    <!--查看订单弹出框-->
+    <div class="queryOrderModel">
+        <div class="queryOrderGroup">
+            <div class="selectModelTitle">查看<img src="/images/close.png" class="closeModel"></div>
+            <div class="queryOrderModelData">
+                <label>订单编号：</label><span class="oneClumnWidth" id="orderId"></span>
+                <label>下单时间：</label><span id="orderTime"></span>
+                <div>
+                    <label>物品重量：</label><span class="oneClumnWidth" id="goodsWeight"></span>
+                    <label>物品备注：</label><span id="specialRemarks"></span>
+                </div>
+            </div>
+            <input type="hidden" id="tempMaiNo" />
+            <input type="hidden" id="tempOrderId" />
+            <div class="queryOrderModelProgress">
+                <div class="orderNumTilte" id="expressId"></div>
+                <div class="receiveAndTask">
+                    <div class="receiveBox" id="sendBox" title="">
+                        <div class="nameAndPho" id="sendName"></div>
+                        <div class="receiveBoxAddr" id="sendAddr"></div>
+                    </div>
+                    <div class="receiveAndTaskImg"><img src="/images/progressStatu.png"><span id="orderStatus"></span></div>
+                    <div class="receiveBox" id="receiveBox" title="">
+                        <div class="nameAndPho" id="receiveName"></div>
+                        <div class="receiveBoxAddr" id="receiveAddr"></div>
+                    </div>
+                </div>
+                <div id="detail"></div>
+            </div>
+        </div>
+    </div>
+    <div class="personalCenterContent">
+        <div class="leftTabContent">
+            <div class="leftMainTitle">个人中心</div>
+            <div class="personInfo">
+                <a href="/myPerson.action">
+
+
+                    <img  src="/images/0000000000_01.jpg" />
+
+                    <div>155****1419</div>
+                </a>
+            </div>
+            <div class="leftMainContent">
+                <a href="/myOrderNew.action"><div class="leftNodeTab"> 我的订单</div></a>
+                <a href="/myOnlineOrder.action"> <div class="leftNodeTab">我要寄件</div></a>
+                <a href="/myAddress.action"><div class="leftNodeTab">我的地址簿</div></a>
+                <a href="/myPerson.action"><div class="leftNodeTab">会员信息</div></a>
+                <a href="/myWorkOrder.action"><div class="leftNodeTab leftNodeTabActive">我的投诉</div></a>
+            </div>
+        </div>
+        <div style="display:inline-block;" class="rightTabContent">
+            <div class="rightsmalltitle myordertitle bold">我的投诉</div>
+            <div class="cont">
+                <div style="display:block;" class="tabswitchcontent clearfix">
+                    <div class="queryresultordertable" id="workOrder">
+                        <table border="1" id="table1">
+                            <thead>
+                            <tr>
+                                <th style="padding-left:10px;text-align:center">单号</th>
+                                <th style="width:108px;text-align:center">投诉时间</th>
+                                <th style="width:150px;text-align:center">投诉类型</th>
+                                <th style="width:80px;text-align:center">处理状态</th>
+                                <th style="padding:0 13px 0 10px;width:250px;text-align:center">操作</th>
+                            </tr>
+                            </thead>
+
+                        </table>
+                        <form method='post' class="customerInfocont" id='pageUtilForm'><div class="tablegroup">
+                            <div class="page1 btngroup" id="page1">
+                                <a class="btn link" href="#" onclick="page01(1);return false;">首页</a>
+                                <a class="current btn" id="1"style="color: #fff;" href='#' onclick = "page01(1);return false;" >1</a>
+
+
+                            <input type="hidden" name="curPage" id="curPage"  value="1"/><input type="hidden" name="Parameter" id="Parameter"  value="?page="/></div></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--工单详情-->
+        <div class="complaintDetail alertContainer">
+            <div class="alertMask"></div>
+            <div class="alert">
+                <div class="header">
+                    <span class="title">投诉详情</span>
+                    <img class="closeBtn" src="/images/close.png"/>
+                </div>
+                <div class="alertBody">
+                    <div class="content">
+                        <div class="billInfo">
+                            <dl class="billNum">
+                                <dt id="workorderTextDT">运单编号：</dt>
+                                <dd id="workorderidDD">123456789012</dd>
+                            </dl>
+                            <span class="billStatus" id="workOrderStatusDD">处理中</span>
+                        </div>
+                        <dl>
+                            <dt>投诉时间：</dt>
+                            <dd id="createTimeDD">2019-06-13 10:35</dd>
+                        </dl>
+                        <dl>
+                            <dt>投诉类型：</dt>
+                            <dd id="problemdescDD">虚假签收</dd>
+                        </dl>
+                        <dl>
+                            <dt>详细描述：</dt>
+                            <dd id="memoDD">某某快递员虚假签收，快递实际上都没有到达本人手里，快递状态就显示已签收。某某快递员虚假签收，快递实际上都没有到达本人手里，快递状态就显示已签收。某某快递员虚假签收，快递实际上都没有到达本人手里，快递状态就显示已签收。</dd>
+                        </dl>
+                        <div class="imgList" id="myComplaintViewer"></div>
+                    </div>
+                    <div class="feedbackTitle">处理回复</div>
+                    <div class="content">
+                        <p class="feedbackInfo" id="replyContentDD"></p>
+                        <div class="noContent">
+                            <img src="/images/no_content.png"/>
+                            <p>暂无处理结果</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--催处理-->
+        <div class="urgent alertContainer" style="display: none;">
+            <div class="alertMask"></div>
+            <div class="alert">
+                <div class="header">
+                    <span class="title">催处理</span>
+                    <img class="closeBtn" src="/images/close.png"/>
+                </div>
+                <div class="content">
+                    <div class="tip">
+                        请您留言：
+                    </div>
+                    <div class="mt15">
+                        <input type="hidden" id="reminderWorkOrderId"/>
+                        <textarea maxlength="100" id="reminderContentTextArea" placeholder="有什么话留给小天天，我们看到后会尽快处理～"></textarea>
+                    </div>
+                    <div class="footer">
+                        <button class="confirm" onclick="reminderWorkOrder()">确定</button>
+                        <button class="cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--查看评价-->
+        <div class="feedback alertContainer">
+            <div class="alertMask"></div>
+            <div class="alert" style="width: 455px;">
+                <div class="header">
+                    <span class="title">评价详情</span>
+                    <img class="closeBtn" src="/images/close.png"/>
+                </div>
+                <div class="content">
+                    <div class="tip">
+                        您对本次服务评价：
+                    </div>
+                    <div class="remark mt15">
+                        <img  id="evaluationStarImg" src="/images/star1.png"/>
+                        <span id="evaluationStarSpan"></span>
+                    </div>
+                    <div class="split">
+                        <hr/>
+                        <span>留言</span>
+                        <hr/>
+                    </div>
+                    <div class="message" id="evaluationContentSpan">
+                        暂无留言
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--评价-->
+        <div class="myRating alertContainer">
+            <div class="alertMask"></div>
+            <div class="alert">
+                <div class="header">
+                    <span class="title">服务评价</span>
+                    <img class="closeBtn" src="/images/close.png"/>
+                </div>
+                <div class="content">
+                    <div class="tip">
+                        请您对本次服务进行评价并留言：
+                    </div>
+                    <img class="ratingImg" src="/images/star1.png"/>
+                    <div class="mt15 btns" id="evaluationDiv">
+                        <button id="evaluationBtnOne" data-value="1" class="button active">非常满意</button>
+                        <button id="evaluationBtnTwo" data-value="2" class="button">满意</button>
+                        <button id="evaluationBtnThree" data-value="3" class="button">不满意</button>
+                    </div>
+                    <div class="mt15">
+                        <input type="hidden" id="evaluationWorkOrderId"/>
+                        <textarea placeholder="您的留言是我们努力的动力" id="evaluationContentTextarea" maxlength="100"></textarea>
+                    </div>
+                    <div class="footer">
+                        <button class="confirm" onclick="evaluationWorkOrder()">确定</button>
+                        <button class="cancel">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        var count00=0;
+        //根据用户id显示投诉信息
+        function tbody1(page) {
+            var luId=$("#userId").val();//暂时为默认值,需改
+            $.ajax({
+                type: "post",
+                url: "../../user/select_user_id",
+                data: {"id": luId,"page":page},
+                dataType: "JSON",
+                success: function (resout) {
+                    var dt=resout;
+                    var html='';
+                    //alert(dt);
+                    if(dt!='' && dt !=null){
+                        $(dt).each(function (index,element) {
+                            html+="<tbody class='tbody01'>\n" +
+                                "\n" +
+                                "<tr style=\"height: 40px;\">\n" +
+                                "<td style=\"padding-left:10px;\">\n" +element['loId']+
+                                " </td>\n" +
+                                " <td>"+element['mcGmtCreate']+"</td>\n" +
+                                " <td>"+element['tocContext']+"</td>\n" +
+                                " <td>"+element['psContext']+"\n" +
+                                " </td>\n" +
+                                " <td style=\"padding:0 13px 0 10px;text-align: center;\">\n" +
+                                " <span class=\"operateBlue\" onclick=\"removeWorkOrder("+element['loId']+")\">删除</span>\n" +
+                                " <span style=\"color: #0293ED;cursor: pointer;\" onclick=\"show("+element['loId']+")\">查看</span>\n" +
+                                " </td>\n" +
+                                " </tr>\n" +
+                                "\n" +
+                                " </tbody>"
+                        });
+                        var count=dt[0].count01;
+                        count00=count;
+                        var pages="";
+                        for(var i=2;i<=count;i++){
+                            pages+=" <a class=\"link btn pages \" style id='"+i+"' href='#' onclick = \"page01("+i+");return false;\" >"+i+"</a>"
+                        }
+                    }
+                    $('.tbody01').remove();
+                    $('#table1').append(html);
+                    $('.pages').remove();
+                    $("#1").after(pages);
+                }
+            });
+        }
+        tbody1(1);
+
+
+        //分页操作  在修改样式时出现问题,需修改
+        function page01(page) {
+            tbody1(page);
+            //alert(count00);
+            //style="color: #fff;" 字体颜色
+            //alert(page);
+            //var html="";
+            for (var i=1;i<=count00;i++) {
+                if(i==page){
+                    if(i==1){
+                        $('#1').attr("class","btn current");
+                        $('#1').attr("style","color: #fff;");
+                    }else{
+                        //html+=" <a class=\"btn current pages\" style='color: #fff;' id='"+i+"' href='#' onclick = \"page01("+i+");return false;\" >"+i+"</a>"
+                        var s="#"+page;
+                        document.getElementById(s).setAttribute("class","btn current pages");
+                        document.getElementById(s).setAttribute("style","color: #fff;");
+                    }
+                }else if(i>1){
+                   // html+=" <a class=\"link btn pages \" style id='"+i+"' href='#' onclick = \"page01("+i+");return false;\" >"+i+"</a>"
+                    var c="#"+i;
+                    alert(c);
+                    document.getElementById(c).setAttribute("class","btn link pages");
+                    document.getElementById(c).setAttribute("style","");
+                }else if(i==1){
+                    $('#1').attr("class","btn link");
+                    $('#1').attr("style","");
+                }
+            }
+            //alert(html);
+            //$('.pages').remove();
+            //$("#1").after(html);
+        }
+
+        //删除投诉信息
+        function removeWorkOrder(id){
+            swal({
+                    title: "确认删除该条投诉记录吗？",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "确定",
+                    cancelButtonText: "取消",
+                    closeOnConfirm: false
+                },
+                function(){
+                    $.ajax({
+                        type : "post",
+                        url : "../../user/remove_mc_id",
+                        data :{"id":id},
+                        dataType: "JSON",
+                        success : function(data) {
+                            if (data != null) {
+                                if (data > 0) {
+                                    swal({
+                                            title: "投诉已删除",
+                                            type: "info"
+                                        },
+                                        function() {
+                                            location.reload();
+                                        });
+                                } else {
+                                    swal("", data.msg, "info");
+                                }
+                            } else {
+                                swal("", "操作异常，请稍后再试！", "info");
                             }
-                        } else {
+                        },
+                        error:function(data){
+                            swal("操作异常，请稍后再试！");
+                        }
+                    });
+                }
+            );
+        }
+        function cancelWorkOrder(workOrderId){
+            swal({
+                    title: "取消后将不在受理，确认取消吗？",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "确定",
+                    cancelButtonText: "取消",
+                    closeOnConfirm: false
+                },
+                function(){
+                    $.ajax({
+                        type : "post",
+                        url : "/workOrder!cancelWorkOrder.action",
+                        data :{"selfHelpWorkOrder.workOrderId":workOrderId},
+                        dataType: "JSON",
+                        success : function(data) {
+                            if (data != null) {
+                                if (data.code == "1000") {
+                                    swal({
+                                            title: "投诉已取消",
+                                            type: "info"
+                                        },
+                                        function() {
+                                            location.reload();
+                                        });
+                                } else{
+                                    swal("", data.msg, "error");
+                                }
+                            } else {
+                                swal("", "操作异常，请稍后再试！", "error");
+                            }
+                        },
+                        error:function(data){
                             swal("", "操作异常，请稍后再试！", "error");
                         }
-                    },
-                    error:function(data){
+                    });
+                }
+            );
+        }
+        //查看投诉信息
+        function show(id) {
+            $('#workorderidDD').html('');
+            $('#createTimeDD').html('');
+            $('#problemdescDD').html('');
+            $('#workOrderStatusDD').html('');
+            $('#memoDD').html('');
+            $('#replyContentDD').html('');
+            $('.imgList').empty();
+            $('.noContent').hide();
+            $('.complaintDetail').hide();
+            $.ajax({
+                type : "post",
+                url : "../../user/select_mc_id",
+                data :{"id":id},
+                dataType: "JSON",
+                success : function(data) {
+                        if (data != '' && data !=null) {
+                            var temp = data;
+                            $('#workorderTextDT').html("订单编号：");
+                            $('#workorderidDD').html(temp[0].loId);
+                            if(temp[0].mcGmtCreate != null && temp[0].mcGmtCreate != ""){
+                                $('#createTimeDD').html(temp[0].mcGmtCreate);
+                            }
+                            //alert(temp[0].loId+","+temp[0].mcGmtCreate+","+temp[0].psId+","+temp[0].mcContext+","+temp[0].mcImgLocation);
+                            // $('#createTimeDD').html(temp.createTime);
+                            $('#problemdescDD').html(temp[0].tocContext);
+                            if (temp[0].psId == '4'){
+                                $('#workOrderStatusDD').html("已处理");
+                                $('.billStatus').css('color', '#0293ED')
+                            }else if(temp[0].psId == '2'){
+                                $('#workOrderStatusDD').html("处理中");
+                                $('.billStatus').css('color', '#BBBBBB')
+                            }else if(temp[0].psId == '1'){
+                                $('#workOrderStatusDD').html("未处理");
+                                $('.billStatus').css('color', '#BBBBBB')
+                            }else{
+                                $('#workOrderStatusDD').html("已取消");
+                                $('.billStatus').css('color', '#FF8E51')
+                            }
+                            $('#memoDD').html(temp[0].mcContext);
+                            if( temp.mcContext != null && temp[0].mcContext.length > 0){
+                                $('.noContent').hide();
+                                $('#replyContentDD').show();
+                                $('#replyContentDD').html();
+                            }else{
+                                $('.noContent').show();
+                                $('#replyContentDD').hide();
+                            }
+                            $('.complaintDetail').show();
+
+                            $('.imgList').empty();
+                            var imgList =  temp[0].mcImgLocation.split(",");
+                            //['https://sdossuppre1.cnsuning.com/fps/ttkdex/7511-1061139672466.jpg','https://sdossuppre1.cnsuning.com/fps/ttkdex/7511-1061139672466.jpg','https://sdossuppre1.cnsuning.com/fps/ttkdex/7511-1061139672466.jpg'/*'./img/pxfzt1.png', './img/pxfzt2.png', './img/pxfzt3.png'*/];
+                            var elStr = '';
+                            for(var i = 0; i < imgList.length; i++) {
+                                if(imgList[i].trim() != ''){
+                                    elStr += '<img src="' + imgList[i] + '" data-original="' + imgList[i] + '" alt="图片' + i + '" />';
+                                }
+                            }
+                            $('.imgList').append(elStr)
+                            $('#myComplaintViewer').viewer({url:"data-original"});
+                        } else {
+                            swal("", data.msg, "error");
+                        }
+                },
+                error:function(data){
+                    swal("", "操作异常，请稍后再试！", "error");
+                }
+            });
+
+        }
+        function initReminderWorkOrder(workOrderId) {
+            $('#reminderContentTextArea').val('');
+            $('#reminderWorkOrderId').val(workOrderId);
+            $('.urgent').show();
+        }
+        String.prototype.trim = function() {
+            return this.replace(/^\s*([\S\s]*?)\s*$/, '$1');
+        }
+        function reminderWorkOrder(){
+            var reminderContent = $('#reminderContentTextArea').val().trim();
+            if(reminderContent.length <= 3) {
+                swal("", "请详细说明哦", "info");
+                return;
+            }
+            var workOrderId = $('#reminderWorkOrderId').val();
+            $.ajax({
+                type : "post",
+                url : "/workOrder!reminderWorkOrder.action",
+                data :{"selfHelpWorkOrder.workOrderId":workOrderId,"selfHelpWorkOrder.reminderContent":reminderContent},
+                dataType: "JSON",
+                success : function(data) {
+                    if (data != null) {
+                        if (data.code == "1000") {
+                            $('.urgent').hide();
+                            swal({
+                                    title: "催处理成功，我们会尽快处理",
+                                    type: "info"
+                                },
+                                function() {
+                                    location.reload();
+                                });
+                        } else {
+                            swal("", data.msg, "error");
+                        }
+                    } else {
                         swal("", "操作异常，请稍后再试！", "error");
                     }
-                });
-            }
-        );
-    }
-    function showDetail(workOrderId) {
-        $('#workorderidDD').html('');
-        $('#createTimeDD').html('');
-        $('#problemdescDD').html('');
-        $('#workOrderStatusDD').html('');
-        $('#memoDD').html('');
-        $('#replyContentDD').html('');
-        $('.imgList').empty();
-        $('.noContent').hide();
-        $('.complaintDetail').hide();
-        $.ajax({
-            type : "post",
-            url : "/workOrder!searchWorkOrderInfo.action",
-            data :{"selfHelpWorkOrder.workOrderId":workOrderId},
-            dataType: "JSON",
-            success : function(data) {
-                if (data != null) {
-                    if (data.code == "1000") {
-                        var temp = data.data;
-                        if(temp.mailNo != null && temp.mailNo != ''){
-                            $('#workorderTextDT').html("运单编号：");
-                            $('#workorderidDD').html(temp.mailNo);
-                        }else{
-                            $('#workorderTextDT').html("订单编号：");
-                            $('#workorderidDD').html(temp.externalOrder);
-                        }
-                        if(temp.createTime != null && temp.createTime != ""){
-                            $('#createTimeDD').html(temp.createTime.slice(0,temp.createTime.indexOf(".")));
-                        }
-                        // $('#createTimeDD').html(temp.createTime);
-                        $('#problemdescDD').html(temp.problemDesc);
-                        if (temp.workOrderStatus == '1'){
-                            $('#workOrderStatusDD').html("已处理");
-                            $('.billStatus').css('color', '#0293ED')
-                        }else if(temp.workOrderStatus == '2'){
-                            $('#workOrderStatusDD').html("已取消");
-                            $('.billStatus').css('color', '#BBBBBB')
-                        }else{
-                            $('#workOrderStatusDD').html("处理中");
-                            $('.billStatus').css('color', '#FF8E51')
-                        }
-                        $('#memoDD').html(temp.memo);
-                        if( temp.replyContent != null && temp.replyContent.length > 0){
-                            $('.noContent').hide();
-                            $('#replyContentDD').show();
-                            $('#replyContentDD').html(temp.replyContent);
-                        }else{
-                            $('.noContent').show();
-                            $('#replyContentDD').hide();
-                        }
-                        $('.complaintDetail').show();
-
-                        $('.imgList').empty();
-                        var imgList =  temp.urls.split(',');
-                        //['https://sdossuppre1.cnsuning.com/fps/ttkdex/7511-1061139672466.jpg','https://sdossuppre1.cnsuning.com/fps/ttkdex/7511-1061139672466.jpg','https://sdossuppre1.cnsuning.com/fps/ttkdex/7511-1061139672466.jpg'/*'./img/pxfzt1.png', './img/pxfzt2.png', './img/pxfzt3.png'*/];
-                        var elStr = '';
-                        for(var i = 0; i < imgList.length; i++) {
-                            if(imgList[i].trim() != ''){
-                                elStr += '<img src="' + imgList[i] + '" data-original="' + imgList[i] + '" alt="图片' + i + '" />';
-                            }
-                        }
-                        $('.imgList').append(elStr)
-                        $('#myComplaintViewer').viewer({url:"data-original"});
-                    } else {
-                        swal("", data.msg, "error");
-                    }
-                } else {
+                },
+                error:function(data){
                     swal("", "操作异常，请稍后再试！", "error");
                 }
-            },
-            error:function(data){
-                swal("", "操作异常，请稍后再试！", "error");
-            }
-        });
-
-    }
-    function initReminderWorkOrder(workOrderId) {
-        $('#reminderContentTextArea').val('');
-        $('#reminderWorkOrderId').val(workOrderId);
-        $('.urgent').show();
-    }
-    String.prototype.trim = function() {
-        return this.replace(/^\s*([\S\s]*?)\s*$/, '$1');
-    }
-    function reminderWorkOrder(){
-        var reminderContent = $('#reminderContentTextArea').val().trim();
-        if(reminderContent.length <= 3) {
-            swal("", "请详细说明哦", "info");
-            return;
+            });
         }
-        var workOrderId = $('#reminderWorkOrderId').val();
-        $.ajax({
-            type : "post",
-            url : "/workOrder!reminderWorkOrder.action",
-            data :{"selfHelpWorkOrder.workOrderId":workOrderId,"selfHelpWorkOrder.reminderContent":reminderContent},
-            dataType: "JSON",
-            success : function(data) {
-                if (data != null) {
-                    if (data.code == "1000") {
-                        $('.urgent').hide();
-                        swal({
-                                title: "催处理成功，我们会尽快处理",
-                                type: "info"
-                            },
-                            function() {
-                                location.reload();
-                            });
+        function initEvaluationWorkOrder(workOrderId,evaluationStar,evaluationContent) {
+            if(evaluationContent == null || evaluationContent == ''){
+                evaluationContent = '暂无留言';
+            }
+            if(evaluationStar == '0'){
+                $('#evaluationBtnOne').addClass('active');
+                $('#evaluationBtnTwo').removeClass('active');
+                $('#evaluationBtnThree').removeClass('active');
+                $('#evaluationWorkOrderId').val(workOrderId);
+                $('.myRating').show();
+            }else{
+                $('.feedback').show();
+                if(evaluationStar == '1'){
+                    $('#evaluationStarSpan').html('非常满意');
+                    $('#evaluationStarImg').attr('src','/images/star1.png');
+                    $('#evaluationContentSpan').html(evaluationContent);
+                }else if(evaluationStar == '2'){
+                    $('#evaluationStarSpan').html('满意');
+                    $('#evaluationStarImg').attr('src','/images/star2.png');
+                    $('#evaluationContentSpan').html(evaluationContent);
+                }else if(evaluationStar == '3'){
+                    $('#evaluationStarSpan').html('不满意');
+                    $('#evaluationStarImg').attr('src','/images/star3.png');
+                    $('#evaluationContentSpan').html(evaluationContent);
+                }
+            }
+        }
+        function evaluationWorkOrder() {
+            var evaluationContent = $('#evaluationContentTextarea').val();
+            var evaluationStar = '';
+            $("#evaluationDiv button").each(function(ii,vv){
+                if($(this).hasClass('active')){
+                    evaluationStar = $(this).attr("data-value");
+                }
+            });
+            var workOrderId = $('#evaluationWorkOrderId').val();
+            $.ajax({
+                type : "post",
+                url : "/workOrder!evaluationWorkOrder.action",
+                data :{"selfHelpWorkOrder.workOrderId":workOrderId,"selfHelpWorkOrder.evaluationStar":evaluationStar,"selfHelpWorkOrder.evaluationContent":evaluationContent},
+                dataType: "JSON",
+                success : function(data) {
+                    if (data != null) {
+                        if (data.code == "1000") {
+                            $('.myRating').hide();
+                            swal({
+                                    title: "感谢您的评价",
+                                    type: "info"
+                                },
+                                function() {
+                                    location.reload();
+                                });
+                        } else {
+                            swal("", data.msg, "error");
+                        }
                     } else {
-                        swal("", data.msg, "error");
+                        swal("", "操作异常，请稍后再试！", "error");
                     }
-                } else {
+                },
+                error:function(data){
                     swal("", "操作异常，请稍后再试！", "error");
                 }
-            },
-            error:function(data){
-                swal("", "操作异常，请稍后再试！", "error");
-            }
-        });
-    }
-    function initEvaluationWorkOrder(workOrderId,evaluationStar,evaluationContent) {
-        if(evaluationContent == null || evaluationContent == ''){
-            evaluationContent = '暂无留言';
+            });
         }
-        if(evaluationStar == '0'){
-            $('#evaluationBtnOne').addClass('active');
-            $('#evaluationBtnTwo').removeClass('active');
-            $('#evaluationBtnThree').removeClass('active');
-            $('#evaluationWorkOrderId').val(workOrderId);
-            $('.myRating').show();
-        }else{
-            $('.feedback').show();
-            if(evaluationStar == '1'){
-                $('#evaluationStarSpan').html('非常满意');
-                $('#evaluationStarImg').attr('src','/images/star1.png');
-                $('#evaluationContentSpan').html(evaluationContent);
-            }else if(evaluationStar == '2'){
-                $('#evaluationStarSpan').html('满意');
-                $('#evaluationStarImg').attr('src','/images/star2.png');
-                $('#evaluationContentSpan').html(evaluationContent);
-            }else if(evaluationStar == '3'){
-                $('#evaluationStarSpan').html('不满意');
-                $('#evaluationStarImg').attr('src','/images/star3.png');
-                $('#evaluationContentSpan').html(evaluationContent);
-            }
-        }
-    }
-    function evaluationWorkOrder() {
-        var evaluationContent = $('#evaluationContentTextarea').val();
-        var evaluationStar = '';
-        $("#evaluationDiv button").each(function(ii,vv){
-            if($(this).hasClass('active')){
-                evaluationStar = $(this).attr("data-value");
-            }
-        });
-        var workOrderId = $('#evaluationWorkOrderId').val();
-        $.ajax({
-            type : "post",
-            url : "/workOrder!evaluationWorkOrder.action",
-            data :{"selfHelpWorkOrder.workOrderId":workOrderId,"selfHelpWorkOrder.evaluationStar":evaluationStar,"selfHelpWorkOrder.evaluationContent":evaluationContent},
-            dataType: "JSON",
-            success : function(data) {
-                if (data != null) {
-                    if (data.code == "1000") {
-                        $('.myRating').hide();
-                        swal({
-                                title: "感谢您的评价",
-                                type: "info"
-                            },
-                            function() {
-                                location.reload();
-                            });
-                    } else {
-                        swal("", data.msg, "error");
-                    }
-                } else {
-                    swal("", "操作异常，请稍后再试！", "error");
-                }
-            },
-            error:function(data){
-                swal("", "操作异常，请稍后再试！", "error");
-            }
-        });
-    }
-</script>
-<!-- ftl end -->
+    </script>
+    <!-- ftl end -->
 
-<div class="footer commonWrap">
-  <div class="footerCont fixedWid clearfix">
-    <div class="customer fl">
-      <span class="info">客服电话</span>
-      <span class="info tel">4001-888-888</span>
-      <span class="info timer">服务时间： 8:30 - 17:30</span>
+    <div class="footer commonWrap">
+        <div class="footerCont fixedWid clearfix">
+            <div class="customer fl">
+                <span class="info">客服电话</span>
+                <span class="info tel">4001-888-888</span>
+                <span class="info timer">服务时间： 8:30 - 17:30</span>
+            </div>
+            <div class="hyperlink clearfix">
+                <div class="linkgroup fl">
+                    <a href="" class="link">客户服务</a>
+                    <a href="pages/placeOrder.html" class="link">在线寄件</a>
+                    <a href="pages/queryExpress.html" class="link">运单查询</a>
+                    <a href="pages/queryNetwork.html" class="link">网点查询</a>
+                    <a href="pages/queryPrice.html" class="link">运费查询</a>
+                </div>
+                <div class="linkgroup fl">
+                    <a href="" class="link">客服服务</a>
+                    <a href="/article/baseArticleAction!aboutTT.action#lxwm" class="link">客服热线  </a>
+                    <a href="pages/customerServiceCenter.html#last" class="link">在线留言</a>
+                </div>
+                <div class="linkgroup fl">
+                    <a href="" class="link">加盟天天</a>
+                    <a href="pages/joiningTT.html?divId=jmxz" class="link">加盟须知   </a>
+                    <a href="pages/joiningTT.html?divId=jmlc" class="link">加盟流程</a>
+                    <a href="pages/joiningTT.html?divId=jmrx" class="link">加盟热线</a>
+                    <a href="pages/joiningTT.html?divId=zsqy" class="link">招商区域</a>
+                </div>
+                <div class="linkgroup fl">
+                    <a href="" class="link">人才招聘</a>
+                    <a href="pages/recruitment.html?tab=1" class="link">职位信息</a>
+                    <a href="pages/recruitment.html?tab=2" class="link">招聘介绍</a>
+                </div>
+                <div class="linkgroup fr smcodediv" style="text-align:center">
+                    <img class="smcode" src="/images/code_dyh.png" alt="">
+                    <span class="info">天天相知微信</span>
+                    <span class="info">订阅号扫码关注</span>
+                </div>
+                <div class="linkgroup fr smcodediv">
+                    <img class="smcode" src="/images/code_fwh.png" alt="">
+                    <span class="info">天天快递微信</span>
+                    <span class="info">服务号扫码关注</span>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="hyperlink clearfix">
-      <div class="linkgroup fl">
-        <a href="" class="link">客户服务</a>
-        <a href="pages/placeOrder.html" class="link">在线寄件</a>
-        <a href="pages/queryExpress.html" class="link">运单查询</a>
-        <a href="pages/queryNetwork.html" class="link">网点查询</a>
-        <a href="pages/queryPrice.html" class="link">运费查询</a>
-      </div>
-      <div class="linkgroup fl">
-        <a href="" class="link">客服服务</a>
-        <a href="/article/baseArticleAction!aboutTT.action#lxwm" class="link">客服热线  </a>
-        <a href="pages/customerServiceCenter.html#last" class="link">在线留言</a>
-      </div>
-      <div class="linkgroup fl">
-        <a href="" class="link">加盟天天</a>
-        <a href="pages/joiningTT.html?divId=jmxz" class="link">加盟须知   </a>
-        <a href="pages/joiningTT.html?divId=jmlc" class="link">加盟流程</a>
-        <a href="pages/joiningTT.html?divId=jmrx" class="link">加盟热线</a>
-        <a href="pages/joiningTT.html?divId=zsqy" class="link">招商区域</a>
-      </div>
-      <div class="linkgroup fl">
-        <a href="" class="link">人才招聘</a>
-        <a href="pages/recruitment.html?tab=1" class="link">职位信息</a>
-        <a href="pages/recruitment.html?tab=2" class="link">招聘介绍</a>
-      </div>
-      <div class="linkgroup fr smcodediv" style="text-align:center">
-        <img class="smcode" src="/images/code_dyh.png" alt="">
-        <span class="info">天天相知微信</span>
-        <span class="info">订阅号扫码关注</span>
-      </div>
-      <div class="linkgroup fr smcodediv">
-        <img class="smcode" src="/images/code_fwh.png" alt="">
-        <span class="info">天天快递微信</span>
-        <span class="info">服务号扫码关注</span>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="footerbottom commonWrap">
-  <div class="fixedWid">
-    <p class='info'>©版权所有 2016 天天快递有限公司<a style="color: #A6A7AB;" href="http://www.beian.miit.gov.cn/" target="_blank"> 浙ICP备13006085</a>号
+    <div class="footerbottom commonWrap">
+        <div class="fixedWid">
+            <p class='info'>©版权所有 2016 天天快递有限公司<a style="color: #A6A7AB;" href="http://www.beian.miit.gov.cn/" target="_blank"> 浙ICP备13006085</a>号
 
-    <a href="/images/businessLicense.png" target="_blank" style="color: #A6A7AB;" > | 快递业务经营许可证</a><a href="pages/businessLincence.html" target="_blank" style="color: #A6A7AB;" > | <img src="/images/yyzz.png" style="width: 19px;height:19px;vertical-align: middle;"> 营业执照</a></p>
-  </div>
-</div>
-<div class="selfServiceBtnList">
-  <div class="customerBtn" data="/onlineCall.action">
-    <div class="onLineIcon"></div>
-    <span class="btnTip">在线客服</span>
-  </div>
-  <div class="customerBtns selfOrderServiceBtn" id="selfOrderServiceBtn">
-    <div class="selfServiceIcon"></div>
-    <span class="btnTip">自助投诉</span>
-  </div>
-  <div class="customerBtns selfOrderServiceBtn" id="toTopBtn">
-    <div class="returnTopIcon"></div>
-    <span class="btnTip">返回顶部</span>
-  </div>
-</div>
+                <a href="/images/businessLicense.png" target="_blank" style="color: #A6A7AB;" > | 快递业务经营许可证</a><a href="pages/businessLincence.html" target="_blank" style="color: #A6A7AB;" > | <img src="/images/yyzz.png" style="width: 19px;height:19px;vertical-align: middle;"> 营业执照</a></p>
+        </div>
+    </div>
+    <div class="selfServiceBtnList">
+        <div class="customerBtn" data="/onlineCall.action">
+            <div class="onLineIcon"></div>
+            <span class="btnTip">在线客服</span>
+        </div>
+        <div class="customerBtns selfOrderServiceBtn" id="selfOrderServiceBtn">
+            <div class="selfServiceIcon"></div>
+            <span class="btnTip">自助投诉</span>
+        </div>
+        <div class="customerBtns selfOrderServiceBtn" id="toTopBtn">
+            <div class="returnTopIcon"></div>
+            <span class="btnTip">返回顶部</span>
+        </div>
+    </div>
 </div>
 
 <script type="text/javascript" src="/js/index1.js"></script>

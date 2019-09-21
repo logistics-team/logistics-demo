@@ -29,4 +29,12 @@ public interface ExpressProvincesCityAreasService {
      * @return list
      */
     ExpressProvincesCityAreas findByID(int id);
+
+    /**
+     * 查询子地区
+     * @param condition  关键字
+     * @param id   id
+     * @return  json
+     */
+    List<ExpressProvincesCityAreas> findChild(String condition, int id);
 }

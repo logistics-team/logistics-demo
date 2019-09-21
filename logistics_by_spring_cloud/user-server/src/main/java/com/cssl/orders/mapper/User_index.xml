@@ -15,7 +15,9 @@
     </resultMap>
 
    <select id="selectAll" resultMap="user">
-       SELECT lu_id,lu_username,lu_phone,lu_sex,lu_birthday,lu_gmt_modified,lu_isblacklist FROM logistics_user where 1=1
+       SELECT lu.lu_id,lu.lu_username,lu.lu_phone,lu.lu_sex,lu.lu_birthday,lu.lu_gmt_modified,lu.lu_isblacklist FROM logistics_user lu
+       INNER JOIN role_user ru ON lu.lu_id=ru.lu_id
+       WHERE 1=1 AND ru.lr_id=1002
        <if test="name != null and name != ''">
            and lu_username like '%${name}%'
        </if>

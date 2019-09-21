@@ -49,4 +49,15 @@ public class ExpressProvincesCityAreasServiceImplC implements ExpressProvincesCi
     public ExpressProvincesCityAreas findByID(int id) {
         return cityAreasDao.findByID(id);
     }
+
+    /**
+     * 查询子地区
+     * @param condition 关键字
+     * @param id        id
+     * @return  json
+     */
+    @Override
+    public List<ExpressProvincesCityAreas> findChild(String condition, int id) {
+        return cityAreasDao.findChild(condition,id);
+    }
 }

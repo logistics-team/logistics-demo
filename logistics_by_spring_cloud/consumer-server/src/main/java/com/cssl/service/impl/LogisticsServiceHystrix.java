@@ -1,6 +1,7 @@
 package com.cssl.service.impl;
 
 import com.cssl.entity.ExpressGoods;
+import com.cssl.entity.LogisticsOrders;
 import com.cssl.entity.LogisticsStatus;
 import com.cssl.entity.LogisticsUser;
 import com.cssl.service.LogisticsService;
@@ -64,10 +65,24 @@ public class LogisticsServiceHystrix implements LogisticsService {
         return null;
     }
 
+    /**
+     * 按照id 和 关键字 查询子节点   3
+     *
+     * @param condition 关键字
+     * @param province  省id
+     * @param city      市id
+     * @param district  区县id
+     * @return 子节点的json
+     */
+    @Override
+    public String cityAreasFindChild(String condition, int province, int city, int district) {
+        return null;
+    }
+
     @Override
     public String confirmOrder(Map<String, Object> map) {
         //提交失败！返回原页面
-        return "redirect:/staticFiles/pages/placeOrder.html";
+        return null;
     }
 
     @Override

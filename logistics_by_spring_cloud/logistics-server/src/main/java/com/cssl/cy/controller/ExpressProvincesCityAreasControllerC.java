@@ -41,7 +41,7 @@ public class ExpressProvincesCityAreasControllerC {
      * @return
      */
     @RequestMapping("findByLevel")
-    public Object findByLevel(@RequestBody() int level){
+    public Object findByLevel(int level){
         return  cityAreasService.findByLevel(level);
     }
 
@@ -51,7 +51,7 @@ public class ExpressProvincesCityAreasControllerC {
      * @return
      */
     @RequestMapping("findByID")
-    public Object findByID(@RequestBody() int id){
+    public Object findByID( int id){
         System.out.println(id);
         return  cityAreasService.findByID(id);
     }
@@ -70,7 +70,7 @@ public class ExpressProvincesCityAreasControllerC {
     @RequestMapping("freight")
     public Object freightCharge (int id , int id2 ,double weight,int hedging,boolean transportation ,boolean boo ){
         //这个map根据是否同省来初始化
-        Map <String ,Object> map ;
+        Map <String ,Integer> map ;
         if(boo){
             //同省
             map = CityAreasCalculateUtil.freightCharge();
@@ -84,8 +84,8 @@ public class ExpressProvincesCityAreasControllerC {
             map = CityAreasCalculateUtil.freightCharge(distance,transportation);
         }
         //从初始化完成了的map中获取首重和续重费用
-        int first = (int) map.get("first");
-        int continued = (int) map.get("continued");
+        int first = map.get("first");
+        int continued = map.get("continued");
         //向上取整后的重量 , 因为重量得按整数算,但前台传过来的是double
         int  wg = (int)Math.ceil(weight);
         //总价
@@ -106,4 +106,16 @@ public class ExpressProvincesCityAreasControllerC {
     }
 
 
+    @RequestMapping("findChild")
+    public Object findChild(String condition,int province,int city,int district){
+        List<ExpressProvincesCityAreas> list ;
+        if (district>0){
+            list = cityAreasService.findChild(condition,district);
+        }else if (city>0){
+            list =   cityAreasService.findChild(condition,city);
+        }else{
+            list =    cityAreasService.findChild(condition,province);
+        }
+        return list ;
+    }
 }

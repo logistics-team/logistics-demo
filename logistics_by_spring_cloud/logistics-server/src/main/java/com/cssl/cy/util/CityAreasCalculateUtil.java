@@ -9,9 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 /** 
- *
  * @author Kagura Linne
- *
  */
 public final class CityAreasCalculateUtil {
 
@@ -38,55 +36,6 @@ public final class CityAreasCalculateUtil {
 		
 		return null;
 	}
-	
-	/**
-	 * 	 * 提供寄收双方的  省 - 市 - 县区  的id           
-	 *                         
-	 * @param pro   
-	 * @param city
-	 * @param county
-	 * @param pro2
-	 * @param city2
-	 * @param county2
-	 * 
-	 * @return  map 中的 key 为 size ,   from   ,  to  ,   price  ,...              
-	 * size  对应的value值为 省与省之间的距离      
-	 * from  是 一个 maap对象, 指代寄件地区的省会
-	 * to      是一个maap对象 , 指代收件地区的省会
-	 * price   指价格
-	 */
-	public static Map<String, Object> service(int pro ,int city, int county,  int pro2 , int city2 ,int county2){
-		Map<String, Object> resultMap  = new HashMap<String, Object>();
-		//同省
-		if (pro == pro2) {
-			selPC(county);
-			/*
-			 * //同市 if(city == city2) {
-			 * 
-			 * //同县区 if(county == county2) {
-			 * 
-			 * }else { //同省同市不同区 }
-			 * 
-			 * }else { //同省不同市 }
-			 */
-		}else {
-			//不同省
-			
-		}
-		return resultMap;
-	}
-	
-	/**
-	 * 寻找省会
-	 * @param id  当前地区id 
-	 * @return   省会对象
-	 */
-	public static ExpressProvincesCityAreas selPC(int id) {
-		//先查看此地区的级别 , 如果为2级就拿到上级id  , 查询数据库, 根据 parent_id = 父类id && epca_center = true  来找到省会.
-		//如果此地区为 3级 , 则需要拿到上级的父id
-		return null;
-	}
-
 
 
 	/**
@@ -95,12 +44,12 @@ public final class CityAreasCalculateUtil {
 	 * @param transportation   运输方式
 	 * @return
 	 */
-	public static Map<String,Object> freightCharge(int distance ,   boolean transportation){
+	public static Map<String,Integer> freightCharge(int distance ,   boolean transportation){
 		double freighgRate  =1;
 		if (transportation){
 			freighgRate = 1.8;
 		}
-		Map<String,Object> map = new HashMap<>();
+		Map<String,Integer> map = new HashMap<>();
 		if (distance < 500*1000) {
 			map.put("first",(int)Math.ceil(10*freighgRate));
 
@@ -119,8 +68,8 @@ public final class CityAreasCalculateUtil {
 	 * 计算运费 ,同省陆运
 	 * @return
 	 */
-	public static Map<String,Object> freightCharge(){
-		Map<String,Object> map =new HashMap<String,Object>();
+	public static Map<String,Integer> freightCharge(){
+		Map<String,Integer> map =new HashMap<String,Integer>();
 		map.put("first",6);
 		map.put("continued",1);
 		return  map;

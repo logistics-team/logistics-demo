@@ -395,26 +395,26 @@
                 }
             });
 
-            $.ajax({
-                type: 'post',
-                url: "/order!queryTimeEffective.action",
-                data:{ "proviZ1": proviZ1, "cityZ1": cityZ1, "areaZ1": areaZ1, "townZ1": townZ1, "addressZ1": addressZ1,
-                    "proviWe": proviWe, "cityWe": cityWe, "areaWe": areaWe, "townWe": townWe, "addressWe": addressWe,
-                    "orderDate": orderDate1, "orderTime": orderTime },
-                dataType: 'json',
-                success: function(data2) {
-                    if (data2 != null) {
-                        if (data2.code == "1000") {	// 成功
-                            td4.innerHTML = getDateFormat(data2.data.deliveryDate);
-                        } else{	// 失败
-                            swal("", data2.msg, "error");
-                        }
-                    }
-                },
-                error: function(){
-                    swal("", "请求失败！", "error");
-                }
-            });
+            // $.ajax({
+            //     type: 'post',
+            //     url: "/order!queryTimeEffective.action",
+            //     data:{ "proviZ1": proviZ1, "cityZ1": cityZ1, "areaZ1": areaZ1, "townZ1": townZ1, "addressZ1": addressZ1,
+            //         "proviWe": proviWe, "cityWe": cityWe, "areaWe": areaWe, "townWe": townWe, "addressWe": addressWe,
+            //         "orderDate": orderDate1, "orderTime": orderTime },
+            //     dataType: 'json',
+            //     success: function(data2) {
+            //         if (data2 != null) {
+            //             if (data2.code == "1000") {	// 成功
+            //                 td4.innerHTML = getDateFormat(data2.data.deliveryDate);
+            //             } else{	// 失败
+            //                 swal("", data2.msg, "error");
+            //             }
+            //         }
+            //     },
+            //     error: function(){
+            //         swal("", "请求失败！", "error");
+            //     }
+            // });
 
         }
 

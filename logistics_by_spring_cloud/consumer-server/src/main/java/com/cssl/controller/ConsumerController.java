@@ -1,14 +1,24 @@
 package com.cssl.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.alipay.api.AlipayApiException;
+import com.cssl.entity.LogisticsOrders;
 import com.cssl.entity.LogisticsStatus;
+import com.cssl.entity.TransportationStatus;
 import com.cssl.service.*;
+import com.cssl.vo.TransportationInfo;
+import com.cssl.vo.WaybillInfo;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,79 +28,146 @@ import java.util.Map;
 @Controller
 //@RestController
 public class ConsumerController {
+    private AlipayOrders alipayOrders;
+
+    @Autowired
+    public AlipayOrders alipayOrders(AlipayOrders alipayOrders) {
+        this.alipayOrders = alipayOrders;
+        return this.alipayOrders;
+    }
+
     //智能填写
     private AddressInfo addressInfo;
+
     @Autowired
-    public AddressInfo addressInfo(AddressInfo addressInfo){
+    public AddressInfo addressInfo(AddressInfo addressInfo) {
         this.addressInfo = addressInfo;
         return this.addressInfo;
     }
+
     private LogisticsService logisticsService;
+
     @Autowired
-    public LogisticsService logisticsService(LogisticsService logisticsService){
+    public LogisticsService logisticsService(LogisticsService logisticsService) {
         this.logisticsService = logisticsService;
         return this.logisticsService;
     }
 
 
     private UserService userService;
+
     @Autowired
-    public UserService userService(UserService userService){
+    public UserService userService(UserService userService) {
         this.userService = userService;
         return this.userService;
     }
 
     private SecurityService securityService;
+
     @Autowired
-    public SecurityService securityService(SecurityService securityService){
+    public SecurityService securityService(SecurityService securityService) {
         this.securityService = securityService;
         return this.securityService;
     }
 
     private InfoService infoService;
+
     @Autowired
-    public InfoService infoService(InfoService infoService){
+    public InfoService infoService(InfoService infoService) {
         this.infoService = infoService;
         return this.infoService;
     }
 
+    //findLogisticsOrders  //查询物流订单
+    @ResponseBody
+    @RequestMapping("findLogisticsOrders")
+    public  Map<String, Object> findLogisticsOrders(String orderTextInput) {
 
-    @RequestMapping("show")
-    @ResponseBody//显示订单,下拉框搜索,搜索框搜索,省市区搜索
-    public String show(@RequestParam(required=false,name="id",defaultValue="0")int id,int page,int limit,@RequestParam(required=false,name="name",defaultValue="")String name,@RequestParam(required=false,name="select01",defaultValue="0")int select01,@RequestParam(required=false,name="select02",defaultValue="0")int select02,@RequestParam(required=false,name="select03",defaultValue="0")int select03){
-        //System.out.println("id:"+id+",page:"+page+",limit:"+limit);
-        //System.out.println("name:"+name+",select01:"+select01+",select02:"+select02+",select03:"+select03);
-        String s=userService.show(id,page,limit,name,select01,select02,select03);// 服务者 名 logistics-server 访问orders/show方法 获取String 数据
-        //System.out.println("数据显示:"+s);
-        return s;
-    }
-    @RequestMapping("l_statue")
-    @ResponseBody//订单下拉框
-    public List<LogisticsStatus> l_statue(@RequestParam(required=false,name="id",defaultValue="0")int id){
-        //System.out.println("id:"+id);
-        String s=userService.l_statue(id);// 服务者 名 logistics-server 访问orders/show方法 获取list 数据
-        List<LogisticsStatus> list=new ArrayList<LogisticsStatus>();
-        String[] ss=s.split(",");
-        for (int i=0;i<ss.length;i+=2){
-            LogisticsStatus ls=new LogisticsStatus();
-            ls.setLsId(Integer.parseInt(ss[i]));
-            ls.setLsContext(ss[i+1]);
-            list.add(ls);
+        System.out.println("orderTextInput = " + orderTextInput);
+
+        List<Map<String,Object>> dataList = new ArrayList<>();
+        for (int i = 1; i <= 20; i++) {
+            Map<String,Object> mdataList = new HashMap<>();
+            mdataList.put("orderNum","运单号"+i);
+            mdataList.put("state","运单状态"+i);
+            List<Map<String,Object>> data = new ArrayList<>();
+            for (int j = 1; j <= 10; j++) {
+                Map<String,Object> mdata = new HashMap<>();
+                mdata.put("time","时间"+j);
+                mdata.put("context","到达地址及其信息"+j);
+                data.add(mdata);
+            }
+            mdataList.put("data",data);
+            dataList.add(mdataList);
         }
-        //System.out.println("下拉框显示:"+list);
-        return list;
+
+//        Map<String,Object> mdata = new HashMap<>();
+//        mdata.put("time","时间");
+//        mdata.put("context","到达地址及其信息");
+//        Map<String,Object> mdata2 = new HashMap<>();
+//        mdata2.put("time","时间2");
+//        mdata2.put("context","到达地址及其信息2");
+//        Map<String,Object> mdata3 = new HashMap<>();
+//        mdata3.put("time","时间3");
+//        mdata3.put("context","到达地址及其信息3");
+//        Map<String,Object> mdata4 = new HashMap<>();
+//        mdata4.put("time","时间4");
+//        mdata4.put("context","到达地址及其信息4");
+//        List<Map<String,Object>> data = new ArrayList<>();
+//        data.add(mdata);
+//        data.add(mdata2);
+//        data.add(mdata3);
+//        data.add(mdata4);
+
+//        Map<String,Object> mdataList = new HashMap<>();
+//        mdataList.put("orderNum","运单号");
+//        mdataList.put("state","运单状态");
+//        mdataList.put("data",data);
+//        Map<String,Object> mdataList2 = new HashMap<>();
+//        mdataList2.put("orderNum","运单号");
+//        mdataList2.put("state","运单状态");
+//        mdataList2.put("data",data);
+//        Map<String,Object> mdataList3 = new HashMap<>();
+//        mdataList3.put("orderNum","运单号");
+//        mdataList3.put("state","运单状态");
+//        mdataList3.put("data",data);
+//        List<Map<String,Object>> dataList = new ArrayList<>();
+//        dataList.add(mdataList);
+//        dataList.add(mdataList2);
+//        dataList.add(mdataList3);
+
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("returnStatus", "01");
+//        map.put("returnStatus","02");
+        map.put("returnMsg", "未查询到订单:"+orderTextInput);
+        map.put("dataList", dataList);
+
+
+
+        String s = JSON.toJSONString(map);
+        System.out.println("s = " + s);
+        return map;
     }
-    @RequestMapping("ls_update")
-    @ResponseBody//编辑订单
-    public int ls_update(@RequestParam(required=false,name="ls_id",defaultValue="0")int ls_id,@RequestParam(required=false,name="ts_id",defaultValue="")String ts_id){
-        System.out.println("ls_id:"+ls_id+",ts_id:"+ts_id);
-        String s=userService.ls_update(ls_id,ts_id);// 服务者 名 logistics-server 访问orders/show方法 获取int 数据
-        int i=Integer.parseInt(s);
-        return i;
+
+
+    /**
+     * 支付宝订单下单 2
+     *
+     * @param response
+     * @param request
+     * @param ordersId
+     * @param amount
+     * @throws IOException
+     */
+    @RequestMapping("ali/{ordersId}/{amount}")
+    public void ali(HttpServletResponse response, HttpServletRequest request, @PathVariable(value = "ordersId") String ordersId, @PathVariable(value = "amount") String amount) throws IOException {
+        alipayOrders.ali(response, request, ordersId, amount);
     }
 
     /**
-     *   寄件下单
+     * 寄件下单
+     *
      * @param sendProvinceCode
      * @param sendCityCode
      * @param sendRegionCode
@@ -120,16 +197,16 @@ public class ConsumerController {
      */
     @PostMapping("confirmSent")
     @ResponseBody
-    public String confirmOrder(String sendProvinceCode,String sendCityCode,String sendRegionCode,
-                               String sendProvinceName,String sendCityName,String sendRegionName,
-                               String sendAddress,String sendName,String sendTel,String sendPhone,
-                               String receiveProvinceCode,String receiveCityCode,String receiveRegionCode,
-                               String receiveProvinceName,String receiveCityName,String receiveRegionName,
-                               String receiveAddress,String receiveName,String receiveTel,String receivePhone,
-                               String goodsType,String goodsWeight,String insuranceMoney,String goodsRemarks,
-                               String transport,String luId){
+    public String confirmOrder(String sendProvinceCode, String sendCityCode, String sendRegionCode,
+                               String sendProvinceName, String sendCityName, String sendRegionName,
+                               String sendAddress, String sendName, String sendTel, String sendPhone,
+                               String receiveProvinceCode, String receiveCityCode, String receiveRegionCode,
+                               String receiveProvinceName, String receiveCityName, String receiveRegionName,
+                               String receiveAddress, String receiveName, String receiveTel, String receivePhone,
+                               String goodsType, String goodsWeight, String insuranceMoney, String goodsRemarks,
+                               String transport, String luId) {
         Map<String, Object> map = new HashMap<String, Object>();
-        map.put("luId",luId);
+        map.put("luId", luId);
         //寄件人信息
         map.put("sendProvinceCode", sendProvinceCode);
         map.put("sendCityCode", sendCityCode);
@@ -160,18 +237,21 @@ public class ConsumerController {
         map.put("insuranceMoney", insuranceMoney);
         map.put("goodsRemarks", goodsRemarks);
         map.put("transport", transport);
-        System.out.println("map = " + map);
-        return logisticsService.confirmOrder(map);
+//        System.out.println("map = " + map);
+        String s = logisticsService.confirmOrder(map);
+//        System.out.println("s = " + s);
+        return s;
     }
 
 
     /**
      * 运费预估   2
+     *
      * @return
      */
     @RequestMapping("freightEstimate")
     @ResponseBody
-    public String freightEstimate(Integer sendProvinceCode,Integer sendRegionCode,Integer receiveProvinceCode,Integer receiveRegionCode,Double goodsWeight,Integer insuranceMoney,Boolean transport){
+    public String freightEstimate(Integer sendProvinceCode, Integer sendRegionCode, Integer receiveProvinceCode, Integer receiveRegionCode, Double goodsWeight, Integer insuranceMoney, Boolean transport) {
         System.out.println("sendProvinceCode = " + sendProvinceCode);           //发出省
         System.out.println("sendRegionCode = " + sendRegionCode);               //发出区县
         System.out.println("receiveProvinceCode = " + receiveProvinceCode);     //接收省
@@ -183,14 +263,13 @@ public class ConsumerController {
         System.out.println("isProvince = " + isProvince);
 
 
-
-        Map<String,Object> map = new HashMap<String,Object>();
-        map.put("sendRegionCode",sendRegionCode);   //状态
-        map.put("receiveRegionCode",receiveRegionCode);          //首重
-        map.put("goodsWeight",goodsWeight);    //续重
-        map.put("transport",transport);
-        map.put("isProvince",isProvince);   //保费
-        map.put("insuranceMoney",insuranceMoney);      //预计运费
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("sendRegionCode", sendRegionCode);   //状态
+        map.put("receiveRegionCode", receiveRegionCode);          //首重
+        map.put("goodsWeight", goodsWeight);    //续重
+        map.put("transport", transport);
+        map.put("isProvince", isProvince);   //保费
+        map.put("insuranceMoney", insuranceMoney);      //预计运费
 //        map.put("sendRegionCode","123456");   //状态
 
 //        JSON.toJSONString(map);
@@ -199,12 +278,12 @@ public class ConsumerController {
     }
 
 
-
     /**
      * 登录
-     * @param j_username     手机号
-     * @param j_password  密码
-     * @param encodinginput   验证码
+     *
+     * @param j_username    手机号
+     * @param j_password    密码
+     * @param encodinginput 验证码
      * @return
      */
     @ResponseBody
@@ -215,18 +294,20 @@ public class ConsumerController {
     }
 
     /**
-     *   获取登录的用户信息 2
+     * 获取登录的用户信息 2
+     *
      * @return
      */
     @ResponseBody
     @GetMapping("getUserInfo")
-    public String getUserInfo(){
+    public String getUserInfo() {
         String userByPhone = infoService.findUserByPhone();
         return userByPhone;
     }
 
     /**
      * 注销  退出
+     *
      * @return
      */
     @RequestMapping("/logout")
@@ -236,9 +317,10 @@ public class ConsumerController {
 
     /**
      * 注册
+     *
      * @param userPhoneTel 手机号
-     * @param password      密码
-     * @param messageCode   验证码
+     * @param password     密码
+     * @param messageCode  验证码
      * @return
      */
     @ResponseBody
@@ -250,7 +332,7 @@ public class ConsumerController {
 
     @ResponseBody
     @RequestMapping("/isExistence")    //是否重复手机号
-    public String isExistence(String phone){    //手机号是否已经注册
+    public String isExistence(String phone) {    //手机号是否已经注册
         String existence = securityService.isExistence(phone);
         return existence;
     }
@@ -258,22 +340,22 @@ public class ConsumerController {
 
     @ResponseBody
     @PostMapping("/verificationCode")   //短信发送确认
-    public String sendMessages(String phoneNum){    //获取验证码，
+    public String sendMessages(String phoneNum) {    //获取验证码，
         return securityService.sendMessages(phoneNum);
     }
 
     @RequestMapping("/kickout")  //挤出跳转
-    public String kickout(){     //未登录跳转页面
+    public String kickout() {     //未登录跳转页面
         return "redirect:/staticFiles/pages/login.html";
     }
 
     @RequestMapping("/notRole")  //无权页面跳转
-    public String notRole(){     //未登录跳转页面
+    public String notRole() {     //未登录跳转页面
         return "redirect:/staticFiles/pages/login.html";
     }
 
     @RequestMapping("/notLogin")     //未登录跳转
-    public String notLogin(){     //未登录跳转页面
+    public String notLogin() {     //未登录跳转页面
         return "redirect:/staticFiles/pages/login.html";
     }
 
@@ -281,8 +363,8 @@ public class ConsumerController {
     //查询所有的订单
     @RequestMapping("showOrdersAll")
     @ResponseBody
-    public String htAllOrder(String search,Integer pageIndex,Integer pageSize) throws JsonProcessingException {
-        String orders = logisticsService.showAllOrders(search,pageIndex,pageSize);
+    public String htAllOrder(String search, Integer pageIndex, Integer pageSize) throws JsonProcessingException {
+        String orders = logisticsService.showAllOrders(search, pageIndex, pageSize);
 
         return orders;
     }

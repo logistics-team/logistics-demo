@@ -25,6 +25,47 @@
     <link rel="stylesheet" type="text/css" href="/css/sweetalert.css">
     <link type="text/css" rel="stylesheet" href="/css/expressServiceTab.css">
 
+
+    <style>
+        #container {
+            height:  450px;
+            width: 100%;
+        }
+
+        .amap-icon img,
+        .amap-marker-content img{
+            width: 25px;
+            height: 34px;
+        }
+
+        .marker {
+            position: absolute;
+            top: -20px;
+            right: -118px;
+            color: #fff;
+            padding: 4px 10px;
+            box-shadow: 1px 1px 1px rgba(10, 10, 10, .2);
+            white-space: nowrap;
+            font-size: 12px;
+            font-family: "";
+            background-color: #25A5F7;
+            border-radius: 3px;
+        }
+
+        .input-card{
+            width: 18rem;
+            z-index: 170;
+        }
+
+        .input-card .btn{
+            margin-right: .8rem;
+        }
+
+        .input-card .btn:last-child{
+            margin-right: 0;
+        }
+    </style>
+
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/sweetalert-dev.js"></script>
     <script type="text/javascript" src="/js/goUrl.js"></script>
@@ -108,50 +149,67 @@
             <p class="info">天天快递提供快捷、安全、贴心、可靠的快递服务，是您的优质选择</p>
         </div>
     </div>
+
+
+
     <!--弹出框背景色-->
-    <div class="mask"></div>
+    <div class="mask"  ></div>
     <!--网点查询详情弹出框-->
-    <div class="netContentModel">
+    <div class="netContentModel" >
         <div class="netContentGroup">
-            <div class="netModelTitle"><span id="networkNameSpan">北京海淀永泰公司</span><span id="networkNoSpan">网点编号：010890</span><img src="/images/close.png" class="closeModel"></div>
+            <div class="netModelTitle"><span id="networkNameSpan"></span><span id="networkNoSpan">网点编号：</span><img src="/images/close.png" class="closeModel"></div>
             <div class="netMainContent">
-                <div class="netMainRow">
-                    <label class="oneLabelSty">所在地区：</label><span class="spanWidth" id="countyNoSpan"></span>
-                </div>
-                <div class="netMainRow">
-                    <label class="oneLabelSty">联系电话：</label><span class="spanWidth" id="businessTelSpan"></span>
-                </div>
-                <div class="netMainRow">
-                    <label class="oneLabelSty">派送时效：</label><span class="longWidth isshowCont" id="deliverySx"></span>
-                    <div class="showBtn deliverySx"><span class="fr">展开</span></div>
-                </div>
-                <div class="netMainRow">
-                    <label class="oneLabelSty">派送范围：</label><span class="longWidth isshowCont" id="deliveryRangeSpan"></span>
-                    <div class="showBtn deliveryOpenBtn"><span class="fr">展开</span></div>
-                </div>
-                <div class="netMainRow">
-                    <label class="oneLabelSty">不派送范围：</label><span class="longWidth isshowCont" id="noDeliveryRangeSpan"></span>
-                    <div class="showBtn noDeliveryOpenBtn"><span class="fr">展开</span></div>
-                </div>
-                <div class="netMainRow">
-                    <label class="oneLabelSty">备注：</label><span class="longWidth isshowCont" id="extRemarkSpan"></span>
-                    <div class="showBtn extRemarkOpenBtn"><span class="fr">展开</span></div>
-                </div>
-
-
-                <div class="netMainRow" style="display: none">
-                    <label class="oneLabelSty">营业时间：</label><span id="jc_append_serverSpan"></span>
-                </div>
-                <div class="netMainRow">
-                    <label class="oneLabelSty">允许到付：</label><span class="longWidth" id="deliveryTimeLimitSpan"></span>
-                </div>
-                <div class="netMainRow">
-                    <label class="oneLabelSty">公司地址：</label><span class="longWidth" id="networkAddressSpan"></span>
-                </div>
-                <div class="mapBackGround" id="mapdiv"></div>
+              <!--  <div class="mapBackGround" id="mapdiv"></div>-->
+                <div id="container" ></div>
             </div>
         </div>
     </div>
+
+    <script type="text/javascript"
+            src="https://webapi.amap.com/maps?v=1.4.15&key=e4eed758528a59402bc4d5a6662d9d09"></script>
+    <script type="text/javascript">
+        var marker, map = new AMap.Map("container", {
+            resizeEnable: true,
+            center: [113.06707,28.80631],
+            zoom: 13
+        });
+
+
+        // 实例化点标记
+        function addMarker(po) {
+            clearMarker();
+            marker = new AMap.Marker({
+                icon: "//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png",
+                position: po,
+                offset: new AMap.Pixel(-13, -30)
+            });
+            marker.setMap(map);
+        }
+
+        function clearMarker() {
+            if (marker) {
+                marker.setMap(null);
+                marker = null;
+            }
+        }
+
+
+
+        function getmap(lng,lat,name,id){
+            $(".netContentModel ,.mask").css('display','block');
+            $("#networkNameSpan").html(name);
+            $("#networkNoSpan").html("网点编号:"+id);
+
+            var position = new AMap.LngLat(lng, lat);
+            map.setCenter(position);
+            map.setZoom(13);
+            addMarker(position);
+        }
+
+    </script>
+
+
+
     <div class="sendMailContent khfwContent">
         <div class="leftTabContent">
             <div class="leftMainTitle">客户服务</div>

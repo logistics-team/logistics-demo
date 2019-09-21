@@ -98,9 +98,25 @@ public interface LogisticsService {
     @RequestMapping(value="address/getFreightEstimate",method = RequestMethod.POST,consumes = "application/json")
     String freightEstimate(@RequestBody Map<String, Object> map);
 
+    /**
+     * 投诉订单提交 2
+     * @param complaintInfoMap
+     * @return
+     */
     @RequestMapping(value="complaint/workOrderCustomerSubmit",method = RequestMethod.POST,consumes = "application/json")
     String workOrderCustomerSubmit(@RequestBody Map<String, Object> complaintInfoMap);
 
+
+    /**
+     * 按照id 和 关键字 查询子节点   3
+     * @param condition  关键字
+     * @param province 省id
+     * @param city   市id
+     * @param district  区县id
+     * @return 子节点的json
+     */
+    @RequestMapping(value = "CityAreas/findChild",method = RequestMethod.POST,consumes = "application/json")
+    String cityAreasFindChild(@RequestParam("condition") String condition,@RequestParam("province") int province,@RequestParam("city") int city,@RequestParam("district") int district);
 
 //    String freightEstimate(String sendRegionCode, String receiveRegionCode, String goodsWeight, boolean transport, boolean isProvince, boolean preservation);
 }

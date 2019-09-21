@@ -13,7 +13,6 @@
     <script src="/js/echarts.min.js"></script>
     <script src="/layui/layui.js" charset="utf-8"></script>
     <script>
-
         //头像用户名加载。。
         $.getJSON("../../guest/getUserInfo", function (data) {
             if (data != null) {
@@ -26,7 +25,6 @@
                 }
             }
         })
-
 
         var id;
         function xc(name) {
@@ -97,7 +95,7 @@
 
             //触发事件
             var active = {
-                tabChange: function(){
+               tabChange: function(){
                     //切换到指定Tab项
                     element.tabChange('demo', id_2 );
                     alert('jinru...')
@@ -207,23 +205,23 @@
                         <blockquote class="layui-elem-quote">(如果出现没有数据出现或者提示错误等情况,均为您查询的分类中不存在数据,敬请注意)</blockquote>
                         <div class="demoTable3">
                             <form class="layui-form" onclick="return false">
-                                <div class="layui-form-item">
-                                    <label class="layui-form-label" style="padding: 0px 15px"><button class="layui-btn" data-type="reload3">筛选</button></label>
-                                    <div class="layui-input-block">
-                                        <select name="interest" lay-filter="aihao" id="demoReload3">
-                                            <option value=""  selected=""></option>
-                                            <option value="1">文件</option>
-                                            <option value="2">书籍</option>
-                                            <option value="3">食品</option>
-                                            <option value="4">化妆品</option>
-                                            <option value="5">服饰</option>
-                                            <option value="6">日用品</option>
-                                            <option value="7">医用类</option>
-                                            <option value="8">易碎</option>
-                                            <option value="9">其他</option>
-                                        </select>
-                                    </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label" style="padding: 0px 15px"><button class="layui-btn" data-type="reload3">筛选</button></label>
+                                <div class="layui-input-block">
+                                    <select name="interest" lay-filter="aihao" id="demoReload3">
+                                        <option value=""  selected=""></option>
+                                        <option value="1">文件</option>
+                                        <option value="2">书籍</option>
+                                        <option value="3">食品</option>
+                                        <option value="4">化妆品</option>
+                                        <option value="5">服饰</option>
+                                        <option value="6">日用品</option>
+                                        <option value="7">医用类</option>
+                                        <option value="8">易碎</option>
+                                        <option value="9">其他</option>
+                                    </select>
                                 </div>
+                            </div>
                             </form>
                         </div>
 
@@ -241,7 +239,7 @@
                                 //方法级渲染
                                 table.render({
                                     elem: '#LAY_table_user'
-                                    ,url: 'http://localhost:9292/guest/show'
+                                    ,url: '../../admin/show'
                                     ,cols: [[
                                         {field:'loId', width:160, title: '订单ID', sort: true, align: 'center'}
                                         ,{field:'euReceiptName', width:120, title: '寄件人', align: 'center'}
@@ -281,7 +279,7 @@
                                                 curr: 1 //重新从第 1 页开始
                                             }
                                             ,where: {
-                                                id: demoReload.val()
+                                                    id: demoReload.val()
                                             }
                                         }, 'data');
                                     }
@@ -319,12 +317,12 @@
                                     var loid="<span class='lois2'>订单ID:&nbsp;&nbsp;&nbsp;&nbsp;"+data.loId+"</span>";
                                     comtext=data.tsid;
                                     var lsid="";
-                                    $.ajax({url:"http://localhost:9292/l_statue?id="+data.lsId,success:function (result) {
-                                            //alert(result);
-                                            $(result).each(function (index,element) {
-                                                lsid+="<option class='l_statue' value='"+element.lsId+"'>"+element.lsContext+"</option>";
-                                            })
-                                        },type:'post',async:false});
+                                    $.ajax({url:"../../admin/l_statue?id="+data.lsId,success:function (result) {
+                                        //alert(result);
+                                        $(result).each(function (index,element) {
+                                            lsid+="<option class='l_statue' value='"+element.lsId+"'>"+element.lsContext+"</option>";
+                                        })
+                                    },type:'post',async:false});
                                     //alert(id+namej+names);
                                     $(".lois2").remove();
                                     $("#dtid").append(loid);
@@ -342,17 +340,17 @@
                                     //layer.msg(ts_id+":"+ls_id);
                                     layer.close(layer.index);//关闭最新弹出的框
                                     //进行后台的数据修改
-                                    $.ajax({url:"http://localhost:9292/ls_update?ts_id="+ts_id+"&ls_id="+ls_id,success:function (result) {
+                                    $.ajax({url:"../../admin/ls_update?ts_id="+ts_id+"&ls_id="+ls_id,success:function (result) {
                                             if(result===0){
                                                 layer.msg("保存失败,请重试!",{icon:5});//哭脸提示
-                                            }else{
-                                                layer.msg("保存成功!",{icon:6});//笑脸提示
+                                            }else {
+                                                layer.msg("保存成功!", {icon: 6});//笑脸提示
                                                 //location.reload(true);刷新页面
-                                                //刷新表单数据
-                                                table.reload('LAY_table_userReload',{
-                                                    page:{curr:1}
-                                                })
                                             }
+                                            //刷新表单数据
+                                            table.reload('LAY_table_userReload',{
+                                                page:{curr:1}
+                                            })
                                         },type:'post',async:false});
                                     return false;
                                 });
@@ -383,7 +381,7 @@
 
                                 table.render({
                                     elem: '#test4'
-                                    ,url:'http://localhost:9292/guest/e_user'
+                                    ,url:'../../admin/e_user'
                                     ,cellMinWidth: 80
                                     ,cols: [[
                                         {field:'loId', width:160, title: '订单ID', sort: true, fixed: true, align: 'center'}
@@ -408,32 +406,32 @@
                                 });
 
 
-                                var $ = layui.$, active = {
-                                    reload: function(){
-                                        //获取搜索值
-                                        var demoReload = $('#demoReload');
-                                        //执行重载
-                                        table.reload('test4Reload', {
-                                            page: {
-                                                curr: 1 //重新从第 1 页开始
-                                            }
-                                            ,where: {
-                                                id: demoReload.val()
-                                            }
-                                        }, 'data');
-                                    }
-                                };
-                                //搜索按钮点击
-                                $('.demoTable .layui-btn').on('click', function(){
-                                    var type = $(this).data('type');
-                                    active[type] ? active[type].call(this) : '';
-                                });
+                            var $ = layui.$, active = {
+                                reload: function(){
+                                    //获取搜索值
+                                    var demoReload = $('#demoReload');
+                                    //执行重载
+                                    table.reload('test4Reload', {
+                                        page: {
+                                            curr: 1 //重新从第 1 页开始
+                                        }
+                                        ,where: {
+                                            id: demoReload.val()
+                                        }
+                                    }, 'data');
+                                }
+                            };
+                            //搜索按钮点击
+                            $('.demoTable .layui-btn').on('click', function(){
+                                var type = $(this).data('type');
+                                active[type] ? active[type].call(this) : '';
+                            });
                             });
                         </script>
                     </div>
-                    <!-- 未处理× -->
+                    <!-- 未处理√ -->
                     <div class="layui-tab-item">
-                        <blockquote class="layui-elem-quote">这是一个解释</blockquote>
+                        <blockquote class="layui-elem-quote">当投诉从未处理转为处理中后,便不能改回未处理,请管理员注意|ू･ω･` )</blockquote>
                         <script type="text/html" id="switchTp2">
                             <input type="checkbox" name="lock" value="{{d.id}}" lay-skin="switch" lay-text="处理中|未处理" lay-filter="lockDemo3">
                         </script>
@@ -450,26 +448,56 @@
 
                                 table.render({
                                     elem: '#test5'
-                                    ,url:'../../anon/complaintInfo'
+                                    ,url:'../../admin/select_untreated'
                                     ,cols: [[
-                                        {field:'loId', width:160, title: '投诉订单号', sort: true, align: 'center'}
-                                        ,{field:'complaintTime', width:120, title: '投诉时间', align: 'center'}
-                                        ,{field:'sender', width:120, title: '寄件人', align: 'center'}
-                                        ,{field:'consignee', width:120, title: '收件人', align: 'center'}
-                                        ,{field:'typeOfComplaint', width:180, title: '投诉类型', sort: true, align: 'center'}
-                                        ,{field:'complaintDescription', width:180, title: '投诉描述', align: 'center'}
-                                        ,{field:'processingStatus',title: '处理状态',templet: '#switchTp2',unresize: true, width:145, align: 'center'}
+                                        {field:'id', width:160, title: '编号', sort: true, align: 'center'}
+                                        ,{field:'loId', width:120, title: '订单id', align: 'center'}
+                                        ,{field:'ciName', width:120, title: '寄件人', align: 'center'}
+                                        ,{field:'ciPhone', width:150, title: '寄件人电话', align: 'center'}
+                                        ,{field:'ciAddress', width:180, title: '寄件人地址', sort: true, align: 'center'}
+                                        ,{field:'ciName2', width:120, title: '收件人', align: 'center'}
+                                        ,{field:'ciPhone2', width:150, title: '收件人电话', align: 'center'}
+                                        ,{field:'ciAddress2', width:180, title: '收件人地址', sort: true, align: 'center'}
+                                        ,{field:'mcGmtModified', width:180, title: '修改时间', align: 'center'}
+                                        ,{field:'tocContext', width:120, title: '投诉类型', align: 'center'}
+                                        ,{field:'mcContext', width:250, title: '投诉描述', align: 'center'}
+                                        ,{field:'lock',title: '状态',templet: '#switchTp2',unresize: true, width:145, align: 'center'}
                                         ,{field:'button',title: '投诉图片',templet: '#switchTpbutton', width:145, align: 'center', fixed: 'right'}
+                                        ,{field:'mcimglocation', width:100, title: '投诉图片路径', align: 'center',style:'display:none'}
                                     ]]
                                     ,page: true
+                                    ,id: 'test5_up'
                                 });
                                 //监听处理操作
                                 form.on('switch(lockDemo3)', function(obj){
-                                    layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);
+                                    //layer.tips(this.value + '：'+ obj.elem.checked, obj.othis);
+                                    var psid=1;
+                                    if(obj.elem.checked){
+                                        psid=2;
+                                    }
+                                    $.ajax({url:"../../admin/update_psid?id="+this.value+"&psid="+psid,success:function (result) {
+                                            if(result===0){
+                                                layer.msg("保存失败,请重试!",{icon:5});//哭脸提示
+                                            }else{
+                                                layer.msg("保存成功!",{icon:6});//笑脸提示
+                                                //location.reload(true);刷新页面
+                                                //刷新表单数据
+                                                table.reload('test6_up',{
+                                                    page:{curr:1}
+                                                })
+                                            }
+                                            //刷新表单数据
+                                            table.reload('test5_up',{
+                                                page:{curr:1}
+                                            })
+
+                                        },type:'post',async:false});
+
                                 });
                                 //查看按钮
                                 table.on('tool(test5)', function (obj) {
                                     var data = obj.data;
+                                    ck_img(data);
                                     if (obj.event === 'detail') {
                                         layer.open({
                                             //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
@@ -481,12 +509,42 @@
                                         });
                                     }
                                 });
+
+                                //查看加载图片
+                                function ck_img(data) {
+                                    var src=data.mcimglocation;
+                                    var html='';
+                                    var s=src.split(",");
+                                    var len=s.length;
+                                    if(src !=''){
+                                        //alert(src+":"+len+":"+s);
+                                        for(var i=0;i<len;i++){
+                                            html+="<div class='ckk' style='text-align :center;'><img src='"+s[i]+"' style='max-height:280px; max-width:500px; vertical-align: middle;'></div>\n";
+                                        }
+                                    }else{
+                                        html="<div class='ckk'><h1 style='text-align: center'>未上传投诉图片</h1></div>\n" ;
+                                    }
+                                    //alert(html);
+                                    $(".ckk").remove();
+                                    $("#test1_01").append(html);
+                                    //轮播加载
+                                    layui.use('carousel', function(){
+                                        var carousel = layui.carousel;
+                                        //建造实例
+                                        carousel.render({
+                                            elem: '#test1'
+                                            ,width: '100%' //设置容器宽度
+                                            ,arrow: 'always' //始终显示箭头
+                                            //,anim: 'updown' //切换动画方式
+                                        });
+                                    });
+                                }
                             });
                         </script>
                     </div>
-                    <!-- 处理中× -->
+                    <!-- 处理中√ -->
                     <div class="layui-tab-item">
-                        <blockquote class="layui-elem-quote">这是一个解释</blockquote>
+                        <blockquote class="layui-elem-quote">投诉转为已处理好后,便不能转回处理中,请管理员注意|ू･ω･` )</blockquote>
                         <script type="text/html" id="switchTp3">
                             <input type="checkbox" name="lock" value="{{d.id}}" lay-skin="switch" lay-text="已处理|处理中" lay-filter="lockDemo4">
                         </script>
@@ -498,49 +556,110 @@
 
                         <table class="layui-hide" id="test6" lay-filter="test6"></table>
                         <script>
-                            layui.use('table', function(){
+                            layui.use('table', function() {
                                 var table = layui.table,
                                     form = layui.form;
 
                                 table.render({
                                     elem: '#test6'
-                                    ,url:'/demo.json'
-                                    ,cols: [[
-                                        {field:'id', width:100, title: '订单ID', sort: true, align: 'center'}
-                                        ,{field:'username', width:120, title: '寄件人', align: 'center'}
-                                        ,{field:'sex', width:120, title: '收件人', align: 'center'}
-                                        ,{field:'city', width:140, title: '投诉类型', align: 'center'}
-                                        ,{field:'experience', width:180, title: '时间', sort: true, align: 'center'}
-                                        ,{field:'email', width:470, title: '描述', align: 'center'}
-                                        ,{field:'lock',title: '状态',templet: '#switchTp3',unresize: true, width:145, align: 'center'}
-                                        ,{field:'button',title: '投诉图片',templet: '#switchTpbutton02', width:145, align: 'center', fixed: 'right'}
+                                    , url: '../../admin/select_inHand'
+                                    , cols: [[
+                                        {field: 'id', width: 160, title: '编号', sort: true, align: 'center'}
+                                        , {field: 'loId', width: 120, title: '订单id', align: 'center'}
+                                        , {field: 'ciName', width: 120, title: '寄件人', align: 'center'}
+                                        , {field: 'ciPhone', width: 150, title: '寄件人电话', align: 'center'}
+                                        , {field: 'ciAddress', width: 180, title: '寄件人地址', sort: true, align: 'center'}
+                                        , {field: 'ciName2', width: 120, title: '收件人', align: 'center'}
+                                        , {field: 'ciPhone2', width: 150, title: '收件人电话', align: 'center'}
+                                        , {field: 'ciAddress2', width: 180, title: '收件人地址', sort: true, align: 'center'}
+                                        , {field: 'mcGmtModified', width: 180, title: '修改时间', align: 'center'}
+                                        , {field: 'tocContext', width: 120, title: '投诉类型', align: 'center'}
+                                        , {field: 'mcContext', width: 250, title: '投诉描述', align: 'center'}
+                                        , {field: 'lock', title: '状态', templet: '#switchTp3', unresize: true, width: 145, align: 'center'}
+                                        , {field: 'button', title: '投诉图片', templet: '#switchTpbutton', width: 145, align: 'center', fixed: 'right'}
+                                        , {field: 'mcimglocation', width: 100, title: '投诉图片路径', align: 'center', style: 'display:none'}
                                     ]]
-                                    ,page: true
+                                    , page: true
+                                    , id: 'test6_up'
                                 });
                                 //监听处理操作
-                                form.on('switch(lockDemo4)', function(obj){
-                                    layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);
-                                });
-                                //查看按钮
-                                table.on('tool(test6)', function (obj) {
-                                    var data = obj.data;
-                                    if (obj.event === 'detail') {
-                                        layer.open({
-                                            //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
-                                            type: 1,
-                                            title: "投诉图片信息",
-                                            area: ['700px', '325px'],
-                                            shadeClose:true,//点击阴影关闭
-                                            content: $("#test1")//引用的弹出层的页面层的方式加载修改界面表单
-                                        });
+                                form.on('switch(lockDemo4)', function (obj) {
+                                    layer.tips(this.value + '：' + obj.elem.checked, obj.othis);
+                                    var psid = 2;
+                                    if (obj.elem.checked) {
+                                        psid = 4;
                                     }
-                                });
+                                    $.ajax({
+                                        url: "../../admin/update_psid?id=" + this.value + "&psid=" + psid,
+                                        success: function (result) {
+                                            if (result === 0) {
+                                                layer.msg("保存失败,请重试!", {icon: 5});//哭脸提示
+                                            } else {
+                                                layer.msg("保存成功!", {icon: 6});//笑脸提示
+                                                //location.reload(true);刷新页面
+                                                //刷新表单数据
+                                                table.reload('test7_up', {
+                                                    page: {curr: 1}
+                                                })
+                                            }
+                                            //刷新表单数据
+                                            table.reload('test6_up', {
+                                                page: {curr: 1}
+                                            })
+                                        }
+                                    });
+                                    });
+                                    //查看按钮
+                                    table.on('tool(test6)', function (obj) {
+                                        var data = obj.data;
+                                        ck(data);
+                                        if (obj.event === 'detail') {
+                                            layer.open({
+                                                //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+                                                type: 1,
+                                                title: "投诉图片信息",
+                                                area: ['700px', '325px'],
+                                                shadeClose: true,//点击阴影关闭
+                                                content: $("#test1")//引用的弹出层的页面层的方式加载修改界面表单
+                                            });
+                                        }
+                                    });
+
+                                    //图片加入查看按钮
+                                function ck(data) {
+                                    var src=data.mcimglocation;
+                                    var html='';
+                                    var s=src.split(",");
+                                    var len=s.length;
+                                    if(src !=''){
+                                        //alert(src+":"+len+":"+s);
+                                        for(var i=0;i<len;i++){
+                                            html+="<div class='ckk' style='text-align :center;'><img src='"+s[i]+"' style='max-height:280px; max-width:500px; vertical-align: middle ;'></div>\n";
+                                        }
+                                    }else{
+                                        html="<div class='ckk'><h1 style='text-align: center'>未上传投诉图片</h1></div>\n" ;
+                                    }
+                                    //alert(html);
+                                    $(".ckk").remove();
+                                    $("#test1_01").append(html);
+                                    //轮播加载
+                                    layui.use('carousel', function(){
+                                        var carousel = layui.carousel;
+                                        //建造实例
+                                        carousel.render({
+                                            elem: '#test1'
+                                            ,width: '100%' //设置容器宽度
+                                            ,arrow: 'always' //始终显示箭头
+                                            //,anim: 'updown' //切换动画方式
+                                        });
+                                    });
+                                }
                             });
-                        </script>
+                            </script>
                     </div>
-                    <!-- 已处理× -->
+                    <!-- 已处理√ -->
                     <div class="layui-tab-item">
-                        <blockquote class="layui-elem-quote">这是一个解释</blockquote>
+                        <blockquote class="layui-elem-quote">!!!∑(ﾟДﾟノ)ノ</blockquote>
 
                         <!-- 查看投诉图片 -->
                         <script type="text/html" id="switchTpbutton03">
@@ -555,21 +674,29 @@
 
                                 table.render({
                                     elem: '#test7'
-                                    ,url:'/demo.json'
+                                    ,url:'../../admin/select_processed'
                                     ,cols: [[
-                                        {field:'id', width:100, title: '订单ID', sort: true, align: 'center'}
-                                        ,{field:'username', width:120, title: '寄件人', align: 'center'}
-                                        ,{field:'sex', width:120, title: '收件人', align: 'center'}
-                                        ,{field:'city', width:140, title: '投诉类型', align: 'center'}
-                                        ,{field:'experience', width:180, title: '时间', sort: true, align: 'center'}
-                                        ,{field:'email', width:650, title: '描述', align: 'center'}
-                                        ,{field:'button',title: '投诉图片',templet: '#switchTpbutton03', width:145, align: 'center', fixed: 'right'}
+                                        {field:'id', width:160, title: '编号', sort: true, align: 'center'}
+                                        ,{field:'loId', width:120, title: '订单id', align: 'center'}
+                                        ,{field:'ciName', width:120, title: '寄件人', align: 'center'}
+                                        ,{field:'ciPhone', width:150, title: '寄件人电话', align: 'center'}
+                                        ,{field:'ciAddress', width:180, title: '寄件人地址', sort: true, align: 'center'}
+                                        ,{field:'ciName2', width:120, title: '收件人', align: 'center'}
+                                        ,{field:'ciPhone2', width:150, title: '收件人电话', align: 'center'}
+                                        ,{field:'ciAddress2', width:180, title: '收件人地址', sort: true, align: 'center'}
+                                        ,{field:'mcGmtModified', width:180, title: '修改时间', align: 'center'}
+                                        ,{field:'tocContext', width:120, title: '投诉类型', align: 'center'}
+                                        ,{field:'mcContext', width:250, title: '投诉描述', align: 'center'}
+                                        ,{field:'button',title: '投诉图片',templet: '#switchTpbutton', width:145, align: 'center', fixed: 'right'}
+                                        ,{field:'mc_img_location', width:100, title: '投诉图片路径', align: 'center',style:'display:none'}
                                     ]]
                                     ,page: true
+                                    ,id:'test7_up'
                                 });
                                 //查看按钮
                                 table.on('tool(test7)', function (obj) {
                                     var data = obj.data;
+                                    ck2(data);
                                     if (obj.event === 'detail') {
                                         layer.open({
                                             //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
@@ -581,6 +708,36 @@
                                         });
                                     }
                                 });
+
+                                //轮播图加载
+                                function ck2(data) {
+                                    var src=data.mcimglocation;
+                                    var html='';
+                                    var s=src.split(",");
+                                    var len=s.length;
+                                    if(src !=''){
+                                        //alert(src+":"+len+":"+s);
+                                        for(var i=0;i<len;i++){
+                                            html+="<div class='ckk' style='text-align :center;'><img src='"+s[i]+"' style='max-height:280px; max-width:500px; vertical-align: middle;' ></div>\n";
+                                        }
+                                    }else{
+                                        html="<div class='ckk'><h1 style='text-align: center'>未上传投诉图片</h1></div>\n" ;
+                                    }
+                                    //alert(html);
+                                    $(".ckk").remove();
+                                    $("#test1_01").append(html);
+                                    //轮播加载
+                                    layui.use('carousel', function(){
+                                        var carousel = layui.carousel;
+                                        //建造实例
+                                        carousel.render({
+                                            elem: '#test1'
+                                            ,width: '100%' //设置容器宽度
+                                            ,arrow: 'always' //始终显示箭头
+                                            //,anim: 'updown' //切换动画方式
+                                        });
+                                    });
+                                }
                             });
                         </script>
                     </div>
@@ -605,7 +762,7 @@
 
                         <script>
                             function black(){
-                                $.ajax({url:"http://localhost:9292/guest/user_black",success:function (result) {
+                                $.ajax({url:"../../admin/user_black",success:function (result) {
                                         var html="{";
                                         var s=result.split(",");
                                         //alert(result);
@@ -622,7 +779,7 @@
                                     },type:'post',async:false});
                             }
                             layui.use(['table', 'form', 'layer'], function () {
-                                black();
+                               black();
                                 // 操作对象
                                 var form = layui.form
                                     , table = layui.table
@@ -641,7 +798,7 @@
                                         ,{field: 'luisblacklist', width: 158, title: '状态', align: 'center', toolbar: '#switchTp6', unresize: true, fixed: 'right'}
                                     ]]
                                     , id: 'dataCheck'
-                                    , url: 'http://localhost:9292/guest/user'
+                                    , url: '../../admin/findAllUser'
                                     , page: true
                                     ,width: 800
                                     ,done : function(res, curr, count) {
@@ -687,17 +844,19 @@
                                 form.on('switch(lockDemo6)', function(obj){
                                     alert(this.value + '：'+ obj.elem.checked, obj.othis);
                                     //进行后台的数据修改
-                                    $.ajax({url:"http://localhost:9292/guest/user_update?id="+this.value+"&block="+obj.elem.checked,success:function (result) {
+                                    $.ajax({url:"../../admin/user_update?id="+this.value+"&block="+obj.elem.checked,success:function (result) {
                                             if(result===0){
                                                 layer.msg("保存失败,请重试!",{icon:5});//哭脸提示
                                             }else{
                                                 layer.msg("保存成功!",{icon:6});//笑脸提示
                                                 //location.reload(true);刷新页面
-                                                //刷新表单数据
-                                                table.reload('dataCheck',{
-                                                    page:{curr:1}
-                                                })
                                             }
+
+                                            //刷新表单数据
+                                            table.reload('dataCheck',{
+                                                page:{curr:1}
+                                            })
+
                                         },type:'post',async:false});
 
                                     //layer.msg("操作成功",{icon:6});//笑脸
@@ -708,7 +867,7 @@
                         </script>
 
 
-                    </div>
+                </div>
                     <!-- 订单编号+地址查询√ -->
                     <div class="layui-tab-item">
                         <blockquote class="layui-elem-quote">id,寄件人,收件人,地址的搜索</blockquote>
@@ -746,7 +905,7 @@
                         </script>
 
                         <script>
-                            $.ajax({url:"http://localhost:9292/guest/epca_select01",success:function (result) {
+                            $.ajax({url:"../../admin/epca_select01",success:function (result) {
                                     //alert(result);
                                     var lsid="";
                                     $(result).each(function (index,element) {
@@ -766,7 +925,7 @@
                                 //方法级渲染
                                 table.render({
                                     elem: '#LAY_table_user7'
-                                    ,url: 'http://localhost:9292/guest/show'
+                                    ,url: '../../admin/show'
                                     ,cols: [[
                                         {field:'loId', width:160, title: '订单ID', sort: true, align: 'center'}
                                         ,{field:'euReceiptName', width:120, title: '寄件人', align: 'center'}
@@ -787,13 +946,13 @@
                                     ,id: 'testReload'
                                     ,page: true
                                     ,done : function(res, curr, count) {
-                                        //layer.msg("进入..."+count);
-                                        if (count === 0)
-                                        {
-                                            $(".layui-none").hide();//隐藏无数据
-                                            $(".layui-table-page").hide();//隐藏分页
-                                        }
+                                    //layer.msg("进入..."+count);
+                                    if (count === 0)
+                                    {
+                                        $(".layui-none").hide();//隐藏无数据
+                                        $(".layui-table-page").hide();//隐藏分页
                                     }
+                                }
                                 });
 
                                 //下拉框监听,联动下拉框
@@ -809,7 +968,7 @@
                                     select03=0;
                                     layui.form.render("select");//重新编译select
                                     if(select01>0){
-                                        $.ajax({url:"http://localhost:9292/guest/epca_select02?id="+select01,success:function (result) {
+                                        $.ajax({url:"../../admin/epca_select02?id="+select01,success:function (result) {
                                                 //alert(result);
                                                 var lsid="";
                                                 $(result).each(function (index,element) {
@@ -828,7 +987,7 @@
                                     select03=0;
                                     layui.form.render("select");//重新编译select
                                     if(select02>0){
-                                        $.ajax({url:"http://localhost:9292/epca_select02?id="+select02,success:function (result) {
+                                        $.ajax({url:"../../admin/epca_select02?id="+select02,success:function (result) {
                                                 //alert(result);
                                                 var lsid="";
                                                 $(result).each(function (index,element) {
@@ -898,7 +1057,7 @@
                                     var loid="<span class='lois2'>订单ID:&nbsp;&nbsp;&nbsp;&nbsp;"+data.loId+"</span>";
                                     comtext=data.tsid;
                                     var lsid="";
-                                    $.ajax({url:"http://localhost:9292/l_statue?id="+data.lsId,success:function (result) {
+                                    $.ajax({url:"../../admin/l_statue?id="+data.lsId,success:function (result) {
                                             //alert(result);
                                             $(result).each(function (index,element) {
                                                 lsid+="<option class='l_statue' value='"+element.lsId+"'>"+element.lsContext+"</option>";
@@ -921,17 +1080,18 @@
                                     //layer.msg(ts_id+":"+ls_id);
                                     layer.close(layer.index);//关闭最新弹出的框
                                     //进行后台的数据修改
-                                    $.ajax({url:"http://localhost:9292/ls_update?ts_id="+ts_id+"&ls_id="+ls_id,success:function (result) {
+                                    $.ajax({url:"../../admin/ls_update?ts_id="+ts_id+"&ls_id="+ls_id,success:function (result) {
                                             if(result===0){
                                                 layer.msg("保存失败,请重试!",{icon:5});//哭脸提示
                                             }else{
                                                 layer.msg("保存成功!",{icon:6});//笑脸提示
                                                 //location.reload(true);刷新页面
-                                                //刷新表单数据
-                                                table.reload('LAY_table_userReload',{
-                                                    page:{curr:1}
-                                                })
                                             }
+                                            //刷新表单数据
+                                            table.reload('LAY_table_userReload',{
+                                                page:{curr:1}
+                                            })
+
                                         },type:'post',async:false});
                                     return false;
                                 });
@@ -1050,12 +1210,12 @@
                         </script>
 
                         <div id="zxt" style="width: 1000px;height:500px;display: inline-block"></div>
-                        <div style="width:100px; display: inline-block">
-                            <button type="button" class="layui-btn layui-btn-primary layui-btn-radius" style="margin-bottom: 15px;margin-left: 30px" onclick="click_line(5)">最近7天</button>
-                            <button type="button" class="layui-btn layui-btn-primary layui-btn-radius" style="margin-bottom: 15px;margin-left: 30px" onclick="click_line(2)">最近四周</button>
-                            <button type="button" class="layui-btn layui-btn-primary layui-btn-radius" style="margin-bottom: 15px;margin-left: 30px" onclick="click_line(3)">最近十二月</button>
-                            <button type="button" class="layui-btn layui-btn-primary layui-btn-radius" style="margin-bottom: 15px;margin-left: 30px" onclick="click_line(4)">最近五年</button>
-                        </div>
+                            <div style="width:100px; display: inline-block">
+                                <button type="button" class="layui-btn layui-btn-primary layui-btn-radius" style="margin-bottom: 15px;margin-left: 30px" onclick="click_line(5)">最近7天</button>
+                                <button type="button" class="layui-btn layui-btn-primary layui-btn-radius" style="margin-bottom: 15px;margin-left: 30px" onclick="click_line(2)">最近四周</button>
+                                <button type="button" class="layui-btn layui-btn-primary layui-btn-radius" style="margin-bottom: 15px;margin-left: 30px" onclick="click_line(3)">最近十二月</button>
+                                <button type="button" class="layui-btn layui-btn-primary layui-btn-radius" style="margin-bottom: 15px;margin-left: 30px" onclick="click_line(4)">最近五年</button>
+                            </div>
                         <script>
                             var s=3;
                             var myChart2 = echarts.init(document.getElementById('zxt'));
@@ -1325,16 +1485,16 @@
 
                         </script>
                     </div>
-                </div>
-
             </div>
-        </div>
 
-        <div class="layui-footer">
-            <!-- 底部固定区域 -->
-            © 版权所有 2015 天天快递有限公司 浙ICP备13006085号 | 快递业务经营许可证
         </div>
     </div>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © 版权所有 2015 天天快递有限公司 浙ICP备13006085号 | 快递业务经营许可证
+    </div>
+</div>
     <!--这里是弹出层的表单信息-->
     <div class="layui-row" id="popUpdateTest" style="display:none;">
 
@@ -1397,25 +1557,16 @@
 </div>
 //投诉图片欣赏
 <div class="layui-carousel" id="test1" style="display:none;">
-    <div carousel-item="">
-        <div>条目1</div>
+    <div carousel-item="" id="test1_01">
+       <!-- <div>条目1</div>
         <div>条目2</div>
         <div>条目3</div>
         <div>条目4</div>
-        <div>条目5</div>
+        <div>条目5</div> -->
     </div>
 </div>
 <script>
-    layui.use('carousel', function(){
-        var carousel = layui.carousel;
-        //建造实例
-        carousel.render({
-            elem: '#test1'
-            ,width: '100%' //设置容器宽度
-            ,arrow: 'always' //始终显示箭头
-            //,anim: 'updown' //切换动画方式
-        });
-    });
+
 </script>
 
 </body>

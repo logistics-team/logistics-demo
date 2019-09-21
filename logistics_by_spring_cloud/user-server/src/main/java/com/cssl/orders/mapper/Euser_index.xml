@@ -35,7 +35,7 @@
             and l.lo_id like '%${id}%'
         </if>
         <if test="name != null and name != ''">
-            and u.eu_receipt_name like '%${name}%' or u.eu_sender_name like '%${name}%'
+            and (u.eu_receipt_name like '%${name}%' or u.eu_sender_name like '%${name}%')
         </if>
         limit  #{page},#{limit}
     </select>
@@ -48,7 +48,7 @@
             and l.lo_id like '%${id}%'
         </if>
         <if test="name != null and name != ''">
-            and u.eu_receipt_name like '%${name}%' or u.eu_sender_name like '%${name}%'
+            and (u.eu_receipt_name like '%${name}%' or u.eu_sender_name like '%${name}%')
         </if>
     </select>
 

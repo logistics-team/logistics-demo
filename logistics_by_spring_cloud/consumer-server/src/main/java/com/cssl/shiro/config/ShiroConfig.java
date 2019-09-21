@@ -60,16 +60,20 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/index/**", "anon"); //测试
         filterChainDefinitionMap.put("/html/**", "anon"); //测试
         filterChainDefinitionMap.put("/anon/**", "anon"); //测试
+        filterChainDefinitionMap.put("/cityAreas/**", "anon"); //测试
 
 
         //用户，需要角色权限 “user”
         filterChainDefinitionMap.put("/fileUploadController/**", "roles[user]");
         filterChainDefinitionMap.put("/guest/showOrdersAll", "roles[user]");
         filterChainDefinitionMap.put("/staticFiles/user/**", "roles[user]");
+        filterChainDefinitionMap.put("/user/**", "roles[user]");
         //管理员，需要角色权限 “admin”
         filterChainDefinitionMap.put("/staticFiles/manage/**", "roles[admin]");
+        filterChainDefinitionMap.put("/admin/**", "roles[admin]");
         //管理员，需要角色权限 “admin”
         filterChainDefinitionMap.put("/staticFiles/manage/**", "roles[root]");
+        filterChainDefinitionMap.put("/admin/**", "roles[root]");
         //开放登陆接口
         filterChainDefinitionMap.put("/findpwd", "anon");
         filterChainDefinitionMap.put("/login", "anon");

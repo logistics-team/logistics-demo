@@ -44,9 +44,6 @@
         <if test="id gt 0 and id lt 10">
             and t.it_id=${id}
         </if>
-        <if test="name!=null and name!=''">
-            and u.eu_receipt_name like '%${name}%'
-        </if>
         <if test="select01 gt 0">
             and s.ep_id like '%${select01}%'
         </if>
@@ -57,16 +54,7 @@
             AND s.ea_id like '%${select03}%'
         </if>
         <if test="name!=null and name!=''">
-            or u.eu_sender_name like '%${name}%'
-        </if>
-        <if test="select01 gt 0">
-            and s.ep_id like '%${select01}%'
-        </if>
-        <if test="select02 gt 0">
-            AND s.ec_id like '%${select02}%'
-        </if>
-        <if test="select03 gt 0">
-            AND s.ea_id like '%${select03}%'
+            and (u.eu_receipt_name like '%${name}%' or u.eu_sender_name like '%${name}%')
         </if>
         limit  #{page},#{limit}
     </select>
@@ -95,9 +83,6 @@
         <if test="id gt 0 and id lt 10">
             and t.it_id=#{id}
         </if>
-        <if test="name!=null and name!=''">
-            and u.eu_receipt_name like '%${name}%'
-        </if>
         <if test="select01 gt 0">
             and s.ep_id=${select01}
         </if>
@@ -108,16 +93,7 @@
             AND s.ea_id=${select03}
         </if>
         <if test="name!=null and name!=''">
-            or u.eu_sender_name like '%${name}%'
-        </if>
-        <if test="select01 gt 0">
-            and s.ep_id like '%${select01}%'
-        </if>
-        <if test="select02 gt 0">
-            AND s.ec_id like '%${select02}%'
-        </if>
-        <if test="select03 gt 0">
-            AND s.ea_id like '%${select03}%'
+            and (u.eu_receipt_name like '%${name}%' or u.eu_sender_name like '%${name}%')
         </if>
     </select>
 </mapper>

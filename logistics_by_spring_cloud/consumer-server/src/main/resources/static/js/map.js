@@ -1,7 +1,7 @@
 /**
  * Created by 17120847 on 2018/6/12.
  */
-	var map,marker ;
+/*	var map,marker ;
 	mapInit();
 	function mapInit(){
 		try{
@@ -12,7 +12,7 @@
 		    });	
 		}catch(err){
 		}   
-	}
+	}*/
 
     function geocoder(addressinfoa) {
     	try{
@@ -51,7 +51,7 @@
             infoWindow.open(map, marker.getPosition());
         });
     }
-    function addMarker(i, d) {
+   /* function addMarker(i, d) {
         lnglatXY = [i, d]; //已知点坐标
     	var geocoder = new AMap.Geocoder({
             radius: 1000,
@@ -66,7 +66,7 @@
             position: lnglatXY
         });
         map.setFitView();
-    }
+    }*/
 
     function isnullToString(obj){
         if (typeof(obj) == "undefined" || obj == null) {
@@ -90,15 +90,25 @@
     }
 
 	function networkInfo(networkno){
+	    //	type:"post",
+        // 			url:"/cityAreas/findChild",
 		$.ajax({
-			type:"post",	
-			url:"/netWork/networkQuery!serchNetworkInfo.action",				
-			data:{"peripheralUnit.zexid":networkno},
+			type:"post",
+            url:"/cityAreas/findChild",
+			data:{"zexid":networkno},
 			error: function(){
 					swal("", 'Error loading web_jsp document！', "warning");
 			},
 			success:function(data){
-				if(data == 'fail'){
+                //<div class="netContentGroup">
+                //             <div class="netModelTitle"><span id="networkNameSpan">SN长沙新世界分部</span><span id="networkNoSpan">72519</span><img src="/staticFiles/assets/customerService/close.png" class="closeModel"></div>
+                //             <div class="netMainContent">
+                //             </div>
+                //         </div>
+
+
+
+				/*if(data == 'fail'){
 					swal("", '抱歉你所查询的地区暂时没有网点存在！', "warning");
 				}else{
 					var network = JSON.parse(data);
@@ -170,7 +180,9 @@
 //					addMarker(network.longitude,network.latitude);
 					geocoder(network.adrnr);
 				}
-			} 	 		
+			*/}
+			,
+            dataType:"json"
 		});
 	}
 	
@@ -200,6 +212,7 @@
 	
 	function searchNetWork(countyName,cityName,opt){
 		var data;
+		//这是搜索查询
 		if(opt == 'search'){
 			var province = $("#ctityTextHtml").find(".select-item[data-count$='province']").attr('data-code');
 			var city = $("#ctityTextHtml").find(".select-item[data-count$='city']").attr('data-code');
@@ -213,23 +226,61 @@
 				swal("", '网点名称最多不超过20个字符。', "info");
 				return;
 			}
-			data = {"peripheralUnit.vtext":condition,"peripheralUnit.city":city,"peripheralUnit.province":province,"peripheralUnit.district":district};
+			//第一个属性是 关键字    ,  后面三个属性分别是省,市,区县
+			data = {"condition":condition,"city":city,"province":province,"district":district};
+
+			//这是地图查询
 		}else if(opt == 'map'){
-			data = {"peripheralUnit.city":cityName,"peripheralUnit.province":countyName};
+		    //省和市
+			data = {"city":cityName,"province":countyName};
 		}
 		$.ajax({
 			type:"post",	
-			url:"/netWork/networkQuery!serchNetwork.action",				
+			url:"/cityAreas/findChild",
 			data:data,
+
 			error: function(){
-					swal("", 'Error loading web_jsp document！', "warning");
+					swal("", 'Error loading fucking document！', "warning");
 			},
 			success:function(data){
-			    $(".queryResultContent").html(data);
+                var clearfix = "<div class=\"resultBoxDesc clearfix\" >";
+                var fl = "   <label class=\"fl\">";
+                var div = "</div>";
+                var ht = "";
+
+                var i1="queryResultBox";
+                var i2="queryResultBox queryResultBoxEven";
+			    $.each(data,function (i,value) {
+
+                    if (value["epcaLevel"]==1){
+                        i1="queryResultBox queryResultBoxEven";
+                        i2="queryResultBox";
+                    }
+			        if (value["epcaLevel"]!=1){
+
+                        if (i%2==0){
+
+                            ht += "<div class='"+i1+"'  onclick=\"javascript:getmap("+value["epcaLng"]+","+value["epcaLat"]+",'"+value["epcaName"]+"',"+value["epcaCitycode"]+")\">"+
+                                "<div class=\"resultBoxTitle\">"+value["epcaName"]+
+                                "<span>网点编号："+value["epcaCitycode"]+"</span>"+
+                                div+
+                                div
+                        }else{
+                            ht += "<div class='"+i2+"'  onclick=\"javascript:getmap("+value["epcaLng"]+","+value["epcaLat"]+",'"+value["epcaName"]+"',"+value["epcaCitycode"]+")\">"+
+                                "<div class=\"resultBoxTitle\">"+value["epcaName"]+
+                                "<span>网点编号："+value["epcaCitycode"]+"</span>"+
+                                div+
+                                div
+                        }
+                   }
+                })
+			    $(".queryResultContent").html(ht);
 			    $(".distributionScope").find('br').remove();
 				if(data.length == 0){
 					swal("", '抱歉你所查询的地区暂时没有网点存在！', "warning");
-				}else{
+				}
+				/*下面的这些貌似是画图用的,注释先
+				else{
                     var mao = $("#queryResultContent"); //获得锚点
                     if (mao.length > 0) {//判断对象是否存在
                         var pos = mao.offset().top;
@@ -242,8 +293,8 @@
                             $("html,body").animate({scrollTop: sc*(-1)}, 500);
                         }
                     }
-                }
-			} 	 		
+                }*/
+			} 	,  dataType:"json"
 		});
 	}
 	

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cssl.orders.mapper.MyComplaint_index">
+
+    <resultMap id="map" type="com.cssl.entity.MyComplaint">
+        <id column="mc_id" property="mcId"></id>
+        <id column="lo_id" property="loId"></id>
+        <id column="mc_gmt_modified" property="mcGmtModified"></id>
+        <id column="mc_context" property="mcContext"></id>
+        <id column="mc_img_location" property="mcImgLocation"></id>
+        <association property="typesOfComplaints" javaType="com.cssl.entity.TypesOfComplaints">
+            <id column="toc_context" property="tocContext"></id>
+        </association>
+        <association property="processingStatus" javaType="com.cssl.entity.ProcessingStatus">
+            <id column="ps_context" property="psContext"></id>
+        </association>
+        <association property="complainantInfo" javaType="com.cssl.entity.ComplainantInfo">
+            <id column="ci_name" property="ciName"></id>
+            <id column="ci_phone" property="ciPhone"></id>
+            <id column="ci_address" property="ciAddress"></id>
+        </association>
+    </resultMap>
+
+    <select id="select_psid" resultMap="map">
+        SELECT c.mc_id,c.lo_id,CONCAT(ci.ci_name,'/',ci2.ci_name) AS ci_name,CONCAT(ci.ci_phone,'/',ci2.ci_phone) AS ci_phone,CONCAT(ci.ci_address,'/',ci2.ci_address) AS ci_address,c.mc_img_location,toc.toc_context,c.mc_context,ps.ps_context,c.mc_gmt_modified
+        FROM my_complaint c
+        INNER JOIN types_of_complaints toc ON c.toc_id=toc.toc_id
+        INNER JOIN processing_status ps ON c.ps_id=ps.ps_id
+        INNER JOIN complainant_info ci ON c.ci_id=ci.ci_id
+        INNER JOIN complainant_info ci2 ON c.ci_ailing_id=ci2.ci_id
+        WHERE c.ps_id=#{id}
+        limit  #{page},#{limit}
+    </select>
+
+
+    <select id="count" resultType="int" parameterType="int">
+        select count(0) from my_complaint  WHERE ps_id=#{id}
+    </select>
+
+    <update id="update_psid" >
+        UPDATE my_complaint SET ps_id=#{psid},mc_gmt_modified = NOW() WHERE mc_id=#{id}
+    </update>
+
+
+    <resultMap id="user_id" type="com.cssl.entity.MyComplaint">
+        <id column="lo_id" property="loId"></id>
+        <id column="mc_gmt_create" property="mcGmtCreate"></id>
+        <association property="typesOfComplaints" javaType="com.cssl.entity.TypesOfComplaints">
+            <id column="toc_context" property="tocContext"></id>
+        </association>
+        <association property="processingStatus" javaType="com.cssl.entity.ProcessingStatus">
+            <id column="ps_context" property="psContext"></id>
+        </association>
+    </resultMap>
+
+    <select id="select_user_id" resultMap="user_id">
+        SELECT m.lo_id,m.mc_gmt_create,ps.ps_context,toc.toc_context FROM my_complaint m
+        INNER JOIN processing_status ps ON m.ps_id=ps.ps_id
+        INNER JOIN types_of_complaints toc ON m.toc_id=toc.toc_id
+        INNER JOIN order_user_rela our ON m.lo_id=our.lo_id
+        WHERE our.lu_id=#{id}
+        limit #{page},#{size}
+    </select>
+
+    <resultMap id="mc_id" type="com.cssl.entity.MyComplaint">
+        <id column="lo_id" property="loId"></id>
+        <id column="mc_context" property="mcContext"></id>
+        <id column="ps_id" property="psId"></id>
+        <id column="mc_img_location" property="mcImgLocation"></id>
+        <id column="mc_gmt_create" property="mcGmtCreate"></id>
+        <association property="typesOfComplaints" javaType="com.cssl.entity.TypesOfComplaints">
+            <id column="toc_context" property="tocContext"></id>
+        </association>
+    </resultMap>
+
+    <select id="select_mc_id" resultMap="mc_id" parameterType="String">
+        SELECT mc.lo_id,mc.ps_id,mc.mc_context,mc.mc_img_location,mc.mc_gmt_create,toc.toc_context  FROM my_complaint mc
+        INNER JOIN types_of_complaints toc ON mc.toc_id=toc.toc_id
+        where mc.lo_id=#{id}
+    </select>
+
+    <delete id="remove_mc_id" parameterType="String">
+         DELETE FROM my_complaint WHERE lo_id=#{id}
+    </delete>
+
+    <select id="count02" resultType="int">
+         SELECT COUNT(0) FROM my_complaint m
+         INNER JOIN order_user_rela our ON m.lo_id=our.lo_id
+         WHERE our.lu_id=#{id}
+    </select>
+</mapper>

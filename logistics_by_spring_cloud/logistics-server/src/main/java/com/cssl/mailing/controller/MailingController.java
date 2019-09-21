@@ -32,6 +32,11 @@ public class MailingController {
         return cityAreasService.getJson();
     }
 
+    /**
+     * 订单提交
+     * @param map
+     * @return
+     */
     @PostMapping("submitOrders")
     public Object submitOrders(@RequestBody Map<String,Object> map){
         return ordersService.generateOrders(map);//ordersService.generateOrders(map);//传输地址判断是否添加成功！

@@ -170,7 +170,7 @@
     function complaintOrder(){
         //add 17030544 使用 spring security 校验是否登录,如果没有登录跳转passport.因为passport是跨域请求所有ajax会有异常
         //这里就不处理了.
-        window.open("/workOrder!initVSelfHelpWorkOrder.action");
+        window.open("http://127.0.0.1:9292/staticFiles/user/selfHelp.html");
     }
     // 单击验证码图片切换验证码
     function changeValidateCode(obj) {
@@ -182,7 +182,7 @@
     function dealResult(dataList) {
 //        console.log(dataList);
 
-        objList=dataList
+        objList=dataList;
         if(objList.length>0){
             setOrderDetail(0);
         }
@@ -198,8 +198,6 @@
         if("" != objList[i].data){
             var orderList = objList[i].data;
 
-//            if(orderList.length > 0){
-//            }
             var state =  objList[i].state;
             //循环放入值，取出详细信息
             for(var j=orderList.length-1; j>=0 ;j--){
@@ -259,10 +257,10 @@
         var orderTextInput = $("#orderTextInput").val();
         if(orderTextInput == '' || orderTextInput == null || orderTextInput.trim() == ''){
             swal("","请填写运单号!", "info");
-            changeValidateCode("verificationCodeImg");
+            // changeValidateCode("verificationCodeImg");
             return false;
         }
-        var pattern  =  /^(((TT|tt)[0-9]{13})|([0-9]{12}))$/;
+        var pattern  =  /([0-9]{16})$/;//^(((TT|tt)[0-9]{13})|([0-9]{12}))$/;
 
         var orderTextInputs = new Array();
         //根据回车分割
@@ -275,21 +273,22 @@
         }
 
         //图形验证码
-        var encodinginput = $("#encodinginput").val();
-        if (!sc.queryStatus()) {
-            swal("","请进行安全验证。","info");
-            return false;
-        }else{
-
-        }
+        // var encodinginput = $("#encodinginput").val();
+        // if (!sc.queryStatus()) {
+        //     swal("","请进行安全验证。","info");
+        //     return false;
+        // }else{
+        //
+        // }
 
         //提交查询
         $.ajax({
             type : "post",
-            url : "/customerService!queryWayBillInfo.action",
-            data :{"orderTextInput":orderTextInput,"token":sc.queryToken()},
+            url : "../../guest/findLogisticsOrders",//订单查询地址
+            data :{"orderTextInput":orderTextInput},
             dataType: "JSON",
             success : function(data) {
+
                 if (data != null) {
                     if (data.returnStatus == "01") {
                         dealResult(data.dataList);
@@ -298,15 +297,15 @@
                         swal("",data.returnMsg, "info");
 
                     }
-                    init();
+                    // init();
                 } else {
-                    init();
+                    // init();
                     swal("",data.returnMsg, "info");
                 }
             },
             error:function(data){
                 swal("",data.returnMsg, "info");
-                init();
+                // init();
             }
         });
     }
@@ -332,7 +331,7 @@
     })
 
     $(document).ready(function(){
-        init()
+        // init()
         var a =  GetRequest();
         if(undefined !=a.orderTextInput){
 
@@ -341,7 +340,7 @@
             var orderTextInput = base.decode(a.orderTextInput);
             $("#orderTextInput").val(orderTextInput);
 
-            var pattern  =  /^([TT|tt][0-9]{13})|([0-9]{12})$/;;
+            var pattern  = /([0-9]{16})$/; ///^([TT|tt][0-9]{13})|([0-9]{12})$/;
 
             var orderTextInputs = new Array();
             //根据回车分割

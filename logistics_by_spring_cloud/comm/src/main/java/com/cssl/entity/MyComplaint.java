@@ -52,6 +52,35 @@ public class MyComplaint implements Serializable {
     @TableField("mc_creatorMobilePhone")
     private String mcCreatormobilephone;
 
+
+    private TypesOfComplaints typesOfComplaints; //投诉类型
+    private ProcessingStatus processingStatus; //状态
+    private ComplainantInfo complainantInfo; //投诉 收寄人
+
+    public TypesOfComplaints getTypesOfComplaints() {
+        return typesOfComplaints;
+    }
+
+    public void setTypesOfComplaints(TypesOfComplaints typesOfComplaints) {
+        this.typesOfComplaints = typesOfComplaints;
+    }
+
+    public ProcessingStatus getProcessingStatus() {
+        return processingStatus;
+    }
+
+    public void setProcessingStatus(ProcessingStatus processingStatus) {
+        this.processingStatus = processingStatus;
+    }
+
+    public ComplainantInfo getComplainantInfo() {
+        return complainantInfo;
+    }
+
+    public void setComplainantInfo(ComplainantInfo complainantInfo) {
+        this.complainantInfo = complainantInfo;
+    }
+
     public Integer getMcId() {
         return mcId;
     }

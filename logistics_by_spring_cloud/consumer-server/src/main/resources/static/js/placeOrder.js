@@ -448,11 +448,11 @@ function submitFunc(toUrl) {
                 if (data != null) {
                     if (data.loId != null) {//data.returnStatus == "01"
                         swal({
-                                title: "下单成功",
+                                title: "下单成功，请前往支付，若未支付则默认上门收款！",
                                 type: "info"
                             },
                             function() {
-                                window.location.href = toUrl;
+                                window.location.href = toUrl+"/"+data.loId+"/"+data.loCharge;
                             });
                     } else{
                         // init()

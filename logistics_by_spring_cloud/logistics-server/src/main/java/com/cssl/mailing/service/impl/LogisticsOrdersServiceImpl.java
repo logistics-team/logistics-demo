@@ -197,7 +197,7 @@ public class LogisticsOrdersServiceImpl extends ServiceImpl<LogisticsOrdersMappe
             if (insert > 0) {
                 Object luId = map.get("luId");
                 System.out.println("luId = " + ""!=luId);
-                if (""!=luId){
+                if (""!=luId&&null!=luId){
                     //添加用户订单关系
                     OrderUserRela rela = new OrderUserRela();
                     rela.setLuId(Integer.parseInt((String)luId));
@@ -205,7 +205,7 @@ public class LogisticsOrdersServiceImpl extends ServiceImpl<LogisticsOrdersMappe
                     if (!orderUserRelaService.save(rela))
                         return null;
                 }
-                return JSON.toJSONString(orders);
+                return orders;//JSON.toJSONString(orders);
             }
         }
         System.out.println("订单生成失败");
