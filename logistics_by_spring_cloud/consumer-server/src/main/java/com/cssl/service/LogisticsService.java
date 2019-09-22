@@ -118,6 +118,52 @@ public interface LogisticsService {
     @RequestMapping(value = "CityAreas/findChild",method = RequestMethod.POST,consumes = "application/json")
     String cityAreasFindChild(@RequestParam("condition") String condition,@RequestParam("province") int province,@RequestParam("city") int city,@RequestParam("district") int district);
 
-//    String freightEstimate(String sendRegionCode, String receiveRegionCode, String goodsWeight, boolean transport, boolean isProvince, boolean preservation);
+    /**
+     * 新增地址 4
+     * @param map
+     * @return
+     */
+    @RequestMapping(value="address/addAddress",method = RequestMethod.POST,consumes = "application/json")
+    String addAddress(@RequestParam Map<String, Object> map);
+
+    /**
+     * 查询用户下的所有地址 4
+     * @param pageIndex
+     * @param pageSize
+     * @param uid
+     * @return
+     */
+    @RequestMapping(value="address/showAddressById",method = RequestMethod.POST,consumes = "application/json")
+    String showAddressUserById(@RequestParam Integer pageIndex,@RequestParam Integer pageSize,@RequestParam Integer uid);
+
+    /**
+     * 编辑地址回显 4
+     * @param aId
+     * @return
+     */
+    @RequestMapping(value="address/echoData",method = RequestMethod.POST,consumes = "application/json")
+    String echoData(@RequestParam Integer aId);
+
+    /**
+     *     地址删除 4
+     */
+    @RequestMapping(value="address/deleteAddress",method = RequestMethod.POST,consumes = "application/json")
+    String deleteAddress(@RequestParam Integer aId);
+
+    /**
+     * 修改地址 4
+     * @param map
+     * @return
+     */
+    @RequestMapping(value="address/updateAddress",method = RequestMethod.POST,consumes = "application/json")
+    String updateAddress(@RequestParam Map<String, Object> map);
+
+    /**
+     * 订单查询 2
+     * @param orderTextInput
+     * @return
+     */
+    @RequestMapping(value="ordersFind/findOrdersByTexts",method = RequestMethod.POST,consumes = "application/json")
+    String findOrdersByTexts(@RequestBody String orderTextInput);
 }
 

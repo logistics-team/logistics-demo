@@ -1,7 +1,5 @@
 package com.cssl.mailing.controller;
 
-
-
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -15,7 +13,6 @@ import com.cssl.entity.*;
 
 import java.util.List;
 import java.util.Map;
-
 
 @RestController
 @RequestMapping("mailing")
@@ -55,13 +52,7 @@ public class MailingController {
         return list;
     }
 
-    @RequestMapping("findAddr")//智能识别 ：根据省市查询市县
-    public Object findAddr(String addr_p,String addr_c){//传省市
 
-        Map<String, Object> map = cityAreasService.findAddr(addr_p, addr_c);
-
-        return map;
-    }
 
     //展示所有的订单
     @RequestMapping("getAllOrders")

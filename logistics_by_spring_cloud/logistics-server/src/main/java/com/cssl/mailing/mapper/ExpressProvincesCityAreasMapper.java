@@ -1,11 +1,16 @@
 package com.cssl.mailing.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.cssl.entity.AddressUserRela;
 import com.cssl.entity.ExpressProvincesCityAreas;
+import com.cssl.entity.MyAddressBook;
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -75,5 +80,33 @@ public interface ExpressProvincesCityAreasMapper extends BaseMapper<ExpressProvi
 
     @Select("select * from express_provinces_city_areas where parent_id = #{parentCode} ;")
     List<ExpressProvincesCityAreas> getAddressDataInfo(String parentCode);
+
+
+    //新增用户地址
+    @Insert("INSERT INTO `my_address_book`(`ep_id`,`ec_id`,`ea_id`,`mab_address`,`mab_phone`,`mab_isdefault`,`mab_is_receipt`,`mab_creator`,`mab_tag`)  values (#{provinceCode},#{cityCode},#{regionCode},#{address},#{phone},#{defaultType},#{addressType},#{name},#{tag})")
+    Integer addAddress(Map<String,Object> map);
+
+    //获取地址最近一次增长的id
+    @Select("select max(mab_id) from  `my_address_book`")
+    Integer selectId();
+    //新增用户地址关联信息
+    @Insert("insert into`address_user_rela`(`lu_id`,`mab_id`) values (#{userId},#{mabId})")
+    Integer addUserAddress(Integer userId,Integer mabId);
+    //查询用户地址表里面的地址id
+    @Select("SELECT `aur_id`,`lu_id`,`mab_id` FROM  `address_user_rela` where `lu_id`=#{uid}")
+    List<AddressUserRela> selectAllUserAddressById(Integer uid);
+    //查询该用户地址
+    List<MyAddressBook> showAllMyAddressById(Integer mId);
+    //地址回显
+    MyAddressBook echoData(Integer aId);
+    //根据aId删除
+    //地址表
+    @Delete(" DELETE FROM `my_address_book` WHERE mab_id=#{aId} ")
+    Integer deleteAddress(Integer aId);
+    //用户地址关系表
+    @Delete(" DELETE FROM `address_user_rela` WHERE mab_id=#{aId} ")
+    Integer deleteUserAddress(Integer aId);
+    //修改地址
+    Integer updateAddress(Map<String,Object> map);
 
 }

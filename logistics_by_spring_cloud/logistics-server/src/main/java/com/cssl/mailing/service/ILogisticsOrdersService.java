@@ -23,4 +23,6 @@ public interface ILogisticsOrdersService extends IService<LogisticsOrders> {
     List<LogisticsOrders> showAllLogisticsOrders(Integer loId);
 
     LogisticsOrders findOrder(String mailNo);
+
+    String findOrdersByTexts(String orderTextInput);
 }

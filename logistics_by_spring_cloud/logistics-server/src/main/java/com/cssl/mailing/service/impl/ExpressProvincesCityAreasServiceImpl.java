@@ -49,30 +49,6 @@ public class ExpressProvincesCityAreasServiceImpl extends ServiceImpl<ExpressPro
         return JSON.toJSONString(plist,true);
     }
 
-    @Override
-    public Integer getProvinceIdByName(String province) {
-        return mapper.getProvinceIdByName(province);
-    }
-
-    @Override
-    public Integer getCityIdByName(String city) {
-        return mapper.getCityIdByName(city);
-    }
-
-    @Override
-    public Integer getAreasIdByName(String areas) {
-        return mapper.getAreasIdByName(areas);
-    }
-
-    @Override
-    public Map<String,Object> findAddr(String addr_p, String addr_c) {
-        List<ExpressProvincesCityAreas> clist = mapper.findAddrByParentName(addr_p);
-        List<ExpressProvincesCityAreas> alist = mapper.findAddrByParentName(addr_c);
-        Map<String,Object> map = new HashMap<>();
-        map.put("clist",clist);
-        map.put("alist",alist);
-        return map;
-    }
 
     @Override
     public String getAddressDataInfo(String parentCode) {
@@ -86,5 +62,15 @@ public class ExpressProvincesCityAreasServiceImpl extends ServiceImpl<ExpressPro
         map.put("returnStatus","01");
         map.put("areaData",map_c);
         return JSON.toJSONString(map);
+    }
+
+    @Override
+    public String addAddress(Map<String, Object> map) {
+        System.out.println("map = " + map);
+        Integer addAddress = mapper.addAddress(map);
+        Integer selectId = mapper.selectId();
+        System.out.println("selectId"+selectId);
+        Integer userId = mapper.addUserAddress(Integer.parseInt(map.get("userId").toString()), selectId);
+        return addAddress.toString();
     }
 }

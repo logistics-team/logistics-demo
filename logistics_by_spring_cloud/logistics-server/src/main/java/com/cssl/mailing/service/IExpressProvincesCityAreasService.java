@@ -21,14 +21,14 @@ public interface IExpressProvincesCityAreasService extends IService<ExpressProvi
     /**
      * 查找ID
      */
+    //2
 
-    Integer getProvinceIdByName(String province);
 
-    Integer getCityIdByName(String city);
 
-    Integer getAreasIdByName(String areas);
-
-    Map<String,Object> findAddr(String addr_p, String addr_c);
 
     String getAddressDataInfo(String parentCode);
+
+
+    //用户添加地址 4
+    String addAddress(Map<String,Object> map);
 }

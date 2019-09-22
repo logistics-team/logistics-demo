@@ -3,9 +3,7 @@ package com.cssl.service.impl;
 import com.alibaba.fastjson.JSON;
 import com.cssl.service.AddressInfo;
 import com.cssl.service.LogisticsService;
-import com.cssl.service.UserService;
 import com.cssl.util.AddressResolutionUtil;
-import org.apache.ibatis.annotations.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +20,6 @@ public class AddressInfoImpl implements AddressInfo {
         this.logisticsService = logisticsService;
         return this.logisticsService;
     }
-
     @Override
     public String findAddrByProvincesCity(String addr_p,String addr_c) {
         return logisticsService.findAddrByProvincesCity(addr_p, addr_c);
@@ -59,5 +56,33 @@ public class AddressInfoImpl implements AddressInfo {
         System.out.println("map = " + map);
 
         return JSON.toJSONString(map);
+    }
+
+    @Override
+    public String addAddressData(Map<String, Object> map) {
+        System.out.println("name"+map.get("name"));
+        System.out.println("addressType"+map.get("addressType"));
+        return logisticsService.addAddress(map);
+    }
+
+    @Override
+    public String showAddressById(Integer pageIndex, Integer pageSize, Integer uid) {
+        return logisticsService.showAddressUserById(pageIndex,pageSize,uid);
+    }
+
+    @Override
+    public String echoData(Integer aId) {
+        //编辑地址回显
+        return logisticsService.echoData(aId);
+    }
+
+    @Override
+    public String deleteAddress(Integer aId) {
+        return logisticsService.deleteAddress(aId);
+    }
+
+    @Override
+    public String updateAddress(Map<String, Object> map) {
+        return logisticsService.updateAddress(map);
     }
 }

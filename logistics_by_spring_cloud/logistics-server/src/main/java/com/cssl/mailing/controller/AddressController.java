@@ -2,12 +2,12 @@ package com.cssl.mailing.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.cssl.cy.controller.ExpressProvincesCityAreasControllerC;
+import com.cssl.entity.MyAddressBook;
+import com.cssl.mailing.service.AddressUserRealService;
 import com.cssl.mailing.service.IExpressProvincesCityAreasService;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,6 +21,9 @@ public class AddressController {
 
     @Autowired
     private ExpressProvincesCityAreasControllerC controllerC;
+
+    @Autowired
+    private AddressUserRealService addressUserRealService;
 
     /**
      * 三级联动 2
@@ -72,4 +75,36 @@ public class AddressController {
         return map;
     }
 
+
+
+    @RequestMapping("addAddress")
+    @ResponseBody
+    public String addAddress(@RequestParam Map<String,Object> map){
+        System.out.println("htname"+map.get("name"));
+        return  areasService.addAddress(map);
+    }
+    @RequestMapping("showAddressById")
+    @ResponseBody
+    public PageInfo showAddressById(@RequestParam Integer pageIndex, @RequestParam Integer pageSize, @RequestParam Integer uid){
+        System.out.println("htAddress"+uid);
+        PageInfo pageInfo = addressUserRealService.showAllMyAddress(pageIndex, pageSize, uid);
+        return pageInfo;
+    }
+    @RequestMapping("echoData")
+    @ResponseBody
+    public MyAddressBook echoData(@RequestParam Integer aId){
+        //地址回显
+        return  addressUserRealService.echoData(aId);
+    }
+    @RequestMapping("deleteAddress")
+    public String deleteAddress(@RequestParam Integer aId){
+        //地址删除
+        return  addressUserRealService.deleteAddress(aId).toString();
+    }
+    @RequestMapping("updateAddress")
+    @ResponseBody
+    public String updateAddress(@RequestParam Map<String,Object> map){
+        System.out.println("htname"+map.get("name"));
+        return  addressUserRealService.updateAddress(map);
+    }
 }

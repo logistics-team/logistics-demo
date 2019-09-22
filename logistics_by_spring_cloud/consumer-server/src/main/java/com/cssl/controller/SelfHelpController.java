@@ -56,7 +56,7 @@ public class SelfHelpController {
             }
 
         }else {
-
+            map.put("success","false");
         }
         return JSON.toJSONString(map);
     }

@@ -17,19 +17,20 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @RequestMapping("guest")
 @Controller
 //@RestController
 public class ConsumerController {
+    private OrdersFindService ordersFindService;
+    @Autowired
+    public OrdersFindService ordersFindService(OrdersFindService ordersFindService) {
+        this.ordersFindService = ordersFindService;
+        return this.ordersFindService;
+    }
     private AlipayOrders alipayOrders;
-
     @Autowired
     public AlipayOrders alipayOrders(AlipayOrders alipayOrders) {
         this.alipayOrders = alipayOrders;
@@ -81,73 +82,9 @@ public class ConsumerController {
     //findLogisticsOrders  //查询物流订单
     @ResponseBody
     @RequestMapping("findLogisticsOrders")
-    public  Map<String, Object> findLogisticsOrders(String orderTextInput) {
-
-        System.out.println("orderTextInput = " + orderTextInput);
-
-        List<Map<String,Object>> dataList = new ArrayList<>();
-        for (int i = 1; i <= 20; i++) {
-            Map<String,Object> mdataList = new HashMap<>();
-            mdataList.put("orderNum","运单号"+i);
-            mdataList.put("state","运单状态"+i);
-            List<Map<String,Object>> data = new ArrayList<>();
-            for (int j = 1; j <= 10; j++) {
-                Map<String,Object> mdata = new HashMap<>();
-                mdata.put("time","时间"+j);
-                mdata.put("context","到达地址及其信息"+j);
-                data.add(mdata);
-            }
-            mdataList.put("data",data);
-            dataList.add(mdataList);
-        }
-
-//        Map<String,Object> mdata = new HashMap<>();
-//        mdata.put("time","时间");
-//        mdata.put("context","到达地址及其信息");
-//        Map<String,Object> mdata2 = new HashMap<>();
-//        mdata2.put("time","时间2");
-//        mdata2.put("context","到达地址及其信息2");
-//        Map<String,Object> mdata3 = new HashMap<>();
-//        mdata3.put("time","时间3");
-//        mdata3.put("context","到达地址及其信息3");
-//        Map<String,Object> mdata4 = new HashMap<>();
-//        mdata4.put("time","时间4");
-//        mdata4.put("context","到达地址及其信息4");
-//        List<Map<String,Object>> data = new ArrayList<>();
-//        data.add(mdata);
-//        data.add(mdata2);
-//        data.add(mdata3);
-//        data.add(mdata4);
-
-//        Map<String,Object> mdataList = new HashMap<>();
-//        mdataList.put("orderNum","运单号");
-//        mdataList.put("state","运单状态");
-//        mdataList.put("data",data);
-//        Map<String,Object> mdataList2 = new HashMap<>();
-//        mdataList2.put("orderNum","运单号");
-//        mdataList2.put("state","运单状态");
-//        mdataList2.put("data",data);
-//        Map<String,Object> mdataList3 = new HashMap<>();
-//        mdataList3.put("orderNum","运单号");
-//        mdataList3.put("state","运单状态");
-//        mdataList3.put("data",data);
-//        List<Map<String,Object>> dataList = new ArrayList<>();
-//        dataList.add(mdataList);
-//        dataList.add(mdataList2);
-//        dataList.add(mdataList3);
-
-
-        Map<String, Object> map = new HashMap<>();
-        map.put("returnStatus", "01");
-//        map.put("returnStatus","02");
-        map.put("returnMsg", "未查询到订单:"+orderTextInput);
-        map.put("dataList", dataList);
-
-
-
-        String s = JSON.toJSONString(map);
-        System.out.println("s = " + s);
-        return map;
+    public String findLogisticsOrders(String orderTextInput) {
+        String ordersByTexts = ordersFindService.findOrdersByTexts(orderTextInput);
+        return ordersByTexts;
     }
 
 
@@ -365,7 +302,6 @@ public class ConsumerController {
     @ResponseBody
     public String htAllOrder(String search, Integer pageIndex, Integer pageSize) throws JsonProcessingException {
         String orders = logisticsService.showAllOrders(search, pageIndex, pageSize);
-
         return orders;
     }
 }

@@ -33,6 +33,12 @@ public class TransportationStatus implements Serializable {
 
     private Integer countId;
 
+    private Integer tsNewId;
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
     public Integer getCountId() {
         return countId;
     }

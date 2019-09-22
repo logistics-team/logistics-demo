@@ -48,4 +48,37 @@
         select epca_id from express_provinces_city_areas where epca_name =#{cityTem};
     </select>
 
+
+    <resultMap id="provincesMap" type="com.cssl.entity.MyAddressBook">
+        <id column="mab_id" property="mabId"></id>
+        <result column="mab_address" property="mabAddress"></result>
+        <result column="mab_phone" property="mabPhone"></result>
+        <result column="mab_isdefault" property="mabIsdefault"></result>
+        <result column="mab_is_receipt" property="mabIsReceipt"></result>
+        <result column="mab_creator" property="mabCreator"></result>
+        <result column="mab_tag" property="tag" ></result>
+        <collection property="provinces" javaType="com.cssl.entity.Provinces">
+            <id column="provincesCode" property="provincesCode"></id>
+            <result column="provincesName" property="provincesName"></result>
+            <result column="citiesCode" property="citiesCode"></result>
+            <result column="citiesName" property="citiesName"></result>
+            <result column="countiesCode" property="countiesCode"></result>
+            <result column="countiesName" property="countiesName"></result>
+        </collection>
+    </resultMap>
+
+    <select id="showAllMyAddressById" parameterType="Integer" resultMap="provincesMap">
+        SELECT md.`mab_id` AS mab_id,ep_id as provincesCode,(SELECT  epca_name FROM express_provinces_city_areas WHERE ep_id=epca_id) AS provincesName  ,`ec_id` as citiesCode,(SELECT  epca_name FROM express_provinces_city_areas WHERE ec_id=epca_id) AS citiesName ,`ea_id` as countiesCode ,(SELECT  epca_name FROM express_provinces_city_areas WHERE ea_id=epca_id) AS countiesName ,`mab_address`,`mab_phone`,`mab_isdefault`,`mab_is_receipt`,`mab_creator`,`mab_tag`  FROM `my_address_book`  md
+        INNER JOIN `address_user_rela`  au ON md.mab_id=au.mab_id
+        WHERE lu_id=#{mId}
+    </select>
+    <select id="echoData" parameterType="Integer" resultMap="provincesMap">
+        SELECT mab_id,ep_id as provincesCode,(SELECT  epca_name FROM express_provinces_city_areas WHERE ep_id=epca_id) AS provincesName  ,`ec_id` as citiesCode,(SELECT  epca_name FROM express_provinces_city_areas WHERE ec_id=epca_id) AS citiesName ,`ea_id` as countiesCode ,(SELECT  epca_name FROM express_provinces_city_areas WHERE ea_id=epca_id) AS countiesName ,`mab_address`,`mab_phone`,`mab_isdefault`,`mab_is_receipt`,`mab_creator`,`mab_tag`  FROM `my_address_book`
+        WHERE mab_id=#{aId}
+    </select>
+
+    <update id="updateAddress" parameterType="map">
+        UPDATE `my_address_book` SET `ep_id`=#{provinceCode},`ec_id`=#{cityCode},`ea_id`=#{regionCode},`mab_address`=#{address},`mab_phone`=#{phone},`mab_isdefault`=#{defaultType},`mab_is_receipt`=#{addressType},`mab_creator`=#{name},`mab_tag`=#{tag} where `mab_id`=#{userId}
+    </update>
+
 </mapper>

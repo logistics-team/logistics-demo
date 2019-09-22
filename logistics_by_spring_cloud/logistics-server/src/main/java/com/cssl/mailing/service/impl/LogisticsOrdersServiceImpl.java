@@ -14,6 +14,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -222,5 +224,40 @@ public class LogisticsOrdersServiceImpl extends ServiceImpl<LogisticsOrdersMappe
     @Override
     public LogisticsOrders findOrder(String mailNo) {
         return ordersMapper.findOrder(mailNo);
+    }
+
+    /**
+     * 订单查询
+     * @param orderTextInput
+     * @return
+     */
+    @Override
+    public String findOrdersByTexts(String orderTextInput) {
+        String[] orders = orderTextInput.split("\n");
+        List<Map<String,Object>> dataList = new ArrayList<>();
+        for (int i = 1; i <= orders.length; i++) {
+            Map<String,Object> mdataList = new HashMap<>();
+            mdataList.put("orderNum",orders[i]);
+            //查询状态
+            mdataList.put("state","已签收");
+            List<Map<String,Object>> data = new ArrayList<>();
+            for (int j = 1; j <= 10; j++) {
+                Map<String,Object> mdata = new HashMap<>();
+                //运单时间
+                mdata.put("time","时间"+j);
+                //目的地字符串
+                mdata.put("context","到达地址及其信息"+j);
+                data.add(mdata);
+            }
+            mdataList.put("data",data);
+            dataList.add(mdataList);
+        }
+        Map<String, Object> map = new HashMap<>();
+        map.put("returnStatus", "01");
+//        map.put("returnStatus","02");
+        map.put("returnMsg", "未查询到订单:"+orderTextInput);
+        map.put("dataList", dataList);
+        String s = JSON.toJSONString(map);
+        return s;
     }
 }

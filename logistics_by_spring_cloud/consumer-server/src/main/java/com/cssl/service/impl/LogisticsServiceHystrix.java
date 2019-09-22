@@ -13,11 +13,6 @@ import java.util.Map;
 @Component
 public class LogisticsServiceHystrix implements LogisticsService {
 
-//    @Override
-//    public String sayHi(String message) {
-//        return "客户端连接失败！请检查网络信息"+message;
-//    }
-
 
     @Override
     public String show(int id, int page, int limit) {
@@ -79,6 +74,73 @@ public class LogisticsServiceHystrix implements LogisticsService {
         return null;
     }
 
+    /**
+     * 新增地址 4
+     *
+     * @param map
+     * @return
+     */
+    @Override
+    public String addAddress(Map<String, Object> map) {
+        return null;
+    }
+
+    /**
+     * 查询用户下的所有地址 4
+     *
+     * @param pageIndex
+     * @param pageSize
+     * @param uid
+     * @return
+     */
+    @Override
+    public String showAddressUserById(Integer pageIndex, Integer pageSize, Integer uid) {
+        return null;
+    }
+
+    /**
+     * 编辑地址回显 4
+     *
+     * @param aId
+     * @return
+     */
+    @Override
+    public String echoData(Integer aId) {
+        return null;
+    }
+
+    /**
+     * 地址删除 4
+     *
+     * @param aId
+     */
+    @Override
+    public String deleteAddress(Integer aId) {
+        return null;
+    }
+
+    /**
+     * 修改地址 4
+     *
+     * @param map
+     * @return
+     */
+    @Override
+    public String updateAddress(Map<String, Object> map) {
+        return null;
+    }
+
+    /**
+     * 订单查询 2
+     *
+     * @param orderTextInput
+     * @return
+     */
+    @Override
+    public String findOrdersByTexts(String orderTextInput) {
+        return null;
+    }
+
     @Override
     public String confirmOrder(Map<String, Object> map) {
         //提交失败！返回原页面
@@ -105,11 +167,6 @@ public class LogisticsServiceHystrix implements LogisticsService {
         return null;
     }
 
-
-//    @Override
-//    public String save(LocalDateTime eg_gmt_create, Integer it_id, BigDecimal weight, BigDecimal eg_appraised_price, String eg_special_context, LocalDateTime eu_gmt_create, LocalDateTime eu_gmt_modified, String eu_receipt_name, Integer ep_receipt_id, Integer ec_receipt_id, Integer ea_receipt_id, String eu_receipt_phone, String eu_sender_name, Integer ep_sender_id, Integer ec_sender_id, Integer ea_sender_id, String eu_sender_phone, Integer eg_id) {
-//        return "客户端连接失败！请检查网络信息";
-//    }
 
 
 }

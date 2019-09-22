@@ -201,7 +201,7 @@
             var state =  objList[i].state;
             //循环放入值，取出详细信息
             for(var j=orderList.length-1; j>=0 ;j--){
-                if("签收" == state){
+                if("已签收" == state){
                     //揽件
                     if(j == orderList.length-1){
                         _html +='<div class="orderProgressRow"><span>'+orderList[j].time+'</span> <img src="/images/progressStart.png" class="bigImgProgress">  <span style="width: 619px;display: inline-block;vertical-align: top;">'+orderList[j].context+'</span></div>'
